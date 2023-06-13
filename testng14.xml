@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" thread-count = "1" name=" ownbook Hire /Purchase -  with /without funder  -  Accept changes / without changes flow">
+
+    
+    <test name="1.Acquisition_Quotes_HPNR_BCH_without_maintenance_lead_oppourtunity_Test2">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_BCH_without_maintenance_lead_oppourtunity_Test2" />
+		</classes>
+	</test>
+	
+	
+	
+	<test name="2.Lead_ownbook_business_flow_edit_accept_flow_test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_business_flow_edit_accept_flow_test" />
+		</classes>
+	</test>
+	
+	<test name="3.Acquisition_Quotes_HPNR_BCH_without_maintenance_lead_oppourtunity_Test2">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_BCH_without_maintenance_lead_oppourtunity_Test2" />
+		</classes>
+	</test>
+	
+	
+	<test name="4.Lead_ownbook_business_accept_without_any_changes_Test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_business_accept_without_any_changes_Test" />
+		</classes>
+	</test>
+	
+
+<test name="5.Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_with_maintenance_lead_opportunity_Test2">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_with_maintenance_lead_opportunity_Test2" />
+		</classes>
+	</test>
+    
+    
+    <test name="6.Lead_ownbook_business_flow_edit_accept_flow_test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_business_flow_edit_accept_flow_test" />
+		</classes>
+	</test>
+
+	
+	
+	<test name="7.Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_with_maintenance_lead_opportunity_Test2">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_with_maintenance_lead_opportunity_Test2" />
+		</classes>
+	</test>
+    
+    
+    <test name="8.Lead_ownbook_business_flow_edit_accept_flow_test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_business_accept_without_any_changes_Test" />
+		</classes>
+	</test>
+    
+    
+    
+     
+    <test name="9.Acquisition_Quotes_HPNR_HPNR_ownbbook_funder_purchae_quote_addition_without_maintenance_lead_opportunity_Test5">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_HPNR_ownbbook_funder_purchae_quote_addition_without_maintenance_lead_opportunity_Test5" />
+		</classes>
+	</test>
+    
+    
+    <test name="10.Lead_ownbook_purchase_business_accept_without_any_changes_Test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_purchase_business_accept_without_any_changes_Test" />
+		</classes>
+	</test>
+    
+    
+   
+    
+	<test name="11.Acquisition_Quotes_HPNR_HPNR_ownbbook_funder_purchae_quote_addition_without_maintenance_lead_opportunity_Test5">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_HPNR_ownbbook_funder_purchae_quote_addition_without_maintenance_lead_opportunity_Test5" />
+		</classes>
+	</test>
+    
+    
+    <test name="12.Lead_ownbook_business_flow_edit_accept_flow_test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_business_flow_edit_ownbook_purchase_accept_flow_test2" />
+		</classes>
+	</test>
+	
+	
+	<test name="13.Acquisition_Quotes_HPNR_HPNR_without_maintenance_lead_opportunity_Test2">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_HPNR_without_maintenance_ownbook_purchase_lead_opportunity_Test2" />
+		</classes>
+	</test>
+    
+    
+    <test name="14.Lead_ownbook_business_flow_edit_accept_flow_test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_business_flow_edit_ownbook_purchase_accept_flow_test2" />
+		</classes>
+	</test>
+	
+	
+	 
+	<test name="15.Acquisition_Quotes_HPNR_HPNR_without_maintenance_lead_opportunity_Test2">
+		<classes>
+			<class name="com.amt.test.Acquisition_Quotes_HPNR_HPNR_without_maintenance_ownbook_purchase_lead_opportunity_Test2" />
+		</classes>
+	</test>
+	
+	
+	
+	 <test name="16.Lead_ownbook_purchase_business_accept_without_any_changes_Test">
+		<classes>
+			<class name="com.amt.test.LOU.Lead_ownbook_purchase_business_accept_without_any_changes_Test" />
+		</classes>
+	</test>
+    
+    
+    
+    
+   
+    
+</suite> <!-- Suite -->

@@ -131,16 +131,16 @@ boolean opp_CurrentStatus=   obj_Opportunities_Page.verify_current_status_of_opp
 		// Opportunity listing screen - Proposal status  
 					boolean opp_AfterCurrentStatus =obj_Opportunities_Page.verify_current_status_of_opportunity_after_sending_to_proposal();
 					
-					Assert.assertTrue(opp_AfterCurrentStatus);
-					
+					Assert.assertTrue(opp_AfterCurrentStatus);					
 						
-						
-						System.out.println( "Status Verified : After sending the proposal ");
+						 System.out.println( "Status Verified : After sending the proposal ");
 						 LO.print("Status Verified : After sending the proposal");
 						
 					}
 		
-		
+	// // here we have to add one test to verify the quote values
+	
+	
 	@Test( priority=6)
 	
 	public void broker_create_opportunity_business_sending_to_contract() throws Exception {	

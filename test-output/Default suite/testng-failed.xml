@@ -3,20 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amt.test.LOU.Lead_ownbook_business_flow_edit_accept_flow_test">
+      <class name="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test">
         <methods>
-          <include name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification"/>
-          <include name="UW5_verify_ownbook_underwriting_proposal_decision_accept_with_changes"/>
-          <include name="UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call"/>
-          <include name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up"/>
-          <include name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up"/>
-          <include name="tearDown"/>
-          <include name="OP1_verify_underwriting_flow_ownbook_after_contract_signed_with_latest_changes_"/>
-          <include name="L7_ownbook_create_opportunity_business_currentstatus_after_sending_to_contract"/>
-          <include name="UW9B_ownbook_after_Underwriting_accepted_mothlty_payment_price"/>
+          <include name="aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test"/>
+          <include name="aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test"/>
+          <include name="aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test" invocation-numbers="0"/>
+          <include name="aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.amt.test.LOU.Lead_ownbook_business_flow_edit_accept_flow_test -->
+      </class> <!-- com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

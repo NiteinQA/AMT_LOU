@@ -1,10 +1,7 @@
 package com.amt.QuoteSummaryPages;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -15,7 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
 import com.amt.testUtil.ExplicitWait;
-import com.amt.testUtil.ReadExcelCalculation;
 import com.amt.testUtil.ReadExcelCalculationForPurchaseAgreement;
 import com.amt.testUtil.RemoveComma;
 

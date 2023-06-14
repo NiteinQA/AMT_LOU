@@ -299,7 +299,7 @@ private WebElement underw_listing_decision_yes_option;
 
 // underwriting current status 
 	  
-	  @FindBy(xpath = "(//td[@class='ng-star-inserted'])[8]")
+	  @FindBy(xpath = "(//td[@class='ng-star-inserted'])[9]")
 		private WebElement underw_current_status;  
 
 	  
@@ -347,7 +347,7 @@ Properties prop;
 	try
 	{
 		prop=new Properties();
-		FileInputStream ip = new FileInputStream("D:\\newWorkspaceStaging\\AutomationStaging\\src\\main\\java\\configs\\excelValues.properties");
+		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
 		prop.load(ip);                            
 	}
 	catch(FileNotFoundException e)

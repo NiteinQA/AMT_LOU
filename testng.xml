@@ -9,15 +9,10 @@
 		</classes>
 	</test>
 	
-		<test name="Lead_broker_business_flow2">
+		<test name="Lead_ownbook_business_flow2">
 		<classes>
 			<class name="com.amt.test.LOU.Lead_ownbook_business_flow_edit_ownbook_purchase_accept_flow_test2" />
 		</classes>
 	</test>
-	
-
-	
-
-	
 	
 </suite><!-- Suite -->

@@ -293,49 +293,34 @@ public class Opportunities extends TestBase {
 
 	// @FindBy(xpath ="]/td[7]/div/div/div/span")
 	// private WebElement OwbbookStatusAfterxpath;
-	
-	
+
 	@FindBy(xpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[4]/div/div")
 	private WebElement new_quote_monthly_payment;
-	
-	
+
 	@FindBy(xpath = "//p[contains(text(),'Holding cost')]")
-    private WebElement underwriting_holding_cost_menu;
-	
+	private WebElement underwriting_holding_cost_menu;
 
 	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-aquisition-generic[1]/form[1]/div[1]/div[1]/div[1]/app-acquisition-holding-cost[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/app-acquisition-quote-summary[1]/div[1]/div[1]/button[1]/div[1]")
-    private WebElement underwriting_holding_cost_summary;
-	
-	
-	
+	private WebElement underwriting_holding_cost_summary;
+
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-aquisition-generic[1]/form[1]/div[1]/div[1]/div[1]/app-acquisition-holding-cost[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/app-acquisition-quote-summary[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[5]/div[1]/p[1]/strong[1]")
-    private WebElement total_cap_maint_value;
-	
-	
+	private WebElement total_cap_maint_value;
+
 	@FindBy(xpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[1]")
-    private WebElement underwriting_new_quote;
-	
-	
+	private WebElement underwriting_new_quote;
+
 	@FindBy(xpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]")
-    private WebElement underwriting_new_quote1;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	private WebElement underwriting_new_quote1;
 
 	Properties prop;
+
+	Opportunities obj_Opportunities_Page;
 
 	public Opportunities() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("D:\\newWorkspaceStaging\\AutomationStaging\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(
+					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -388,8 +373,9 @@ public class Opportunities extends TestBase {
 	public boolean verify_current_status_of_opportunity_before_sending_to_proposal()
 
 	{
-		
-		System.out.println("*****************Before sending to proposal below is the current status ****************************");
+
+		System.out.println(
+				"*****************Before sending to proposal below is the current status ****************************");
 		System.out.println("*********************************************");
 
 		ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
@@ -444,8 +430,6 @@ public class Opportunities extends TestBase {
 		System.out.println("*********************************************");
 		return flag;
 
-		
-		
 	}
 
 	public boolean verify_current_status_of_opportunity_after_sending_to_proposal()
@@ -454,7 +438,7 @@ public class Opportunities extends TestBase {
 
 		System.out.println("*****************Opportunity after sending to proposal ****************************");
 		System.out.println("*********************************************");
-		
+
 		ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
 		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 20);
 
@@ -785,9 +769,9 @@ public class Opportunities extends TestBase {
 	public void opp_menu_link() throws Exception
 
 	{
-		
+
 		System.out.println("**********************Opportunity page will display ***********************");
-		
+
 		System.out.println("*********************************************");
 		System.out.println("*********************************************");
 
@@ -807,8 +791,9 @@ public class Opportunities extends TestBase {
 	public void opp_search_textbox(String GetOpportunityid1) throws Exception
 
 	{
-		
-		System.out.println("**************Searching for Opportunity id in search text box*******************************");
+
+		System.out.println(
+				"**************Searching for Opportunity id in search text box*******************************");
 		System.out.println("*********************************************");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
@@ -826,6 +811,33 @@ public class Opportunities extends TestBase {
 
 		// Thread.sleep(5000);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	}
+
+	public boolean opp_verify_monthly_payment() throws Exception {
+
+		String GetOpportunityid = GetExcelFormulaValue.get_cell_value(1, 2, prop.getProperty("HPNR_HPNR_QuoteNo"));
+
+		double monthlyPaymentExpected = GetExcelFormulaValue.get_string_value(1, 1,
+				prop.getProperty("HPNR_HPNR_QuoteNo"));
+
+		obj_Opportunities_Page = new Opportunities();
+
+		obj_Opportunities_Page.opp_search_textbox(GetOpportunityid);
+
+		List<WebElement> li = driver.findElements(By.xpath("(//*[@class='table heading-hvr opportunitytable ng-star-inserted']//table)[2]//thead//th"));
+
+		int index = li.indexOf(By.xpath("//th[normalize-space()='MONTHLY PAYMENT']"));
+
+		double monthlyPaymentActual = Double.parseDouble(RemoveComma.of(driver.findElement(By.xpath("((//*[@class='table heading-hvr opportunitytable ng-star-inserted']//table)[2]//tbody//td)["
+						+ index + "]")).getText()));
+
+		boolean flag = false;
+
+		if (Difference.of_two_Double_Values(monthlyPaymentExpected, monthlyPaymentActual) < 0.1) {
+			flag = true;
+		}
+
+		return flag;
 	}
 
 	public String[] get_api_data_opp() throws InterruptedException
@@ -948,12 +960,6 @@ public class Opportunities extends TestBase {
 				System.out.println("New Quote ref in Opportunity " + Quoteref_web_1);
 				LO.print("New Quote ref in Opportunity " + Quoteref_web_1);
 
-				
-				
-				  
-		
-				
-				
 			}
 
 			// Monthly Payment value from screen
@@ -1005,9 +1011,6 @@ public class Opportunities extends TestBase {
 				LO.print("Cancelled Monthly Payment value is = " + MonthlyPayment_cancelled_1);
 			}
 
-			
-			
-			
 		}
 
 		String[] DataValue1 = new String[4];
@@ -1020,105 +1023,75 @@ public class Opportunities extends TestBase {
 		return DataValue1;
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	public double fetching_the_new_quote_monthly_payment_sending_to_excel() throws IOException, InterruptedException
-	{
-		//Click.on(driver, new_quote_monthly_payment, 30);
-		
-	
-	
-	      
-	      System.out.println("Page title of active tab: " + driver.getTitle());
-	      LO.print("Page title of active tab: " + driver.getTitle());
-		
-	//  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-	  
-	  ExplicitWait.visibleElement(driver, new_quote_monthly_payment, 30);
-		
-		String temp_new_quote_monthly_payment=new_quote_monthly_payment.getText().trim().substring(2);
-		
-		System.out.println(" new_quote_monthly_payment = " + temp_new_quote_monthly_payment);
-		
-		LO.print("new_quote_monthly_payment ="+temp_new_quote_monthly_payment);
 
-		
-		double screen_new_quote_monthly_payment_converted =Double.parseDouble(temp_new_quote_monthly_payment);
-		
+	public double fetching_the_new_quote_monthly_payment_sending_to_excel() throws IOException, InterruptedException {
+		// Click.on(driver, new_quote_monthly_payment, 30);
+
+		System.out.println("Page title of active tab: " + driver.getTitle());
+		LO.print("Page title of active tab: " + driver.getTitle());
+
+		// ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+
+		ExplicitWait.visibleElement(driver, new_quote_monthly_payment, 30);
+
+		String temp_new_quote_monthly_payment = new_quote_monthly_payment.getText().trim().substring(2);
+
+		System.out.println(" new_quote_monthly_payment = " + temp_new_quote_monthly_payment);
+
+		LO.print("new_quote_monthly_payment =" + temp_new_quote_monthly_payment);
+
+		double screen_new_quote_monthly_payment_converted = Double.parseDouble(temp_new_quote_monthly_payment);
+
 		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
-		
+
 		wb.getSheet("HPNR_HPNR_QuoteNo").getRow(0).getCell(3).setCellValue(screen_new_quote_monthly_payment_converted);
-		
+
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		wb.write(out);
-	wb.close();
-	return screen_new_quote_monthly_payment_converted;
-	
-	
-	
-	
-	}
-	
-	
-	public double set_the_orderdepositandcashdeposit_in_excelsheet( double screen_total_cap_maint_value1) throws IOException, InterruptedException
-	{
-	
-	
-	// Set the customer quote data in excel sheet 
-	
+		wb.close();
+		return screen_new_quote_monthly_payment_converted;
 
-		
-	LO.print("Writing screen values to Excel for customer quote calculation -started" );
-	System.out.println("Writing screen values to Excel for customer quote calculation -started" );
-	
-	
-	FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
-	XSSFWorkbook wb = new XSSFWorkbook(in);
-	
-			 
-	 Thread.sleep(2000);
-	
-	wb.getSheet("HirePurchaseNonRegulated").getRow(104).getCell(4).setCellValue("YES");
-	wb.getSheet("HirePurchaseNonRegulated").getRow(110).getCell(1).setCellValue(5000);
-	wb.getSheet("HirePurchaseNonRegulated").getRow(110).getCell(4).setCellValue(5000);
-	
-	 Thread.sleep(2000);
-	
-    wb.getSheet("HirePurchaseNonRegulated").getRow(31).getCell(11).setCellValue(screen_total_cap_maint_value1);
-	
-    Thread.sleep(2000);
-	FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
-	wb.write(out);	
-	out.close();
-		
-	LO.print("Writing screen values to Excel for customer quote calculation -completed" );
-	System.out.println("Writing screen values to Excel for customer quote calculation -completed" );
-	
-	return GetExcelFormulaValue.get_formula_value(95, 1, "HirePurchaseNonRegulated");
-	
-	
-	
-	
-	
-	
-	
-	
 	}
-		
-		
-	public double open_the_underwriting_accepted_get_the_holdingcost_total_cap_maint_value() throws InterruptedException, IOException 
-	{
-	
-		
+
+	public double set_the_orderdepositandcashdeposit_in_excelsheet(double screen_total_cap_maint_value1)
+			throws IOException, InterruptedException {
+
+		// Set the customer quote data in excel sheet
+
+		LO.print("Writing screen values to Excel for customer quote calculation -started");
+		System.out.println("Writing screen values to Excel for customer quote calculation -started");
+
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+
+		Thread.sleep(2000);
+
+		wb.getSheet("HirePurchaseNonRegulated").getRow(104).getCell(4).setCellValue("YES");
+		wb.getSheet("HirePurchaseNonRegulated").getRow(110).getCell(1).setCellValue(5000);
+		wb.getSheet("HirePurchaseNonRegulated").getRow(110).getCell(4).setCellValue(5000);
+
+		Thread.sleep(2000);
+
+		wb.getSheet("HirePurchaseNonRegulated").getRow(31).getCell(11).setCellValue(screen_total_cap_maint_value1);
+
+		Thread.sleep(2000);
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+		out.close();
+
+		LO.print("Writing screen values to Excel for customer quote calculation -completed");
+		System.out.println("Writing screen values to Excel for customer quote calculation -completed");
+
+		return GetExcelFormulaValue.get_formula_value(95, 1, "HirePurchaseNonRegulated");
+
+	}
+
+	public double open_the_underwriting_accepted_get_the_holdingcost_total_cap_maint_value()
+			throws InterruptedException, IOException {
+
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 40);
-		
-		
+
 		/*
 		 * String OwbbookStatusBeforexpath =
 		 * "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
@@ -1167,32 +1140,22 @@ public class Opportunities extends TestBase {
 		 * WebElement Quoteref_web = driver.findElement(By.xpath(QuoteBerofexpath + i +
 		 * QuoteAfterXpath));
 		 */
-		
-		
-		
+
 		ExplicitWait.visibleElement(driver, underwriting_new_quote, 20);
-		
-		if (underwriting_new_quote.isEnabled())
-		{
-		Actions ac = new Actions(driver);
-		
-	  ac.doubleClick(underwriting_new_quote).build().perform();
-			
-		{
-			
-		 ac.doubleClick(underwriting_new_quote1).build().perform();
-			
+
+		if (underwriting_new_quote.isEnabled()) {
+			Actions ac = new Actions(driver);
+
+			ac.doubleClick(underwriting_new_quote).build().perform();
+
+			{
+
+				ac.doubleClick(underwriting_new_quote1).build().perform();
+
+			}
+
 		}
-			
-			
-			
-			
-		}
-		
-		 
-		
-		   
-			
+
 		/*
 		 * System.out.println("Click on underwriting page");
 		 * 
@@ -1205,67 +1168,57 @@ public class Opportunities extends TestBase {
 		 * 
 		 * ac.doubleClick(underwriting_new_quote).build().perform();
 		 */
-		 ArrayList<String> browserwindow = new ArrayList<String>(driver.getWindowHandles());
-	      //switch to active tab
-	      driver.switchTo().window(browserwindow.get(1));
-	      
-	      System.out.println("Page title of active tab: " + driver.getTitle());
-	      LO.print("Page title of active tab: " + driver.getTitle());
-	
-	
-	
+		ArrayList<String> browserwindow = new ArrayList<String>(driver.getWindowHandles());
+		// switch to active tab
+		driver.switchTo().window(browserwindow.get(1));
 
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 40);
-	
-	Click.on(driver, underwriting_holding_cost_menu, 20);
-	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 40);
-	Click.on(driver, underwriting_holding_cost_summary, 20);
-	
-	  ExplicitWait.visibleElement(driver, total_cap_maint_value, 30);
-	  
-	  
-	//
-	  Thread.sleep(2000);
-	  
-	  String temp_total_cap_maint_value=RemoveComma.of(total_cap_maint_value.getText().trim().substring(2));;
-		
+		System.out.println("Page title of active tab: " + driver.getTitle());
+		LO.print("Page title of active tab: " + driver.getTitle());
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 40);
+
+		Click.on(driver, underwriting_holding_cost_menu, 20);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 40);
+		Click.on(driver, underwriting_holding_cost_summary, 20);
+
+		ExplicitWait.visibleElement(driver, total_cap_maint_value, 30);
+
+		//
+		Thread.sleep(2000);
+
+		String temp_total_cap_maint_value = RemoveComma.of(total_cap_maint_value.getText().trim().substring(2));
+		;
+
 		System.out.println(" temp_total_cap_maint_value = " + temp_total_cap_maint_value);
-		
-		LO.print("temp_total_cap_maint_value ="+temp_total_cap_maint_value);
 
-		 Thread.sleep(2000);
-		
-		double screen_total_cap_maint_value =Double.parseDouble(temp_total_cap_maint_value);
-		
+		LO.print("temp_total_cap_maint_value =" + temp_total_cap_maint_value);
+
+		Thread.sleep(2000);
+
+		double screen_total_cap_maint_value = Double.parseDouble(temp_total_cap_maint_value);
+
 		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
-		
-		 Thread.sleep(2000);
+
+		Thread.sleep(2000);
 		wb.getSheet("HPNR_HPNR_QuoteNo").getRow(0).getCell(4).setCellValue(screen_total_cap_maint_value);
-		
+
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		wb.write(out);
-	wb.close();
-	
-	 Thread.sleep(2000);
-	/*
-	 * ArrayList<String> browserwindow1 = new
-	 * ArrayList<String>(driver.getWindowHandles()); //switch to active tab
-	 * driver.switchTo().window(browserwindow1.get(0));
-	 */
-	
-	return screen_total_cap_maint_value;
-	
+		wb.close();
 
-	
-	
-		}
-	
-	
-	
-	
-	
+		Thread.sleep(2000);
+		/*
+		 * ArrayList<String> browserwindow1 = new
+		 * ArrayList<String>(driver.getWindowHandles()); //switch to active tab
+		 * driver.switchTo().window(browserwindow1.get(0));
+		 */
+
+		return screen_total_cap_maint_value;
+
+	}
+
 	/*
 	 * obj_read_excel_calculation_page = new
 	 * ReadExcelCalculationForPurchaseAgreement();
@@ -1292,40 +1245,7 @@ public class Opportunities extends TestBase {
 	 * ); }
 	 * 
 	 * return status;
-	 */		
-		
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	 */
 
 	public int postAPITest(String QuoteRef, String OppID)
 			throws JsonGenerationException, JsonMappingException, IOException, ParseException, InterruptedException {
@@ -1341,8 +1261,7 @@ public class Opportunities extends TestBase {
 		OppStatusData OppStatus = new OppStatusData(QuoteRef, OppID); // expected users object
 
 		// object to json file:
-		mapper.writeValue(new File(
-				"D:\\newWorkspaceStaging\\AutomationStaging\\src\\main\\java\\com\\amt\\api\\pojo\\OppStatusData.json"),
+		mapper.writeValue(new File("D:\\LOU\\AMT_LOU\\src\\main\\java\\com\\amt\\api\\pojo\\OppStatusData.json"),
 				OppStatus);
 
 		// java object to json in String:
@@ -1367,10 +1286,9 @@ public class Opportunities extends TestBase {
 	public void opp_listing_detail_page() throws Exception
 
 	{
-		
+
 		System.out.println("*****************Opportunity Lisiting page ****************************");
 		System.out.println("*********************************************");
-		
 
 		ExplicitWait.visibleElement(driver, opp_listing_double_click, 10);
 
@@ -1379,7 +1297,7 @@ public class Opportunities extends TestBase {
 		// Double click on element
 
 		act.doubleClick(opp_listing_double_click).perform();
-		
+
 		System.out.println("*********************************************");
 		System.out.println("*********************************************");
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
@@ -1528,7 +1446,7 @@ public class Opportunities extends TestBase {
 
 		send_contract_to_customer_pop_up_send_button.click();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 80);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// *[@id="sendcontractmodal"]/div/div/div[3]/div/button[2]
 
@@ -2159,12 +2077,9 @@ public class Opportunities extends TestBase {
 		search_bar.sendKeys(Keys.ENTER);
 
 	}
-	
-	
-	
-	
+
 	// Search Text for Ownbook_Purchase
-	
+
 	public void verify_opportunity_ownbook_purchase_quote_search_text_box() throws InterruptedException, IOException {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
@@ -2214,12 +2129,9 @@ public class Opportunities extends TestBase {
 		search_bar.sendKeys(Keys.ENTER);
 
 	}
-	
-	
-	
-	
+
 	//
-	
+
 	public void verify_opportunity_ownbook_quote_hire_search_text_box() throws InterruptedException, IOException {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
@@ -2269,8 +2181,7 @@ public class Opportunities extends TestBase {
 		search_bar.sendKeys(Keys.ENTER);
 
 	}
-	
-	
+
 	public void verify_opportunity_broker_business_quote_search_text_box() throws InterruptedException, IOException {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
@@ -2320,27 +2231,6 @@ public class Opportunities extends TestBase {
 		search_bar.sendKeys(Keys.ENTER);
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	// CurrentStatusafterAccptingTheNewChangesFromUnderwritingPopup
 
@@ -2439,8 +2329,7 @@ public class Opportunities extends TestBase {
 
 		ExplicitWait.visibleElement(driver, opp_current_status_channel, 20);
 		ExplicitWait.visibleElement(driver, opp_current_status_quoteref1, 20);
-		//ExplicitWait.visibleElement(driver, opp_current_status_quoteref2, 20);
-		
+		// ExplicitWait.visibleElement(driver, opp_current_status_quoteref2, 20);
 
 		// String OppCurrentStatusOpen = opp_current_status_open.getText().trim();
 
@@ -2449,7 +2338,8 @@ public class Opportunities extends TestBase {
 		String oppCurrentStatusChannel = opp_current_status_channel.getText().trim();
 
 		String oppCurrentStatusQuoteref1 = opp_current_status_quoteref1.getText().trim();
-		//String oppCurrentStatusQuoteref2 = opp_current_status_quoteref2.getText().trim();
+		// String oppCurrentStatusQuoteref2 =
+		// opp_current_status_quoteref2.getText().trim();
 
 		System.out.println("::::::::::::::::::::::::::::::Current Status :::::::::::::::::::::::::::::::::::::");
 
@@ -2471,10 +2361,10 @@ public class Opportunities extends TestBase {
 
 		System.out.println(" Current Status of  Quote ref1 is = " + oppCurrentStatusQuoteref1);
 		LO.print("Current Status of  Quote ref is = " + oppCurrentStatusQuoteref1);
-		
-		//System.out.println(" Current Status of  Quote ref 2 is = " + oppCurrentStatusQuoteref2);
-		//LO.print("Current Status of  Quote ref is = " + oppCurrentStatusQuoteref2);
 
+		// System.out.println(" Current Status of Quote ref 2 is = " +
+		// oppCurrentStatusQuoteref2);
+		// LO.print("Current Status of Quote ref is = " + oppCurrentStatusQuoteref2);
 
 		// boolean CurrentStatusOpen = OppCurrentStatusOpen.equals(" ");
 
@@ -2490,10 +2380,8 @@ public class Opportunities extends TestBase {
 
 		boolean CurrentStatusQuoteref1 = oppCurrentStatusQuoteref1.equals("Response received");
 
-		
-
 		boolean flag = false;
-		if (CurrentStatusProposal && CurrentStatusChannel && CurrentStatusQuoteref1 )
+		if (CurrentStatusProposal && CurrentStatusChannel && CurrentStatusQuoteref1)
 
 		{
 
@@ -2505,12 +2393,9 @@ public class Opportunities extends TestBase {
 		return flag;
 
 	}
-	
-	
-	
-	
-	
-	public boolean verify_ownbook_opportunity_staus_when_underwrting_accepted_refer_changes_after_response_received() throws Exception
+
+	public boolean verify_ownbook_opportunity_staus_when_underwrting_accepted_refer_changes_after_response_received()
+			throws Exception
 
 	{
 		Thread.sleep(3000);
@@ -2522,8 +2407,7 @@ public class Opportunities extends TestBase {
 
 		ExplicitWait.visibleElement(driver, opp_current_status_channel, 20);
 		ExplicitWait.visibleElement(driver, opp_current_status_quoteref1, 20);
-		//ExplicitWait.visibleElement(driver, opp_current_status_quoteref2, 20);
-		
+		// ExplicitWait.visibleElement(driver, opp_current_status_quoteref2, 20);
 
 		// String OppCurrentStatusOpen = opp_current_status_open.getText().trim();
 
@@ -2532,7 +2416,8 @@ public class Opportunities extends TestBase {
 		String oppCurrentStatusChannel = opp_current_status_channel.getText().trim();
 
 		String oppCurrentStatusQuoteref1 = opp_current_status_quoteref1.getText().trim();
-		//String oppCurrentStatusQuoteref2 = opp_current_status_quoteref2.getText().trim();
+		// String oppCurrentStatusQuoteref2 =
+		// opp_current_status_quoteref2.getText().trim();
 
 		System.out.println("::::::::::::::::::::::::::::::Current Status :::::::::::::::::::::::::::::::::::::");
 
@@ -2554,10 +2439,10 @@ public class Opportunities extends TestBase {
 
 		System.out.println(" Current Status of  Quote ref1 is = " + oppCurrentStatusQuoteref1);
 		LO.print("Current Status of  Quote ref is = " + oppCurrentStatusQuoteref1);
-		
-		//System.out.println(" Current Status of  Quote ref 2 is = " + oppCurrentStatusQuoteref2);
-		//LO.print("Current Status of  Quote ref is = " + oppCurrentStatusQuoteref2);
 
+		// System.out.println(" Current Status of Quote ref 2 is = " +
+		// oppCurrentStatusQuoteref2);
+		// LO.print("Current Status of Quote ref is = " + oppCurrentStatusQuoteref2);
 
 		// boolean CurrentStatusOpen = OppCurrentStatusOpen.equals(" ");
 
@@ -2573,10 +2458,8 @@ public class Opportunities extends TestBase {
 
 		boolean CurrentStatusQuoteref1 = oppCurrentStatusQuoteref1.equals("Underwriting accepted");
 
-		
-
 		boolean flag = false;
-		if (CurrentStatusProposal && CurrentStatusChannel && CurrentStatusQuoteref1 )
+		if (CurrentStatusProposal && CurrentStatusChannel && CurrentStatusQuoteref1)
 
 		{
 
@@ -2588,35 +2471,6 @@ public class Opportunities extends TestBase {
 		return flag;
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	public String verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()
 			throws InterruptedException

@@ -309,7 +309,9 @@ public class QuoteSummary_HPNR_HPNRPage extends TestBase {
 			FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 			XSSFWorkbook wb = new XSSFWorkbook(in);
 			
-			wb.getSheet("HPNR_HPNR_QuoteNo").getRow(0).getCell(0).setCellValue(quote_ref_no);
+			wb.getSheet(prop.getProperty("HPNR_HPNR_QuoteNo")).getRow(1).getCell(0).setCellValue(quote_ref_no);
+			
+			wb.getSheet(prop.getProperty("HPNR_HPNR_QuoteNo")).getRow(1).getCell(1).setCellValue(quote_summary_monthly_finance_rental_from_screen_converted);
 			
 			FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 			wb.write(out);

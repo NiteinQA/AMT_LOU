@@ -3,7 +3,7 @@
 <suite thread-count="1" parallel="tests" name="Suite">
 
 
-	
+
 	<test name="1.Acquisition_Quotes_Broker_HPNR_Test">
 		<classes>
 			<class name="com.amt.test.Acquisition_Quotes_Broker_HPNR_Test" />
@@ -17,11 +17,6 @@
 			<class name="com.amt.test.LOU.Lead_broker_business_hpnr_declined_flow_Test3" />
 		</classes>
 	</test>
-	
-	
-	
-	
-	
 	
 	
 	
@@ -140,15 +135,9 @@
 	 </test>
 	
 	
-	<!-- 6.Purchase  + Additional term and mileage Done  -->
-	
-	
-	    
-	
-
 	
 	
 	
 	
 	
-  </suite> <!-- Suite -->
+  </suite>  

@@ -31,7 +31,7 @@ public class TestBase {
     	try
     	{
     		prop=new Properties();
-    		FileInputStream ip = new FileInputStream("D:\\mehul nagar\\newWorkspaceStaging\\AutomationStaging\\src\\main\\java\\configs\\config.properties");
+    		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\config.properties");
     		prop.load(ip);                            
     	}
     	catch(FileNotFoundException e)
@@ -88,7 +88,7 @@ public class TestBase {
 	public void setup() throws InterruptedException, IOException {
      
 		prop=new Properties();
-		FileInputStream ip = new FileInputStream("D:\\mehul nagar\\newWorkspaceStaging\\AutomationStaging\\src\\main\\java\\configs\\config.properties");
+		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\config.properties");
 		prop.load(ip);		
 		  
 	    initialization(prop.getProperty("browser"));
@@ -97,7 +97,7 @@ public class TestBase {
 		obj_Login_Page.enter_credentials();
 	}
 
-  @AfterClass public void tearDown() { driver.close(); }
+//  @AfterClass public void tearDown() { driver.close(); }
 	
 	
 	}

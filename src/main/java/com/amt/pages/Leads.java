@@ -1335,6 +1335,16 @@ String Lead_OpportunityId=  lead_Opp_location.getText() ;
 System.out.println("In Lead created Opportunity Id is =" + Lead_OpportunityId);
 
 LO.print("In Lead created Opportunity Id is =" + Lead_OpportunityId);
+
+FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+XSSFWorkbook wb = new XSSFWorkbook(in);
+
+wb.getSheet(prop.getProperty("HPNR_HPNR_QuoteNo")).getRow(1).getCell(2).setCellValue(Lead_OpportunityId);
+
+FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+wb.write(out);
+wb.close();
+
 return Lead_OpportunityId;
 }
 

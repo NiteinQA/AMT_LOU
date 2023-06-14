@@ -127,7 +127,7 @@ Properties prop;
 	    	try
 	    	{
 	    		prop=new Properties();
-	    		FileInputStream ip = new FileInputStream("D:\\newWorkspaceStaging\\AutomationStaging\\src\\main\\java\\configs\\excelValues.properties");
+	    		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
 	    		prop.load(ip);                            
 	    	}
 	    	catch(FileNotFoundException e)
@@ -365,28 +365,23 @@ public void search_and_verify_ownbook_purchase_underwriting_get_proposal_id() th
 	String UnderwritingPopupProposalId= underwriting_popup_proposal_id.getText();
 	Thread.sleep(2000);
 	String UnderwritingPopupProposalIdFromScreen= UnderwritingPopupProposalId.substring(14, 21);
-	Thread.sleep(2000);
+
 	System.out.println("Underwriting Popup Proposal Id is =" +UnderwritingPopupProposalIdFromScreen); 
 		      LO.print("Underwriting Popup Proposal Id is =" +UnderwritingPopupProposalIdFromScreen);
 		
 		
-		Thread.sleep(1000);
+
 		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 		Thread.sleep(1000);
-		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFWorkbook wb = new XSSFWorkbook(in);	
 		
-		Thread.sleep(1000);
-		wb.getSheet("HPNR_HPNR_QuoteNo").getRow(0).getCell(1).setCellValue(UnderwritingPopupProposalIdFromScreen);
-		//wb.getSheet("BrokerBCHQuoteNo").getRow(0).getCell(2).setCellValue(UnderwritingPopupProposalId);
-		Thread.sleep(1000);
+		Thread.sleep(1000);		
+		wb.getSheet(prop.getProperty("HPNR_HPNR_QuoteNo")).getRow(1).getCell(3).setCellValue(UnderwritingPopupProposalIdFromScreen);
+
 		Thread.sleep(1000);
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		Thread.sleep(1000);
-		wb.write(out);
-		
-
-		
-		
+		wb.write(out);	
 
 }
 

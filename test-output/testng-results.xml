@@ -1,23 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="0" failed="1" skipped="3">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<br>----------Screenshot---------<br>]]>
+      <![CDATA[<b>Clicked on Quote button </b> <br />]]>
     </line>
     <line>
-      <![CDATA[<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test_14_06_2023_07_53_47.png" height="800" width="1000">]]>
+      <![CDATA[<b>Manufacture =AUDI has been selected</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Model range =A7 has been selected</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle has been selected</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Paint option has been selected</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Interior option has been selected</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Acquisition Contract type option selected = Broker </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Customer Contract type option selected = Business Contract Hire(BCH)</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting Basic Price- Vehicle value is  =44854.17</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting Basic Price - Paint  value is  =0.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting  Basic Price - Options value is   =833.33</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting Discount- Vehicle value is  =0.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting   Discount - Paint value is   =0.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting  Discount- Options value is   =0.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting Additional Discount- Vehicle value is  =0.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting  Additional Discount - paint value is  =0.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting  Additional Discount - Options value is  =0.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing OTR table values to excel sheet -Started </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing OTR table values to excel sheet -Completed </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Subtotal After Discount from excel sheet -Started </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Subtotal After Discount from excel sheet -Started </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Subtotal After Discount from excel sheet is =45687.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Subtotal after discount actual value from screen =£ 45,687.50</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*********Calculations for On Road Price has been started***********</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Started getting On screen values from after discount table </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Manufacture_delivery_charges =550.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Road_tax_first_year =585.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>First_registration_fee =55.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Rebate =0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing After discount values to excel has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing After discount values to excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading On Road Price for invoice from excel has been Started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading On Road Price for invoice from excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected on the road price from excel is =56125.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual on the road price from screen is =56125.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Funder quote added successfully</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Calculations for Quote Summary page gas been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading values from excel sheet to compare it with quote summary on screen values</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Comparing excel values with actual values on screen</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>OTR price compared</b> <br />]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-06-14T19:52:19 IST" name="Default suite" finished-at="2023-06-14T19:53:47 IST" duration-ms="87999">
+  <suite started-at="2023-06-15T11:16:09 IST" name="Default suite" finished-at="2023-06-15T11:18:09 IST" duration-ms="120457">
     <groups>
     </groups>
-    <test started-at="2023-06-14T19:52:19 IST" name="Default test" finished-at="2023-06-14T19:53:47 IST" duration-ms="87999">
+    <test started-at="2023-06-15T11:16:09 IST" name="Default test" finished-at="2023-06-15T11:18:09 IST" duration-ms="120457">
       <class name="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-14T19:52:19 IST" name="setup" finished-at="2023-06-14T19:52:43 IST" duration-ms="24134" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-15T11:16:09 IST" name="setup" finished-at="2023-06-15T11:16:20 IST" duration-ms="11576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-14T19:52:45 IST" name="aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test" data-provider="testData" finished-at="2023-06-14T19:53:47 IST" duration-ms="62386" status="FAIL">
+        <test-method signature="aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-15T11:16:22 IST" name="aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test" data-provider="testData" finished-at="2023-06-15T11:17:15 IST" duration-ms="53303" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,183 +209,370 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //span[normalize-space()='New quote']' (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //span[normalize-space()='New quote']' (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.amt.testUtil.ExplicitWait.clickableElement(ExplicitWait.java:17)
-at com.amt.pages.AcquisitionListingPage.aquisition_Listingpage_AddnewQuote(AcquisitionListingPage.java:65)
-at com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test(Acquisition_Quotes_Broker_BCH_without_maintenance_Test.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[normalize-space()='New quote']"}
-  (Session info: chrome=114.0.5735.111)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'DSK-4052', ip: '172.16.1.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [189d42ef5cb9ec9e8d127e88d47f96cc, findElement {using=xpath, value=//span[normalize-space()='New quote']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51678}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51678/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 189d42ef5cb9ec9e8d127e88d47f96cc
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:660)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 29 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
             <line>
-              <![CDATA[<br>----------Screenshot---------<br>]]>
+              <![CDATA[<b>Clicked on Quote button </b> <br />]]>
             </line>
             <line>
-              <![CDATA[<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test_14_06_2023_07_53_47.png" height="800" width="1000">]]>
+              <![CDATA[<b>Manufacture =AUDI has been selected</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Model range =A7 has been selected</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle has been selected</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Paint option has been selected</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Interior option has been selected</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Acquisition Contract type option selected = Broker </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Customer Contract type option selected = Business Contract Hire(BCH)</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting Basic Price- Vehicle value is  =44854.17</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting Basic Price - Paint  value is  =0.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting  Basic Price - Options value is   =833.33</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting Discount- Vehicle value is  =0.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting   Discount - Paint value is   =0.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting  Discount- Options value is   =0.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting Additional Discount- Vehicle value is  =0.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting  Additional Discount - paint value is  =0.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting  Additional Discount - Options value is  =0.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing OTR table values to excel sheet -Started </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing OTR table values to excel sheet -Completed </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Subtotal After Discount from excel sheet -Started </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Subtotal After Discount from excel sheet -Started </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Subtotal After Discount from excel sheet is =45687.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Subtotal after discount actual value from screen =£ 45,687.50</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test -->
-        <test-method signature="aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-14T19:53:47 IST" name="aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test" finished-at="2023-06-14T19:53:47 IST" depends-on-methods="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-15T11:17:15 IST" name="aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test" data-provider="testData" finished-at="2023-06-15T11:17:17 IST" depends-on-methods="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test" duration-ms="1619" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AUDI]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[REF001]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[05/12/23]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[600]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Formula1-BCH]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[<b>*********Calculations for On Road Price has been started***********</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Started getting On screen values from after discount table </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Manufacture_delivery_charges =550.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Road_tax_first_year =585.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>First_registration_fee =55.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Rebate =0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing After discount values to excel has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing After discount values to excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading On Road Price for invoice from excel has been Started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading On Road Price for invoice from excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected on the road price from excel is =56125.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual on the road price from screen is =56125.00</b> <br />]]>
+            </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test -->
-        <test-method signature="aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-14T19:53:47 IST" name="aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test" finished-at="2023-06-14T19:53:47 IST" depends-on-methods="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-15T11:17:17 IST" name="aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test" data-provider="testData" finished-at="2023-06-15T11:17:52 IST" depends-on-methods="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test" duration-ms="34289" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AUDI]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[REF001]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[05/12/23]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[600]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Formula1-BCH]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[<b>Funder quote added successfully</b> <br />]]>
+            </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test -->
-        <test-method signature="aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-14T19:53:47 IST" name="aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test" finished-at="2023-06-14T19:53:47 IST" depends-on-methods="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test@51c668e3]" started-at="2023-06-15T11:17:52 IST" name="aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test" data-provider="testData" finished-at="2023-06-15T11:18:09 IST" depends-on-methods="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test.aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test" duration-ms="17410" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AUDI]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[REF001]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[05/12/23]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[600]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Formula1-BCH]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[<b>*************Calculations for Quote Summary page gas been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading values from excel sheet to compare it with quote summary on screen values</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Comparing excel values with actual values on screen</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>OTR price compared</b> <br />]]>
+            </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test -->
       </class> <!-- com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test -->

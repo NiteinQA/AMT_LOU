@@ -5,7 +5,9 @@ package com.amt.testBase;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.Time;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -80,7 +82,7 @@ public class TestBase {
 		 
 		 driver.manage().window().maximize();
 		 //driver.manage().deleteAllCookies();
-		 //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
+		 driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 		 driver.get(prop.getProperty("url"));		 
 	}
 	

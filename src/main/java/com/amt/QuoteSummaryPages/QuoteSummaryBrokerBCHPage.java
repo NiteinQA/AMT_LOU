@@ -94,6 +94,10 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Payment profile']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_payment_profile;
 
+	// contract mileage
+	@FindBy(xpath = "//*[normalize-space()='Contract mileage']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_contract_mileage;	
+
 	// Initial finance rental
 	@FindBy(xpath = "//*[normalize-space()='Initial finance rental']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_initial_finance_rental;
@@ -148,7 +152,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		js.executeScript("arguments[0].click();", quote_summary_save_button);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 150);
 
 		ExplicitWait.visibleElement(driver, quote_summary_vehicle_heading, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
@@ -170,14 +174,14 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_funder_name, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_ref_number, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_exp_date, 120);
-
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_payment_profile, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_contract_mileage, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_initial_finance_rental, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_finance, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_commission, 120);
 
 		// Vehicle details
-		String vehicle_name = quote_summary_cost_otr_price.getText().trim();
+		String vehicle_name = quote_summary_vehicle_heading.getText().trim();
 
 		// quote no.
 		String quote_ref_no = quote_summary_ref_no.getText();
@@ -213,6 +217,8 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		String customer_quote_summary_quote_exp_date = quote_summary_customer_quote_summary_quote_exp_date.getText().trim();
 
 		String customer_quote_summary_payment_profile = quote_summary_customer_quote_summary_payment_profile.getText().trim();
+		
+		double customer_quote_summary_contract_mileage = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_contract_mileage.getText().trim()));
 
 		double customer_quote_summary_initial_finance_rental = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2)));
 
@@ -224,8 +230,10 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		String sheetname = prop.getProperty("BrokerBCHQuoteNo");
-
+       //quote ref no 
 		wb.getSheet(sheetname).getRow(1).getCell(0).setCellValue(quote_ref_no);
+	    //quote ref no 
+		wb.getSheet(sheetname).getRow(1).getCell(10).setCellValue(vehicle_name);
 		//customer quote values
 		wb.getSheet(sheetname).getRow(4).getCell(1).setCellValue(customer_contract_type);
 		wb.getSheet(sheetname).getRow(4).getCell(3).setCellValue(customer_quote_summary_terms);
@@ -237,6 +245,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		wb.getSheet(sheetname).getRow(10).getCell(3).setCellValue(customer_quote_summary_quote_ref_number);
 		wb.getSheet(sheetname).getRow(12).getCell(1).setCellValue(customer_quote_summary_quote_exp_date);
 		wb.getSheet(sheetname).getRow(12).getCell(3).setCellValue(customer_quote_summary_payment_profile);
+		wb.getSheet(sheetname).getRow(14).getCell(1).setCellValue(customer_quote_summary_contract_mileage);
 		wb.getSheet(sheetname).getRow(14).getCell(3).setCellValue(customer_quote_summary_initial_finance_rental);
 		//wb.getSheet(sheetname).getRow(16).getCell(1).setCellValue();
 		//wb.getSheet(sheetname).getRow(16).getCell(3).setCellValue();

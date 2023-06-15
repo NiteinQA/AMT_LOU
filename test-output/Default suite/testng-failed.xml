@@ -6,8 +6,8 @@
       <class name="com.amt.test.broker.business.hire.Acquisition_Quotes_Broker_BCH_without_maintenance_Test">
         <methods>
           <include name="aquisition_quotes_user_flow_broker_bch_funder_quote_addition_without_maintenance_test"/>
-          <include name="aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test"/>
-          <include name="aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test" invocation-numbers="0"/>
+          <include name="aquisition_quotes_user_flow_broker_bch_quote_summary_values_verification_without_maintenance_test" invocation-numbers="0"/>
+          <include name="aquisition_quotes_user_flow_broker_bch_OTR_calculation_without_maintenance_test"/>
           <include name="aquisition_quotes_user_flow_broker_bch_after_discount_calculation_without_maintenance_test"/>
           <include name="setup"/>
         </methods>

@@ -483,7 +483,7 @@ public class Lead_ownbook_business_flow_10 extends TestBase {
 
 		System.out.println("Status code 200 received ");
 
-		obj_Opportunities_Page.opp_search_textbox(opp_id_screen);
+		obj_Opportunities_Page.opp_search_textbox();
 
 	}
 

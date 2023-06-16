@@ -833,7 +833,7 @@ public class Opportunities extends TestBase {
 
 		obj_Opportunities_Page = new Opportunities();
 
-		obj_Opportunities_Page.opp_search_textbox(GetOpportunityid);
+		obj_Opportunities_Page.opp_search_textbox();
 
 		List<WebElement> li = driver.findElements(By.xpath("(//*[@class='table heading-hvr opportunitytable ng-star-inserted']//table)[2]//thead//th"));
 

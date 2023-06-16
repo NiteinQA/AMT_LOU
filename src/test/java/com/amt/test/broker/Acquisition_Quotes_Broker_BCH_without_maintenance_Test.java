@@ -1,4 +1,4 @@
-package com.amt.test.broker.business.hire;
+package com.amt.test.broker;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;

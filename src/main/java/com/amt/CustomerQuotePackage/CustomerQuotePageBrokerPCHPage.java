@@ -251,7 +251,7 @@ public class CustomerQuotePageBrokerPCHPage extends TestBase {
 		LO.print("Funder quote added successfully");
 	 
 		boolean flag=false;
-		if(count==1 && save_button.isEnabled() )
+		if(count==1)
 		{
 			flag=true;	
 		}

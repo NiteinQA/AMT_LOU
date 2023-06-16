@@ -1212,7 +1212,7 @@ public boolean verify_table_values_on_lead_page() throws IOException, Interrupte
 	//get Expiry date	
 	String[] ExpiryDate          = lead_page_table_elements_list.get(6).getText().split(" ");
 	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(6));
-	String ExpiryDateActual      = RemoveComma.of(ExpiryDate[0]);
+	String expiryDateActual      = RemoveComma.of(ExpiryDate[0]);
 	
 	//part second -- Getting values from quote save excel sheet
 	
@@ -1421,14 +1421,14 @@ public boolean verify_table_values_on_lead_page() throws IOException, Interrupte
 	
 	
 	//comparing expiry date
-	if(ExpiryDateActual.equals(expiryDateExpected)) 
+	if(expiryDateActual.equals(expiryDateExpected)) 
 	{ 
 		count++; 
 		
 		System.out.println("");
 		LO.print          ("");
-		System.out.println(ExpiryDateActual+" = "+expiryDateExpected);
-		LO.print          (ExpiryDateActual+" = "+expiryDateExpected);
+		System.out.println(expiryDateActual+" = "+expiryDateExpected);
+		LO.print          (expiryDateActual+" = "+expiryDateExpected);
 		System.out.println("Expiry date compared and found ok");
 		LO.print          ("Expiry date compared and found ok");
 		
@@ -1437,8 +1437,8 @@ public boolean verify_table_values_on_lead_page() throws IOException, Interrupte
 	{
 		System.out.println("");
 		LO.print          ("");
-		System.err.println(ExpiryDateActual+" != "+expiryDateExpected); 
-		LO.print          (ExpiryDateActual+" != "+expiryDateExpected);
+		System.err.println(expiryDateActual+" != "+expiryDateExpected); 
+		LO.print          (expiryDateActual+" != "+expiryDateExpected);
 		System.err.println("Expiry date compared but found not ok");
 		LO.print          ("Expiry date compared but found not ok");
 		

@@ -54,11 +54,7 @@ public class Lead_broker_business_hpnr_flow_Test2 extends TestBase {
 	@Test( priority=2)
 	public void broker_create_opportunity_business() throws Exception {
 	
-	
-		 
-		String GetOpportunityid = obj_Leads_Page.lead_map_new_quote_broker_business_getting_the_opportunityno();
-		 Thread.sleep(5000);
-		 
+ 
 		 // Opportunity flow
 		 
 		obj_Opportunities_Page = new Opportunities();
@@ -71,9 +67,7 @@ public class Lead_broker_business_hpnr_flow_Test2 extends TestBase {
 		
 		
 		
-		
-		obj_Opportunities_Page.opp_search_textbox(GetOpportunityid);
-		
+		obj_Opportunities_Page.opp_search_textbox();
 		
 		
 		obj_Opportunities_Page.opp_verify_channel_data();
@@ -234,7 +228,7 @@ public void L8_ownbook_signed_contract_status_with_api_call() throws Exception
 
 	System.out.println("Status code 200 received ");
 
-	obj_Opportunities_Page.opp_search_textbox(opp_id_screen);
+	obj_Opportunities_Page.opp_search_textbox();
 
 }
 

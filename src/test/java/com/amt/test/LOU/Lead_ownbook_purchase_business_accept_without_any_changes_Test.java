@@ -53,12 +53,6 @@ public class Lead_ownbook_purchase_business_accept_without_any_changes_Test exte
 		@Test(priority = 2)
 		public void L2_ownbook_create_opportunity_business() throws Exception {
 		
-			String GetOpportunityid = obj_Leads_Page.lead_map_new_quote_broker_business_getting_the_opportunityno();
-			Thread.sleep(5000);
-		
-		
-		
-		
 		 
 		 // Opportunity flow
 		 
@@ -70,7 +64,7 @@ public class Lead_ownbook_purchase_business_accept_without_any_changes_Test exte
 		// Opportunity listing screen - Proposal status  
 		obj_Proposal_Page.Opp_listing_proposal_status();
 		
-		obj_Opportunities_Page.opp_search_textbox(GetOpportunityid);
+		obj_Opportunities_Page.opp_search_textbox();
 		
 		
 		
@@ -231,7 +225,7 @@ public class Lead_ownbook_purchase_business_accept_without_any_changes_Test exte
 
 			System.out.println("Status code 200 received ");
 
-			obj_Opportunities_Page.opp_search_textbox(opp_id_screen);
+			obj_Opportunities_Page.opp_search_textbox();
 
 		}
 

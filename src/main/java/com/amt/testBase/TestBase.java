@@ -6,9 +6,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Time;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -60,8 +62,15 @@ public class TestBase {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			options.addArguments("force-device-scale-factor=0.90");
-			options.addArguments("high-dpi-support=0.90");
+//			options.addArguments("force-device-scale-factor=0.90");
+//			options.addArguments("high-dpi-support=0.90");
+			options.addArguments("enable-automation");
+//			options.addArguments("--headless");
+//			options.addArguments("--no-sandbox");
+//			options.addArguments("--disable-extensions");
+//			options.addArguments("--dns-prefetch-disable");
+//			options.addArguments("--disable-gpu");
+			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			
 
 			
@@ -82,7 +91,7 @@ public class TestBase {
 		 
 		 driver.manage().window().maximize();
 		 //driver.manage().deleteAllCookies();
-		 driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+//		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
 		 driver.get(prop.getProperty("url"));		 
 	}
 	

@@ -788,24 +788,35 @@ public class Opportunities extends TestBase {
 
 	}
 
-	public void opp_search_textbox(String GetOpportunityid1) throws Exception
+	public void opp_search_textbox() throws Exception
 
 	{
 
-		System.out.println(
-				"**************Searching for Opportunity id in search text box*******************************");
+		System.out.println("**************Searching for Opportunity id in search text box*******************************");
 		System.out.println("*********************************************");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
-		ExplicitWait.visibleElement(driver, search_bar, 30);
-
-		Thread.sleep(1000);
+	 
+		
+		//Getting oppo ID from excel 		
+		String sheetName="";
+		
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business"))
+		{ 	sheetName                    = prop.getProperty("BrokerBCHQuoteNo"); }
+		
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual"))
+		{ 	sheetName                    = prop.getProperty("BrokerPCHQuoteNo"); }
+		
+		String opportunityId = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);		
+		
+		ExplicitWait.visibleElement(driver, search_bar, 30);	
+		search_bar.sendKeys(opportunityId);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-		search_bar.sendKeys(GetOpportunityid1);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-		LO.print("Enter the Opportunity id in Search Text box");
+		
+		
 		System.out.println("Enter the Opportunity id in Search Text box");
+		LO.print          ("Enter the Opportunity id in Search Text box");
 
 		search_bar.sendKeys(Keys.ENTER);
 

@@ -204,11 +204,11 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		String customer_contract_type = quote_summary_customer_contract_type.getText();
 		
-		double customer_quote_summary_terms = Double.parseDouble(quote_summary_customer_quote_summary_terms.getText().trim().substring(0,2));
+		String customer_quote_summary_terms = quote_summary_customer_quote_summary_terms.getText().trim().substring(0,2);
 
-		double customer_quote_summary_miles = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_miles_per_annum.getText().trim()));
+		String customer_quote_summary_miles = RemoveComma.of(quote_summary_customer_quote_summary_miles_per_annum.getText().trim());
 
-		double customer_quote_summary_monthly_finance_rental = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2)));
+		String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2));
 
 		String customer_quote_funder_name = quote_summary_customer_quote_summary_funder_name.getText().trim();
 
@@ -218,13 +218,13 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		String customer_quote_summary_payment_profile = quote_summary_customer_quote_summary_payment_profile.getText().trim();
 		
-		double customer_quote_summary_contract_mileage = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_contract_mileage.getText().trim()));
+		String customer_quote_summary_contract_mileage = RemoveComma.of(quote_summary_customer_quote_summary_contract_mileage.getText().trim());
 
-		double customer_quote_summary_initial_finance_rental = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2)));
+		String customer_quote_summary_initial_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2));
 
 		String customer_quote_summary_pence_per_excess_mile_finance = quote_summary_customer_quote_summary_pence_per_excess_mile_finance.getText().trim();
 
-		double customer_quote_summary_commission = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_commission.getText().trim().substring(2)));
+		String customer_quote_summary_commission = RemoveComma.of(quote_summary_customer_quote_summary_commission.getText().trim().substring(2));
 
 		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);

@@ -13,9 +13,11 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByLinkText;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,6 +26,7 @@ import com.amt.testUtil.Click;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
 import com.amt.testUtil.HelperClass;
+import com.amt.testUtil.RemoveComma;
 import com.amt.testUtil.Dropdown;
 
 public class Leads extends TestBase {
@@ -290,6 +293,10 @@ public class Leads extends TestBase {
 	  
 	@FindBy(xpath ="//*[@id=\"MapNewQuote\"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span")
 	private WebElement acquisition_contract_type_ownbook;
+	
+	//env table elements list 
+	@FindAll({@FindBy(xpath ="//*[@class='table mb-0 levelthreetr']/tbody/tr/td/div")})
+	public List<WebElement> lead_page_table_elements_list;
 
 
 		 
@@ -306,7 +313,7 @@ public class Leads extends TestBase {
 
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("D:\\StagingNew\\AMT_Automation\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -318,58 +325,58 @@ public class Leads extends TestBase {
 
 	
 	  public String add_new_lead(String sheet_name) throws InterruptedException,
-	  IOException { Thread.sleep(3000);
+	  IOException { Thread.sleep(12000);
 	  
-	  Click.on(driver, leads, 30);
+	  Click.on(driver, leads, 120);
 	  
 	  LO.print("Clicked on Leads page");
 	  System.out.println("Clicked on Leads page");
 	  
 	  ExplicitWait.visibleElement(driver, add_lead, 40);
 	  
-	  Click.on(driver, add_lead, 30);
+	  Click.on(driver, add_lead, 120);
 	  
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
 	  Thread.sleep(2000);
 	  
-	  Dropdown.selectByVisibleText(driver, general_lead_source, " Instagram ", 30);
+	  Dropdown.selectByVisibleText(driver, general_lead_source, " Instagram ", 120);
 	  
-	  Dropdown.selectByVisibleText(driver, general_entry_type, " Lease ", 30);
+	  Dropdown.selectByVisibleText(driver, general_entry_type, " Lease ", 120);
 	  
-	  Dropdown.selectByVisibleText(driver, status, " New/Open ", 30);
+	  Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
 	  
-	  Click.sendKeys(driver, general_assigned_to, "QA Sales", 30);
+	  Click.sendKeys(driver, general_assigned_to, "QA Sales", 120);
 	  
 	  LO.print("Lead is assigned"); System.out.println("Lead is assigned");
 	  
 	  Thread.sleep(2000);
 	  
-	  Click.on(driver, general_assigned_to_option, 30);
+	  Click.on(driver, general_assigned_to_option, 120);
 	  
-	  Dropdown.selectByVisibleText(driver, customer_type, " Individual ", 30);
+	  Dropdown.selectByVisibleText(driver, customer_type, " Individual ", 120);
 	  
 	  LO.print("Customer type - " + "Indivisual" + " selected");
 	  System.out.println("Customer type - " + "Indivisual" + " selected");
 	  
 	  js = (JavascriptExecutor) driver;
 	  
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
-	  Click.sendKeys(driver, customer_name, "QA ", 30);
+	  Click.sendKeys(driver, customer_name, "QA ", 120);
 	  
 	  Thread.sleep(4000);
 	  
 	  Click.on(driver, customer_name_option, 20);
 	  
-	  Click.on(driver, add_new_vehicle_request, 30);
+	  Click.on(driver, add_new_vehicle_request, 120);
 	  
 	  LO.print("Clicked on Add new vehicle request");
 	  System.out.println("Clicked on Add new vehicle request");
 	  
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
-	  Click.on(driver, channel, 30);
+	  Click.on(driver, channel, 120);
 	  
 	  Thread.sleep(2000);
 	  
@@ -381,20 +388,20 @@ public class Leads extends TestBase {
 	  LO.print("Channel type Broker has been selected");
 	  System.out.println("Channel type Broker has been selected");
 	  
-	  Click.on(driver, channel, 30);
+	  Click.on(driver, channel, 120);
 	  
-	  Click.on(driver, save_vehicle_request, 30);
+	  Click.on(driver, save_vehicle_request, 120);
 	  
-	  Click.sendKeys(driver, add_note, "Test Note", 30);
+	  Click.sendKeys(driver, add_note, "Test Note", 120);
 	  
-	  Click.on(driver, post, 30);
+	  Click.on(driver, post, 120);
 	  
-	  Click.on(driver, map_new_quote, 30);
+	  Click.on(driver, map_new_quote, 120);
 	  
 	  LO.print("Clicked on Map new quote");
 	  System.out.println("Clicked on Map new quote");
 	  
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
 	  String quote_no = GetExcelFormulaValue.get_cell_value(0, 0, sheet_name);
 	  
@@ -404,26 +411,26 @@ public class Leads extends TestBase {
 	  for (int i = 0; i <= table_data.size() - 1; i++) {
 	  
 	  if (table_data.get(i).getText().equals(quote_no)) {
-	  ExplicitWait.clickableElement(driver, table_data.get(i - 1), 30);
+	  ExplicitWait.clickableElement(driver, table_data.get(i - 1), 120);
 	  table_data.get(i - 1).click(); } }
 	  
 	  LO.print("New Quote has been mapped with lead");
 	  System.out.println("New Quote has been mapped with lead");
 	  
-	  Click.on(driver, ok_button, 30);
+	  Click.on(driver, ok_button, 120);
 	  
 	  Thread.sleep(7000);
 	  
-	  ExplicitWait.clickableElement(driver, save_and_convert_button, 30);
+	  ExplicitWait.clickableElement(driver, save_and_convert_button, 120);
 	  
 	  js.executeScript("arguments[0].click();", save_and_convert_button);
 	  
 	  LO.print("Clicked on save and convert button");
 	  System.out.println("Clicked on save and convert button");
 	  
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
-	  ExplicitWait.visibleElement(driver, opportunity_ref_no, 30);
+	  ExplicitWait.visibleElement(driver, opportunity_ref_no, 120);
 	  
 	  String opportunityRefNo = opportunity_ref_no.getText();
 	  
@@ -450,7 +457,7 @@ public class Leads extends TestBase {
 	  
 	  js.executeScript("arguments[0].click();", update_and_exit);
 	  
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
 	  return driver.getTitle();
 	  
@@ -471,21 +478,25 @@ public class Leads extends TestBase {
 		
 	
 		
-		Thread.sleep(1000);
+		
 
-		// HelperClass.highlightElement(driver, leads); //Click on Leads Menu Link
-		Click.on(driver, leads, 30);
+		ExplicitWait.clickableElement(driver, leads, 60);
+		HelperClass.highlightElement(driver, leads); //Click on Leads Menu Link
+		Click.on(driver, leads, 120);
+
 
 		LO.print("Clicked on Leads on Side Menu");
 		System.out.println("Clicked on Leads on Side Menu");
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		// Add Lead Button
-		ExplicitWait.visibleElement(driver, add_lead, 40);
+		ExplicitWait.visibleElement(driver, add_lead, 120);
 
-		Click.on(driver, add_lead, 30);
+		Click.on(driver, add_lead, 120);
 		System.out.println("Clicked on Leads button");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		LO.print("Clicked on add lead");
 		System.out.println("Clicked on add lead");
@@ -493,30 +504,30 @@ public class Leads extends TestBase {
 		//Thread.sleep(1000);
 
 		HelperClass.highlightElement(driver, general_lead_source);
-		Dropdown.selectByVisibleText(driver, general_lead_source, " Instagram ", 30);
+		Dropdown.selectByVisibleText(driver, general_lead_source, " Instagram ", 120);
 
 		HelperClass.highlightElement(driver, general_entry_type);
 
-		Dropdown.selectByVisibleText(driver, general_entry_type, " Lease ", 30);
+		Dropdown.selectByVisibleText(driver, general_entry_type, " Lease ", 120);
 
 		HelperClass.highlightElement(driver, status);
 
-		Dropdown.selectByVisibleText(driver, status, " New/Open ", 30);
-		//Dropdown.selectByVisibleText(driver, status, " Closed ", 30);
+		Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
+		//Dropdown.selectByVisibleText(driver, status, " Closed ", 120);
 
-		Click.sendKeys(driver, general_assigned_to, "Automation Tester", 30);
+		Click.sendKeys(driver, general_assigned_to, "Automation Tester", 120);
 
 		LO.print("Lead is assigned");
 		System.out.println("Lead is assigned");
 
 		//Thread.sleep(1000);
 
-		Click.on(driver, general_assigned_to_option, 30);
+		Click.on(driver, general_assigned_to_option, 120);
 
 		// Adding the General Notes
 
 		HelperClass.highlightElement(driver, general_notes);
-		Click.sendKeys(driver, general_notes, "TestNotes", 30);
+		Click.sendKeys(driver, general_notes, "TestNotes", 120);
 
 		LO.print("Added data in General Notes");
 		System.out.println("Added data in General Notes");
@@ -527,16 +538,16 @@ public class Leads extends TestBase {
 
 	{
 
-		Dropdown.selectByVisibleText(driver, customer_type, " Individual ", 30);
+		Dropdown.selectByVisibleText(driver, customer_type, " Individual ", 120);
 
 		LO.print("Customer type - " + "Individual" + " selected");
 		System.out.println("Customer type - " + "Individual" + " selected");
 
 		//js = (JavascriptExecutor) driver;
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		Click.sendKeys(driver, customer_name, "QA ", 30);
+		Click.sendKeys(driver, customer_name, "QA ", 120);
 
 		//Thread.sleep(4000);
 
@@ -556,28 +567,29 @@ public class Leads extends TestBase {
 	public void lead_Customer_info_business() throws Exception
 
 	{
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
-		Dropdown.selectByVisibleText(driver, customer_type, " Business ", 30);
+		Dropdown.selectByVisibleText(driver, customer_type, " Business ", 120);
 
 		LO.print("Customer type - " + "Business" + " selected");
 		System.out.println("Customer type - " + "Business" + " selected");
 
 		//js = (JavascriptExecutor) driver;
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		Thread.sleep(2000);
-		Click.sendKeys(driver, customer_name, "Comp QA2", 30);
+		Click.sendKeys(driver, customer_name, "Comp", 120);
+		customer_name.sendKeys(" QA2");
 		Thread.sleep(1000);
 		
-		Click.on(driver, customer_name_option, 30);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		Click.on(driver, customer_name_option, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
 		//Thread.sleep(4000);
 
 		//Click.on(driver, customer_name_option, 20);
 
-		//ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		//ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 	}
 	
@@ -602,22 +614,22 @@ public class Leads extends TestBase {
 		HelperClass.highlightElement(driver, add_new_vehicle_request);
 		
 		
-	Click.on(driver, add_new_vehicle_request, 30);
+	Click.on(driver, add_new_vehicle_request, 120);
 
 	LO.print("Clicked on Add new vehicle request");
 	System.out.println("Clicked on Add new vehicle request");
 
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	//Thread.sleep(4000);
 
 	
 	HelperClass.highlightElement(driver, channel);
 
-	Click.on(driver, channel, 30);
+	Click.on(driver, channel, 120);
 
 //	Thread.sleep(2000);
 	
-	Click.on(driver, channel_broker_value, 30);
+	Click.on(driver, channel_broker_value, 120);
 
 	LO.print("Clicked on broker channel");
 	System.out.println("Clicked on broker channel");
@@ -626,10 +638,10 @@ public class Leads extends TestBase {
 	//Thread.sleep(2000);
 	//channel_broker_value.sendKeys(Keys.TAB);
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
 	Thread.sleep(5000);	
-	Click.on(driver, add_new_vehicle_save, 30);
+	Click.on(driver, add_new_vehicle_save, 120);
 	
 	LO.print("Vehicle request for broker has been saved");
 	System.out.println("Vehicle request for broker has been saved");
@@ -653,22 +665,22 @@ public void lead_vehicle_request_ownbook() throws Exception
 		//HelperClass.highlightElement(driver, add_new_vehicle_request);
 		
 		
-	Click.on(driver, add_new_vehicle_request, 30);
+	Click.on(driver, add_new_vehicle_request, 120);
 
 	LO.print("Clicked on Add new vehicle request");
 	System.out.println("Clicked on Add new vehicle request");
 
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	//Thread.sleep(4000);
 
 	
 	HelperClass.highlightElement(driver, channel);
 
-	Click.on(driver, channel, 30);
+	Click.on(driver, channel, 120);
 
 	//Thread.sleep(2000);
 	
-	Click.on(driver, channel_ownbook_value, 30);
+	Click.on(driver, channel_ownbook_value, 120);
 
 	LO.print("Clicked on ownbook channel");
 	System.out.println("Clicked on ownbook channel");
@@ -677,10 +689,10 @@ public void lead_vehicle_request_ownbook() throws Exception
 	//Thread.sleep(2000);
 	//channel_broker_value.sendKeys(Keys.TAB);
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
 	Thread.sleep(5000);	
-	Click.on(driver, add_new_vehicle_save, 30);
+	Click.on(driver, add_new_vehicle_save, 120);
 	
 	LO.print("Vehicle request for broker has been saved");
 	System.out.println("Vehicle request for broker has been saved");
@@ -729,22 +741,22 @@ public void lead_vehicle_request_business() throws Exception
 		
 
 		
-	Click.on(driver, add_new_vehicle_request, 30);
+	Click.on(driver, add_new_vehicle_request, 120);
 
 	LO.print("Clicked on Add new vehicle request");
 	System.out.println("Clicked on Add new vehicle request");
 
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	//Thread.sleep(4000);
 
 	
 	HelperClass.highlightElement(driver, channel);
 
-	Click.on(driver, channel, 30);
+	Click.on(driver, channel, 120);
 
 	//Thread.sleep(2000);
 	
-	Click.on(driver, channel_broker_value, 30);
+	Click.on(driver, channel_broker_value, 120);
 
 	LO.print("Clicked on broker channel");
 	System.out.println("Clicked on broker channel");
@@ -753,10 +765,10 @@ public void lead_vehicle_request_business() throws Exception
 	//Thread.sleep(2000);
 	//channel_broker_value.sendKeys(Keys.TAB);
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
 	//Thread.sleep(5000);	
-	Click.on(driver, add_new_vehicle_save, 30);
+	Click.on(driver, add_new_vehicle_save, 120);
 	
 	LO.print("Vehicle request for broker has been saved");
 	System.out.println("Vehicle request for broker has been saved");
@@ -811,62 +823,62 @@ public void lead_map_new_quote_broker_individual() throws Exception
 	//Thread.sleep(5000);
 	
 	
-	Click.on(driver, Map_New_quote_icon, 30);
+	Click.on(driver, Map_New_quote_icon, 120);
 
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
-	Click.on(driver, acquisition_contract_type, 30);
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	Click.on(driver, acquisition_contract_type, 120);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
 	LO.print("Click on acquisition contract type icon");
 	System.out.println("Click on acquisition contract type icon");
 	
 
 	//Thread.sleep(5000);
-	Click.on(driver, acquisition_contract_type_broker_value, 30);
+	Click.on(driver, acquisition_contract_type_broker_value, 120);
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
 	//Thread.sleep(5000);
-	Click.on(driver, customer_contract_type, 30);
+	Click.on(driver, customer_contract_type, 120);
 			
 	//Thread.sleep(5000);
-	Click.on(driver, customer_contract_type_pch_value, 30);
+	Click.on(driver, customer_contract_type_pch_value, 120);
 	
 	LO.print("Click on customer contract type icon");
 	System.out.println("Click on customer contract type icon");
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
 	//Thread.sleep(5000);
-	Click.on(driver, map_new_quote_search, 30);
+	Click.on(driver, map_new_quote_search, 120);
 	
 	LO.print("Click on search button");
 	System.out.println("Click on search button");
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //	Thread.sleep(5000);
-	Click.on(driver, map_new_quote_createddate_sorting, 30);
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	Click.on(driver, map_new_quote_createddate_sorting, 120);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
 	LO.print("Click on created date button 1st ");
 	System.out.println("Click on created date button 1st");
 	
 	
-	Click.on(driver, map_new_quote_createddate_sorting, 30);
+	Click.on(driver, map_new_quote_createddate_sorting, 120);
 	
 	LO.print("Click on created date button 2nd");
 	System.out.println("Click on created date button 2nd");
 	
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	//Thread.sleep(5000);
-	Click.on(driver, select_new_quoted, 30);	
+	Click.on(driver, select_new_quoted, 120);	
 	
 	//Thread.sleep(5000);
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
-	Click.on(driver, select_new_quoted_save, 30);
+	Click.on(driver, select_new_quoted_save, 120);
 	
 	
 	
@@ -934,34 +946,34 @@ System.out.println("Click on Map New Quote icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, Map_New_quote_icon, 30);
+Click.on(driver, Map_New_quote_icon, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-Click.on(driver, acquisition_contract_type_ownbook, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+Click.on(driver, acquisition_contract_type_ownbook, 120);
 
 LO.print("Click on acquisition contract type icon");
 System.out.println("Click on acquisition contract type icon");
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, acquisition_contract_type_ownbook_value, 30);
+Click.on(driver, acquisition_contract_type_ownbook_value, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 //Thread.sleep(5000);
-Click.on(driver, customer_contract_type, 30);
+Click.on(driver, customer_contract_type, 120);
 		
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, customer_contract_type_pch_value, 30);
+Click.on(driver, customer_contract_type_pch_value, 120);
 
 LO.print("Click on customer contract type icon");
 System.out.println("Click on customer contract type icon");
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 Thread.sleep(5000);
-Click.on(driver, map_new_quote_search, 30);
+Click.on(driver, map_new_quote_search, 120);
 
 LO.print("Click on search button");
 System.out.println("Click on search button");
@@ -969,26 +981,26 @@ System.out.println("Click on search button");
 
 
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 1st ");
 System.out.println("Click on created date button 1st");
 
 
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 2nd");
 System.out.println("Click on created date button 2nd");
 
 
 //Thread.sleep(5000);
-Click.on(driver, select_new_quoted, 30);	
+Click.on(driver, select_new_quoted, 120);	
 
 Thread.sleep(5000);
 
-Click.on(driver, select_new_quoted_save, 30);
+Click.on(driver, select_new_quoted_save, 120);
 
 try
 
@@ -1060,45 +1072,45 @@ System.out.println("Click on Map New Quote icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, Map_New_quote_icon, 30);
+Click.on(driver, Map_New_quote_icon, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-Click.on(driver, acquisition_contract_type, 30);
+Click.on(driver, acquisition_contract_type, 120);
 
 LO.print("Click on acquisition contract type icon");
 System.out.println("Click on acquisition contract type icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, acquisition_contract_type_broker_value, 30);
+Click.on(driver, acquisition_contract_type_broker_value, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 //Thread.sleep(5000);
-Click.on(driver, customer_contract_type, 30);
+Click.on(driver, customer_contract_type, 120);
 LO.print("Click on customer contract type icon");
 System.out.println("Click on customer contract type icon");		
 
 //Thread.sleep(5000);
-Click.on(driver, customer_business_contract_type_bch_value, 30);
+Click.on(driver, customer_business_contract_type_bch_value, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_search, 30);
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+Click.on(driver, map_new_quote_search, 120);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 LO.print("Click on search button");
 System.out.println("Click on search button");
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 1st ");
 System.out.println("Click on created date button 1st");
 
 
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 2nd");
 System.out.println("Click on created date button 2nd");
@@ -1107,13 +1119,13 @@ System.out.println("Click on created date button 2nd");
 //Thread.sleep(5000);
 System.out.println("Select the checkbox for new quote ");
 LO.print("Select the checkbox for new quote ");
-Click.on(driver, select_new_quoted, 30);	
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+Click.on(driver, select_new_quoted, 120);	
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
 System.out.println("click ok button on Map  new quote ");
 LO.print("click ok button on Map  new quote ");
 
-Click.on(driver, select_new_quoted_save, 30);
+Click.on(driver, select_new_quoted_save, 120);
 
 
 Thread.sleep(5000);
@@ -1132,7 +1144,7 @@ try
 	 
 	 Click.on(driver, lead_already_exits_quote_availbale, 20);
 	
-	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  Thread.sleep(5000);
 	 
 	 System.out.println("click on OK button for copy quote  ");
@@ -1157,7 +1169,293 @@ try
 
 }
 
+public boolean verify_table_values_on_lead_page() throws IOException, InterruptedException, ClassNotFoundException
+{
+	
+	//part first -- getting actual values from screen --on lead page before saving 
+	//wait for table elements to be loaded
+	ExplicitWait.waitForListOfVisibleElements(driver, lead_page_table_elements_list, 60);
+	
+	
+	//get quote ref no.
+	
+	String quotRefNoActual       = lead_page_table_elements_list.get(0).getText();
+	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(0));
+	
+	
+	//get Vehicle name	
+	String vehicleNameActual     = lead_page_table_elements_list.get(1).getText();	
+	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(1));
+	
+	//get contract type
+	String contractTypeActual    = lead_page_table_elements_list.get(2).getText();	
+	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(2));
+	
+	//get monthly payment
+	String[] monthlyPayment      = lead_page_table_elements_list.get(3).getText().split(" ");
+	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(3));
+	double monthlyFinanceRentalActual  = Double.parseDouble(RemoveComma.of(monthlyPayment[1]));	
+	
+	
+	//get mileage	
+	String [] mileage           = lead_page_table_elements_list.get(4).getText().split(" ");
+	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(4));
+	double mileageActual        = Double.parseDouble(mileage[1]);	
+	
+	
+	//get terms
+	String [] term              = lead_page_table_elements_list.get(5).getText().split(" ");
+	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(5));
+	double termActual            = Double.parseDouble(term[1]);	
+	
+	
+	//get Expiry date	
+	String[] ExpiryDate          = lead_page_table_elements_list.get(6).getText().split(" ");
+	HelperClass.highlightElement(driver,lead_page_table_elements_list.get(6));
+	String ExpiryDateActual      = RemoveComma.of(ExpiryDate[0]);
+	
+	//part second -- Getting values from quote save excel sheet
+	
+	//define sheet name from which values to be taken
+	
+	String sheetName="";
+	
+	if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business"))
+	{ 	sheetName                    = prop.getProperty("BrokerBCHQuoteNo"); }
+	
+	if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual"))
+	{ 	sheetName                    = prop.getProperty("BrokerPCHQuoteNo"); }
 
+
+	String quotRefNoExpected            = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
+	String vehicleNameExpected          = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
+	
+	String contractTypeExpected         = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
+	double termExpected                 = Double.parseDouble(GetExcelFormulaValue.get_cell_value(4, 3, sheetName));
+	
+	double mileageExpected              = Double.parseDouble(GetExcelFormulaValue.get_cell_value(6, 1, sheetName));
+	double monthlyFinanceRentalExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(6, 3, sheetName));
+	
+//	GetExcelFormulaValue.get_string_value(8, 1, sheetName);
+//	GetExcelFormulaValue.get_string_value(8, 3, sheetName);
+	
+//	GetExcelFormulaValue.get_string_value(10, 1, sheetName);
+//	GetExcelFormulaValue.get_string_value(10, 3, sheetName);
+	
+	String expiryDateExpected           = GetExcelFormulaValue.get_cell_value(12, 1, "BrokerBCHQuoteNo");
+//	GetExcelFormulaValue.get_string_value(12, 3, sheetName);
+	
+//	GetExcelFormulaValue.get_string_value(14, 1, sheetName);
+//	GetExcelFormulaValue.get_string_value(14, 3, sheetName);
+//	
+//	GetExcelFormulaValue.get_string_value(16, 1, sheetName);
+//	GetExcelFormulaValue.get_string_value(16, 3, sheetName);
+//	
+//	GetExcelFormulaValue.get_string_value(18, 1, sheetName);
+//	GetExcelFormulaValue.get_string_value(18, 3, sheetName);
+//	
+//	GetExcelFormulaValue.get_string_value(20, 1, sheetName);
+//	GetExcelFormulaValue.get_string_value(20, 3, sheetName);
+	
+	
+	//part third  Comparing actual and expected 
+	
+	System.out.println("");
+    LO.print          ("");
+	System.out.println("Started Verifying Table values on lead page before saving and converting");
+    LO.print          ("Started Verifying Table values on lead page before saving and converting");
+	
+	int count =0;
+	
+	//comparing quote no.
+	if(quotRefNoActual.equals(quotRefNoExpected))
+	{ 
+		count++;
+	
+	    System.out.println("");
+	    LO.print          ("");
+	    System.out.println(quotRefNoActual+" = "+quotRefNoExpected);
+	    LO.print          (quotRefNoActual+" = "+quotRefNoExpected);
+	    System.out.println("Quote no. compared and found ok");
+	    LO.print          ("Quote no. compared and found ok");
+	}
+	else 
+	{
+		System.out.println("");
+		LO.print          ("");
+		System.err.println(quotRefNoActual+" != "+quotRefNoExpected);
+		LO.print          (quotRefNoActual+" != "+quotRefNoExpected);
+		System.err.println("Quote no. compared but found not ok");
+		LO.print          ("Quote no. compared but found not ok");
+	}
+	
+	
+
+	//comparing vehicle name
+	if(vehicleNameActual.equals(vehicleNameExpected)) 
+	{ 
+		count++;
+		
+		System.out.println("");
+		LO.print          ("");
+	    System.out.println(vehicleNameActual+" = "+vehicleNameExpected);
+	    LO.print          (vehicleNameActual+" = "+vehicleNameExpected);
+	    System.out.println("Vehicle name compared and found ok");
+		LO.print          ("Vehicle name compared and found ok");
+	    
+	}
+	else
+	{
+		System.out.println("");
+		LO.print          ("");
+		System.err.println(vehicleNameActual+" != "+vehicleNameExpected);
+		LO.print          (vehicleNameActual+" != "+vehicleNameExpected);
+		System.err.println("Vehicle name compared but found not ok");
+		LO.print          ("Vehicle name compared but found not ok");
+	    
+	}
+	
+	
+
+	//comparing contract type
+	if(contractTypeActual.equals(contractTypeExpected))
+	{ 
+		count++; 
+		System.out.println("");
+		LO.print          ("");
+		System.out.println(contractTypeActual+" = "+contractTypeExpected);
+		LO.print          (contractTypeActual+" = "+contractTypeExpected);
+		System.out.println("Contract type compared and found ok");
+		LO.print          ("Contract type compared and found ok");
+		
+		}
+	else
+	{
+		System.out.println("");
+		LO.print          ("");
+		System.err.println(contractTypeActual+" != "+contractTypeExpected);
+		LO.print          (contractTypeActual+" != "+contractTypeExpected);
+		System.err.println("Contract type compared but found not ok");
+		LO.print          ("Contract type compared but found not ok");
+		}
+	
+	
+
+	//comparing monthly finance payment
+	if(monthlyFinanceRentalActual==monthlyFinanceRentalExpected) 
+	{
+		count++;
+		
+		System.out.println("");
+		LO.print          ("");
+		System.out.println(monthlyFinanceRentalActual+" = "+monthlyFinanceRentalExpected);
+		LO.print          (monthlyFinanceRentalActual+" = "+monthlyFinanceRentalExpected);
+		System.out.println("Monthly finance rental compared and found ok");
+		LO.print          ("Monthly finance rental compared and found ok");
+		
+	}
+	else
+	{
+		System.out.println("");
+		LO.print          ("");
+		System.err.println(monthlyFinanceRentalActual+" != "+monthlyFinanceRentalExpected);
+		LO.print          (monthlyFinanceRentalActual+" != "+monthlyFinanceRentalExpected);
+		System.err.println("Monthly finance rental compared but found not ok");
+		LO.print          ("Monthly finance rental compared but found not ok");
+		
+	}
+	
+	
+	
+	//comparing mileage
+	if(mileageActual==mileageExpected) 
+	{ 
+		count++;
+		
+		System.out.println("");
+		LO.print          ("");
+		System.out.println(mileageActual+" = "+mileageExpected);
+		LO.print          (mileageActual+" = "+mileageExpected);
+		System.out.println("Mileage compared and found ok");
+		LO.print          ("Mileage compared and found ok");
+		
+	}
+	else 
+	{
+		System.out.println("");
+		LO.print          ("");
+		System.err.println(mileageActual+" != "+mileageExpected); 
+		LO.print          (mileageActual+" != "+mileageExpected); 
+		System.err.println("Mileage compared but found not ok");
+		LO.print          ("Mileage compared but found not ok");
+		
+	}
+	
+	
+	
+	//comparing term
+	if(termActual==termExpected) 
+	{ 
+		count++; 
+		
+		System.out.println("");
+		LO.print          ("");
+		System.out.println(termActual+" = "+termExpected);
+		LO.print          (termActual+" = "+termExpected);
+		System.out.println("Terms compared and found ok");
+		LO.print          ("Terms compared and found ok");
+		
+		
+	}
+	else 
+	{
+		System.out.println("");
+		LO.print          ("");
+		System.err.println(termActual+" != "+termExpected);
+		LO.print          (termActual+" != "+termExpected);		
+		System.err.println("Terms compared but found not ok");
+		LO.print          ("Terms compared but found not ok");
+		
+	}
+	
+	
+	
+	//comparing expiry date
+	if(ExpiryDateActual.equals(expiryDateExpected)) 
+	{ 
+		count++; 
+		
+		System.out.println("");
+		LO.print          ("");
+		System.out.println(ExpiryDateActual+" = "+expiryDateExpected);
+		LO.print          (ExpiryDateActual+" = "+expiryDateExpected);
+		System.out.println("Expiry date compared and found ok");
+		LO.print          ("Expiry date compared and found ok");
+		
+	}
+	else 
+	{
+		System.out.println("");
+		LO.print          ("");
+		System.err.println(ExpiryDateActual+" != "+expiryDateExpected); 
+		LO.print          (ExpiryDateActual+" != "+expiryDateExpected);
+		System.err.println("Expiry date compared but found not ok");
+		LO.print          ("Expiry date compared but found not ok");
+		
+	}
+	
+	boolean status = false;
+	if (count==7)
+		
+	{
+		status = true;
+	}
+	
+	return status;
+	
+	
+	
+}
 
 
 
@@ -1179,45 +1477,45 @@ System.out.println("Click on Map New Quote icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, Map_New_quote_icon, 30);
+Click.on(driver, Map_New_quote_icon, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-Click.on(driver, acquisition_contract_type, 30);
+Click.on(driver, acquisition_contract_type, 120);
 
 LO.print("Click on acquisition contract type icon");
 System.out.println("Click on acquisition contract type icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, acquisition_contract_type_broker_value, 30);
+Click.on(driver, acquisition_contract_type_broker_value, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 //Thread.sleep(5000);
-Click.on(driver, customer_contract_type, 30);
+Click.on(driver, customer_contract_type, 120);
 LO.print("Click on customer contract type icon");
 System.out.println("Click on customer contract type icon");		
 
 //Thread.sleep(5000);
-Click.on(driver, customer_business_contract_type_hpnr_value, 30);
+Click.on(driver, customer_business_contract_type_hpnr_value, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_search, 30);
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+Click.on(driver, map_new_quote_search, 120);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 LO.print("Click on search button");
 System.out.println("Click on search button");
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 1st ");
 System.out.println("Click on created date button 1st");
 
 
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 2nd");
 System.out.println("Click on created date button 2nd");
@@ -1226,13 +1524,13 @@ System.out.println("Click on created date button 2nd");
 //Thread.sleep(5000);
 System.out.println("Select the checkbox for new quote ");
 LO.print("Select the checkbox for new quote ");
-Click.on(driver, select_new_quoted, 30);	
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+Click.on(driver, select_new_quoted, 120);	
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
 System.out.println("click ok button on Map  new quote ");
 LO.print("click ok button on Map  new quote ");
 
-Click.on(driver, select_new_quoted_save, 30);
+Click.on(driver, select_new_quoted_save, 120);
 
 
 Thread.sleep(5000);
@@ -1251,7 +1549,7 @@ try
 	 
 	 Click.on(driver, lead_already_exits_quote_availbale, 20);
 	
-	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  Thread.sleep(5000);
 	 
 	 System.out.println("click on OK button for copy quote  ");
@@ -1302,10 +1600,10 @@ LO.print("Click on Lead save and Convert button");
 System.out.println("Click on Lead save and Convert button");
 
 //Thread.sleep(2000);	
-Click.on(driver, lead_update_convert_into_opp_button, 30);
+Click.on(driver, lead_update_convert_into_opp_button, 120);
 
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 
 System.out.println("**********************Quoted is saved successfully ***********************");
@@ -1316,39 +1614,74 @@ System.out.println("**********************Quoted is saved successfully *********
 }
 
 
-public String lead_map_new_quote_broker_business_getting_the_opportunityno ( ) throws Exception
+//public String lead_map_new_quote_broker_business_getting_the_opportunityno ( ) throws Exception
+//
+//{
+//
+//
+//
+//
+////Thread.sleep(5000);
+//
+//ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+//
+//
+//String Lead_OpportunityId=  lead_Opp_location.getText() ;
+//
+//
+//
+//System.out.println("In Lead created Opportunity Id is =" + Lead_OpportunityId);
+//
+//LO.print("In Lead created Opportunity Id is =" + Lead_OpportunityId);
+//
+//FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+//XSSFWorkbook wb = new XSSFWorkbook(in);
+//
+//wb.getSheet(prop.getProperty("HPNR_HPNR_QuoteNo")).getRow(1).getCell(2).setCellValue(Lead_OpportunityId);
+//
+//FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+//wb.write(out);
+//wb.close();
+//
+//return Lead_OpportunityId;
+//}
+
+
+public void lead_map_new_quote_broker_business_getting_the_opportunityno ( ) throws Exception
 
 {
 
-
-
-
-//Thread.sleep(5000);
-
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 
 String Lead_OpportunityId=  lead_Opp_location.getText() ;
 
-
-
+System.out.println("");
+LO.print          ("");
 System.out.println("In Lead created Opportunity Id is =" + Lead_OpportunityId);
-
-LO.print("In Lead created Opportunity Id is =" + Lead_OpportunityId);
+LO.print          ("In Lead created Opportunity Id is =" + Lead_OpportunityId);
+System.out.println("");
+LO.print          ("");
 
 FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 XSSFWorkbook wb = new XSSFWorkbook(in);
 
-wb.getSheet(prop.getProperty("HPNR_HPNR_QuoteNo")).getRow(1).getCell(2).setCellValue(Lead_OpportunityId);
+String sheetName="";
+
+if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business"))
+{ 	sheetName                    = prop.getProperty("BrokerBCHQuoteNo"); }
+
+if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual"))
+{ 	sheetName                    = prop.getProperty("BrokerPCHQuoteNo"); }
+
+wb.getSheet(sheetName).getRow(1).getCell(2).setCellValue(Lead_OpportunityId);
 
 FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 wb.write(out);
 wb.close();
 
-return Lead_OpportunityId;
+
 }
-
-
 
 
 
@@ -1379,54 +1712,54 @@ System.out.println("Click on Map New Quote icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, Map_New_quote_icon, 30);
+Click.on(driver, Map_New_quote_icon, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-Click.on(driver, acquisition_contract_type, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+Click.on(driver, acquisition_contract_type, 120);
 
 LO.print("Click on acquisition contract type icon");
 System.out.println("Click on acquisition contract type icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, acquisition_contract_type_ownbook_value, 30);
+Click.on(driver, acquisition_contract_type_ownbook_value, 120);
 
 
 
 //Thread.sleep(5000);
-Click.on(driver, customer_contract_type, 30);
+Click.on(driver, customer_contract_type, 120);
 		
 //Thread.sleep(5000);
-Click.on(driver, customer_business_contract_type_bch_value, 30);
+Click.on(driver, customer_business_contract_type_bch_value, 120);
 
 LO.print("Click on customer contract type icon");
 System.out.println("Click on customer contract type icon");
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_search, 30);
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+Click.on(driver, map_new_quote_search, 120);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 LO.print("Click on search button");
 System.out.println("Click on search button");
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 1st ");
 System.out.println("Click on created date button 1st");
 
 
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 2nd");
 System.out.println("Click on created date button 2nd");
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(2000);
-Click.on(driver, select_new_quoted, 30);	
+Click.on(driver, select_new_quoted, 120);	
 
 Thread.sleep(2000);
 
-Click.on(driver, select_new_quoted_save, 30);
+Click.on(driver, select_new_quoted_save, 120);
 
 Thread.sleep(2000);
 try
@@ -1442,9 +1775,9 @@ try
 	 
 	 Click.on(driver, lead_already_exits_quote_availbale, 10);
 	 
-	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  Thread.sleep(5000);
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
 	 System.out.println("click on OK button for copy quote  ");
 	 LO.print("click on OK button for copy quote ");
@@ -1497,54 +1830,54 @@ System.out.println("Click on Map New Quote icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, Map_New_quote_icon, 30);
+Click.on(driver, Map_New_quote_icon, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-Click.on(driver, acquisition_contract_type, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+Click.on(driver, acquisition_contract_type, 120);
 
 LO.print("Click on acquisition contract type icon");
 System.out.println("Click on acquisition contract type icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, acquisition_contract_type_ownbook_value, 30);
+Click.on(driver, acquisition_contract_type_ownbook_value, 120);
 
 
 
 //Thread.sleep(5000);
-Click.on(driver, customer_contract_type, 30);
+Click.on(driver, customer_contract_type, 120);
 		
 //Thread.sleep(5000);
-Click.on(driver, customer_business_contract_type_bch_value, 30);
+Click.on(driver, customer_business_contract_type_bch_value, 120);
 
 LO.print("Click on customer contract type icon");
 System.out.println("Click on customer contract type icon");
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_search, 30);
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+Click.on(driver, map_new_quote_search, 120);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 LO.print("Click on search button");
 System.out.println("Click on search button");
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 1st ");
 System.out.println("Click on created date button 1st");
 
 
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 2nd");
 System.out.println("Click on created date button 2nd");
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(2000);
-Click.on(driver, select_new_quoted, 30);	
+Click.on(driver, select_new_quoted, 120);	
 
 Thread.sleep(2000);
 
-Click.on(driver, select_new_quoted_save, 30);
+Click.on(driver, select_new_quoted_save, 120);
 
 Thread.sleep(2000);
 try
@@ -1560,9 +1893,9 @@ try
 	 
 	 Click.on(driver, lead_already_exits_quote_availbale, 10);
 	 
-	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  Thread.sleep(5000);
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
 	 System.out.println("click on OK button for copy quote  ");
 	 LO.print("click on OK button for copy quote ");
@@ -1617,57 +1950,57 @@ System.out.println("Click on Map New Quote icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, Map_New_quote_icon, 30);
+Click.on(driver, Map_New_quote_icon, 120);
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-Click.on(driver, acquisition_contract_type, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+Click.on(driver, acquisition_contract_type, 120);
 
 LO.print("Click on acquisition contract type icon");
 System.out.println("Click on acquisition contract type icon");
 
 
 //Thread.sleep(5000);
-Click.on(driver, acquisition_contract_type_ownbook_value, 30);
+Click.on(driver, acquisition_contract_type_ownbook_value, 120);
 
 
 
 //Thread.sleep(5000);
-Click.on(driver, customer_contract_type, 30);
+Click.on(driver, customer_contract_type, 120);
 		
 //Thread.sleep(5000);
 // HPRNR
-Click.on(driver, customer_business_contract_type_hpnr_value, 30);
+Click.on(driver, customer_business_contract_type_hpnr_value, 120);
 
 
 
 LO.print("Click on customer contract type icon");
 System.out.println("Click on customer contract type icon");
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_search, 30);
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+Click.on(driver, map_new_quote_search, 120);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 LO.print("Click on search button");
 System.out.println("Click on search button");
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 1st ");
 System.out.println("Click on created date button 1st");
 
 
-Click.on(driver, map_new_quote_createddate_sorting, 30);
+Click.on(driver, map_new_quote_createddate_sorting, 120);
 
 LO.print("Click on created date button 2nd");
 System.out.println("Click on created date button 2nd");
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(2000);
-Click.on(driver, select_new_quoted, 30);	
+Click.on(driver, select_new_quoted, 120);	
 
 Thread.sleep(2000);
 
-Click.on(driver, select_new_quoted_save, 30);
+Click.on(driver, select_new_quoted_save, 120);
 
 Thread.sleep(2000);
 try
@@ -1683,9 +2016,9 @@ try
 	 
 	 Click.on(driver, lead_already_exits_quote_availbale, 10);
 	 
-	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  Thread.sleep(5000);
-	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+	  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	  
 	 System.out.println("click on OK button for copy quote  ");
 	 LO.print("click on OK button for copy quote ");

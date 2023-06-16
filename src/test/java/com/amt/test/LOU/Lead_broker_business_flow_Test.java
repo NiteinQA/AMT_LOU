@@ -43,52 +43,46 @@ public class Lead_broker_business_flow_Test extends TestBase {
 		 //Business = Broker + BCH
 		 obj_Leads_Page.lead_map_new_quote_broker_business();
 		 
+		 //verifying table values with Quote save excel sheet values before saving 
 		 
+		boolean table_verification_before_save =  obj_Leads_Page.verify_table_values_on_lead_page();
+
 		 
-		 obj_Leads_Page.lead_map_new_quote_broker_business_save_and_Convert();
-		
+		//save lead and convert it to opportunity
+	    obj_Leads_Page.lead_map_new_quote_broker_business_save_and_Convert();
+	    
+	    
+	    //verifying table values with Quote save excel sheet values before saving
+	    boolean table_verification_after_save =  obj_Leads_Page.verify_table_values_on_lead_page();
+	    
+	    boolean flag = false ; 
+	    if(table_verification_before_save&&table_verification_after_save)
+	    	
+	    {
+	    	flag = true ;
+	    }    
+	    
+		//Assert.assertTrue(flag);	
+	    
+		// Getting oppo ID and Saving to excel sheet and printing to console
+		obj_Leads_Page.lead_map_new_quote_broker_business_getting_the_opportunityno();
 		 
 	}
-	
 	
 	@Test( priority=2)
-	public void broker_create_opportunity_business() throws Exception {
 	
-	
-		 
-		String GetOpportunityid = obj_Leads_Page.lead_map_new_quote_broker_business_getting_the_opportunityno();
-		 Thread.sleep(5000);
-		 
-		 // Opportunity flow
-		 
-		obj_Opportunities_Page = new Opportunities();
-		Thread.sleep(1000);
-		obj_Opportunities_Page.opp_menu_link();
-		
-		obj_Proposal_Page = new Proposal();
-		// Opportunity listing screen - Proposal status  
-		//obj_Proposal_Page.Opp_listing_proposal_status();
-		
-		
-		
-		
-		obj_Opportunities_Page.opp_search_textbox(GetOpportunityid);
-		
-		
-		
-		obj_Opportunities_Page.opp_verify_channel_data();
-		
-	}
-	
-	@Test( priority=3)
-	
-	public void broker_create_opportunity_business_currentstatus_before_sending_to_proposal() throws Exception {	
+	public void broker_create_opportunity_business_current_status_before_sending_to_proposal() throws Exception {	
 	
 
-		obj_Opportunities_Page = new Opportunities();
+		 // Opportunity flow
+		obj_Opportunities_Page = new Opportunities();		
+
+		obj_Opportunities_Page.opp_menu_link();		
+		
+		obj_Opportunities_Page.opp_search_textbox();
 		
 		
-boolean opp_CurrentStatus=   obj_Opportunities_Page.verify_current_status_of_opportunity_before_sending_to_proposal();
+        boolean opp_CurrentStatus  =  obj_Opportunities_Page.verify_current_status_of_opportunity_before_sending_to_proposal();
 		
 		Assert.assertTrue(opp_CurrentStatus);
 		

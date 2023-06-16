@@ -268,7 +268,9 @@ public class Lead_broker_business_flow_Test extends TestBase {
 		obj_Underwriting_Popup_Page.search_and_verify_underwriting_icon_is_availabale();
 
 		boolean underwriting_pop_up_value_verification = obj_Underwriting_Popup_Page.search_and_verify_underwriting_get_proposal_id();
-//		obj_Underwriting_Popup_Page.search_and_verify_underwriting_get_quote_no();
+
+		Assert.assertTrue(underwriting_pop_up_value_verification);
+		//		obj_Underwriting_Popup_Page.search_and_verify_underwriting_get_quote_no();
 
 		// obj_Underwriting_Popup_Page.search_and_verify_underwriting_download_contract_file();
 		// //

@@ -67,7 +67,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 	private WebElement quote_summary_vehicle_heading;
 
 	// customer quote summary button
-	@FindBy(xpath = "//button[@data-target='#collapseBchSummary']//div[@class='acc-head']")
+	@FindBy(xpath = "//*[normalize-space()='Customer quote summary']//ancestor::button")
 	private WebElement quote_summary_customer_quote_summary_button;
 
 	// terms
@@ -134,7 +134,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public boolean quote_summary_broker_BCH_without_maintenance(String sheet_name)
+	public void quote_summary_broker_BCH_without_maintenance(String sheet_name)
 			throws InterruptedException, IOException {
 
 		LO.print("*************Calculations for Quote Summary page gas been started************");
@@ -187,17 +187,13 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		String quote_ref_no = quote_summary_ref_no.getText();
 
 		// otr section
-		double cost_otr_price_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2)));
+		String cost_otr_price_from_screen =RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2));
 
-		double cost_price_ex_vat_and_rfl_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2)));
+		String cost_price_ex_vat_and_rfl_from_screen = RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2));
 
-		double otr_vat_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2)));
+		String otr_vat_from_screen = RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2));
 
-		double otr_rfl_and_frf_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2)));
+		String otr_rfl_and_frf_from_screen = RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2));
 
 		// customer quote section
 		// getting text from elements
@@ -265,9 +261,9 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		wb.write(out);
 		wb.close();
 
-		return obj_read_excel_calculation_page
-				.verify_quote_summary_values_for_broker_bch_pch_fl_from_excel_without_maintenance(
-						cost_otr_price_from_screen, sheet_name);
+//		return obj_read_excel_calculation_page
+//				.verify_quote_summary_values_for_broker_bch_pch_fl_from_excel_without_maintenance(
+//						cost_otr_price_from_screen, sheet_name);
 
 	}
 

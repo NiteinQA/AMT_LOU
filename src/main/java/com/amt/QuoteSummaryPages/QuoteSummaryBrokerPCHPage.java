@@ -73,7 +73,7 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 	private WebElement quote_summary_vehicle_heading;
 
 	// customer quote summary button
-	@FindBy(xpath = "//button[@data-target='#collapseBchSummary']//div[@class='acc-head']")
+	@FindBy(xpath = "//*[normalize-space()='Customer quote summary']//ancestor::button")
 	private WebElement quote_summary_customer_quote_summary_button;
 
 	// terms

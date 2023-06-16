@@ -81,12 +81,12 @@ public class UnderwritingPopupPage extends TestBase {
 	@FindBy(xpath = "(//button[@data-dismiss='modal'][normalize-space()='Close'])[1]")
 	private WebElement underwriting_popup_close_button;
 	
-	// vehicle details
+	//  vehicle details
 		@FindBy(xpath = "//*[@class='heading ng-star-inserted']")
 		private WebElement quote_summary_vehicle_heading;
 
 		// customer quote summary button
-		@FindBy(xpath = "//button[@data-target='#CustomerQuoteSummary2']//div[@class='acc-head pt-0']")
+		@FindBy(xpath = "//*[normalize-space()='Customer quote summary']//ancestor::button")
 		private WebElement quote_summary_customer_quote_summary_button;
 
 		// terms
@@ -145,7 +145,7 @@ public class UnderwritingPopupPage extends TestBase {
 		@FindBy(xpath = "//*[normalize-space()='Commission']//ancestor::div[1]//div//strong")
 		private WebElement quote_summary_customer_quote_summary_commission;
 		
-		@FindBy(xpath = "//*[@id='headingBchSummary']//*[normalize-space()='Contract type']//ancestor::div[1]//div//strong")
+		@FindBy(xpath = "//*[normalize-space()='Contract type']//ancestor::div[1]//div//strong")
 		private WebElement quote_summary_customer_contract_type;
 
 	// Ownbook - pop up values for accept
@@ -384,356 +384,296 @@ public class UnderwritingPopupPage extends TestBase {
 	    
 		int count =0;
 		
-		//comparing quote no.
-		if(quotRefNoActual.equals(quotRefNoExpected))
-		{ 
+		// comparing quote no.
+		if (quotRefNoActual.equals(quotRefNoExpected)) {
 			count++;
-		
-		    System.out.println("");
-		    LO.print          ("");
-		    System.out.println(quotRefNoActual+" = "+quotRefNoExpected);
-		    LO.print          (quotRefNoActual+" = "+quotRefNoExpected);
-		    System.out.println("Quote no. compared and found ok");
-		    LO.print          ("Quote no. compared and found ok");
-		}
-		else 
-		{
+
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(quotRefNoActual+" != "+quotRefNoExpected);
-			LO.print          (quotRefNoActual+" != "+quotRefNoExpected);
+			System.out.println(quotRefNoActual + " = " + quotRefNoExpected);
+			LO.print          (quotRefNoActual + " = " + quotRefNoExpected);
+			System.out.println("Quote no. compared and found ok");
+			LO.print          ("Quote no. compared and found ok");
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(quotRefNoActual + " != " + quotRefNoExpected);
+			LO.print          (quotRefNoActual + " != " + quotRefNoExpected);
 			System.err.println("Quote no. compared but found not ok");
 			LO.print          ("Quote no. compared but found not ok");
 		}
-		
-		
 
-		//comparing vehicle name
-		if(vehicleNameActual.equals(vehicleNameExpected)) 
-		{ 
+		// comparing vehicle name
+		if (vehicleNameActual.equals(vehicleNameExpected)) {
 			count++;
-			
+
 			System.out.println("");
 			LO.print          ("");
-		    System.out.println(vehicleNameActual+" = "+vehicleNameExpected);
-		    LO.print          (vehicleNameActual+" = "+vehicleNameExpected);
-		    System.out.println("Vehicle name compared and found ok");
+			System.out.println(vehicleNameActual + " = " + vehicleNameExpected);
+			LO.print          (vehicleNameActual + " = " + vehicleNameExpected);
+			System.out.println("Vehicle name compared and found ok");
 			LO.print          ("Vehicle name compared and found ok");
-		    
-		}
-		else
-		{
+
+		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(vehicleNameActual+" != "+vehicleNameExpected);
-			LO.print          (vehicleNameActual+" != "+vehicleNameExpected);
+			System.err.println(vehicleNameActual + " != " + vehicleNameExpected);
+			LO.print          (vehicleNameActual + " != " + vehicleNameExpected);
 			System.err.println("Vehicle name compared but found not ok");
 			LO.print          ("Vehicle name compared but found not ok");
-		    
-		}
-		
-		
 
-		//comparing contract type
-		if(contractTypeActual.equals(contractTypeExpected))
-		{ 
-			count++; 
+		}
+
+		// comparing contract type
+		if (contractTypeActual.equals(contractTypeExpected)) {
+			count++;
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(contractTypeActual+" = "+contractTypeExpected);
-			LO.print          (contractTypeActual+" = "+contractTypeExpected);
+			System.out.println(contractTypeActual + " = " + contractTypeExpected);
+			LO.print          (contractTypeActual + " = " + contractTypeExpected);
 			System.out.println("Contract type compared and found ok");
 			LO.print          ("Contract type compared and found ok");
-			
-			}
-		else
-		{
+
+		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(contractTypeActual+" != "+contractTypeExpected);
-			LO.print          (contractTypeActual+" != "+contractTypeExpected);
+			System.err.println(contractTypeActual + " != " + contractTypeExpected);
+			LO.print          (contractTypeActual + " != " + contractTypeExpected);
 			System.err.println("Contract type compared but found not ok");
 			LO.print          ("Contract type compared but found not ok");
-			}
-		
-		
+		}
 
-		//comparing monthly finance payment
-		if(monthlyFinanceRentalActual==monthlyFinanceRentalExpected) 
-		{
-			count++;
+		// comparing monthly finance payment
+		if (monthlyFinanceRentalActual == monthlyFinanceRentalExpected) {
 			
+			count++;
+
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(monthlyFinanceRentalActual+" = "+monthlyFinanceRentalExpected);
-			LO.print          (monthlyFinanceRentalActual+" = "+monthlyFinanceRentalExpected);
+			System.out.println(monthlyFinanceRentalActual + " = " + monthlyFinanceRentalExpected);
+			LO.print          (monthlyFinanceRentalActual + " = " + monthlyFinanceRentalExpected);
 			System.out.println("Monthly finance rental compared and found ok");
 			LO.print          ("Monthly finance rental compared and found ok");
-			
-		}
-		else
-		{
+
+		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(monthlyFinanceRentalActual+" != "+monthlyFinanceRentalExpected);
-			LO.print          (monthlyFinanceRentalActual+" != "+monthlyFinanceRentalExpected);
+			System.err.println(monthlyFinanceRentalActual + " != " + monthlyFinanceRentalExpected);
+			LO.print          (monthlyFinanceRentalActual + " != " + monthlyFinanceRentalExpected);
 			System.err.println("Monthly finance rental compared but found not ok");
 			LO.print          ("Monthly finance rental compared but found not ok");
-			
+
 		}
-		
-		
-		
-		//comparing mileage
-		if(mileageActual==mileageExpected) 
-		{ 
+
+		// comparing mileage
+		if (mileageActual == mileageExpected) {
 			count++;
-			
+
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(mileageActual+" = "+mileageExpected);
-			LO.print          (mileageActual+" = "+mileageExpected);
+			System.out.println(mileageActual + " = " + mileageExpected);
+			LO.print          (mileageActual + " = " + mileageExpected);
 			System.out.println("Mileage compared and found ok");
 			LO.print          ("Mileage compared and found ok");
-			
-		}
-		else 
-		{
+
+		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(mileageActual+" != "+mileageExpected); 
-			LO.print          (mileageActual+" != "+mileageExpected); 
+			System.err.println(mileageActual + " != " + mileageExpected);
+			LO.print          (mileageActual + " != " + mileageExpected);
 			System.err.println("Mileage compared but found not ok");
 			LO.print          ("Mileage compared but found not ok");
-			
+
 		}
-		
-		
-		
-		//comparing term
-		if(termActual==termExpected) 
-		{ 
-			count++; 
-			
+
+		// comparing term
+		if (termActual == termExpected) {
+			count++;
+
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(termActual+" = "+termExpected);
-			LO.print          (termActual+" = "+termExpected);
+			System.out.println(termActual + " = " + termExpected);
+			LO.print          (termActual + " = " + termExpected);
 			System.out.println("Terms compared and found ok");
 			LO.print          ("Terms compared and found ok");
-			
-			
-		}
-		else 
-		{
+
+		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(termActual+" != "+termExpected);
-			LO.print          (termActual+" != "+termExpected);		
+			System.err.println(termActual + " != " + termExpected);
+			LO.print          (termActual + " != " + termExpected);
 			System.err.println("Terms compared but found not ok");
 			LO.print          ("Terms compared but found not ok");
-			
+
 		}
-		
-		
-		
-		//comparing expiry date
-		if(expiryDateActual.equals(expiryDateExpected)) 
-		{ 
-			count++; 
-			
+
+		// comparing expiry date
+		if (expiryDateActual.equals(expiryDateExpected)) {
+			count++;
+
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(expiryDateActual+" = "+expiryDateExpected);
-			LO.print          (expiryDateActual+" = "+expiryDateExpected);
+			System.out.println(expiryDateActual + " = " + expiryDateExpected);
+			LO.print          (expiryDateActual + " = " + expiryDateExpected);
 			System.out.println("Expiry date compared and found ok");
 			LO.print          ("Expiry date compared and found ok");
-			
-		}
-		else 
-		{
+
+		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(expiryDateActual+" != "+expiryDateExpected); 
-			LO.print          (expiryDateActual+" != "+expiryDateExpected);
+			System.err.println(expiryDateActual + " != " + expiryDateExpected);
+			LO.print          (expiryDateActual + " != " + expiryDateExpected);
 			System.err.println("Expiry date compared but found not ok");
 			LO.print          ("Expiry date compared but found not ok");
-			
-		}
-		
-		//comparing funder name
-				if(funderNameActual.equals(funderNameExpected)) 
-				{ 
-					count++; 
-					
-					System.out.println("");
-					LO.print          ("");
-					System.out.println(funderNameActual+" = "+funderNameExpected);
-					LO.print          (funderNameActual+" = "+funderNameExpected);
-					System.out.println("Expiry date compared and found ok");
-					LO.print          ("Expiry date compared and found ok");
-					
-				}
-				else 
-				{
-					System.out.println("");
-					LO.print          ("");
-					System.err.println(funderNameActual+" != "+funderNameExpected); 
-					LO.print          (funderNameActual+" != "+funderNameExpected);
-					System.err.println("Expiry date compared but found not ok");
-					LO.print          ("Expiry date compared but found not ok");
-					
-				}
-				
-				//comparing funder quote ref no.
-				if(funderQuoteRefNumberActual.equals(funderQuoteRefNumberExpected)) 
-				{ 
-					count++; 
-					
-					System.out.println("");
-					LO.print          ("");
-					System.out.println(funderQuoteRefNumberActual+" = "+funderQuoteRefNumberExpected);
-					LO.print          (funderQuoteRefNumberActual+" = "+funderQuoteRefNumberExpected);
-					System.out.println("Expiry date compared and found ok");
-					LO.print          ("Expiry date compared and found ok");
-					
-				}
-				else 
-				{
-					System.out.println("");
-					LO.print          ("");
-					System.err.println(funderQuoteRefNumberActual+" != "+funderQuoteRefNumberExpected); 
-					LO.print          (funderQuoteRefNumberActual+" != "+funderQuoteRefNumberExpected);
-					System.err.println("Expiry date compared but found not ok");
-					LO.print          ("Expiry date compared but found not ok");
-					
-				}
 
-				//comparing payment profile
-				if(paymentProfileActual.equals(paymentProfileExpected)) 
-				{ 
-					count++; 
-					
-					System.out.println("");
-					LO.print          ("");
-					System.out.println(paymentProfileActual+" = "+paymentProfileExpected);
-					LO.print          (paymentProfileActual+" = "+paymentProfileExpected);
-					System.out.println("Expiry date compared and found ok");
-					LO.print          ("Expiry date compared and found ok");
-					
-				}
-				else 
-				{
-					System.out.println("");
-					LO.print          ("");
-					System.err.println(paymentProfileActual+" != "+paymentProfileExpected); 
-					LO.print          (paymentProfileActual+" != "+paymentProfileExpected);
-					System.err.println("Expiry date compared but found not ok");
-					LO.print          ("Expiry date compared but found not ok");
-					
-				}
-				
-				//comparing contract mileage
-				if(contractMileageActual==contractMileageExpected) 
-				{ 
-					count++; 
-					
-					System.out.println("");
-					LO.print          ("");
-					System.out.println(contractMileageActual+" = "+contractMileageExpected);
-					LO.print          (contractMileageActual+" = "+contractMileageExpected);
-					System.out.println("Terms compared and found ok");
-					LO.print          ("Terms compared and found ok");
-					
-					
-				}
-				else 
-				{
-					System.out.println("");
-					LO.print          ("");
-					System.err.println(contractMileageActual+" != "+contractMileageExpected);
-					LO.print          (contractMileageActual+" != "+contractMileageExpected);		
-					System.err.println("Terms compared but found not ok");
-					LO.print          ("Terms compared but found not ok");
-					
-				}
-				
-						
-				//comparing Initial finance rental		
-				if(initialFinanceRentalActual==initialFinanceRentalExpected) 
-				{ 
-					count++; 
-					
-					System.out.println("");
-					LO.print          ("");
-					System.out.println(initialFinanceRentalActual+" = "+initialFinanceRentalExpected);
-					LO.print          (initialFinanceRentalActual+" = "+initialFinanceRentalExpected);
-					System.out.println("Terms compared and found ok");
-					LO.print          ("Terms compared and found ok");
-					
-					
-				}
-				else 
-				{
-					System.out.println("");
-					LO.print          ("");
-					System.err.println(initialFinanceRentalActual+" != "+initialFinanceRentalExpected);
-					LO.print          (initialFinanceRentalActual+" != "+initialFinanceRentalExpected);		
-					System.err.println("Terms compared but found not ok");
-					LO.print          ("Terms compared but found not ok");
-					
-				}
-				
-				//comparing pense per excess mile  finance
-				if(pencePerExcessMileFinanceActual.equals(pencePerExcessMileFinanceExpected)) 
-				{ 
-					count++; 
-					
-					System.out.println("");
-					LO.print          ("");
-					System.out.println(pencePerExcessMileFinanceActual+" = "+pencePerExcessMileFinanceExpected);
-					LO.print          (pencePerExcessMileFinanceActual+" = "+pencePerExcessMileFinanceExpected);
-					System.out.println("Expiry date compared and found ok");
-					LO.print          ("Expiry date compared and found ok");
-					
-				}
-				else 
-				{
-					System.out.println("");
-					LO.print          ("");
-					System.err.println(pencePerExcessMileFinanceActual+" != "+pencePerExcessMileFinanceExpected); 
-					LO.print          (pencePerExcessMileFinanceActual+" != "+pencePerExcessMileFinanceExpected);
-					System.err.println("Expiry date compared but found not ok");
-					LO.print          ("Expiry date compared but found not ok");
-					
-				}
-				
-				
-				
-				//comparing commission
-				if(commissionActual==commissionExpected) 
-				{ 
-					count++; 
-					
-					System.out.println("");
-					LO.print          ("");
-					System.out.println(commissionActual+" = "+commissionExpected);
-					LO.print          (commissionActual+" = "+commissionExpected);
-					System.out.println("Terms compared and found ok");
-					LO.print          ("Terms compared and found ok");
-					
-					
-				}
-				else 
-				{
-					System.out.println("");
-					LO.print          ("");
-					System.err.println(commissionActual+" != "+commissionExpected);
-					LO.print          (commissionActual+" != "+commissionExpected);		
-					System.err.println("Terms compared but found not ok");
-					LO.print          ("Terms compared but found not ok");
-					
-				}
+		}
+
+		// comparing funder name
+		if (funderNameActual.equals(funderNameExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(funderNameActual + " = " + funderNameExpected);
+			LO.print          (funderNameActual + " = " + funderNameExpected);
+			System.out.println("Funder name compared and found ok");
+			LO.print          ("Funder name compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(funderNameActual + " != " + funderNameExpected);
+			LO.print          (funderNameActual + " != " + funderNameExpected);
+			System.err.println("Funder name compared but found not ok");
+			LO.print          ("Funder name compared but found not ok");
+
+		}
+
+		// comparing funder quote ref no.
+		if (funderQuoteRefNumberActual.equals(funderQuoteRefNumberExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(funderQuoteRefNumberActual + " = " + funderQuoteRefNumberExpected);
+			LO.print          (funderQuoteRefNumberActual + " = " + funderQuoteRefNumberExpected);
+			System.out.println("Funder quote ref no. compared and found ok");
+			LO.print          ("Funder quote ref no. compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(funderQuoteRefNumberActual + " != " + funderQuoteRefNumberExpected);
+			LO.print          (funderQuoteRefNumberActual + " != " + funderQuoteRefNumberExpected);
+			System.err.println("Funder quote ref no. compared but found not ok");
+			LO.print          ("Funder quote ref no. compared but found not ok");
+
+		}
+
+		// comparing payment profile
+		if (paymentProfileActual.equals(paymentProfileExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(paymentProfileActual + " = " + paymentProfileExpected);
+			LO.print          (paymentProfileActual + " = " + paymentProfileExpected);
+			System.out.println("Payment profile compared and found ok");
+			LO.print          ("Payment profile compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(paymentProfileActual + " != " + paymentProfileExpected);
+			LO.print          (paymentProfileActual + " != " + paymentProfileExpected);
+			System.err.println("Payment profile compared but found not ok");
+			LO.print          ("Payment profile compared but found not ok");
+
+		}
+
+		// comparing contract mileage
+		if (contractMileageActual == contractMileageExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(contractMileageActual + " = " + contractMileageExpected);
+			LO.print          (contractMileageActual + " = " + contractMileageExpected);
+			System.out.println("Contract mileage compared and found ok");
+			LO.print          ("Contract mileage compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(contractMileageActual + " != " + contractMileageExpected);
+			LO.print          (contractMileageActual + " != " + contractMileageExpected);
+			System.err.println("Contract mileage compared but found not ok");
+			LO.print          ("Contract mileage compared but found not ok");
+
+		}
+
+		// comparing Initial finance rental
+		if (initialFinanceRentalActual == initialFinanceRentalExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(initialFinanceRentalActual + " = " + initialFinanceRentalExpected);
+			LO.print          (initialFinanceRentalActual + " = " + initialFinanceRentalExpected);
+			System.out.println("Initial finance rental compared and found ok");
+			LO.print          ("Initial finance rental compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(initialFinanceRentalActual + " != " + initialFinanceRentalExpected);
+			LO.print          (initialFinanceRentalActual + " != " + initialFinanceRentalExpected);
+			System.err.println("Initial finance rental compared but found not ok");
+			LO.print          ("Initial finance rental compared but found not ok");
+
+		}
+
+		// comparing pense per excess mile finance
+		if (pencePerExcessMileFinanceActual.equals(pencePerExcessMileFinanceExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(pencePerExcessMileFinanceActual + " = " + pencePerExcessMileFinanceExpected);
+			LO.print          (pencePerExcessMileFinanceActual + " = " + pencePerExcessMileFinanceExpected);
+			System.out.println("Pense per excess mile finance compared and found ok");
+			LO.print          ("Pense per excess mile finance compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(pencePerExcessMileFinanceActual + " != " + pencePerExcessMileFinanceExpected);
+			LO.print          (pencePerExcessMileFinanceActual + " != " + pencePerExcessMileFinanceExpected);
+			System.err.println("Pense per excess mile finance compared but found not ok");
+			LO.print          ("Pense per excess mile finance compared but found not ok");
+
+		}
+
+		// comparing commission
+		if (commissionActual == commissionExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(commissionActual + " = " + commissionExpected);
+			LO.print          (commissionActual + " = " + commissionExpected);
+			System.out.println("commission compared and found ok");
+			LO.print          ("commission compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(commissionActual + " != " + commissionExpected);
+			LO.print          (commissionActual + " != " + commissionExpected);
+			System.err.println("commission compared but found not ok");
+			LO.print          ("commission compared but found not ok");
+
+		}
 								
 		
 		boolean status = false;

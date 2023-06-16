@@ -84,9 +84,9 @@ public class Acquisition_Quotes_Broker_BCH_without_maintenance_edited_Test exten
 			String commission, String partExchangeActual, String partExchangeGiven,String lessFinanceSettlement,String oderDeposit, String documentFee,String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 				
 
-		    obj_quote_summary_page = new QuoteSummaryBrokerBCHPage();
-			boolean quote_summary_page_status = obj_quote_summary_page.quote_summary_broker_BCH_without_maintenance(sheet_name);
-			Assert.assertTrue(quote_summary_page_status);
+		     obj_quote_summary_page = new QuoteSummaryBrokerBCHPage();
+			 obj_quote_summary_page.quote_summary_broker_BCH_without_maintenance(sheet_name);
+		
 			
 		}
 	

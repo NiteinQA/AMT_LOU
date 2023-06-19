@@ -302,6 +302,9 @@ public class Underwriting extends TestBase {
 
 	@FindBy(xpath = "//*[normalize-space()='Quote reference no.:']//ancestor::div[1]")
 	private WebElement underwriting_popup_quote_ref_no;
+	
+	@FindBy(xpath = "//*[normalize-space()='Quote reference no.:']//ancestor::div[1]//span[2]")
+	private WebElement quote_summary_ref_no;
 //
 
 	Properties prop;
@@ -397,7 +400,7 @@ public class Underwriting extends TestBase {
 			sheetName = prop.getProperty("BrokerPCHQuoteNo");
 		}
 
-		String UnderwritingPrposalId = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);
+		String UnderwritingPrposalId = GetExcelFormulaValue.get_cell_value(1, 3, sheetName);
 
 		System.out.println("Getting the  proposal id from excel sheet  =" + UnderwritingPrposalId);
 		LO.print("Getting the  proposal id from excel sheet =" + UnderwritingPrposalId);
@@ -610,9 +613,7 @@ public class Underwriting extends TestBase {
 		
 		//getting otr section elements text
 		
-		double costOtrPriceActual = Double
-				.parseDouble(RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2)));
-
+		
 		double costPriceExVatAndRflActual = Double
 				.parseDouble(RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2)));
 
@@ -622,14 +623,16 @@ public class Underwriting extends TestBase {
 		double otrRflAndFrfActual = Double
 				.parseDouble(RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2)));
 
-		
+		double costOtrPriceActual = Double
+				.parseDouble(RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2)));
+
 		
 		// Vehicle details
 		String vehicleNameActual = quote_summary_vehicle_heading.getText().trim();
 
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 30);
 
-		String quotRefNoActual = quote_summary_cost_otr_price.getText();
+		String quotRefNoActual = quote_summary_ref_no.getText();
 
 		// customer quote section
 		// getting text from elements
@@ -677,11 +680,11 @@ public class Underwriting extends TestBase {
 		
 
 
-		double costOtrPriceExpected         = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 6, sheetName));
-		double costPriceExVatAndRflExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 8, sheetName));
-		double otrVatExpected               = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 6, sheetName));
-		double otrRflAndFrfExpected         = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 8, sheetName));
-	
+		double    costPriceExVatAndRflExpected      = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 6, sheetName));
+		double    otrVatExpected                    = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 8, sheetName));
+		double    otrRflAndFrfExpected              = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 6, sheetName));
+		double    costOtrPriceExpected              = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 8, sheetName));
+		
 		
 
 		String quotRefNoExpected = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
@@ -1357,7 +1360,8 @@ public class Underwriting extends TestBase {
 		Robot rb = new Robot();
 
 		// copying File path to Clipboard
-		StringSelection str = new StringSelection("C:\\Users\\mehul.nagar\\Desktop\\test2.pdf");
+		StringSelection str = new StringSelection(prop.getProperty("Underwriting_accept_upload_doc_path"));
+			
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 
 		// press Contol+V for pasting
@@ -1452,7 +1456,7 @@ public class Underwriting extends TestBase {
 
 	}
 
-	public void verification_underwriting_tab_decision_page_saveandexit_button() throws InterruptedException {
+	public void verification_underwriting_tab_decision_page_save_and_exit_button() throws InterruptedException {
 
 		ExplicitWait.visibleElement(driver, desicion_save_exit_button, 30);
 
@@ -1689,5 +1693,7 @@ public class Underwriting extends TestBase {
 		return flag;
 
 	}
+
+
 
 }

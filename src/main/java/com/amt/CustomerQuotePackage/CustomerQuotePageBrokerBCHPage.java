@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
 import com.amt.testUtil.Dropdown;
+import com.amt.testUtil.ExplicitWait;
 
 public class CustomerQuotePageBrokerBCHPage extends TestBase {
 
@@ -205,7 +206,8 @@ public class CustomerQuotePageBrokerBCHPage extends TestBase {
 			}
 		//Dropdown.select(driver, payment_profile_dropdown, i , 60);
 		
-		Thread.sleep(6000);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+	
 		
 				
 		int term_converted=Integer.parseInt(term);	

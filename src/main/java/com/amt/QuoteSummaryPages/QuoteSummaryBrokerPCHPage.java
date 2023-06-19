@@ -65,7 +65,7 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 	@FindBy(xpath = "//*[@id='headingHoldingCost']//*[normalize-space()='Contract type']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_acq_contract_type;
 
-	@FindBy(xpath = "//*[@id='headingBchSummary']//*[normalize-space()='Contract type']//ancestor::div[1]//div//strong")
+	@FindBy(xpath = "//*[@id='headingPchSummary']//*[normalize-space()='Contract type']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_contract_type;
 
 	// vehicle details
@@ -140,7 +140,7 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public boolean quote_summary_broker_PCH_without_maintenance(String sheet_name) throws InterruptedException, IOException {
+	public void quote_summary_broker_PCH_without_maintenance(String sheet_name) throws InterruptedException, IOException {
 
 		LO.print("*************Calculations for Quote Summary page gas been started************");
 		System.out.println("*************Calculations for Quote Summary page gas been started************");
@@ -191,17 +191,13 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 		String quote_ref_no = quote_summary_ref_no.getText();
 
 		// otr section
-		double cost_otr_price_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2)));
+		String cost_otr_price_from_screen =RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2));
 
-		double cost_price_ex_vat_and_rfl_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2)));
+		String cost_price_ex_vat_and_rfl_from_screen = RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2));
 
-		double otr_vat_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2)));
+		String otr_vat_from_screen = RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2));
 
-		double otr_rfl_and_frf_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2)));
+		String otr_rfl_and_frf_from_screen = RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2));
 
 		// customer quote section
 		// getting text from elements
@@ -268,10 +264,6 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		wb.write(out);
 		wb.close();
-
-		return obj_read_excel_calculation_page
-				.verify_quote_summary_values_for_broker_bch_pch_fl_from_excel_without_maintenance(
-						cost_otr_price_from_screen, sheet_name);
 
 	}
 

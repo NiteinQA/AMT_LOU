@@ -78,28 +78,30 @@ public class GetExcelFormulaValue extends ReadExcelCalculation {
 
 	}
 
-//	public static String get_string_value_without_formula(int rounum, int columnnum, String sheet_name)
-//			throws IOException {
-//
-//		prop = new Properties();
-//
-//		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
-//		prop.load(ip);
-//
-//		FileInputStream fis = new FileInputStream(prop.getProperty("formula_excel_path"));
-//		XSSFWorkbook book = new XSSFWorkbook(fis);
-//		XSSFSheet sheet = book.getSheet(sheet_name);// selecting sheet with its name as a parameter
-//
-//		XSSFRow row = sheet.getRow(rounum);// read data from first row as 0th row contains header
-//		XSSFCell cell = row.getCell(columnnum);// read data from first cell
-//		FormulaEvaluator evaluator = book.getCreationHelper().createFormulaEvaluator();
-//		XSSFFormulaEvaluator.evaluateAllFormulaCells(book);// existing Sheet, Row, and Cell setup
-//		if (cell.getCellType() == CellType.STRING) {
-//			evaluator.evaluateFormulaCell(cell);
-//		}
-//		
-//		return cell.getStringCellValue();
-//
-//	}
+	public static String get_string_value_without_formula(int rounum, int columnnum, String sheet_name)
+			throws IOException {
+
+		prop = new Properties();
+
+		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+		prop.load(ip);
+
+		FileInputStream fis = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook book = new XSSFWorkbook(fis);
+		XSSFSheet sheet = book.getSheet(sheet_name);// selecting sheet with its name as a parameter
+
+		XSSFRow row = sheet.getRow(rounum);// read data from first row as 0th row contains header
+		XSSFCell cell = row.getCell(columnnum);// read data from first cell
+
+		FormulaEvaluator evaluator = book.getCreationHelper().createFormulaEvaluator();
+		XSSFFormulaEvaluator.evaluateAllFormulaCells(book);// existing Sheet, Row, and Cell setup
+		if (cell.getCellType() == CellType.STRING) {
+			evaluator.evaluateAll();
+		}
+		return cell.getStringCellValue();
+
+		
+
+	}
 
 }

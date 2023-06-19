@@ -9,12 +9,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
+import com.amt.testUtil.Click;
 import com.amt.testUtil.Dropdown;
 import com.amt.testUtil.ExplicitWait;
 
 public class Proposal extends TestBase {
 
 	JavascriptExecutor js;
+	
+	Opportunities obj_Opportunities_Page;
 
 	
 	
@@ -214,8 +217,12 @@ private List<WebElement> loading_icon;
 	private WebElement 	proposal_additionalinfo_textbox ;
 	
 	
-	@FindBy(xpath = "//*[@id=\"AICOne1\"]/div[3]/div/button[1]")
+//	@FindBy(xpath = "//*[@class='col-md-12 m-0']//button[normalize-space()='Save']")
+//	private WebElement 	proposal_additionalinfo_save_button ;
+	
+	@FindBy(xpath = "//*[@id='AICOne1']/div[3]/div/button[1]")
 	private WebElement 	proposal_additionalinfo_save_button ;
+	
 	
 	
 	@FindBy(xpath = "//button[@class='btn btn-secondary py-3 px-4 text-nowrap d-flex ml-auto']")
@@ -234,13 +241,13 @@ private List<WebElement> loading_icon;
 		//////////////////////////////// Proposal listing ////////////////////////
 	
 	
-	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[1]/td[10]/div/div/div/div")
+	@FindBy(xpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[1]/td[10]/div/div/div/div")
 	private WebElement 	opp_proposal_status ;
 	
 	
 	
 	
-	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[1]/td[11]/div/a[4]/img")
+	@FindBy(xpath = "//*[@title='Send Proposal']")
 	private WebElement 	Opp_send_proposal_to_customer_icon ;
 	
 
@@ -249,7 +256,7 @@ private List<WebElement> loading_icon;
 	private WebElement 	send_proposal_to_customer_pop_up_yes ;
 	
 	
-	@FindBy(xpath = "//*[@id=\"sendproposalmodal\"]/div/div/div[2]/div[3]/a")
+	@FindBy(xpath = "//*[@id='sendproposalmodal']/div/div/div[2]/div[3]/a")
 	private WebElement 	click_manually_submit_behalf_of_customer_link ;
 	
 	
@@ -478,22 +485,18 @@ private WebElement proposal_save ;
 		LO.print("Proposal page will display ");
 		System.out.println("Proposal page will display");
 		
-		Thread.sleep(3000);
-
-		ExplicitWait.visibleElement(driver, proposal_traddingName, 30);
+		 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		
+		 Thread.sleep(4000);
+		
+    	ExplicitWait.visibleElement(driver, proposal_traddingName, 40);
 		
 		proposal_traddingName.clear();
 		
 		proposal_traddingName.sendKeys("User2");
 		
 		
-		Thread.sleep(3000);
-		
-		ExplicitWait.visibleElement(driver, proposal_legalEntity, 30);
-		
-		
-		
-		
+	
 		
 		/*
 		 * Dropdown.selectByVisibleText(driver, proposal_legalEntity,
@@ -798,14 +801,14 @@ private WebElement proposal_save ;
 		 * proposal_additionalinfo_textbox.clear();
 		 * proposal_additionalinfo_textbox.sendKeys("Test Automation  ");
 		 */
-					
+		 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 					 
 					//2
-					 ExplicitWait.visibleElement(driver, proposal_additionalinfo_save_button, 10);
+					 ExplicitWait.visibleElement(driver, proposal_additionalinfo_save_button, 60);
 					 proposal_additionalinfo_save_button.click();
 					 
 					 
-					 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+					 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 					 
 					//3
 					// ExplicitWait.visibleElement(driver, proposal_update_button, 10);
@@ -813,12 +816,12 @@ private WebElement proposal_save ;
 			
 					
 					//4
-				  ExplicitWait.visibleElement(driver, proposal_update_and_exit_button, 30);
+				  ExplicitWait.visibleElement(driver, proposal_update_and_exit_button, 60);
 					 proposal_update_and_exit_button.click();
 				
 					 
 					 
-					 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
+					 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 					 
 					
 					//5
@@ -1254,6 +1257,14 @@ private WebElement proposal_save ;
 
 	{
 	
+//		obj_Opportunities_Page = new Opportunities();
+//		
+//	
+//		obj_Opportunities_Page.opp_menu_link();
+//
+//		obj_Opportunities_Page.opp_search_textbox();
+		
+		
 		System.out.println("*****************Proposal Lisiting page will display ****************************");
 		System.out.println("*********************************************");
 		
@@ -1407,6 +1418,8 @@ private WebElement proposal_save ;
 
 	{
 
+		
+		Thread.sleep(3000);
 		//1.proposal_indvidual_first_name 
 		ExplicitWait.visibleElement(driver, proposal_indvidual_first, 20);
 		

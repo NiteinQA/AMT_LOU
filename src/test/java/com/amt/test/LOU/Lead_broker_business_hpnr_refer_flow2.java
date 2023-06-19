@@ -1,11 +1,5 @@
 package com.amt.test.LOU;
 
-import java.awt.AWTException;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Properties;
-
 import org.testng.Assert;
 //import org.json.JSONObject;
 import org.testng.annotations.Listeners;
@@ -37,17 +31,6 @@ public class Lead_broker_business_hpnr_refer_flow2 extends TestBase {
 
 	// obj_Opportunities_Page.opp_Listing_detail_page
 
-	// CloseableHttpResponse closeableHttpResponse;
-
-	/*
-	 * public Lead_broker_business_flow2() { try { prop = new Properties();
-	 * FileInputStream ip = new FileInputStream(
-	 * "D:\\newWorkspaceStaging\\AutomationStaging\\src\\main\\java\\configs\\config.properties"
-	 * );
-	 * 
-	 * // prop.load(ip); } catch (FileNotFoundException e) { e.printStackTrace(); }
-	 * catch (IOException e) { e.printStackTrace(); } }
-	 */
 
 	@Test(priority = 1)
 	public void L1_broker_create_lead_business() throws Exception {
@@ -221,7 +204,7 @@ public class Lead_broker_business_hpnr_refer_flow2 extends TestBase {
 
 		obj_Underwriting_Popup_Page.search_and_verify_underwriting_icon_is_availabale();
 
-		obj_Underwriting_Popup_Page.search_and_verify_underwriting_get_proposal_id();
+		obj_Underwriting_Popup_Page.search_and_verify_underwriting_pop_up_summary_values();
 		obj_Underwriting_Popup_Page.search_and_verify_underwriting_get_quote_no();
 
 		// obj_Underwriting_Popup_Page.search_and_verify_underwriting_download_contract_file();
@@ -293,7 +276,7 @@ public class Lead_broker_business_hpnr_refer_flow2 extends TestBase {
 		obj_Underwriting_page.find_underwriting_tab_decision_page_refer_button();
 		// obj_Underwriting_page.find_underwriting_tab_decision_page_refer_notes_textbox();
 
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_saveandexit_button();
+		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
 		boolean statusofrefer = obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_refer();
 		Assert.assertTrue(statusofrefer);
 
@@ -309,7 +292,7 @@ public class Lead_broker_business_hpnr_refer_flow2 extends TestBase {
 		obj_Underwriting_page.find_underwriting_tab_decision_page();
 
 		obj_Underwriting_page.find_decision_decline();
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_saveandexit_button();
+		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
 
 		boolean statusofdecline = obj_Underwriting_page
 				.verify_current_status_of_underwriting_after_sending_to_decline();
@@ -333,7 +316,7 @@ public class Lead_broker_business_hpnr_refer_flow2 extends TestBase {
 		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_upload();
 		// obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon()
 		// ;
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_saveandexit_button();
+		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
 
 		// Assert for Accept condition
 		boolean statusofaccept = obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept();

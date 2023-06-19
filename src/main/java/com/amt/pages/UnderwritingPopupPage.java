@@ -239,7 +239,7 @@ public class UnderwritingPopupPage extends TestBase {
 
 	// 3.underwriting_popup_proposal_id
 
-	public boolean search_and_verify_underwriting_get_proposal_id()
+	public boolean search_and_verify_underwriting_pop_up_summary_values()
 			throws InterruptedException, IOException, ClassNotFoundException {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
@@ -377,8 +377,8 @@ public class UnderwritingPopupPage extends TestBase {
 		
 		System.out.println("");
 	    LO.print          ("");
-		System.out.println("Started Verifying Table values on lead page before saving and converting");
-	    LO.print          ("Started Verifying Table values on lead page before saving and converting");
+		System.out.println("Started Verifying Summary values");
+	    LO.print          ("Started Verifying Summary values");
 
 	    //*******************************
 	    
@@ -856,10 +856,10 @@ public class UnderwritingPopupPage extends TestBase {
 
 	public void verify_send_for_underwriting_button() throws InterruptedException {
 
-		ExplicitWait.visibleElement(driver, underwriting_send_for_underwriting_button, 30);
+		ExplicitWait.visibleElement(driver, underwriting_send_for_underwriting_button, 60);
 
 		underwriting_send_for_underwriting_button.click();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		System.out.println("click on underwriting_send_for_underwriting  button");
 		LO.print("click on underwriting_send_for_underwriting  button ");

@@ -797,18 +797,24 @@ public class Opportunities extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
-	 
+		Thread.sleep(3000);
 		
 		//Getting oppo ID from excel 		
 		String sheetName="";
 		
+	
 		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business"))
 		{ 	sheetName                    = prop.getProperty("BrokerBCHQuoteNo"); }
-		
+		Thread.sleep(3000);
 		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual"))
 		{ 	sheetName                    = prop.getProperty("BrokerPCHQuoteNo"); }
 		
+		System.out.println("SheetName is = "+sheetName);
+		
+		Thread.sleep(3000);
 		String opportunityId = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);		
+		
+		Thread.sleep(3000);
 		
 		ExplicitWait.visibleElement(driver, search_bar, 30);	
 		search_bar.sendKeys(opportunityId);
@@ -1300,18 +1306,22 @@ public class Opportunities extends TestBase {
 
 		System.out.println("*****************Opportunity Lisiting page ****************************");
 		System.out.println("*********************************************");
+		
+		obj_Opportunities_Page = new Opportunities() ;
+		
+//		obj_Opportunities_Page.opp_search_textbox();
 
-		ExplicitWait.visibleElement(driver, opp_listing_double_click, 10);
+		ExplicitWait.visibleElement(driver, opp_listing_double_click, 50);
 
 		Actions act = new Actions(driver);
 
 		// Double click on element
 
-		act.doubleClick(opp_listing_double_click).perform();
+		act.doubleClick(opp_listing_double_click).build().perform();
 
+		System.out.println("*************Entered into opportunity deatail page********************************");
 		System.out.println("*********************************************");
-		System.out.println("*********************************************");
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 
 	}
 
@@ -1347,22 +1357,19 @@ public class Opportunities extends TestBase {
 
 	{
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-		// Thread.sleep(5000);
-
-		ExplicitWait.visibleElement(driver, opp_opp_fact_find_no_of_cars, 10);
+		ExplicitWait.visibleElement(driver, opp_opp_fact_find_no_of_cars, 50);
 
 		opp_opp_fact_find_no_of_cars.sendKeys("1");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 
 		// Thread.sleep(5000);
 
-		ExplicitWait.visibleElement(driver, opp_opp_fact_find_no_of_hgv, 30);
+		ExplicitWait.visibleElement(driver, opp_opp_fact_find_no_of_hgv, 50);
 
 		opp_opp_fact_find_no_of_hgv.sendKeys("1");
 
-		ExplicitWait.visibleElement(driver, opp_opp_fact_find_no_of_lcv, 30);
+		ExplicitWait.visibleElement(driver, opp_opp_fact_find_no_of_lcv, 50);
 
 		opp_opp_fact_find_no_of_lcv.sendKeys("1");
 

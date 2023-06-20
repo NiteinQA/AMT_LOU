@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amt.test.LOU.LOU_broker_business_refer_flow_Test">
+      <class name="com.amt.test.LOU.Lead_broker_business_purchase_flow_Test2">
         <methods>
-          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
+          <include name="broker_create_lead_business"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.amt.test.LOU.LOU_broker_business_refer_flow_Test -->
+      </class> <!-- com.amt.test.LOU.Lead_broker_business_purchase_flow_Test2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -48,7 +48,7 @@ public class Underwriting_broker_business_flow extends TestBase {
 		
 obj_UnderwritingPopupPage_Page.search_and_verify_underwriting_icon_is_availabale();
 
-obj_UnderwritingPopupPage_Page.search_and_verify_underwriting_get_proposal_id();
+obj_UnderwritingPopupPage_Page.search_and_verify_underwriting_pop_up_summary_values();
 obj_UnderwritingPopupPage_Page.search_and_verify_underwriting_get_quote_no();
 
 obj_UnderwritingPopupPage_Page.search_and_verify_underwriting_download_contract_file();

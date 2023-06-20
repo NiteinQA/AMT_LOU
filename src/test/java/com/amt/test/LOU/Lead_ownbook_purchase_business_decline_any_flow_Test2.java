@@ -307,7 +307,7 @@ public class Lead_ownbook_purchase_business_decline_any_flow_Test2 extends TestB
 
 			// obj_Underwriting_page.find_underwriting_listing_detail_listing_yes_option();
 
-			obj_Underwriting_page.find_underwriting_tab_quote_page();
+			obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_broker_purchase_flow();
 
 			//obj_Underwriting_page.find_underwriting_tab_creditfile_page();
 
@@ -331,7 +331,7 @@ public class Lead_ownbook_purchase_business_decline_any_flow_Test2 extends TestB
 		  
 		  
 		  obj_Underwriting_page.
-		  verification_underwriting_tab_decision_page_saveandexit_button();
+		  verification_underwriting_tab_decision_page_save_and_exit_button();
 		  
 		  boolean statusofdecline = obj_Underwriting_page
 		  .verify_current_status_of_underwriting_after_sending_to_decline();

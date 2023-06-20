@@ -32,27 +32,6 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Quote reference no.:']//ancestor::div[1]//span[2]")
 	private WebElement quote_summary_ref_no;
 
-	@FindBy(xpath = "//*[normalize-space()='Cost OTR price']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_cost_otr_price;
-
-	@FindBy(xpath = "//*[normalize-space()='Cost price ex. VAT & RFL']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_cost_price_ex_vat_and_rfl;
-
-	@FindBy(xpath = "//*[normalize-space()='VAT']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_otr_vat;
-
-	@FindBy(xpath = "//*[normalize-space()='RFL & FRF']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_otr_rfl_and_frf;
-
-	@FindBy(xpath = "//*[normalize-space()='Total monthly holding cost']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_total_monthly_holding_cost;
-
-	@FindBy(xpath = "//*[normalize-space()='Monthly finance rental']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_monthly_finance_rental;
-
-	@FindBy(xpath = "//*[normalize-space()='Monthly maint. rental']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_monthly_maintenance_rental;
-
 	@FindBy(xpath = "//*[normalize-space()='Total monthly rental']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_monthly_total_rental;
 
@@ -129,6 +108,27 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 	// save button
 	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
 	private WebElement quote_summary_save_button;
+	
+	@FindBy(xpath = "//*[normalize-space()='Cost OTR price']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_cost_otr_price;
+
+	@FindBy(xpath = "//*[normalize-space()='Cost price ex. VAT & RFL']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_cost_price_ex_vat_and_rfl;
+
+	@FindBy(xpath = "//*[normalize-space()='VAT']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_otr_vat;
+
+	@FindBy(xpath = "//*[normalize-space()='RFL & FRF']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_otr_rfl_and_frf;
+
+	@FindBy(xpath = "//*[normalize-space()='Total monthly holding cost']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_total_monthly_holding_cost;
+
+	@FindBy(xpath = "//*[normalize-space()='Monthly finance rental']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_monthly_finance_rental;
+
+	@FindBy(xpath = "//*[normalize-space()='Monthly maint. rental']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_monthly_maintenance_rental;
 
 	public QuoteSummaryBrokerBCHPage() {
 		PageFactory.initElements(driver, this);

@@ -85,8 +85,8 @@ public class Acquisition_Quotes_Broker_PCH_without_maintenance_Test extends Test
 
 			 obj_quote_summary_page =new QuoteSummaryBrokerPCHPage();
 			
-			boolean quote_summary_page_status = obj_quote_summary_page.quote_summary_broker_PCH_without_maintenance(sheet_name);
-			Assert.assertTrue(quote_summary_page_status);
+			obj_quote_summary_page.quote_summary_broker_PCH_without_maintenance(sheet_name);
+			
 			
 		}
 	

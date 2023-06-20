@@ -281,10 +281,6 @@ public class Underwriting extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Pence per excess mile - total']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_pence_per_excess_mile_total;
 
-	// commission
-	@FindBy(xpath = "//*[normalize-space()='Commission']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_customer_quote_summary_commission;
-
 	@FindBy(xpath = "//*[normalize-space()='Contract type']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_contract_type;
 
@@ -302,9 +298,62 @@ public class Underwriting extends TestBase {
 
 	@FindBy(xpath = "//*[normalize-space()='Quote reference no.:']//ancestor::div[1]")
 	private WebElement underwriting_popup_quote_ref_no;
-	
+
 	@FindBy(xpath = "//*[normalize-space()='Quote reference no.:']//ancestor::div[1]//span[2]")
 	private WebElement quote_summary_ref_no;
+
+	// Total cash price
+	@FindBy(xpath = "//*[normalize-space()='Total cash price']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_total_cash_price;
+
+	// Cash deposit
+	@FindBy(xpath = "//*[normalize-space()='Cash deposit']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_cash_deposit;
+
+	// Balance to finance
+	@FindBy(xpath = "//*[normalize-space()='Balance to finance']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_balance_to_finance;
+
+	// Finance charges
+	@FindBy(xpath = "//*[normalize-space()='Finance charges']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_finance_charges;
+
+	// Balance payable
+	@FindBy(xpath = "//*[normalize-space()='Balance payable']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_balance_payable;
+
+	// Initial cash payment inc. document fee
+	@FindBy(xpath = "//*[normalize-space()='Initial cash payment inc. document fee']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_initial_cash_payment_inc_document_fee;
+
+	// No. of monthly payments
+	@FindBy(xpath = "//*[normalize-space()='No. of monthly payments']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_no_of_monthly_payments;
+
+	// Final balloon payment
+	@FindBy(xpath = "//*[normalize-space()='Final balloon payment']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_final_balloon_payment;
+
+	// Option to purchase fee
+	@FindBy(xpath = "//*[normalize-space()='Option to purchase fee']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_option_to_purchase_fee;
+
+	// RFL included?
+	@FindBy(xpath = "//*[normalize-space()='RFL included?']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_RFL_included;
+
+	// APR
+	@FindBy(xpath = "//*[normalize-space()='APR']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_APR;
+
+	// commission
+	@FindBy(xpath = "//*[normalize-space()='Commission']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_commission;
+
+	// Monthly finance payment
+	@FindBy(xpath = "//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_monthly_finance_payment;
+
 //
 
 	Properties prop;
@@ -565,7 +614,8 @@ public class Underwriting extends TestBase {
 
 	}
 
-	public boolean find_underwriting_tab_quote_page() throws InterruptedException, ClassNotFoundException, IOException {
+	public boolean verify_quote_tab_on_underwriting_page_for_broker_hire_flow()
+			throws InterruptedException, ClassNotFoundException, IOException {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
@@ -610,15 +660,12 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_finance, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_commission, 120);
 
-		
-		//getting otr section elements text
-		
-		
+		// getting otr section elements text
+
 		double costPriceExVatAndRflActual = Double
 				.parseDouble(RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2)));
 
-		double otrVatActual = Double
-				.parseDouble(RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2)));
+		double otrVatActual = Double.parseDouble(RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2)));
 
 		double otrRflAndFrfActual = Double
 				.parseDouble(RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2)));
@@ -626,7 +673,6 @@ public class Underwriting extends TestBase {
 		double costOtrPriceActual = Double
 				.parseDouble(RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2)));
 
-		
 		// Vehicle details
 		String vehicleNameActual = quote_summary_vehicle_heading.getText().trim();
 
@@ -670,22 +716,20 @@ public class Underwriting extends TestBase {
 
 		String sheetName = "";
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_hire")) {
 			sheetName = prop.getProperty("BrokerBCHQuoteNo");
 		}
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_hire")) {
 			sheetName = prop.getProperty("BrokerPCHQuoteNo");
 		}
-		
 
-
-		double    costPriceExVatAndRflExpected      = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 6, sheetName));
-		double    otrVatExpected                    = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 8, sheetName));
-		double    otrRflAndFrfExpected              = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 6, sheetName));
-		double    costOtrPriceExpected              = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 8, sheetName));
-		
-		
+		double costPriceExVatAndRflExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 6, sheetName));
+		double otrVatExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 8, sheetName));
+		double otrRflAndFrfExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 6, sheetName));
+		double costOtrPriceExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 8, sheetName));
 
 		String quotRefNoExpected = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
 		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
@@ -726,88 +770,567 @@ public class Underwriting extends TestBase {
 			count++;
 
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.out.println(costOtrPriceActual + " = " + costOtrPriceExpected);
-			LO.print          (costOtrPriceActual + " = " + costOtrPriceExpected);
+			LO.print(costOtrPriceActual + " = " + costOtrPriceExpected);
 			System.out.println("Cost Otr Price compared and found ok");
-			LO.print          ("Cost Otr Price compared and found ok");
+			LO.print("Cost Otr Price compared and found ok");
 
 		} else {
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.err.println(costOtrPriceActual + " != " + costOtrPriceExpected);
-			LO.print          (costOtrPriceActual + " != " + costOtrPriceExpected);
+			LO.print(costOtrPriceActual + " != " + costOtrPriceExpected);
 			System.err.println("Cost Otr Price compared but found not ok");
-			LO.print          ("Cost Otr Price compared but found not ok");
+			LO.print("Cost Otr Price compared but found not ok");
 
 		}
-		
-		// comparing cost Price Ex Vat And Rfl 
+
+		// comparing cost Price Ex Vat And Rfl
 		if (costPriceExVatAndRflActual == costPriceExVatAndRflExpected) {
 			count++;
 
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.out.println(costPriceExVatAndRflActual + " = " + costPriceExVatAndRflExpected);
-			LO.print          (costPriceExVatAndRflActual + " = " + costPriceExVatAndRflExpected);
+			LO.print(costPriceExVatAndRflActual + " = " + costPriceExVatAndRflExpected);
 			System.out.println("Cost Price Ex Vat And Rfl compared and found ok");
-			LO.print          ("Cost Otr Price compared and found ok");
+			LO.print("Cost Otr Price compared and found ok");
 
 		} else {
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.err.println(costPriceExVatAndRflActual + " != " + costPriceExVatAndRflExpected);
-			LO.print          (costPriceExVatAndRflActual + " != " + costPriceExVatAndRflExpected);
+			LO.print(costPriceExVatAndRflActual + " != " + costPriceExVatAndRflExpected);
 			System.err.println("Cost Price Ex Vat And Rfl compared but found not ok");
-			LO.print          ("Cost Price Ex Vat And Rfl compared but found not ok");
+			LO.print("Cost Price Ex Vat And Rfl compared but found not ok");
 
 		}
-		
-		// comparing cost Price Ex Vat And Rfl 
+
+		// comparing cost Price Ex Vat And Rfl
 		if (otrVatActual == otrVatExpected) {
 			count++;
 
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.out.println(otrVatActual + " = " + otrVatExpected);
-			LO.print          (otrVatActual + " = " + otrVatExpected);
+			LO.print(otrVatActual + " = " + otrVatExpected);
 			System.out.println("Otr Vat compared and found ok");
-			LO.print          ("Otr Vat compared and found ok");
+			LO.print("Otr Vat compared and found ok");
 
 		} else {
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.err.println(otrVatActual + " != " + otrVatExpected);
-			LO.print          (otrVatActual + " != " + otrVatExpected);
+			LO.print(otrVatActual + " != " + otrVatExpected);
 			System.err.println("Otr Vat compared but found not ok");
-			LO.print          ("Otr Vat compared but found not ok");
+			LO.print("Otr Vat compared but found not ok");
 
 		}
-		
-		// comparing Otr Rfl And Frf  
+
+		// comparing Otr Rfl And Frf
 		if (otrRflAndFrfActual == otrRflAndFrfExpected) {
 			count++;
 
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.out.println(otrRflAndFrfActual + " = " + otrRflAndFrfExpected);
-			LO.print          (otrRflAndFrfActual + " = " + otrRflAndFrfExpected);
+			LO.print(otrRflAndFrfActual + " = " + otrRflAndFrfExpected);
 			System.out.println("Otr Rfl And Frf compared and found ok");
-			LO.print          ("Otr Rfl And Frf compared and found ok");
+			LO.print("Otr Rfl And Frf compared and found ok");
 
 		} else {
 			System.out.println("");
-			LO.print          ("");
+			LO.print("");
 			System.err.println(otrRflAndFrfActual + " != " + otrRflAndFrfExpected);
-			LO.print          (otrRflAndFrfActual + " != " + otrRflAndFrfExpected);
+			LO.print(otrRflAndFrfActual + " != " + otrRflAndFrfExpected);
 			System.err.println("Otr Rfl And Frf compared but found not ok");
-			LO.print          ("Otr Rfl And Frf compared but found not ok");
+			LO.print("Otr Rfl And Frf compared but found not ok");
 
 		}
 
+		// comparing quote no.
+		if (quotRefNoActual.equals(quotRefNoExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(quotRefNoActual + " = " + quotRefNoExpected);
+			LO.print(quotRefNoActual + " = " + quotRefNoExpected);
+			System.out.println("Quote no. compared and found ok");
+			LO.print("Quote no. compared and found ok");
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(quotRefNoActual + " != " + quotRefNoExpected);
+			LO.print(quotRefNoActual + " != " + quotRefNoExpected);
+			System.err.println("Quote no. compared but found not ok");
+			LO.print("Quote no. compared but found not ok");
+		}
+
+		// comparing vehicle name
+		if (vehicleNameActual.equals(vehicleNameExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(vehicleNameActual + " = " + vehicleNameExpected);
+			LO.print(vehicleNameActual + " = " + vehicleNameExpected);
+			System.out.println("Vehicle name compared and found ok");
+			LO.print("Vehicle name compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(vehicleNameActual + " != " + vehicleNameExpected);
+			LO.print(vehicleNameActual + " != " + vehicleNameExpected);
+			System.err.println("Vehicle name compared but found not ok");
+			LO.print("Vehicle name compared but found not ok");
+
+		}
+
+		// comparing contract type
+		if (contractTypeActual.equals(contractTypeExpected)) {
+			count++;
+			System.out.println("");
+			LO.print("");
+			System.out.println(contractTypeActual + " = " + contractTypeExpected);
+			LO.print(contractTypeActual + " = " + contractTypeExpected);
+			System.out.println("Contract type compared and found ok");
+			LO.print("Contract type compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(contractTypeActual + " != " + contractTypeExpected);
+			LO.print(contractTypeActual + " != " + contractTypeExpected);
+			System.err.println("Contract type compared but found not ok");
+			LO.print("Contract type compared but found not ok");
+		}
+
+		// comparing monthly finance payment
+		if (monthlyFinanceRentalActual == monthlyFinanceRentalExpected) {
+
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(monthlyFinanceRentalActual + " = " + monthlyFinanceRentalExpected);
+			LO.print(monthlyFinanceRentalActual + " = " + monthlyFinanceRentalExpected);
+			System.out.println("Monthly finance rental compared and found ok");
+			LO.print("Monthly finance rental compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(monthlyFinanceRentalActual + " != " + monthlyFinanceRentalExpected);
+			LO.print(monthlyFinanceRentalActual + " != " + monthlyFinanceRentalExpected);
+			System.err.println("Monthly finance rental compared but found not ok");
+			LO.print("Monthly finance rental compared but found not ok");
+
+		}
+
+		// comparing mileage
+		if (mileageActual == mileageExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(mileageActual + " = " + mileageExpected);
+			LO.print(mileageActual + " = " + mileageExpected);
+			System.out.println("Mileage compared and found ok");
+			LO.print("Mileage compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(mileageActual + " != " + mileageExpected);
+			LO.print(mileageActual + " != " + mileageExpected);
+			System.err.println("Mileage compared but found not ok");
+			LO.print("Mileage compared but found not ok");
+
+		}
+
+		// comparing term
+		if (termActual == termExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(termActual + " = " + termExpected);
+			LO.print(termActual + " = " + termExpected);
+			System.out.println("Terms compared and found ok");
+			LO.print("Terms compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(termActual + " != " + termExpected);
+			LO.print(termActual + " != " + termExpected);
+			System.err.println("Terms compared but found not ok");
+			LO.print("Terms compared but found not ok");
+
+		}
+
+		// comparing expiry date
+		if (expiryDateActual.equals(expiryDateExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(expiryDateActual + " = " + expiryDateExpected);
+			LO.print(expiryDateActual + " = " + expiryDateExpected);
+			System.out.println("Expiry date compared and found ok");
+			LO.print("Expiry date compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(expiryDateActual + " != " + expiryDateExpected);
+			LO.print(expiryDateActual + " != " + expiryDateExpected);
+			System.err.println("Expiry date compared but found not ok");
+			LO.print("Expiry date compared but found not ok");
+
+		}
+
+		// comparing funder name
+		if (funderNameActual.equals(funderNameExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(funderNameActual + " = " + funderNameExpected);
+			LO.print(funderNameActual + " = " + funderNameExpected);
+			System.out.println("Funder name compared and found ok");
+			LO.print("Funder name compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(funderNameActual + " != " + funderNameExpected);
+			LO.print(funderNameActual + " != " + funderNameExpected);
+			System.err.println("Funder name compared but found not ok");
+			LO.print("Funder name compared but found not ok");
+
+		}
+
+		// comparing funder quote ref no.
+		if (funderQuoteRefNumberActual.equals(funderQuoteRefNumberExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(funderQuoteRefNumberActual + " = " + funderQuoteRefNumberExpected);
+			LO.print(funderQuoteRefNumberActual + " = " + funderQuoteRefNumberExpected);
+			System.out.println("Funder quote ref no. compared and found ok");
+			LO.print("Funder quote ref no. compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(funderQuoteRefNumberActual + " != " + funderQuoteRefNumberExpected);
+			LO.print(funderQuoteRefNumberActual + " != " + funderQuoteRefNumberExpected);
+			System.err.println("Funder quote ref no. compared but found not ok");
+			LO.print("Funder quote ref no. compared but found not ok");
+
+		}
+
+		// comparing payment profile
+		if (paymentProfileActual.equals(paymentProfileExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(paymentProfileActual + " = " + paymentProfileExpected);
+			LO.print(paymentProfileActual + " = " + paymentProfileExpected);
+			System.out.println("Payment profile compared and found ok");
+			LO.print("Payment profile compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(paymentProfileActual + " != " + paymentProfileExpected);
+			LO.print(paymentProfileActual + " != " + paymentProfileExpected);
+			System.err.println("Payment profile compared but found not ok");
+			LO.print("Payment profile compared but found not ok");
+
+		}
+
+		// comparing contract mileage
+		if (contractMileageActual == contractMileageExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(contractMileageActual + " = " + contractMileageExpected);
+			LO.print(contractMileageActual + " = " + contractMileageExpected);
+			System.out.println("Contract mileage compared and found ok");
+			LO.print("Contract mileage compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(contractMileageActual + " != " + contractMileageExpected);
+			LO.print(contractMileageActual + " != " + contractMileageExpected);
+			System.err.println("Contract mileage compared but found not ok");
+			LO.print("Contract mileage compared but found not ok");
+
+		}
+
+		// comparing Initial finance rental
+		if (initialFinanceRentalActual == initialFinanceRentalExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(initialFinanceRentalActual + " = " + initialFinanceRentalExpected);
+			LO.print(initialFinanceRentalActual + " = " + initialFinanceRentalExpected);
+			System.out.println("Initial finance rental compared and found ok");
+			LO.print("Initial finance rental compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(initialFinanceRentalActual + " != " + initialFinanceRentalExpected);
+			LO.print(initialFinanceRentalActual + " != " + initialFinanceRentalExpected);
+			System.err.println("Initial finance rental compared but found not ok");
+			LO.print("Initial finance rental compared but found not ok");
+
+		}
+
+		// comparing pense per excess mile finance
+		if (pencePerExcessMileFinanceActual.equals(pencePerExcessMileFinanceExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(pencePerExcessMileFinanceActual + " = " + pencePerExcessMileFinanceExpected);
+			LO.print(pencePerExcessMileFinanceActual + " = " + pencePerExcessMileFinanceExpected);
+			System.out.println("Pense per excess mile finance compared and found ok");
+			LO.print("Pense per excess mile finance compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(pencePerExcessMileFinanceActual + " != " + pencePerExcessMileFinanceExpected);
+			LO.print(pencePerExcessMileFinanceActual + " != " + pencePerExcessMileFinanceExpected);
+			System.err.println("Pense per excess mile finance compared but found not ok");
+			LO.print("Pense per excess mile finance compared but found not ok");
+
+		}
+
+		// comparing commission
+		if (commissionActual == commissionExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(commissionActual + " = " + commissionExpected);
+			LO.print(commissionActual + " = " + commissionExpected);
+			System.out.println("commission compared and found ok");
+			LO.print("commission compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(commissionActual + " != " + commissionExpected);
+			LO.print(commissionActual + " != " + commissionExpected);
+			System.err.println("commission compared but found not ok");
+			LO.print("commission compared but found not ok");
+
+		}
+
+		boolean status = false;
+		if (count == 14)
+
+		{
+			status = true;
+		}
+
+		return status;
+
+	}
+
+	public boolean verify_quote_tab_on_underwriting_page_for_broker_purchase_flow()
+			throws InterruptedException, ClassNotFoundException, IOException {
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+
+		ExplicitWait.visibleElement(driver, underwriting_tab_quote, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+
+		// HelperClass.highlightElement(driver, underwriting_tab_quote);
+
+		Click.on(driver, underwriting_tab_quote, 30);
+
+		System.out.println("Clicked on Underwriting quote page");
+		LO.print("Clicked on Underwriting quote page");
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+
+		ExplicitWait.visibleElement(driver, quote_summary_vehicle_heading, 120);
+
+		ExplicitWait.visibleElement(driver, quote_summary_customer_contract_type, 60);
+
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_button, 120);
+
+		// Cliking on cust quote summary section
+		Click.on(driver, quote_summary_customer_quote_summary_button, 30);
+
+		// waiting for otr section elements
+		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_cost_price_ex_vat_and_rfl, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_otr_vat, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_otr_rfl_and_frf, 120);
+
+		// waiting for summary section elements
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_monthly_finance_payment, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_funder_name, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_ref_number, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_exp_date, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_contract_mileage, 120);
+
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_cash_price, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_cash_deposit, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_balance_to_finance, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_charges, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_balance_payable, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_initial_cash_payment_inc_document_fee,
+				120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_no_of_monthly_payments, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_final_balloon_payment, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_option_to_purchase_fee, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_RFL_included, 120);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_APR, 120);
+		ExplicitWait.visibleElement(driver, underwriting_popup_quote_ref_no, 30);
+
+
+	  	// Vehicle details
+			//1
+			String vehicleNameActual = quote_summary_vehicle_heading.getText().trim();
+
+			//2
+			String quotRefNoActual = underwriting_popup_quote_ref_no.getText();
+			
+			
+			// customer quote section
+			// getting text from elements
+	        //3
+			String contractTypeActual = quote_summary_customer_contract_type.getText();
+		    //4	
+			double termActual = Double.parseDouble(quote_summary_customer_quote_summary_terms.getText().trim().substring(0,2));
+			//5
+			double mileageActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_miles_per_annum.getText().trim()));
+			//6
+			double monthlyFinancePaymentActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2)));
+			//7
+			String funderNameActual = quote_summary_customer_quote_summary_funder_name.getText().trim();
+			//8
+			String funderQuoteRefNumberActual = quote_summary_customer_quote_summary_quote_ref_number.getText().trim();
+			//9
+			String expiryDateActual = quote_summary_customer_quote_summary_quote_exp_date.getText().trim();
+			//10
+			double contractMileageActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_contract_mileage.getText().trim()));
+			//11
+			double totalCashPriceActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_total_cash_price.getText().trim().substring(2)));
+			//12
+			double cashDepositActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_cash_deposit.getText().trim().substring(2)));
+			//13
+			double balanceToFinanceActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
+			//14
+			double financeChargesActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_finance_charges.getText().trim().substring(2)));
+			//15
+			double balancePayableActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_balance_payable.getText().trim().substring(2)));
+			//16
+			double initialCashPaymentIncDocumentFeeActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_initial_cash_payment_inc_document_fee.getText().trim().substring(2)));
+			//17
+			double noOfMonthlyPaymentsActual  = Double.parseDouble(quote_summary_customer_quote_summary_no_of_monthly_payments.getText().trim());
+			//18
+			double finalBalloonPaymentActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_final_balloon_payment.getText().trim().substring(2)));
+			//19
+			double optionToPurchaseFeeActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_option_to_purchase_fee.getText().trim().substring(2)));
+			//20
+			String rFLIncludedActual = quote_summary_customer_quote_summary_RFL_included.getText().trim();
+			//21
+			String [] APR = quote_summary_customer_quote_summary_APR.getText().trim().split(" ");
+			
+			String aPRActual = APR[0];
+
+			//22
+			double commissionActual = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_commission.getText().trim().substring(2)));
+			
+			// getting otr section elements text
+			//23
+			double costPriceExVatAndRflActual = Double.parseDouble(RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2)));
+			//24
+			double otrVatActual = Double.parseDouble(RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2)));
+			//25
+			double otrRflAndFrfActual = Double.parseDouble(RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2)));
+			//26
+			double costOtrPriceActual = Double.parseDouble(RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2)));
+
+
+		String sheetName = "";
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_purchase")) {
+			sheetName = prop.getProperty("BrokerHPNRQuoteNo");
+		}
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_purchase")) {
+			sheetName = prop.getProperty("BrokerPCPQuoteNo");
+		}
 
 		
-		// comparing quote no.
+		// Getting Elements from excel sheet 
+		double costPriceExVatAndRflExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 6, sheetName));
+		double otrVatExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(1, 8, sheetName));
+		double otrRflAndFrfExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 6, sheetName));
+		double costOtrPriceExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(3, 8, sheetName));
+
+     	String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
+		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
+		
+		String contractTypeExpected                          = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
+		double termExpected                                  = Double.parseDouble(GetExcelFormulaValue.get_cell_value(4, 3, sheetName));
+		
+		double mileageExpected                               = Double.parseDouble(GetExcelFormulaValue.get_cell_value(6, 1, sheetName));
+		double monthlyFinancePaymentExpected                 = Double.parseDouble(GetExcelFormulaValue.get_cell_value(6, 3, sheetName));
+		
+		String funderNameExpected                            = GetExcelFormulaValue.get_cell_value(8, 1, sheetName);
+		String funderQuoteRefNumberExpected                  = GetExcelFormulaValue.get_cell_value(8, 3, sheetName);
+		  
+		String expiryDateExpected                               = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);
+		double contractMileageExpected                          = Double.parseDouble(GetExcelFormulaValue.get_cell_value(10, 3, sheetName));
+		
+		double totalCashPriceExpected                           = Double.parseDouble(GetExcelFormulaValue.get_cell_value(12, 1, sheetName));
+		double cashDepositExpected                              = Double.parseDouble(GetExcelFormulaValue.get_cell_value(12, 3, sheetName));
+		
+		double balanceToFinanceExpected                          = Double.parseDouble(GetExcelFormulaValue.get_cell_value(14, 1, sheetName));
+		double financeChargesExpected                            = Double.parseDouble(GetExcelFormulaValue.get_cell_value(14, 3, sheetName));	
+		
+		double balancePayableExpected                             = Double.parseDouble(GetExcelFormulaValue.get_cell_value(16, 1, sheetName));
+		double initialCashPaymentIncDocumentFeeExpected           = Double.parseDouble(GetExcelFormulaValue.get_cell_value(16, 3, sheetName));
+		
+		double noOfMonthlyPaymentsExpected                        = Double.parseDouble(GetExcelFormulaValue.get_cell_value(18, 1, sheetName));
+		double finalBalloonPaymentExpected                        = Double.parseDouble(GetExcelFormulaValue.get_cell_value(18, 3, sheetName));
+		
+		double optionToPurchaseFeeExpected                        = Double.parseDouble(GetExcelFormulaValue.get_cell_value(20, 1, sheetName));
+		String rFLIncludedExpected                                = GetExcelFormulaValue.get_cell_value(20, 3, sheetName);
+
+		double aPRExpected                                        = Double.parseDouble(GetExcelFormulaValue.get_cell_value(22, 1, sheetName));
+		double commissionExpected                                 = Double.parseDouble(GetExcelFormulaValue.get_cell_value(20, 3, sheetName));
+
+		// *******************************
+
+		int count = 0;
+
+
+		// 1.comparing quote no.
 		if (quotRefNoActual.equals(quotRefNoExpected)) {
 			count++;
 
@@ -826,7 +1349,7 @@ public class Underwriting extends TestBase {
 			LO.print          ("Quote no. compared but found not ok");
 		}
 
-		// comparing vehicle name
+		// 2.comparing vehicle name
 		if (vehicleNameActual.equals(vehicleNameExpected)) {
 			count++;
 
@@ -847,7 +1370,7 @@ public class Underwriting extends TestBase {
 
 		}
 
-		// comparing contract type
+		// 3.comparing contract type
 		if (contractTypeActual.equals(contractTypeExpected)) {
 			count++;
 			System.out.println("");
@@ -866,29 +1389,29 @@ public class Underwriting extends TestBase {
 			LO.print          ("Contract type compared but found not ok");
 		}
 
-		// comparing monthly finance payment
-		if (monthlyFinanceRentalActual == monthlyFinanceRentalExpected) {
+		// 4.comparing monthly finance payment
+		if (monthlyFinancePaymentActual == monthlyFinancePaymentExpected) {
 			
 			count++;
 
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(monthlyFinanceRentalActual + " = " + monthlyFinanceRentalExpected);
-			LO.print          (monthlyFinanceRentalActual + " = " + monthlyFinanceRentalExpected);
+			System.out.println(monthlyFinancePaymentActual + " = " + monthlyFinancePaymentExpected);
+			LO.print          (monthlyFinancePaymentActual + " = " + monthlyFinancePaymentExpected);
 			System.out.println("Monthly finance rental compared and found ok");
 			LO.print          ("Monthly finance rental compared and found ok");
 
 		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(monthlyFinanceRentalActual + " != " + monthlyFinanceRentalExpected);
-			LO.print          (monthlyFinanceRentalActual + " != " + monthlyFinanceRentalExpected);
+			System.err.println(monthlyFinancePaymentActual + " != " + monthlyFinancePaymentExpected);
+			LO.print          (monthlyFinancePaymentActual + " != " + monthlyFinancePaymentExpected);
 			System.err.println("Monthly finance rental compared but found not ok");
 			LO.print          ("Monthly finance rental compared but found not ok");
 
 		}
 
-		// comparing mileage
+		// 5.comparing mileage
 		if (mileageActual == mileageExpected) {
 			count++;
 
@@ -909,7 +1432,7 @@ public class Underwriting extends TestBase {
 
 		}
 
-		// comparing term
+		// 6.comparing term
 		if (termActual == termExpected) {
 			count++;
 
@@ -930,28 +1453,7 @@ public class Underwriting extends TestBase {
 
 		}
 
-		// comparing expiry date
-		if (expiryDateActual.equals(expiryDateExpected)) {
-			count++;
-
-			System.out.println("");
-			LO.print          ("");
-			System.out.println(expiryDateActual + " = " + expiryDateExpected);
-			LO.print          (expiryDateActual + " = " + expiryDateExpected);
-			System.out.println("Expiry date compared and found ok");
-			LO.print          ("Expiry date compared and found ok");
-
-		} else {
-			System.out.println("");
-			LO.print          ("");
-			System.err.println(expiryDateActual + " != " + expiryDateExpected);
-			LO.print          (expiryDateActual + " != " + expiryDateExpected);
-			System.err.println("Expiry date compared but found not ok");
-			LO.print          ("Expiry date compared but found not ok");
-
-		}
-
-		// comparing funder name
+		// 7.comparing funder name
 		if (funderNameActual.equals(funderNameExpected)) {
 			count++;
 
@@ -972,7 +1474,7 @@ public class Underwriting extends TestBase {
 
 		}
 
-		// comparing funder quote ref no.
+		// 8.comparing funder quote ref no.
 		if (funderQuoteRefNumberActual.equals(funderQuoteRefNumberExpected)) {
 			count++;
 
@@ -993,28 +1495,28 @@ public class Underwriting extends TestBase {
 
 		}
 
-		// comparing payment profile
-		if (paymentProfileActual.equals(paymentProfileExpected)) {
+		// 9.comparing Expiry Date
+		if (expiryDateActual.equals(expiryDateExpected)) {
 			count++;
 
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(paymentProfileActual + " = " + paymentProfileExpected);
-			LO.print          (paymentProfileActual + " = " + paymentProfileExpected);
-			System.out.println("Payment profile compared and found ok");
-			LO.print          ("Payment profile compared and found ok");
+			System.out.println(expiryDateActual + " = " + expiryDateExpected);
+			LO.print          (expiryDateActual + " = " + expiryDateExpected);
+			System.out.println("Expiry Date compared and found ok");
+			LO.print          ("Expiry Date compared and found ok");
 
 		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(paymentProfileActual + " != " + paymentProfileExpected);
-			LO.print          (paymentProfileActual + " != " + paymentProfileExpected);
-			System.err.println("Payment profile compared but found not ok");
-			LO.print          ("Payment profile compared but found not ok");
+			System.err.println(expiryDateActual + " != " + expiryDateExpected);
+			LO.print          (expiryDateActual + " != " + expiryDateExpected);
+			System.err.println("Expiry Date compared but found not ok");
+			LO.print          ("Expiry Date compared but found not ok");
 
 		}
 
-		// comparing contract mileage
+		// 10.comparing contract mileage
 		if (contractMileageActual == contractMileageExpected) {
 			count++;
 
@@ -1035,49 +1537,250 @@ public class Underwriting extends TestBase {
 
 		}
 
-		// comparing Initial finance rental
-		if (initialFinanceRentalActual == initialFinanceRentalExpected) {
+		// 11.comparing Total Cash Price
+		if (totalCashPriceActual == totalCashPriceExpected) {
 			count++;
 
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(initialFinanceRentalActual + " = " + initialFinanceRentalExpected);
-			LO.print          (initialFinanceRentalActual + " = " + initialFinanceRentalExpected);
-			System.out.println("Initial finance rental compared and found ok");
-			LO.print          ("Initial finance rental compared and found ok");
+			System.out.println(totalCashPriceActual + " = " + totalCashPriceExpected);
+			LO.print          (totalCashPriceActual + " = " + totalCashPriceExpected);
+			System.out.println("Total Cash Price compared and found ok");
+			LO.print          ("Total Cash Price compared and found ok");
 
 		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(initialFinanceRentalActual + " != " + initialFinanceRentalExpected);
-			LO.print          (initialFinanceRentalActual + " != " + initialFinanceRentalExpected);
-			System.err.println("Initial finance rental compared but found not ok");
-			LO.print          ("Initial finance rental compared but found not ok");
+			System.err.println(totalCashPriceActual + " != " + totalCashPriceExpected);
+			LO.print          (totalCashPriceActual + " != " + totalCashPriceExpected);
+			System.err.println("Total Cash Price compared but found not ok");
+			LO.print          ("Total Cash Price compared but found not ok");
 
 		}
 
-		// comparing pense per excess mile finance
-		if (pencePerExcessMileFinanceActual.equals(pencePerExcessMileFinanceExpected)) {
+	
+
+		// 12.comparing  Cash Deposit
+		if (cashDepositActual == cashDepositExpected) {
 			count++;
 
 			System.out.println("");
 			LO.print          ("");
-			System.out.println(pencePerExcessMileFinanceActual + " = " + pencePerExcessMileFinanceExpected);
-			LO.print          (pencePerExcessMileFinanceActual + " = " + pencePerExcessMileFinanceExpected);
-			System.out.println("Pense per excess mile finance compared and found ok");
-			LO.print          ("Pense per excess mile finance compared and found ok");
+			System.out.println(cashDepositActual + " = " + cashDepositExpected);
+			LO.print          (cashDepositActual + " = " + cashDepositExpected);
+			System.out.println("Cash Deposit compared and found ok");
+			LO.print          ("Cash Deposit compared and found ok");
 
 		} else {
 			System.out.println("");
 			LO.print          ("");
-			System.err.println(pencePerExcessMileFinanceActual + " != " + pencePerExcessMileFinanceExpected);
-			LO.print          (pencePerExcessMileFinanceActual + " != " + pencePerExcessMileFinanceExpected);
-			System.err.println("Pense per excess mile finance compared but found not ok");
-			LO.print          ("Pense per excess mile finance compared but found not ok");
+			System.err.println(cashDepositActual + " != " + cashDepositExpected);
+			LO.print          (cashDepositActual + " != " + cashDepositExpected);
+			System.err.println("Cash Deposit compared but found not ok");
+			LO.print          ("Cash Deposit compared but found not ok");
+
+		}
+		
+		
+		// 13.comparing  Balance To Finance
+		if (balanceToFinanceActual == balanceToFinanceExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(balanceToFinanceActual + " = " + balanceToFinanceExpected);
+			LO.print          (balanceToFinanceActual + " = " + balanceToFinanceExpected);
+			System.out.println("Balance To Finance compared and found ok");
+			LO.print          ("Balance To Finance compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(balanceToFinanceActual + " != " + balanceToFinanceExpected);
+			LO.print          (balanceToFinanceActual + " != " + balanceToFinanceExpected);
+			System.err.println("Balance To Finance compared but found not ok");
+			LO.print          ("Balance To Finance compared but found not ok");
 
 		}
 
-		// comparing commission
+
+		// 14.comparing  Finance Charges
+		if (financeChargesActual == financeChargesExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(financeChargesActual + " = " + financeChargesExpected);
+			LO.print          (financeChargesActual + " = " + financeChargesExpected);
+			System.out.println("Finance Charges compared and found ok");
+			LO.print          ("Finance Charges compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(financeChargesActual + " != " + financeChargesExpected);
+			LO.print          (financeChargesActual + " != " + financeChargesExpected);
+			System.err.println("Finance Charges compared but found not ok");
+			LO.print          ("Finance Charges compared but found not ok");
+
+		}
+
+		
+		// 15.comparing  Balance Payable Expected
+		if (balancePayableActual == balancePayableExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(balancePayableActual + " = " + balancePayableExpected);
+			LO.print          (balancePayableActual + " = " + balancePayableExpected);
+			System.out.println("Balance Payable compared and found ok");
+			LO.print          ("Balance Payable compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(balancePayableActual + " != " + balancePayableExpected);
+			LO.print          (balancePayableActual + " != " + balancePayableExpected);
+			System.err.println("Balance Payable compared but found not ok");
+			LO.print          ("Balance Payable compared but found not ok");
+
+		}
+
+		// 16.comparing  initial Cash Payment Inc Document Fee 
+		if (initialCashPaymentIncDocumentFeeActual == initialCashPaymentIncDocumentFeeExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(initialCashPaymentIncDocumentFeeActual + " = " + initialCashPaymentIncDocumentFeeExpected);
+			LO.print          (initialCashPaymentIncDocumentFeeActual + " = " + initialCashPaymentIncDocumentFeeExpected);
+			System.out.println("Initial Cash Payment Inc Document Fee compared and found ok");
+			LO.print          ("Initial Cash Payment Inc Document Fee compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(initialCashPaymentIncDocumentFeeActual + " != " + initialCashPaymentIncDocumentFeeExpected);
+			LO.print          (initialCashPaymentIncDocumentFeeActual + " != " + initialCashPaymentIncDocumentFeeExpected);
+			System.err.println("Initial Cash Payment Inc Document Fee compared but found not ok");
+			LO.print          ("Initial Cash Payment Inc Document Fee compared but found not ok");
+
+		}
+		
+		
+		// 17.comparing  No. of Monthly Payments 
+		if (noOfMonthlyPaymentsActual == noOfMonthlyPaymentsExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(noOfMonthlyPaymentsActual + " = " + noOfMonthlyPaymentsExpected);
+			LO.print          (noOfMonthlyPaymentsActual + " = " + noOfMonthlyPaymentsExpected);
+			System.out.println("No. of Monthly Payments compared and found ok");
+			LO.print          ("No. of Monthly Payments compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(noOfMonthlyPaymentsActual + " != " + noOfMonthlyPaymentsExpected);
+			LO.print          (noOfMonthlyPaymentsActual + " != " + noOfMonthlyPaymentsExpected);
+			System.err.println("No. of Monthly Payments compared but found not ok");
+			LO.print          ("No. of Monthly Payments compared but found not ok");
+
+		}
+		
+		// 18.comparing  Final Balloon Payment 
+		if (finalBalloonPaymentActual == finalBalloonPaymentExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(finalBalloonPaymentActual + " = " + finalBalloonPaymentExpected);
+			LO.print          (finalBalloonPaymentActual + " = " + finalBalloonPaymentExpected);
+			System.out.println("Final Balloon Payment compared and found ok");
+			LO.print          ("Final Balloon Payment compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(finalBalloonPaymentActual + " != " + finalBalloonPaymentExpected);
+			LO.print          (finalBalloonPaymentActual + " != " + finalBalloonPaymentExpected);
+			System.err.println("Final Balloon Payment compared but found not ok");
+			LO.print          ("Final Balloon Payment compared but found not ok");
+
+		}
+
+		
+		// 19.comparing  Option To Purchase Fee  
+		if (optionToPurchaseFeeActual == optionToPurchaseFeeExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(optionToPurchaseFeeActual + " = " + optionToPurchaseFeeExpected);
+			LO.print          (optionToPurchaseFeeActual + " = " + optionToPurchaseFeeExpected);
+			System.out.println("Option To Purchase Fee compared and found ok");
+			LO.print          ("Option To Purchase Fee compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(optionToPurchaseFeeActual + " != " + optionToPurchaseFeeExpected);
+			LO.print          (optionToPurchaseFeeActual + " != " + optionToPurchaseFeeExpected);
+			System.err.println("Option To Purchase Fee compared but found not ok");
+			LO.print          ("Option To Purchase Fee compared but found not ok");
+
+		}
+
+
+		// 20.comparing RFL included ?
+		
+		if (rFLIncludedActual.equals(rFLIncludedExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(rFLIncludedActual + " = " + rFLIncludedExpected);
+			LO.print          (rFLIncludedActual + " = " + rFLIncludedExpected);
+			System.out.println("RFL included ? - compared and found ok");
+			LO.print          ("RFL included ? - compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(rFLIncludedActual + " != " + rFLIncludedExpected);
+			LO.print          (rFLIncludedActual + " != " + rFLIncludedExpected);
+			System.err.println("RFL included ? - compared but found not ok");
+			LO.print          ("RFL included ? - compared but found not ok");
+
+		}
+
+		
+	// 21.comparing APR
+		
+		if (aPRActual.equals(aPRExpected)) {
+			count++;
+
+			System.out.println("");
+			LO.print          ("");
+			System.out.println(aPRActual + " = " + aPRExpected);
+			LO.print          (aPRActual + " = " + aPRExpected);
+			System.out.println("APR compared and found ok");
+			LO.print          ("APR compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print          ("");
+			System.err.println(aPRActual + " != " + aPRExpected);
+			LO.print          (aPRActual + " != " + aPRExpected);
+			System.err.println("APR compared but found not ok");
+			LO.print          ("APR compared but found not ok");
+
+		}
+
+		
+		// 22.comparing commission
 		if (commissionActual == commissionExpected) {
 			count++;
 
@@ -1097,14 +1800,101 @@ public class Underwriting extends TestBase {
 			LO.print          ("commission compared but found not ok");
 
 		}
+								
+		
+		
+		// 23.comparing cost OTR price
+		if (costOtrPriceActual == costOtrPriceExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(costOtrPriceActual + " = " + costOtrPriceExpected);
+			LO.print(costOtrPriceActual + " = " + costOtrPriceExpected);
+			System.out.println("Cost Otr Price compared and found ok");
+			LO.print("Cost Otr Price compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(costOtrPriceActual + " != " + costOtrPriceExpected);
+			LO.print(costOtrPriceActual + " != " + costOtrPriceExpected);
+			System.err.println("Cost Otr Price compared but found not ok");
+			LO.print("Cost Otr Price compared but found not ok");
+
+		}
+
+		// 24.comparing cost Price Ex Vat And Rfl
+		if (costPriceExVatAndRflActual == costPriceExVatAndRflExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(costPriceExVatAndRflActual + " = " + costPriceExVatAndRflExpected);
+			LO.print(costPriceExVatAndRflActual + " = " + costPriceExVatAndRflExpected);
+			System.out.println("Cost Price Ex Vat And Rfl compared and found ok");
+			LO.print("Cost Otr Price compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(costPriceExVatAndRflActual + " != " + costPriceExVatAndRflExpected);
+			LO.print(costPriceExVatAndRflActual + " != " + costPriceExVatAndRflExpected);
+			System.err.println("Cost Price Ex Vat And Rfl compared but found not ok");
+			LO.print("Cost Price Ex Vat And Rfl compared but found not ok");
+
+		}
+
+		// 25.comparing cost Price Ex Vat And Rfl
+		if (otrVatActual == otrVatExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(otrVatActual + " = " + otrVatExpected);
+			LO.print(otrVatActual + " = " + otrVatExpected);
+			System.out.println("Otr Vat compared and found ok");
+			LO.print("Otr Vat compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(otrVatActual + " != " + otrVatExpected);
+			LO.print(otrVatActual + " != " + otrVatExpected);
+			System.err.println("Otr Vat compared but found not ok");
+			LO.print("Otr Vat compared but found not ok");
+
+		}
+
+		// 26.comparing Otr Rfl And Frf
+		if (otrRflAndFrfActual == otrRflAndFrfExpected) {
+			count++;
+
+			System.out.println("");
+			LO.print("");
+			System.out.println(otrRflAndFrfActual + " = " + otrRflAndFrfExpected);
+			LO.print(otrRflAndFrfActual + " = " + otrRflAndFrfExpected);
+			System.out.println("Otr Rfl And Frf compared and found ok");
+			LO.print("Otr Rfl And Frf compared and found ok");
+
+		} else {
+			System.out.println("");
+			LO.print("");
+			System.err.println(otrRflAndFrfActual + " != " + otrRflAndFrfExpected);
+			LO.print(otrRflAndFrfActual + " != " + otrRflAndFrfExpected);
+			System.err.println("Otr Rfl And Frf compared but found not ok");
+			LO.print("Otr Rfl And Frf compared but found not ok");
+
+		}
+
 
 		boolean status = false;
-		if (count == 14)
-
+		if (count==26)
+			
 		{
 			status = true;
 		}
-
+		
 		return status;
 
 	}
@@ -1361,7 +2151,7 @@ public class Underwriting extends TestBase {
 
 		// copying File path to Clipboard
 		StringSelection str = new StringSelection(prop.getProperty("Underwriting_accept_upload_doc_path"));
-			
+
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 
 		// press Contol+V for pasting
@@ -1693,7 +2483,5 @@ public class Underwriting extends TestBase {
 		return flag;
 
 	}
-
-
 
 }

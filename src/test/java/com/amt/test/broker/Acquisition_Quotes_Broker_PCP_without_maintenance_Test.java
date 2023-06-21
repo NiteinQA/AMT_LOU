@@ -1,4 +1,4 @@
-package com.amt.test;
+package com.amt.test.broker;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;

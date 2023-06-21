@@ -44,7 +44,7 @@ public class LOU_broker_individual_hire_accept_flow_Test extends TestBase {
 		boolean table_verification_before_save = obj_Leads_Page.verify_table_values_on_lead_page();
 
 		// obj_Leads_Page.lead_map_new_quote_ownbook_individual();
-		obj_Leads_Page.lead_map_new_quote_broker_business_save_and_Convert();
+		obj_Leads_Page.save_and_convert_after_mapping_a_quote();
 
 		// verifying table values with Quote save excel sheet values before saving
 		boolean table_verification_after_save = obj_Leads_Page.verify_table_values_on_lead_page();
@@ -59,7 +59,7 @@ public class LOU_broker_individual_hire_accept_flow_Test extends TestBase {
 		// Assert.assertTrue(flag);
 
 		// Getting oppo ID and Saving to excel sheet and printing to console
-		obj_Leads_Page.save_and_convert_lead_to_get_the_opportunityno();
+		obj_Leads_Page.get_the_opportunity_no_after_converting_lead_into_opportunity();
 
 	}
 
@@ -172,7 +172,7 @@ public class LOU_broker_individual_hire_accept_flow_Test extends TestBase {
 
 		obj_Opportunities_Page.opp_find_send_contract_icon();
 		
-		// Opportunity listing screen - Proposal status
+		// Opportunity listing screen - Oppo status
 		boolean opp_AfterCurrentStatus_contract = obj_Opportunities_Page
 				.verify_current_status_of_opportunity_after_sending_to_customer_contract();
 
@@ -204,7 +204,8 @@ public class LOU_broker_individual_hire_accept_flow_Test extends TestBase {
 
 		Assert.assertEquals(statuscode, 200);
 
-		System.out.println("Status code 200 received ");
+		LO.print          ("Status code "+statuscode+" received ");
+		System.out.println("Status code "+statuscode+" received ");
 
 		obj_Opportunities_Page.opp_search_textbox();
 
@@ -220,6 +221,9 @@ public class LOU_broker_individual_hire_accept_flow_Test extends TestBase {
 	  boolean CurrentStatusafterContractSigned = obj_Opportunities_Page
 	  .verify_current_status_of_opportunity_after_contract_signed();
 	  Assert.assertTrue(CurrentStatusafterContractSigned);
+	  
+		System.out.println("Status Verified : Contract Signed ");
+		LO.print          ("Status Verified : Contract Signed ");
 	  
 	  }
 	 
@@ -254,6 +258,9 @@ public class LOU_broker_individual_hire_accept_flow_Test extends TestBase {
 		boolean CurrentStatusafterSendingToUnderwriting = obj_Opportunities_Page
 				.verify_current_status_of_opportunity_after_contract_sending_to_underwriting();
 		Assert.assertTrue(CurrentStatusafterSendingToUnderwriting);
+		
+		System.out.println("Status Verified : Awaiting Underwriting ");
+		LO.print          ("Status Verified : Awaiting Underwriting ");
 
 	}
 

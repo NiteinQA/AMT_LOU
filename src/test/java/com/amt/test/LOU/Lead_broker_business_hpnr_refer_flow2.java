@@ -49,7 +49,7 @@ public class Lead_broker_business_hpnr_refer_flow2 extends TestBase {
 		// Business = Broker + HPNR
 		obj_Leads_Page.lead_map_new_quote_broker_with_hpnr_business();
 		
-		obj_Leads_Page.lead_map_new_quote_broker_business_save_and_Convert();
+		obj_Leads_Page.get_the_opportunity_no_after_converting_lead_into_opportunity();
 
 	}
 

@@ -44,7 +44,7 @@ public class LOU_broker_individual_hire_refer_flow_Test extends TestBase {
 		boolean table_verification_before_save = obj_Leads_Page.verify_table_values_on_lead_page();
 
 		// obj_Leads_Page.lead_map_new_quote_ownbook_individual();
-		obj_Leads_Page.lead_map_new_quote_broker_business_save_and_Convert();
+		obj_Leads_Page.save_and_convert_after_mapping_a_quote();
 
 		// verifying table values with Quote save excel sheet values before saving
 		boolean table_verification_after_save = obj_Leads_Page.verify_table_values_on_lead_page();
@@ -59,7 +59,7 @@ public class LOU_broker_individual_hire_refer_flow_Test extends TestBase {
 		// Assert.assertTrue(flag);
 
 		// Getting oppo ID and Saving to excel sheet and printing to console
-		obj_Leads_Page.save_and_convert_lead_to_get_the_opportunityno();
+		obj_Leads_Page.get_the_opportunity_no_after_converting_lead_into_opportunity();
 
 	}
 

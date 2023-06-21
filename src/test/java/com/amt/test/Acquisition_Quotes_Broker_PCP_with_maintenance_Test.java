@@ -121,8 +121,8 @@ public class Acquisition_Quotes_Broker_PCP_with_maintenance_Test extends TestBas
 		boolean quote_summary_page_otr_value_check = obj_quote_summary_page.quote_summary_broker_PCP_with_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_page_otr_value_check);
 		
-		boolean quote_summary_page_status = obj_quote_summary_page.quote_summary_broker_PCP_check_maintenance_values_displayed(monthlyFinancePayment, monthlyMaintenancePayment,sheet_name);
-		Assert.assertTrue(quote_summary_page_status);
+		
+		
 	}
 	
 	

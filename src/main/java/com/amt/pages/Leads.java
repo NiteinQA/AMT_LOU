@@ -202,6 +202,9 @@ public class Leads extends TestBase {
 
 	@FindBy(xpath = "//div[contains(text(),'Personal Contract Hire')]")
 	private WebElement customer_contract_type_pch_value;
+	
+	@FindBy(xpath = "//div[contains(text(),'Personal Contract Purchase')]")
+	private WebElement customer_contract_type_pcp_value;
 
 	@FindBy(xpath = "//div[contains(text(),'Business Contract Hire')]")
 	private WebElement customer_contract_type_bch_value;
@@ -253,11 +256,9 @@ public class Leads extends TestBase {
 	// list of quotes for mapping
 	@FindAll({ @FindBy(xpath = "//tr//td") })
 	public List<WebElement> quotes_for_mapping_list;
-	
+
 	@FindBy(xpath = "//div[@data-coc='coc']//button[@class='btn btn-secondary float-right'][normalize-space()='Ok']")
 	private WebElement map_quote_ok_button;
-	
-	
 
 	public Leads() {
 		PageFactory.initElements(driver, this);
@@ -686,7 +687,22 @@ public class Leads extends TestBase {
 		Click.on(driver, customer_contract_type, 120);
 
 		// Thread.sleep(5000);
-		Click.on(driver, customer_contract_type_pch_value, 120);
+			
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_hire")) {
+			Click.on(driver, customer_contract_type_pch_value, 120);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		}
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_purchase")) {
+
+			Click.on(driver, customer_contract_type_pcp_value, 120);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		}
+
 
 		LO.print("Click on customer contract type icon");
 		System.out.println("Click on customer contract type icon");
@@ -701,40 +717,41 @@ public class Leads extends TestBase {
 //	
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		// Below  code is written by Mehul
-		
-	Click.on(driver, map_new_quote_createddate_sorting, 120);
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
-	
-	LO.print("Click on created date button 1st ");
-	System.out.println("Click on created date button 1st");
-	
-	
-	Click.on(driver, map_new_quote_createddate_sorting, 120);
-	
-	LO.print("Click on created date button 2nd");
-	System.out.println("Click on created date button 2nd");
-	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		// Below code is written by Mehul
 
+		Click.on(driver, map_new_quote_createddate_sorting, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
+		LO.print("Click on created date button 1st ");
+		System.out.println("Click on created date button 1st");
+
+		Click.on(driver, map_new_quote_createddate_sorting, 120);
+
+		LO.print("Click on created date button 2nd");
+		System.out.println("Click on created date button 2nd");
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		// Below code is written by nitein to map exact quote
 
 		String sheetName = "";
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
-			sheetName = prop.getProperty("BrokerBCHQuoteNo");
-		}
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_hire")) {
 			sheetName = prop.getProperty("BrokerPCHQuoteNo");
 		}
+		
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_purchase")) {
+			sheetName = prop.getProperty("BrokerPCPQuoteNo");
+		}
+
 
 		System.out.println(sheetName);
-		
+
 		String quote_no = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
-		
+
 		System.out.println(quote_no);
 
 		for (int i = 0; i <= quotes_for_mapping_list.size() - 1; i++) {
@@ -747,12 +764,10 @@ public class Leads extends TestBase {
 
 				LO.print("New Quote has been mapped with lead");
 				System.out.println("New Quote has been mapped with lead");
-				
-
 
 				break;
 			}
-			
+
 //			else if(i == (quotes_for_mapping_list.size() - 1));
 //			{
 //				 
@@ -765,8 +780,6 @@ public class Leads extends TestBase {
 //			}
 
 		}
-
-		
 
 		// Thread.sleep(5000);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
@@ -796,7 +809,7 @@ public class Leads extends TestBase {
 				Click.on(driver, lead_already_exits_quote_availbale_second_popup_visible, 30);
 
 				System.out.println("New copy quote is mapped with this Lead ");
-			   LO.print("New copy quote is mapped with this Lead ");
+				LO.print("New copy quote is mapped with this Lead ");
 
 			}
 		}
@@ -924,31 +937,29 @@ public class Leads extends TestBase {
 		LO.print("Click on acquisition contract type icon");
 		System.out.println("Click on acquisition contract type icon");
 
-
 		Click.on(driver, acquisition_contract_type_broker_value, 120);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
-
 
 		Click.on(driver, customer_contract_type, 120);
 		LO.print("Click on customer contract type icon");
 		System.out.println("Click on customer contract type icon");
 
-
-
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_hire")) {
 			Click.on(driver, customer_business_contract_type_bch_value, 120);
 
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_purchase")) {
-			
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_purchase")) {
+
 			Click.on(driver, customer_business_contract_type_hpnr_value, 120);
 
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		}
-		
+
 		Click.on(driver, map_new_quote_search, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		LO.print("Click on search button");
@@ -956,36 +967,38 @@ public class Leads extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-Click.on(driver, map_new_quote_createddate_sorting, 120);
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		Click.on(driver, map_new_quote_createddate_sorting, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-LO.print("Click on created date button 1st ");
-System.out.println("Click on created date button 1st");
+		LO.print("Click on created date button 1st ");
+		System.out.println("Click on created date button 1st");
 
+		Click.on(driver, map_new_quote_createddate_sorting, 120);
 
-Click.on(driver, map_new_quote_createddate_sorting, 120);
+		LO.print("Click on created date button 2nd");
+		System.out.println("Click on created date button 2nd");
 
-LO.print("Click on created date button 2nd");
-System.out.println("Click on created date button 2nd");
-
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
-
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		String sheetName = "";
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_hire")) {
 			sheetName = prop.getProperty("BrokerBCHQuoteNo");
 		}
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_hire")) {
 			sheetName = prop.getProperty("BrokerPCHQuoteNo");
 		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_purchase")) {
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_purchase")) {
 			sheetName = prop.getProperty("BrokerHPNRQuoteNo");
 		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_purchase")) {
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_purchase")) {
 			sheetName = prop.getProperty("BrokerPCPQuoteNo");
 		}
 
@@ -1000,18 +1013,23 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 				break;
 
 			}
+			
+			if (i == (quotes_for_mapping_list.size()-1)) {
+
+				LO.print          ("The given quote "+quote_no+" is not available in pop up listing");
+				System.out.println("The given quote "+quote_no+" is not available in pop up listing");
+				
+			}
 
 		}
 
 		LO.print("New Quote has been mapped with lead");
 		System.out.println("New Quote has been mapped with lead");
 
-//Thread.sleep(5000);
+
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
-		
-		
-	
-        Click.on(driver, select_new_quoted_save, 120);
+
+		Click.on(driver, select_new_quoted_save, 120);
 
 		Thread.sleep(5000);
 
@@ -1041,7 +1059,8 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 			}
 		}
 
-		catch (Exception e) {}
+		catch (Exception e) {
+		}
 
 	}
 
@@ -1090,19 +1109,23 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		String sheetName = "";
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_hire")) {
 			sheetName = prop.getProperty("BrokerBCHQuoteNo");
 		}
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_hire")) {
 			sheetName = prop.getProperty("BrokerPCHQuoteNo");
 		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_purchase")) {
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_purchase")) {
 			sheetName = prop.getProperty("BrokerHPNRQuoteNo");
 		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_purchase")) {
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_purchase")) {
 			sheetName = prop.getProperty("BrokerPCPQuoteNo");
 		}
 
@@ -1120,36 +1143,36 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 //	GetExcelFormulaValue.get_string_value(10, 1, sheetName);
 //	GetExcelFormulaValue.get_string_value(10, 3, sheetName);
-		String expiryDateExpected="";
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
-				
-		expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);
-			
+		String expiryDateExpected = "";
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_hire")) {
+
+			expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);
+
 		}
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_hire")) {
-					
-		expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);
-			
-		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_purchase")) {
-		
-		expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);
-			
-		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_purchase")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_hire")) {
 
-		expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);
-			
+			expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);
+
 		}
-	
-		
-		
-	
-	
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_purchase")) {
+
+			expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);
+
+		}
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_purchase")) {
+
+			expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);
+
+		}
+
 //	GetExcelFormulaValue.get_string_value(12, 3, sheetName);
 
 //	GetExcelFormulaValue.get_string_value(14, 1, sheetName);
@@ -1333,12 +1356,10 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 //Map New Quote 
 
-
 		HelperClass.highlightElement(driver, Map_New_quote_icon);
 
 		LO.print("Click on Map New Quote icon");
 		System.out.println("Click on Map New Quote icon");
-
 
 		Click.on(driver, Map_New_quote_icon, 120);
 
@@ -1349,22 +1370,18 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		LO.print("Click on acquisition contract type icon");
 		System.out.println("Click on acquisition contract type icon");
 
-
 		Click.on(driver, acquisition_contract_type_broker_value, 120);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-
 		Click.on(driver, customer_contract_type, 120);
-		
+
 		LO.print("Click on customer contract type icon");
 		System.out.println("Click on customer contract type icon");
-
 
 		Click.on(driver, customer_business_contract_type_hpnr_value, 120);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
-
 
 		Click.on(driver, map_new_quote_search, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
@@ -1381,7 +1398,6 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		LO.print("Click on created date button 2nd");
 		System.out.println("Click on created date button 2nd");
-
 
 		System.out.println("Select the checkbox for new quote ");
 		LO.print("Select the checkbox for new quote ");
@@ -1429,7 +1445,7 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 	}
 
-	public void lead_map_new_quote_broker_business_save_and_Convert() throws Exception
+	public void save_and_convert_after_mapping_a_quote() throws Exception
 
 	{
 
@@ -1489,7 +1505,7 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //return Lead_OpportunityId;
 //}
 
-	public void save_and_convert_lead_to_get_the_opportunityno() throws Exception
+	public void get_the_opportunity_no_after_converting_lead_into_opportunity() throws Exception
 
 	{
 
@@ -1509,19 +1525,23 @@ ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		String sheetName = "";
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_hire")) {
 			sheetName = prop.getProperty("BrokerBCHQuoteNo");
 		}
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_hire")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_hire")) {
 			sheetName = prop.getProperty("BrokerPCHQuoteNo");
 		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_purchase")) {
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("business_purchase")) {
 			sheetName = prop.getProperty("BrokerHPNRQuoteNo");
 		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_purchase")) {
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
+				.contains("individual_purchase")) {
 			sheetName = prop.getProperty("BrokerPCPQuoteNo");
 		}
 

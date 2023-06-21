@@ -43,7 +43,7 @@ public class Lead_ownbook_business_decline_without_any_changes_Test2 extends Tes
 		 //Business = HPNR + BCH
 		 obj_Leads_Page.lead_map_new_quote_owbook_business();
 		
-		 obj_Leads_Page.lead_map_new_quote_broker_business_save_and_Convert();
+		 obj_Leads_Page.save_and_convert_after_mapping_a_quote();
 		
 		
 		

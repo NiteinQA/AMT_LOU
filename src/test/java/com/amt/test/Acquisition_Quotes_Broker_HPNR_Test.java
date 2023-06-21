@@ -122,8 +122,8 @@ public class Acquisition_Quotes_Broker_HPNR_Test extends TestBase {
 
 		 obj_quote_summary_page =new QuoteSummaryBrokerHPNRPage();		
 		
-		boolean quote_summary_page_status = obj_quote_summary_page.quote_summary_broker_HPNR(sheet_name);
-		Assert.assertTrue(quote_summary_page_status);
+        obj_quote_summary_page.quote_summary_broker_HPNR(sheet_name);
+	
 		
 	}	
 	

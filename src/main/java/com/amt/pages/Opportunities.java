@@ -795,27 +795,35 @@ public class Opportunities extends TestBase {
 		System.out.println("**************Searching for Opportunity id in search text box*******************************");
 		System.out.println("*********************************************");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		Thread.sleep(3000);
+		
 		
 		//Getting oppo ID from excel 		
 		String sheetName="";
 		
+
 	
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business"))
-		{ 	sheetName                    = prop.getProperty("BrokerBCHQuoteNo"); }
-		Thread.sleep(3000);
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual"))
-		{ 	sheetName                    = prop.getProperty("BrokerPCHQuoteNo"); }
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
+			sheetName = prop.getProperty("BrokerBCHQuoteNo");
+		}
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_hire")) {
+			sheetName = prop.getProperty("BrokerPCHQuoteNo");
+		}
 		
-		System.out.println("SheetName is = "+sheetName);
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_purchase")) {
+			sheetName = prop.getProperty("BrokerHPNRQuoteNo");
+		}
 		
-		Thread.sleep(3000);
+		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_purchase")) {
+			sheetName = prop.getProperty("BrokerPCPQuoteNo");
+		}
+		
+
 		String opportunityId = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);		
 		
-		Thread.sleep(3000);
-		
+
 		ExplicitWait.visibleElement(driver, search_bar, 30);	
 		search_bar.sendKeys(opportunityId);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);

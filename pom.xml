@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>amt</groupId>
@@ -18,7 +20,8 @@
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<!--
+		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 
 
 		<!--<dependency>
@@ -27,14 +30,18 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>-->
-    
-    <dependency>
-  <groupId>com.paulhammant</groupId>
-  <artifactId>ngwebdriver</artifactId>
-  <version>1.1.5</version>
-</dependency>
 
+		<dependency>
+			<groupId>com.paulhammant</groupId>
+			<artifactId>ngwebdriver</artifactId>
+			<version>1.1.5</version>
+		</dependency>
 
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.3</version>
+		</dependency>
 
 
 		<dependency>
@@ -45,29 +52,29 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20220924</version>
+		</dependency>
 
-<dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20220924</version>
-</dependency>
-
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>5.3.0</version>
-    <scope>test</scope>
-</dependency>
-
-
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-core</artifactId>
-    <version>2.14.1</version>
-</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.3.0</version>
+			<scope>test</scope>
+		</dependency>
 
 
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.14.1</version>
+		</dependency>
+
+
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -129,20 +136,24 @@
 
 	<build>
 		<pluginManagement>
-			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+			<!-- lock down plugins versions to avoid using Maven defaults (may
+			be moved to parent pom) -->
 			<plugins>
-				<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+				<!-- clean lifecycle, see
+				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.1.0</version>
 				</plugin>
-				<!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+				<!-- default lifecycle, jar packaging: see
+				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
 				</plugin>
 				<plugin>
-					<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+					<!--
+					https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.10.1</version>
@@ -154,7 +165,8 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.22.1</version>
 					<configuration>
-						<!-- Following plug in property to configure the ReportNG -->
+						<!-- Following plug in property to configure the
+						ReportNG -->
 						<properties>
 							<property>
 								<name>usedefaultlisteners</name>
@@ -165,9 +177,10 @@
 								<value>org.uncommons.reportng.HTMLReporter</value>
 							</property>
 						</properties>
-						<!-- Suite testng xml file to consider for test execution -->
+						<!-- Suite testng xml file to consider for test
+						execution -->
 						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
+							<suiteXmlFile>broker-business-hire.xml</suiteXmlFile>
 						</suiteXmlFiles>
 						<testFailureIgnore>true</testFailureIgnore>
 					</configuration>
@@ -184,7 +197,8 @@
 					<artifactId>maven-deploy-plugin</artifactId>
 					<version>2.8.2</version>
 				</plugin>
-				<!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+				<!-- site lifecycle, see
+				https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
 				<plugin>
 					<artifactId>maven-site-plugin</artifactId>
 					<version>3.7.1</version>
@@ -192,6 +206,66 @@
 				<plugin>
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
+				</plugin>
+				<!-- Email plug in -->
+
+				<plugin>
+					<groupId>ch.fortysix</groupId>
+					<artifactId>maven-postman-plugin</artifactId>
+					<executions>
+
+						<execution>
+							<id>send a mail</id>
+							<phase>test</phase>
+							<goals>
+								<goal>send-mail</goal>
+							</goals>
+							<inherited>true</inherited>
+
+							<configuration>
+								<!-- From Email address -->
+								<from>nitein.kurane@autofacets.in</from>
+
+								<!--  Email subject -->
+								<subject>Test Automation Report</subject>
+
+								<!-- Fail the build if the mail doesnt reach -->
+								<failonerror>true</failonerror>
+
+								<!-- host -->
+								<mailhost>smtp.autofacets.in</mailhost>
+								<!-- port of the host -->
+								<mailport>465</mailport>
+								<mailssl>true</mailssl>
+								<mailAltConfig>true</mailAltConfig>
+
+								<!-- Email Authentication(USername and Password) -->
+								<mailuser>nitein.kurane@autofacets.in</mailuser>
+								<mailpassword>Nik989%&amp;nhrl14</mailpassword>
+
+								<receivers>
+									<!-- To Email address -->
+									<receiver>mehul.nagar@autofacets.in</receiver>
+									<receiver>nitein.kurane@thegatewaycorp.co.in</receiver>
+								</receivers>
+
+								<fileSets>
+									<fileSet>
+										<!-- Report directory Path -->
+										<directory>D://LOU//MT_LOU//ExtentReport</directory>
+										<includes>
+											<!-- Report file name -->
+											<include>ExtentReport.html</include>
+										</includes>
+										<!-- Use Regular Expressions like
+										**/*.html if you want all the html files
+										to send-->
+									</fileSet>
+								</fileSets>
+
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>

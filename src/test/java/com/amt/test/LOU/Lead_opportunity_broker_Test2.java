@@ -38,7 +38,7 @@ public class Lead_opportunity_broker_Test2 extends TestBase {
 		 
 		 obj_Leads_Page.lead_map_new_quote_broker_individual();
 		
-		 obj_Leads_Page.lead_map_new_quote_broker_business_save_and_Convert();
+		 obj_Leads_Page.save_and_convert_after_mapping_a_quote();
 		 
 			
 			 

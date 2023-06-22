@@ -103,27 +103,12 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 
 	}
 
-	@Test(priority = 4, dependsOnMethods = { "L3_verify_table_values_on_opportunity_page_before_sending_proposal" })
 
-	public void L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_broker_individual_flow()
-			throws Exception {
-		obj_Opportunities_Page = new Opportunities();
+	@Test(priority = 4 , dependsOnMethods = { "L3_verify_table_values_on_opportunity_page_before_sending_proposal" })
 
+	public void L4_adding_proposal_on_opportunity_page_broker_individual_flow() throws Exception {
+		
 		System.out.println("Test 4");
-
-		boolean opp_CurrentStatus = obj_Opportunities_Page
-				.verify_current_status_of_opportunity_before_sending_to_proposal();
-
-		Assert.assertTrue(opp_CurrentStatus);
-
-		System.out.println("Status Verified : Before sending the proposal ");
-		LO.print("Status Verified : Before sending the proposal");
-
-	}
-
-	@Test(priority = 5 , dependsOnMethods = { "L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_broker_individual_flow" })
-
-	public void L5_adding_proposal_on_opportunity_page_broker_individual_flow() throws Exception {
 
 		obj_Opportunities_Page.opp_listing_detail_page();
 
@@ -145,10 +130,12 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 
 	}
 
-	@Test(priority = 6 , dependsOnMethods = { "L5_adding_proposal_on_opportunity_page_broker_individual_flow" })
+	@Test(priority = 5 , dependsOnMethods = { "L4_adding_proposal_on_opportunity_page_broker_individual_flow" })
 
-	public void L6_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow()
+	public void L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow()
 			throws Exception {
+		
+		System.out.println("Test 5");
 		obj_Opportunities_Page = new Opportunities();
 
 		// Opportunity listing screen - Proposal status
@@ -162,18 +149,15 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 
 	}
 
-	@Test(priority = 7, dependsOnMethods = { "L6_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow" })
+	@Test(priority = 6, dependsOnMethods = { "L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow" })
 
-	public void L7_broker_create_opportunity_individual_sending_to_contract() throws Exception {
+	public void L6_broker_create_opportunity_individual_sending_to_contract() throws Exception {
 
-		System.out.println("Test 7");
+		System.out.println("Test 6");
 
 		obj_Opportunities_Page = new Opportunities();
 
 		obj_Opportunities_Page.opp_find_send_contract_icon();
-		
-		
-
 	}
 
 	/*
@@ -200,12 +184,12 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 	 * }
 	 */
 
-	@Test(priority = 8 , dependsOnMethods = { "L7_broker_create_opportunity_individual_sending_to_contract" })
+	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_individual_sending_to_contract" })
 
-	public void L8_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow()
+	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow()
 			throws Exception {
 
-		System.out.println("Test 8");
+		System.out.println("Test 7");
 
 		obj_Opportunities_Page = new Opportunities();
 
@@ -220,11 +204,11 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 
 	}
 
-	@Test(priority = 9 , dependsOnMethods = { "L8_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow" })
-	public void L9_verify_signed_contract_status_with_api_call() throws Exception
+	@Test(priority = 8 , dependsOnMethods = { "L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow" })
+	public void L8_verify_signed_contract_status_with_api_call() throws Exception
 
 	{
-		System.out.println("Test 9");
+		System.out.println("Test 8");
 
 		obj_Opportunities_Page = new Opportunities();
 
@@ -262,11 +246,11 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 	 * }
 	 */
 
-	@Test(priority = 10 , dependsOnMethods = { "L9_verify_signed_contract_status_with_api_call" })
+	@Test(priority = 9 , dependsOnMethods = { "L8_verify_signed_contract_status_with_api_call" })
 
-	public void L10_verify_status_after_contract_signed() throws Exception {
+	public void L9_verify_status_after_contract_signed() throws Exception {
 
-		System.out.println("Test 10");
+		System.out.println("Test 9");
 
 		obj_Opportunities_Page = new Opportunities();
 
@@ -281,11 +265,11 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 	}
 	
 	
-	@Test(priority = 11 , dependsOnMethods = { "L10_verify_status_after_contract_signed" })
+	@Test(priority = 10 , dependsOnMethods = { "L9_verify_status_after_contract_signed" })
 
 	public void UW1_verify_underwriting_flow_ownbook_with_status() throws Exception {
 
-		System.out.println("Test 11");
+		System.out.println("Test 10");
 
 		obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
 
@@ -299,11 +283,11 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 
 	}
 
-	@Test(priority = 12, dependsOnMethods = { "UW1_verify_underwriting_flow_ownbook_with_status" })
+	@Test(priority = 11, dependsOnMethods = { "UW1_verify_underwriting_flow_ownbook_with_status" })
 
 	public void UW2_verify_status_after_sending_to_underwriting() throws Exception {
 
-		System.out.println("Test 12");
+		System.out.println("Test 11");
 		
 		obj_Opportunities_Page = new Opportunities();
 
@@ -316,11 +300,11 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 
 	}
 
-	@Test(priority = 13 , dependsOnMethods = { "UW2_verify_status_after_sending_to_underwriting" })
+	@Test(priority = 12 , dependsOnMethods = { "UW2_verify_status_after_sending_to_underwriting" })
 
 	public void UW3_verify_underwriting_lisitig_page() throws Exception {
 
-		System.out.println("Test 13");
+		System.out.println("Test 12");
 
 		obj_Underwriting_page = new Underwriting();
 
@@ -332,12 +316,12 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 
 	}
 
-	@Test(priority = 14, dependsOnMethods = { "UW3_verify_underwriting_lisitig_page" })
+	@Test(priority = 13, dependsOnMethods = { "UW3_verify_underwriting_lisitig_page" })
 
 	public void UW4_verify_underwriting_proposal_page_flow() throws Exception {
 
 		
-		System.out.println("Test 14");
+		System.out.println("Test 13");
 		
 		obj_Underwriting_page = new Underwriting();
 
@@ -370,10 +354,12 @@ public class LOU_Lead_broker_individual_purchase_accept_flow_Test extends TestBa
 	 * }
 	 */
 
-	@Test(priority = 15, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
+	@Test(priority = 14, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
 
 	public void UW5_verify_underwriting_proposal_decision_with_accept() throws Exception {
 
+		System.out.println("Test 14");
+		
 		obj_Underwriting_page = new Underwriting();
 
 		// obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();

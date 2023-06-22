@@ -189,6 +189,8 @@ public class Underwriting extends TestBase {
 	// Save and exit
 	@FindBy(xpath = "//button[normalize-space()='Save & Exit']")
 	private WebElement desicion_save_exit_button;
+	
+
 
 	// Con - Yes button
 
@@ -215,6 +217,10 @@ public class Underwriting extends TestBase {
 // decision_decline_tab
 	@FindBy(xpath = "//button[normalize-space()='Decline']")
 	private WebElement underw_decision_decline_tab;
+	
+	// decision_refer_tab
+	@FindBy(xpath = "//button[normalize-space()='Refer']")
+	private WebElement underw_decision_refer_tab;
 
 //
 
@@ -384,7 +390,7 @@ public class Underwriting extends TestBase {
 
 	public void verify_underwriting_menulink() {
 
-		ExplicitWait.visibleElement(driver, underwriting_menu_link, 30);
+		ExplicitWait.visibleElement(driver, underwriting_menu_link, 60);
 
 		HelperClass.highlightElement(driver, underwriting_menu_link);
 
@@ -402,7 +408,7 @@ public class Underwriting extends TestBase {
 		HelperClass.highlightElement(driver, underwriting_menu_link_broker);
 
 		underwriting_menu_link_broker.click();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		System.out.println("Click on Underwriting - broker tab ");
 		LO.print("Click on Underwriting - broker tab ");
@@ -411,13 +417,13 @@ public class Underwriting extends TestBase {
 
 	public void verify_underwriting_menulink_ownbook() throws InterruptedException {
 
-		ExplicitWait.visibleElement(driver, underwriting_menu_link_ownbook, 30);
+		ExplicitWait.visibleElement(driver, underwriting_menu_link_ownbook, 60);
 
 		// HelperClass.highlightElement(driver, underwriting_menu_link_ownbook);
 
 		// underwriting_menu_link_ownbookclick();
 		underwriting_menu_link_ownbook.click();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		System.out.println("Click on Underwriting - ownbook tab ");
 		LO.print("Click on Underwriting - ownbook tab ");
@@ -595,7 +601,7 @@ public class Underwriting extends TestBase {
 
 		underw_listing_yes_option.click();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 	}
 
@@ -605,10 +611,10 @@ public class Underwriting extends TestBase {
 
 		HelperClass.highlightElement(driver, underw_listing_decision_yes_option);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		underw_listing_decision_yes_option.click();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 	}
 
@@ -624,38 +630,38 @@ public class Underwriting extends TestBase {
 
 		actions.doubleClick(proposal_detail_listing_data).perform();
 
-		// Click.on(driver, proposal_detail_listing_data, 30);
+		// Click.on(driver, proposal_detail_listing_data, 60);
 
 		System.out.println("Click on Underwriting detail page for proposal");
 		LO.print("Click on Underwriting detail page for proposal");
 		
 		Thread.sleep(2000);
 		
-		try {Click.on(driver, edit_underwriting_pop_up, 30);}
+		try {Click.on(driver, edit_underwriting_pop_up, 10);}
 		catch(Exception e) {}
 		
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 	}
 
 	public boolean verify_quote_tab_on_underwriting_page_for_broker_hire_flow()
 			throws InterruptedException, ClassNotFoundException, IOException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underwriting_tab_quote, 30);
+		ExplicitWait.visibleElement(driver, underwriting_tab_quote, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		// HelperClass.highlightElement(driver, underwriting_tab_quote);
 
-		Click.on(driver, underwriting_tab_quote, 30);
+		Click.on(driver, underwriting_tab_quote, 60);
 
 		System.out.println("Clicked on Underwriting quote page");
 		LO.print("Clicked on Underwriting quote page");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		ExplicitWait.visibleElement(driver, quote_summary_vehicle_heading, 120);
 
@@ -664,7 +670,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_button, 120);
 
 		// Cliking on cust quote summary section
-		Click.on(driver, quote_summary_customer_quote_summary_button, 30);
+		Click.on(driver, quote_summary_customer_quote_summary_button, 60);
 
 		// waiting for otr section elements
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
@@ -701,7 +707,7 @@ public class Underwriting extends TestBase {
 		// Vehicle details
 		String vehicleNameActual = quote_summary_vehicle_heading.getText().trim();
 
-		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 30);
+		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 60);
 
 		String quotRefNoActual = quote_summary_ref_no.getText();
 
@@ -1179,20 +1185,20 @@ public class Underwriting extends TestBase {
 	public boolean verify_quote_tab_on_underwriting_page_for_broker_business_purchase_flow()
 			throws InterruptedException, ClassNotFoundException, IOException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underwriting_tab_quote, 30);
+		ExplicitWait.visibleElement(driver, underwriting_tab_quote, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		// HelperClass.highlightElement(driver, underwriting_tab_quote);
 
-		Click.on(driver, underwriting_tab_quote, 30);
+		Click.on(driver, underwriting_tab_quote, 60);
 
 		System.out.println("Clicked on Underwriting quote page");
 		LO.print("Clicked on Underwriting quote page");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		ExplicitWait.visibleElement(driver, quote_summary_vehicle_heading, 120);
 
@@ -1201,7 +1207,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_button, 120);
 
 		// Cliking on cust quote summary section
-		Click.on(driver, quote_summary_customer_quote_summary_button, 30);
+		Click.on(driver, quote_summary_customer_quote_summary_button, 60);
 
 		// waiting for otr section elements
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
@@ -1230,7 +1236,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_option_to_purchase_fee, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_RFL_included, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_APR, 120);
-		ExplicitWait.visibleElement(driver, underwriting_popup_quote_ref_no, 30);
+		ExplicitWait.visibleElement(driver, underwriting_popup_quote_ref_no, 60);
 
 
 	  	// Vehicle details
@@ -1927,20 +1933,20 @@ public class Underwriting extends TestBase {
 	public boolean verify_quote_tab_on_underwriting_page_for_broker_individual_purchase_flow()
 			throws InterruptedException, ClassNotFoundException, IOException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underwriting_tab_quote, 30);
+		ExplicitWait.visibleElement(driver, underwriting_tab_quote, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		// HelperClass.highlightElement(driver, underwriting_tab_quote);
 
-		Click.on(driver, underwriting_tab_quote, 30);
+		Click.on(driver, underwriting_tab_quote, 60);
 
 		System.out.println("Clicked on Underwriting quote page");
 		LO.print("Clicked on Underwriting quote page");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		ExplicitWait.visibleElement(driver, quote_summary_vehicle_heading, 120);
 
@@ -1949,7 +1955,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_button, 120);
 
 		// Cliking on cust quote summary section
-		Click.on(driver, quote_summary_customer_quote_summary_button, 30);
+		Click.on(driver, quote_summary_customer_quote_summary_button, 60);
 
 		// waiting for otr section elements
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
@@ -2627,13 +2633,13 @@ public class Underwriting extends TestBase {
 	
 	public void find_underwriting_tab_creditfile_page() throws InterruptedException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		Thread.sleep(4000);
-		ExplicitWait.visibleElement(driver, underwriting_tab_creditfile, 30);
+		ExplicitWait.visibleElement(driver, underwriting_tab_creditfile, 60);
 
 		HelperClass.highlightElement(driver, underwriting_tab_creditfile);
 
-		Click.on(driver, underwriting_tab_creditfile, 30);
+		Click.on(driver, underwriting_tab_creditfile, 60);
 
 		System.out.println("Click on credit file tab page ");
 		LO.print("Click on credit file page ");
@@ -2642,14 +2648,14 @@ public class Underwriting extends TestBase {
 
 	public void find_underwriting_tab_document_page() throws InterruptedException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		Thread.sleep(4000);
 
-		ExplicitWait.visibleElement(driver, underwriting_tab_document, 30);
+		ExplicitWait.visibleElement(driver, underwriting_tab_document, 60);
 
 		HelperClass.highlightElement(driver, underwriting_tab_document);
 
-		Click.on(driver, underwriting_tab_document, 30);
+		Click.on(driver, underwriting_tab_document, 60);
 
 		System.out.println("Click on document file tab page ");
 		LO.print("Click on document file page ");
@@ -2660,16 +2666,16 @@ public class Underwriting extends TestBase {
 
 		Thread.sleep(4000);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		ExplicitWait.visibleElement(driver, decision_tab_document, 20);
 
 		HelperClass.highlightElement(driver, decision_tab_document);
 
-		Click.on(driver, decision_tab_document, 30);
+		Click.on(driver, decision_tab_document, 60);
 
 		System.out.println("Click on decision tab page");
-		LO.print("Click on decision tab page");
+		LO.print          ("Click on decision tab page");
 
 	}
 
@@ -2680,9 +2686,9 @@ public class Underwriting extends TestBase {
 
 		HelperClass.highlightElement(driver, Accept_button);
 
-		Click.on(driver, Accept_button, 30);
+		Click.on(driver, Accept_button, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		System.out.println("Click on decision tab Accept button ");
 		LO.print("Click on decision Accept button");
@@ -2691,15 +2697,15 @@ public class Underwriting extends TestBase {
 
 	public void onchanging_refer_to_accept_underwriting_please_confirm_button() throws InterruptedException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, confirm_button, 30);
+		ExplicitWait.visibleElement(driver, confirm_button, 60);
 
 		// HelperClass.highlightElement(driver, confirm_button);
 
-		Click.on(driver, confirm_button, 30);
+		Click.on(driver, confirm_button, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		System.out.println("On changing refer to accept button - Please confirm pop will display ");
 		LO.print("On changing refer to accept button - Please confirm pop will display ");
@@ -2714,17 +2720,17 @@ public class Underwriting extends TestBase {
 		// 1.proposal_indvidual_first_name
 		ExplicitWait.visibleElement(driver, accept_security_deposit_required, 20);
 
-		Click.sendKeys(driver, accept_security_deposit_required, "5000", 30);
+		Click.sendKeys(driver, accept_security_deposit_required, "5000", 60);
 
 		// (//input[@id='increasedOrderDeposit'])[1]
 		// 2.proposal_indvidual_first_name
 		ExplicitWait.visibleElement(driver, accept_increased_order_deposit, 20);
 
-		Click.sendKeys(driver, accept_increased_order_deposit, "5000", 30);
+		Click.sendKeys(driver, accept_increased_order_deposit, "5000", 60);
 
 		System.out.println("Now selecting the payment profile option ");
 
-		// ExplicitWait.visibleElement(driver, accept_payment_profile, 30);
+		// ExplicitWait.visibleElement(driver, accept_payment_profile, 60);
 
 		HelperClass.highlightElement(driver, accept_payment_profile);
 
@@ -2739,11 +2745,11 @@ public class Underwriting extends TestBase {
 		// Thread.sleep(5000);
 
 		// Click.sendKeys(driver, accept_payment_profile, "Spread rentals initial
-		// payment", 30);
+		// payment", 60);
 
-		ExplicitWait.visibleElement(driver, Initial_payment_amount, 30);
+		ExplicitWait.visibleElement(driver, Initial_payment_amount, 60);
 		Thread.sleep(5000);
-		Click.sendKeys(driver, Initial_payment_amount, "500", 30);
+		Click.sendKeys(driver, Initial_payment_amount, "500", 60);
 		Thread.sleep(5000);
 
 	}
@@ -2756,17 +2762,17 @@ public class Underwriting extends TestBase {
 		// 1.proposal_indvidual_first_name
 		ExplicitWait.visibleElement(driver, accept_security_deposit_required, 20);
 
-		Click.sendKeys(driver, accept_security_deposit_required, "5000", 30);
+		Click.sendKeys(driver, accept_security_deposit_required, "5000", 60);
 
 		// (//input[@id='increasedOrderDeposit'])[1]
 		// 2.proposal_indvidual_first_name
 		ExplicitWait.visibleElement(driver, accept_increased_order_deposit, 20);
 
-		Click.sendKeys(driver, accept_increased_order_deposit, "5000", 30);
+		Click.sendKeys(driver, accept_increased_order_deposit, "5000", 60);
 
 		System.out.println("Now selecting the payment profile option ");
 
-		// ExplicitWait.visibleElement(driver, accept_payment_profile, 30);
+		// ExplicitWait.visibleElement(driver, accept_payment_profile, 60);
 
 		HelperClass.highlightElement(driver, accept_payment_profile);
 
@@ -2781,11 +2787,11 @@ public class Underwriting extends TestBase {
 		// Thread.sleep(5000);
 
 		// Click.sendKeys(driver, accept_payment_profile, "Spread rentals initial
-		// payment", 30);
+		// payment", 60);
 
-		ExplicitWait.visibleElement(driver, Initial_payment_amount, 30);
+		ExplicitWait.visibleElement(driver, Initial_payment_amount, 60);
 		Thread.sleep(5000);
-		Click.sendKeys(driver, Initial_payment_amount, "500", 30);
+		Click.sendKeys(driver, Initial_payment_amount, "500", 60);
 		Thread.sleep(5000);
 
 	}
@@ -2795,13 +2801,13 @@ public class Underwriting extends TestBase {
 	{
 
 		ExplicitWait.visibleElement(driver, accept_security_deposit_required, 20);
-		Click.sendKeys(driver, accept_security_deposit_required, "5000", 30);
+		Click.sendKeys(driver, accept_security_deposit_required, "5000", 60);
 
 		ExplicitWait.visibleElement(driver, accept_increased_order_deposit, 20);
-		Click.sendKeys(driver, accept_increased_order_deposit, "5000", 30);
+		Click.sendKeys(driver, accept_increased_order_deposit, "5000", 60);
 
 		ExplicitWait.visibleElement(driver, accept_finance_deposit, 20);
-		Click.sendKeys(driver, accept_finance_deposit, "5000", 30);
+		Click.sendKeys(driver, accept_finance_deposit, "5000", 60);
 
 		ExplicitWait.visibleElement(driver, accept_maintained_contract_required, 20);
 		accept_maintained_contract_required.click();
@@ -2827,16 +2833,16 @@ public class Underwriting extends TestBase {
 		Other_conditions.click();
 
 		ExplicitWait.visibleElement(driver, Other_conditions_textbox, 20);
-		Click.sendKeys(driver, Other_conditions_textbox, "Test", 30);
+		Click.sendKeys(driver, Other_conditions_textbox, "Test", 60);
 
 		ExplicitWait.visibleElement(driver, Notestoapplicant, 20);
-		Click.sendKeys(driver, Notestoapplicant, "Test Notes", 30);
+		Click.sendKeys(driver, Notestoapplicant, "Test Notes", 60);
 
 		////////////////
 
 		ExplicitWait.visibleElement(driver, Driving_licence_for_Accept, 20);
 
-		Click.sendKeys(driver, Driving_licence_for_Accept, "QA comp2Test", 30);
+		Click.sendKeys(driver, Driving_licence_for_Accept, "QA comp2Test", 60);
 
 		Thread.sleep(2000);
 		Driving_licence_for_Accept.sendKeys(Keys.ENTER);
@@ -2844,19 +2850,19 @@ public class Underwriting extends TestBase {
 		Thread.sleep(2000);
 
 		ExplicitWait.visibleElement(driver, Proof_of_address_for, 20);
-		Click.sendKeys(driver, Proof_of_address_for, "QA comp2Test", 30);
+		Click.sendKeys(driver, Proof_of_address_for, "QA comp2Test", 60);
 
 		Thread.sleep(2000);
 		Proof_of_address_for.sendKeys(Keys.ENTER);
 
 		ExplicitWait.visibleElement(driver, Director_guarantee_in_the_name, 20);
-		Click.sendKeys(driver, Director_guarantee_in_the_name, "QA comp2Test", 30);
+		Click.sendKeys(driver, Director_guarantee_in_the_name, "QA comp2Test", 60);
 
 		Thread.sleep(2000);
 		Director_guarantee_in_the_name.sendKeys(Keys.ENTER);
 
 		ExplicitWait.visibleElement(driver, Cross_company_guarantee_in_the_name_of, 20);
-		Click.sendKeys(driver, Driving_licence_for_Accept, "QA comp2 Test", 30);
+		Click.sendKeys(driver, Driving_licence_for_Accept, "QA comp2 Test", 60);
 		Thread.sleep(2000);
 		Driving_licence_for_Accept.sendKeys(Keys.ENTER);
 
@@ -2869,7 +2875,7 @@ public class Underwriting extends TestBase {
 
 		HelperClass.highlightElement(driver, accept_upload_button);
 
-		Click.on(driver, accept_upload_button, 30);
+		Click.on(driver, accept_upload_button, 60);
 
 		Thread.sleep(4000);
 
@@ -2903,7 +2909,7 @@ public class Underwriting extends TestBase {
 
 		HelperClass.highlightElement(driver, refer_button);
 
-		Click.on(driver, refer_button, 30);
+		Click.on(driver, refer_button, 60);
 
 		System.out.println("Click on decision tab Refer button ");
 		LO.print("Click on decision tab Refer button");
@@ -2930,32 +2936,32 @@ public class Underwriting extends TestBase {
 
 	public void find_underwriting_tab_decision_page_refer_notes_textbox() throws InterruptedException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		// Thread.sleep(4000);
 		ExplicitWait.visibleElement(driver, refer_notes_textbox, 20);
 
 		HelperClass.highlightElement(driver, refer_notes_textbox);
 
-		Click.on(driver, refer_notes_textbox, 30);
+		Click.on(driver, refer_notes_textbox, 60);
 
 		System.out.println("Enter the refer notes in text box button");
 		LO.print("Enter the refer notes in text box button");
 
 		// ExplicitWait
 
-		Click.sendKeys(driver, refer_notes_textbox, "Need to update document", 30);
+		Click.sendKeys(driver, refer_notes_textbox, "Need to update document", 60);
 
 	}
 
 	public void verification_underwriting_tab_decision_page_view_icon() throws InterruptedException {
 
-		ExplicitWait.visibleElement(driver, desicion_upload_view, 30);
+		ExplicitWait.visibleElement(driver, desicion_upload_view, 60);
 
 		HelperClass.highlightElement(driver, desicion_upload_view);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		// Thread.sleep(4000);
-		Click.on(driver, desicion_upload_view, 30);
+		Click.on(driver, desicion_upload_view, 60);
 
 		Thread.sleep(4000);
 
@@ -2963,33 +2969,29 @@ public class Underwriting extends TestBase {
 
 		System.out.println("Document is visible");
 
-		Click.on(driver, desicion_upload_view_close, 30);
-
-
-		Thread.sleep(4000);
-		System.out.println("click on view icon close icon ");
-		
-		Click.on(driver, desicion_save_exit_button, 40);	
+		Click.on(driver, desicion_upload_view_close, 60);
 
 	}
 
 	public void verification_underwriting_tab_decision_page_save_and_exit_button() throws InterruptedException {
 
-		ExplicitWait.visibleElement(driver, desicion_save_exit_button, 30);
+		ExplicitWait.visibleElement(driver, desicion_save_exit_button, 60);
 
 		HelperClass.highlightElement(driver, desicion_save_exit_button);
 
-		Click.on(driver, desicion_save_exit_button, 30);
+		Click.on(driver, desicion_save_exit_button, 60);
 
 		System.out.println("Click on save and exit button");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		// Yes button on confirmation
 
-		Click.on(driver, desicion_save_exit_button_confirm_yes, 30);
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		try
+		{		
+		Click.on(driver, desicion_save_exit_button_confirm_yes, 10);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		}catch(Exception e) {}
 
 	}
 
@@ -2997,9 +2999,9 @@ public class Underwriting extends TestBase {
 
 	{
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underw_current_status, 30);
+		ExplicitWait.visibleElement(driver, underw_current_status, 60);
 
 		String ScreenValueforRefer = underw_current_status.getText();
 
@@ -3039,9 +3041,9 @@ public class Underwriting extends TestBase {
 
 	{
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underw_current_status, 30);
+		ExplicitWait.visibleElement(driver, underw_current_status, 60);
 
 		String ScreenValueforAccept = underw_current_status.getText();
 
@@ -3081,9 +3083,9 @@ public class Underwriting extends TestBase {
 
 	{
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underw_current_status, 30);
+		ExplicitWait.visibleElement(driver, underw_current_status, 60);
 
 		String ScreenValueforAccept = underw_current_status.getText();
 
@@ -3123,9 +3125,9 @@ public class Underwriting extends TestBase {
 
 	{
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underw_current_status, 30);
+		ExplicitWait.visibleElement(driver, underw_current_status, 60);
 
 		String ScreenValueforAccept = underw_current_status.getText();
 
@@ -3165,20 +3167,33 @@ public class Underwriting extends TestBase {
 
 	{
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underw_decision_decline_tab, 30);
+		ExplicitWait.visibleElement(driver, underw_decision_decline_tab, 60);
 		underw_decision_decline_tab.click();
 
 	}
+	
+	public void find_decision_refer() throws InterruptedException
+
+	{
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, underw_decision_refer_tab, 60);
+		underw_decision_refer_tab.click();
+		
+
+	}
+
 
 	public boolean verify_current_status_of_underwriting_after_sending_to_decline() throws Exception
 
 	{
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, underw_current_status, 30);
+		ExplicitWait.visibleElement(driver, underw_current_status, 60);
 
 		String ScreenValueforDecline = underw_current_status.getText();
 

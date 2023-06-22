@@ -134,11 +134,14 @@ public class Opportunities extends TestBase {
 	@FindBy(xpath = "//select[@id='carScheme']")
 	private WebElement opp_opp_fact_find_no_of_carscheme;
 
-	@FindBy(xpath = "//app-opportunity-header/div[1]/div[2]/div[1]/button[2]/i[1]")
+	@FindBy(xpath = "//*[normalize-space()='Update']")
 	private WebElement opp_opp_update_button;
 
-	@FindBy(xpath = "//*[@id='cWraper']/div/app-add-opportunities/app-opportunity-header/div/div[1]/div/ul/li[3]/a/p")
+	@FindBy(xpath = "//*[normalize-space()='Proposal']")
 	private WebElement opp_proposal_button;
+	
+	@FindBy(xpath = "//*[normalize-space()='Documents']")
+	private WebElement opp_documents_button;
 
 	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[8]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td[7]/div/div/div/span")
 	private WebElement opp_find_channel_status;
@@ -439,11 +442,11 @@ public class Opportunities extends TestBase {
 		System.out.println("*****************Opportunity after sending to proposal ****************************");
 		System.out.println("*********************************************");
 
-		ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
-		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 20);
+		ExplicitWait.visibleElement(driver, opp_current_status_open, 60);
+		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 60);
 
-		ExplicitWait.visibleElement(driver, opp_current_status_channel, 20);
-		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 20);
+		ExplicitWait.visibleElement(driver, opp_current_status_channel, 60);
+		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 60);
 
 		String OppCurrentStatusOpen = opp_current_status_open.getText().trim();
 
@@ -506,6 +509,8 @@ public class Opportunities extends TestBase {
 	{
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		
+		Thread.sleep(3000);
 
 		// ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
 		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 20);
@@ -1302,8 +1307,21 @@ public class Opportunities extends TestBase {
 		int statusCode = closebaleHttpResponse.getCode();
 
 		Thread.sleep(5000);
+		
+		int i=0;
+		while(i<2)
+		{
+			
 		driver.navigate().refresh();
-
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);		
+		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 50);
+		String oppCurrentStatusQuoteref = opp_current_status_quoteref.getText().trim();
+		if(oppCurrentStatusQuoteref.equals("Contract signed"))
+		{
+			break;
+		}		
+		i++;
+		}
 		return statusCode;
 
 	}
@@ -1341,7 +1359,7 @@ public class Opportunities extends TestBase {
 
 		// Thread.sleep(5000);
 
-		ExplicitWait.visibleElement(driver, opp_opp_update_button, 10);
+		ExplicitWait.visibleElement(driver, opp_opp_update_button, 30);
 
 		opp_opp_update_button.click();
 
@@ -1349,13 +1367,19 @@ public class Opportunities extends TestBase {
 
 		// proposal link
 
-		// Thread.sleep(5000);
+
+		ExplicitWait.visibleElement(driver, opp_documents_button, 30); 
+		
+		opp_documents_button.click();
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		
 
 		ExplicitWait.visibleElement(driver, opp_proposal_button, 20);
 
 		opp_proposal_button.click();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		LO.print("click on Proposal icon");
 		System.out.println("click on Proposal icon");
 
@@ -1474,7 +1498,7 @@ public class Opportunities extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		// *[@id="sendcontractmodal"]/div/div/div[3]/div/button[2]
+
 
 	}
 

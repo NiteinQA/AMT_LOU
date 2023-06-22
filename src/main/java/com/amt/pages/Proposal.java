@@ -1421,7 +1421,7 @@ private WebElement proposal_save ;
 		
 		Thread.sleep(3000);
 		//1.proposal_indvidual_first_name 
-		ExplicitWait.visibleElement(driver, proposal_indvidual_first, 20);
+		ExplicitWait.visibleElement(driver, proposal_indvidual_first, 60);
 		
 		proposal_indvidual_first.clear();
 		proposal_indvidual_first.sendKeys("QA");

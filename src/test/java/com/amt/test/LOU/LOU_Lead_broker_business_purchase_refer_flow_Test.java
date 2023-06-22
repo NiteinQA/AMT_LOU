@@ -12,7 +12,7 @@ import com.amt.pages.UnderwritingPopupPage;
 import com.amt.testBase.TestBase;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class LOU_Lead_broker_business_purchase_accept_flow_Test extends TestBase {
+public class LOU_Lead_broker_business_purchase_refer_flow_Test extends TestBase {
 
 	Leads obj_Leads_Page;
 	Opportunities obj_Opportunities_Page;
@@ -334,62 +334,64 @@ public class LOU_Lead_broker_business_purchase_accept_flow_Test extends TestBase
 
 	}
 
-	/*
-	 * @Test(priority = 14)
-	 * 
-	 * public void UW6_verify_ownbook_underwriting_proposal_decision_with_declined()
-	 * throws Exception {
-	 * 
-	 * obj_Underwriting_page = new Underwriting();
-	 * 
-	 * //obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-	 * obj_Underwriting_page.find_underwriting_tab_decision_page();
-	 * 
-	 * obj_Underwriting_page.find_decision_decline(); obj_Underwriting_page.
-	 * verification_underwriting_tab_decision_page_saveandexit_button();
-	 * 
-	 * boolean statusofdecline = obj_Underwriting_page
-	 * .verify_current_status_of_underwriting_after_sending_to_decline();
-	 * Assert.assertTrue(statusofdecline);
-	 * 
-	 * }
-	 */
+	
+	  @Test(priority = 14,  dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
+	  
+	  public void UW6_verify_ownbook_underwriting_proposal_decision_with_declined()
+	  throws Exception {
+		  
+		  System.out.println("Test 14");
+	  
+	  obj_Underwriting_page = new Underwriting();
+	  
+	  //obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
+	  obj_Underwriting_page.find_underwriting_tab_decision_page();
+	  
+	  obj_Underwriting_page.find_decision_refer(); obj_Underwriting_page.
+	  verification_underwriting_tab_decision_page_save_and_exit_button();
+	  
+	  boolean statusofdecline = obj_Underwriting_page
+	  .verify_current_status_of_underwriting_after_sending_to_refer();
+	  Assert.assertTrue(statusofdecline);
+	  
+	  }
+	 
 
-	@Test(priority = 14, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
-
-	public void UW5_verify_underwriting_proposal_decision_with_accept() throws Exception {
-
-		System.out.println("Test 14");
-		
-		obj_Underwriting_page = new Underwriting();
-
-		// obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-
-		// obj_Underwriting_page.find_underwriting_listing_detail_listing_yes_option();
-
-		// obj_Underwriting_page.find_underwriting_tab_decision_page();
-		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
-
-		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_upload();
-		// //
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
-
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
-
-		obj_Underwriting_page.verify_underwriting_proposal_search_text_box();
-
-		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-
-		obj_Underwriting_page.find_underwriting_tab_decision_page();
-
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
-
-		// Assert for Accept condition
-		
-		boolean statusofaccept = obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept();
-		Assert.assertTrue(statusofaccept);
-
-	}
+//	@Test(priority = 14, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
+//
+//	public void UW5_verify_underwriting_proposal_decision_with_accept() throws Exception {
+//
+//		System.out.println("Test 14");
+//		
+//		obj_Underwriting_page = new Underwriting();
+//
+//		// obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
+//
+//		// obj_Underwriting_page.find_underwriting_listing_detail_listing_yes_option();
+//
+//		// obj_Underwriting_page.find_underwriting_tab_decision_page();
+//		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
+//
+//		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_upload();
+//		// //
+//		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
+//
+//		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
+//
+//		obj_Underwriting_page.verify_underwriting_proposal_search_text_box();
+//
+//		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
+//
+//		obj_Underwriting_page.find_underwriting_tab_decision_page();
+//
+//		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
+//
+//		// Assert for Accept condition
+//		
+//		boolean statusofaccept = obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept();
+//		Assert.assertTrue(statusofaccept);
+//
+//	}
 
 	/*
 	 * @Test(priority = 13)

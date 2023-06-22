@@ -228,20 +228,15 @@ public class Leads extends TestBase {
 	private WebElement select_new_quoted_save;
 
 	// lead update_convert into opportunity button
-	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-add-leads/app-lead-header/div/div[2]/div/button[3]")
+	@FindBy(xpath = "//*[normalize-space()='Save & Convert']")
 	private WebElement lead_update_convert_into_opp_button;
 
 	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-add-opportunities/div/div/div/div/form/div[1]/div[1]/div/div[2]/div[2]")
 	private WebElement lead_Opp_location;
 
-	// *[@id="cWraper"]/div/app-add-opportunities/div/div/div/div/form/div[1]/div[1]/div/div[2]/div[2]
 
 	@FindBy(xpath = "//button[contains(text(),'Confirm')]")
 	private WebElement lead_already_exits_quote_availbale;
-
-	// *[@id="map_copy_quote"]/div/div/div[3]/div/button[1]
-
-	// AlreadyexitsQuote = //button[normalize-space()='Confirm']
 
 	@FindBy(xpath = "//*[@id=\"new_map_copy_quote\"]/div/div/div[3]/div/button[1]")
 	private WebElement lead_already_exits_quote_availbale_second_popup_visible;
@@ -748,11 +743,11 @@ public class Leads extends TestBase {
 		}
 
 
-		System.out.println(sheetName);
+		 
 
 		String quote_no = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
 
-		System.out.println(quote_no);
+		 ExplicitWait.waitForListOfVisibleElements(driver, lead_page_table_elements_list, 30);
 
 		for (int i = 0; i <= quotes_for_mapping_list.size() - 1; i++) {
 
@@ -786,7 +781,7 @@ public class Leads extends TestBase {
 
 		Click.on(driver, select_new_quoted_save, 120);
 
-		Thread.sleep(5000);
+		
 
 		try
 
@@ -795,7 +790,7 @@ public class Leads extends TestBase {
 			if (lead_already_exits_quote_availbale.isEnabled())
 
 			{
-
+				Thread.sleep(5000);
 				System.out.println("click on OK button for lead already existing quote  ");
 				LO.print("click ok button on Map  new quote ");
 
@@ -1456,12 +1451,9 @@ public class Leads extends TestBase {
 
 //Map New Quote 
 
-//Thread.sleep(2000);	
-
 		LO.print("Click on Lead save and Convert button");
 		System.out.println("Click on Lead save and Convert button");
 
-//Thread.sleep(2000);	
 		Click.on(driver, lead_update_convert_into_opp_button, 120);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);

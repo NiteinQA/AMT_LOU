@@ -207,66 +207,7 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
-				<!-- Email plug in -->
-
-				<plugin>
-					<groupId>ch.fortysix</groupId>
-					<artifactId>maven-postman-plugin</artifactId>
-					<executions>
-
-						<execution>
-							<id>send a mail</id>
-							<phase>test</phase>
-							<goals>
-								<goal>send-mail</goal>
-							</goals>
-							<inherited>true</inherited>
-
-							<configuration>
-								<!-- From Email address -->
-								<from>nitein.kurane@autofacets.in</from>
-
-								<!--  Email subject -->
-								<subject>Test Automation Report</subject>
-
-								<!-- Fail the build if the mail doesnt reach -->
-								<failonerror>true</failonerror>
-
-								<!-- host -->
-								<mailhost>smtp.autofacets.in</mailhost>
-								<!-- port of the host -->
-								<mailport>465</mailport>
-								<mailssl>true</mailssl>
-								<mailAltConfig>true</mailAltConfig>
-
-								<!-- Email Authentication(USername and Password) -->
-								<mailuser>nitein.kurane@autofacets.in</mailuser>
-								<mailpassword>Nik989%&amp;nhrl14</mailpassword>
-
-								<receivers>
-									<!-- To Email address -->
-									<receiver>mehul.nagar@autofacets.in</receiver>
-									<receiver>nitein.kurane@thegatewaycorp.co.in</receiver>
-								</receivers>
-
-								<fileSets>
-									<fileSet>
-										<!-- Report directory Path -->
-										<directory>D://LOU//MT_LOU//ExtentReport</directory>
-										<includes>
-											<!-- Report file name -->
-											<include>ExtentReport.html</include>
-										</includes>
-										<!-- Use Regular Expressions like
-										**/*.html if you want all the html files
-										to send-->
-									</fileSet>
-								</fileSets>
-
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
+				
 			</plugins>
 		</pluginManagement>
 	</build>

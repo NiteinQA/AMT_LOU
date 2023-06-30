@@ -75,7 +75,11 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 	// contract mileage
 	@FindBy(xpath = "//*[normalize-space()='Contract mileage']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_customer_quote_summary_contract_mileage;	
+	private WebElement quote_summary_customer_quote_summary_contract_mileage;
+	
+	// Monthly finance rental
+	@FindBy(xpath = "//*[normalize-space()='Monthly finance rental']//ancestor::div[1]//div//strong|//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_monthly_finance_rental;
 
 	// Initial finance rental
 	@FindBy(xpath = "//*[normalize-space()='Initial finance rental']//ancestor::div[1]//div//strong")
@@ -170,7 +174,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		// waiting for summary section elements
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 120);
-		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_initial_finance_rental, 120);		
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_monthly_finance_rental, 120);		
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_funder_name, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_ref_number, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_exp_date, 120);
@@ -204,7 +208,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		String customer_quote_summary_miles = RemoveComma.of(quote_summary_customer_quote_summary_miles_per_annum.getText().trim());
 
-		String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2));
+		String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_monthly_finance_rental.getText().trim().substring(2));
 
 		String customer_quote_funder_name = quote_summary_customer_quote_summary_funder_name.getText().trim();
 
@@ -266,6 +270,9 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 //						cost_otr_price_from_screen, sheet_name);
 
 	}
+	
+	
+
 
 	public boolean quote_summary_broker_BCH_with_maintenance(String sheet_name)
 			throws InterruptedException, IOException {

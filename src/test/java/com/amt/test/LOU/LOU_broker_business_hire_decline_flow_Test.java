@@ -38,7 +38,7 @@ public class LOU_broker_business_hire_decline_flow_Test extends TestBase {
 		obj_Leads_Page.lead_vehicle_request_broker();
 
 		// Business = Broker + BCH
-		obj_Leads_Page.lead_map_new_quote_broker_business();
+		obj_Leads_Page.lead_map_new_quote();
 
 		// verifying table values with Quote save excel sheet values before saving
 

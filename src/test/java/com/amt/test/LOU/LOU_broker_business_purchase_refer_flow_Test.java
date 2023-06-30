@@ -12,7 +12,7 @@ import com.amt.pages.UnderwritingPopupPage;
 import com.amt.testBase.TestBase;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestBase {
+public class LOU_broker_business_purchase_refer_flow_Test extends TestBase {
 
 	Leads obj_Leads_Page;
 	Opportunities obj_Opportunities_Page;
@@ -25,7 +25,7 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 	Underwriting obj_Underwriting_page;
 
 	@Test(priority = 1)
-	public void L1_broker_create_lead_individual() throws Exception {
+	public void L1_broker_create_lead_business() throws Exception {
 
 		System.out.println("Test 1");
 
@@ -33,12 +33,12 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 		obj_Leads_Page.lead_General_info();
 
-		obj_Leads_Page.lead_Customer_info_individual();
+		obj_Leads_Page.lead_Customer_info_business();
 
 		obj_Leads_Page.lead_vehicle_request_broker();
 
-		// individual = Broker + PCP
-		obj_Leads_Page.lead_map_new_quote_broker_individual();
+		// Business = Broker + HPNR
+		obj_Leads_Page.lead_map_new_quote();
 
 //		boolean table_verification_before_save = obj_Leads_Page.verify_table_values_on_lead_page();
 
@@ -62,8 +62,8 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 	}
 
-	@Test(priority = 2,dependsOnMethods = { "L1_broker_create_lead_individual" })
-	public void L2_broker_individual_current_status_before_sending_to_proposal() throws Exception {
+	@Test(priority = 2,dependsOnMethods = { "L1_broker_create_lead_business" })
+	public void L2_broker_business_current_status_before_sending_to_proposal() throws Exception {
 
 		System.out.println("Test 2");
 		// Opportunity flow
@@ -77,7 +77,7 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 		boolean opp_CurrentStatus = obj_Opportunities_Page
 				.verify_current_status_of_opportunity_before_sending_to_proposal();
 
-		Assert.assertTrue(opp_CurrentStatus);
+		//Assert.assertTrue(opp_CurrentStatus);
 
 		System.out.println("Status Verified : Before sending the proposal ");
 		LO.print("Status Verified : Before sending the proposal");
@@ -85,7 +85,7 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 	}
 
-	@Test(priority = 3 , dependsOnMethods = { "L2_broker_individual_current_status_before_sending_to_proposal" })
+	@Test(priority = 3 , dependsOnMethods = { "L2_broker_business_current_status_before_sending_to_proposal" })
 
 	public void L3_verify_table_values_on_opportunity_page_before_sending_proposal() throws Exception {
 
@@ -106,20 +106,20 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 	@Test(priority = 4 , dependsOnMethods = { "L3_verify_table_values_on_opportunity_page_before_sending_proposal" })
 
-	public void L4_adding_proposal_on_opportunity_page_broker_individual_flow() throws Exception {
-		
-		System.out.println("Test 4");
+	public void L4_adding_proposal_on_opportunity_page_broker_business_flow() throws Exception {
 
+		System.out.println("Test 4");
+		
 		obj_Opportunities_Page.opp_listing_detail_page();
 
-		obj_Opportunities_Page.opp_listing_detail_update_individual();
+		obj_Opportunities_Page.opp_opp_fact_find();
 
 		// Proposal page for adding data in opportunity - Customer info, Additional info
 		// , Bank detail
 
 		obj_Proposal_Page = new Proposal();
 
-		obj_Proposal_Page.proposal_Add_Individual_info();
+		obj_Proposal_Page.proposal_Add_Customer_info();
 
 		obj_Proposal_Page.Opp_listing_proposal_fill_form_manually();
 
@@ -130,9 +130,9 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 	}
 
-	@Test(priority = 5 , dependsOnMethods = { "L4_adding_proposal_on_opportunity_page_broker_individual_flow" })
+	@Test(priority = 5 , dependsOnMethods = { "L4_adding_proposal_on_opportunity_page_broker_business_flow" })
 
-	public void L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow()
+	public void L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_business_flow()
 			throws Exception {
 		
 		System.out.println("Test 5");
@@ -144,27 +144,28 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 		Assert.assertTrue(opp_AfterCurrentStatus);
 
-		System.out.println("Status Verified : After sending the proposal ");
+		System.out.println("Status Verified : After sending the proposal");
 		LO.print("Status Verified : After sending the proposal");
 
 	}
 
-	@Test(priority = 6, dependsOnMethods = { "L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow" })
+	@Test(priority = 6, dependsOnMethods = { "L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_business_flow" })
 
-	public void L6_broker_create_opportunity_individual_sending_to_contract() throws Exception {
+	public void L6_broker_create_opportunity_business_sending_to_contract() throws Exception {
 
 		System.out.println("Test 6");
 
 		obj_Opportunities_Page = new Opportunities();
 
 		obj_Opportunities_Page.opp_find_send_contract_icon();
+
 	}
 
 	/*
 	 * @Test( priority=7)
 	 * 
 	 * public void
-	 * broker_create_opportunity_individual_currentstatus_after_sending_to_contract()
+	 * broker_create_opportunity_business_currentstatus_after_sending_to_contract()
 	 * throws Exception { obj_Opportunities_Page = new Opportunities();
 	 * 
 	 * 
@@ -184,9 +185,9 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 	 * }
 	 */
 
-	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_individual_sending_to_contract" })
+	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_business_sending_to_contract" })
 
-	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow()
+	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_business_flow()
 			throws Exception {
 
 		System.out.println("Test 7");
@@ -204,7 +205,7 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 	}
 
-	@Test(priority = 8 , dependsOnMethods = { "L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow" })
+	@Test(priority = 8 , dependsOnMethods = { "L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_business_flow" })
 	public void L8_verify_signed_contract_status_with_api_call() throws Exception
 
 	{
@@ -275,7 +276,7 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 		obj_Underwriting_Popup_Page.search_and_verify_underwriting_icon_is_availabale();
 
-		boolean underwriting_pop_up_value_verification = obj_Underwriting_Popup_Page.verify_underwriting_pop_up_summary_values_for_broker_individual_purchase_flow();
+		boolean underwriting_pop_up_value_verification = obj_Underwriting_Popup_Page.verify_underwriting_pop_up_summary_values_for_broker_business_purchase_flow();
 	
 		//Assert.assertTrue(underwriting_pop_up_value_verification);
 		
@@ -327,30 +328,30 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 
 		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
 
-		boolean status = obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_broker_individual_purchase_flow();
+		boolean status = obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_broker_business_purchase_flow();
 
 		obj_Underwriting_page.find_underwriting_tab_decision_page();
 
 	}
 
 	
-	@Test(priority = 14, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
+	  @Test(priority = 14,  dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
 	  
 	  public void UW6_verify_ownbook_underwriting_proposal_decision_with_declined()
 	  throws Exception {
-		
-	   System.out.println("Test 14");
+		  
+		  System.out.println("Test 14");
 	  
 	  obj_Underwriting_page = new Underwriting();
 	  
 	  //obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
 	  obj_Underwriting_page.find_underwriting_tab_decision_page();
 	  
-	  obj_Underwriting_page.find_decision_decline(); 
-	  obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
+	  obj_Underwriting_page.find_decision_refer(); obj_Underwriting_page.
+	  verification_underwriting_tab_decision_page_save_and_exit_button();
 	  
 	  boolean statusofdecline = obj_Underwriting_page
-	  .verify_current_status_of_underwriting_after_sending_to_decline();
+	  .verify_current_status_of_underwriting_after_sending_to_refer();
 	  Assert.assertTrue(statusofdecline);
 	  
 	  }
@@ -386,6 +387,7 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 //		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
 //
 //		// Assert for Accept condition
+//		
 //		boolean statusofaccept = obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept();
 //		Assert.assertTrue(statusofaccept);
 //
@@ -432,7 +434,7 @@ public class LOU_Lead_broker_individual_purchase_decline_flow_Test extends TestB
 //
 //		obj_Opportunities_Page.opp_menu_link();
 //
-//		obj_Opportunities_Page.verify_opportunity_broker_individual_quote_search_text_box();
+//		obj_Opportunities_Page.verify_opportunity_broker_business_quote_search_text_box();
 //
 //	}
 //

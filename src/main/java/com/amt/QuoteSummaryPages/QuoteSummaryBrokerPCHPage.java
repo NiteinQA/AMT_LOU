@@ -83,6 +83,11 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 	// Miles per annum
 	@FindBy(xpath = "//*[normalize-space()='Miles per annum']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_miles_per_annum;
+	
+	// Monthly finance rental
+	@FindBy(xpath = "//*[normalize-space()='Monthly finance rental']//ancestor::div[1]//div//strong|//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_monthly_finance_rental;
+
 
 	// Funder name
 	@FindBy(xpath = "//*[normalize-space()='Funder']//ancestor::div[1]//div//strong")
@@ -174,7 +179,7 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 		// waiting for summary section elements
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 120);
-		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_initial_finance_rental, 120);		
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_monthly_finance_rental, 120);		
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_funder_name, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_ref_number, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_quote_exp_date, 120);
@@ -208,7 +213,7 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 
 		String customer_quote_summary_miles = RemoveComma.of(quote_summary_customer_quote_summary_miles_per_annum.getText().trim());
 
-		String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_initial_finance_rental.getText().trim().substring(2));
+		String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_monthly_finance_rental.getText().trim().substring(2));
 
 		String customer_quote_funder_name = quote_summary_customer_quote_summary_funder_name.getText().trim();
 

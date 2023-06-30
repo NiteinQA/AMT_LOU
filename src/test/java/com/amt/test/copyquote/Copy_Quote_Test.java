@@ -44,6 +44,41 @@ public class Copy_Quote_Test extends TestBase {
 		 
 		 obj_acq_listing_page.copy_quote();
 	}
+	
+	@Test
+	public void copy_Quote_for_ownbook_individual_purchase_Test() throws IOException, InterruptedException, ClassNotFoundException{			
+		
+		 obj_acq_listing_page = new AcquisitionListingPage();
+		 
+		 obj_acq_listing_page.copy_quote();
+	}
+	
+	
+	@Test
+	public void copy_Quote_for_ownbook_business_purchase_Test() throws IOException, InterruptedException, ClassNotFoundException{			
+		
+		 obj_acq_listing_page = new AcquisitionListingPage();
+		 
+		 obj_acq_listing_page.copy_quote();
+	}
+	
+	
+	@Test
+	public void copy_Quote_for_ownbook_individual_hire_Test() throws IOException, InterruptedException, ClassNotFoundException{			
+		
+		 obj_acq_listing_page = new AcquisitionListingPage();
+		 
+		 obj_acq_listing_page.copy_quote();
+	}
+	
+	
+	@Test
+	public void copy_Quote_for_ownbook_business_hire_Test() throws IOException, InterruptedException, ClassNotFoundException{			
+		
+		 obj_acq_listing_page = new AcquisitionListingPage();
+		 
+		 obj_acq_listing_page.copy_quote();
+	}
 
 
 }

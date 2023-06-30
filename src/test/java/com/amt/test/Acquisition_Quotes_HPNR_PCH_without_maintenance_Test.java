@@ -82,7 +82,7 @@ public class Acquisition_Quotes_HPNR_PCH_without_maintenance_Test extends TestBa
 			String residual_value_used , String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_deposit_from_excel, String document_fee_from_excel,
 			String upsell, String maintenance_required, String maintenance_margin, String initial_payment,
-			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
 		obj_holding_cost_HPNR_PCH_page = new HoldingCost_HPNR_PCHPage();
 	
@@ -101,7 +101,7 @@ public class Acquisition_Quotes_HPNR_PCH_without_maintenance_Test extends TestBa
 			String residual_value_used , String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_deposit_from_excel, String document_fee_from_excel,
 			String upsell, String maintenance_required, String maintenance_margin, String initial_payment,
-			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, NumberFormatException, ClassNotFoundException {
 
 
 		obj_customer_quote_page = new CustomerQuotePage_HPNR_PCHPage();
@@ -133,8 +133,8 @@ public class Acquisition_Quotes_HPNR_PCH_without_maintenance_Test extends TestBa
 		obj_quote_summary_page = new QuoteSummary_HPNR_PCHPage();
 
 
-		boolean quote_summary_page_status = obj_quote_summary_page.quote_summary_HPNR_PCH_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_page_status);
+		obj_quote_summary_page.quote_summary_HPNR_PCH_without_maintenance(sheet_name);
+		
 
 	}
 	

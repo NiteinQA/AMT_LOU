@@ -62,8 +62,8 @@ public class TestBase {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-//			options.addArguments("force-device-scale-factor=0.90");
-//			options.addArguments("high-dpi-support=0.90");
+			options.addArguments("force-device-scale-factor=1.00");
+			options.addArguments("high-dpi-support=1.00");
 			options.addArguments("enable-automation");
 //			options.addArguments("--headless");
 //			options.addArguments("--no-sandbox");

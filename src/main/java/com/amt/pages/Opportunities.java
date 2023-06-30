@@ -49,6 +49,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Opportunities extends TestBase {
 
 	JavascriptExecutor js;
+	
+	AcquisitionListingPage obj_acq_listing_page;
 
 	@FindBy(xpath = "//i[@class='icon-opportunity']")
 	private WebElement opportunities;
@@ -787,7 +789,7 @@ public class Opportunities extends TestBase {
 
 		LO.print("Clicked on Opportunity link from Menu ");
 		System.out.println("Clicked on Opportunity link from Menu");
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		// Click.sendKeys(driver, Lead_OpportunityId, null, 10);
 
@@ -805,25 +807,11 @@ public class Opportunities extends TestBase {
 		
 		
 		//Getting oppo ID from excel 		
-		String sheetName="";
-		
+        String classOrMethodName = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
 
-	
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_hire")) {
-			sheetName = prop.getProperty("BrokerBCHQuoteNo");
-		}
-
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_hire")) {
-			sheetName = prop.getProperty("BrokerPCHQuoteNo");
-		}
+		obj_acq_listing_page = new AcquisitionListingPage();
 		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("business_purchase")) {
-			sheetName = prop.getProperty("BrokerHPNRQuoteNo");
-		}
-		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("individual_purchase")) {
-			sheetName = prop.getProperty("BrokerPCPQuoteNo");
-		}
+		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 		
 
 		String opportunityId = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);		
@@ -907,7 +895,7 @@ public class Opportunities extends TestBase {
 		String OwbbookStatusBeforexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 		String OwbbookStatusAfterxpath = "]/td[7]/div/div/div/span";
-		String Quoteref_web_1 = null;
+		String QuoteRef_new = null;
 
 		for (int i = 1; i <= 2; i++)
 
@@ -925,8 +913,8 @@ public class Opportunities extends TestBase {
 
 				String QuoteAfterXpath = "]/td[1]";
 
-				Quoteref_web_1 = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
-				System.out.println("Quoteref_web_1 " + Quoteref_web_1);
+				QuoteRef_new = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
+				System.out.println("QuoteRef_new " + QuoteRef_new);
 
 			}
 		}
@@ -937,38 +925,26 @@ public class Opportunities extends TestBase {
 		String[] DataAPI = new String[2];
 
 		DataAPI[0] = opp_id_screen;
-		DataAPI[1] = Quoteref_web_1;
+		DataAPI[1] = QuoteRef_new;
 		return DataAPI;
 
 	}
 
-	public String[] get_new_quote_price_after_underwriting_accepted() throws InterruptedException
+	public boolean get_new_quote_price_after_underwriting_accepted() throws InterruptedException, ClassNotFoundException, IOException
 
 	{
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
-		/*
-		 * ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-		 * ExplicitWait.visibleElement(driver, api_Opp_id_webelement, 20); String
-		 * opp_id_screen = api_Opp_id_webelement.getText();
-		 * System.out.println("opp_id_screen" + opp_id_screen);
-		 * 
-		 * // ExplicitWait.visibleElement(driver, api_quote_ref_webelement2, 20);
-		 * 
-		 * // Same for quote ref sent to customer
-		 */
-
-		// ExplicitWait.visibleElement(driver, Quoteref_in_Opp, 20);
-		String OwbbookStatusBeforexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
+		String OwbbookStatusBeforexpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 		String OwbbookStatusAfterxpath = "]/td[7]/div/div/div/span";
 
-		String Quoteref_web_1 = null;
-		String MonthlyPayment_web_1 = null;
+		String QuoteRef_new = null;
+		String MonthlyPayment_new = null;
 
-		String QuoteCancelled_web_1 = null;
-		String MonthlyPayment_cancelled_1 = null;
+		String QuoteRef_cancelled = null;
+		String MonthlyPayment_cancelled = null;
 
 		for (int i = 1; i <= 2; i++)
 
@@ -982,13 +958,13 @@ public class Opportunities extends TestBase {
 
 			{
 
-				String QuoteBerofexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
+				String QuoteBerofexpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 				String QuoteAfterXpath = "]/td[1]";
 
-				Quoteref_web_1 = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
-				System.out.println("New Quote ref in Opportunity " + Quoteref_web_1);
-				LO.print("New Quote ref in Opportunity " + Quoteref_web_1);
+				QuoteRef_new = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
+				System.out.println("New Quote ref in Opportunity " + QuoteRef_new);
+				LO.print("New Quote ref in Opportunity " + QuoteRef_new);
 
 			}
 
@@ -998,15 +974,15 @@ public class Opportunities extends TestBase {
 
 			{
 
-				String MonthlyPriceBerofexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
+				String MonthlyPriceBerofexpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 				String MonthlyPriceAfterxpath = "]/td[4]/div/div";
 
-				MonthlyPayment_web_1 = driver
+				MonthlyPayment_new = driver
 						.findElement(By.xpath(MonthlyPriceBerofexpath + i + MonthlyPriceAfterxpath)).getText();
-				System.out.println("New Quote Monthly Payment is  " + MonthlyPayment_web_1);
+				System.out.println("New Quote Monthly Payment is  " + MonthlyPayment_new);
 
-				LO.print("New Quote Monthly Payment is  = " + MonthlyPayment_web_1);
+				LO.print("New Quote Monthly Payment is  = " + MonthlyPayment_new);
 
 			}
 
@@ -1016,14 +992,14 @@ public class Opportunities extends TestBase {
 
 			{
 
-				String QuoteBerofexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
+				String QuoteBerofexpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 				String QuoteAfterXpath = "]/td[1]";
 
-				QuoteCancelled_web_1 = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
-				System.out.println("Cancelled Quote ref in Opportunity is = " + QuoteCancelled_web_1);
+				QuoteRef_new = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
+				System.out.println("Cancelled Quote ref in Opportunity is = " + QuoteRef_cancelled);
 
-				LO.print("Cancelled Quote ref in Opportunity is = " + QuoteCancelled_web_1);
+				LO.print("Cancelled Quote ref in Opportunity is = " + QuoteRef_cancelled);
 
 			}
 
@@ -1031,26 +1007,58 @@ public class Opportunities extends TestBase {
 
 			{
 
-				String MonthlyPriceBerofexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
+				String MonthlyPriceBerofexpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 				String MonthlyPriceAfterxpath = "]/td[4]/div/div";
 
-				MonthlyPayment_cancelled_1 = driver
+				MonthlyPayment_cancelled = driver
 						.findElement(By.xpath(MonthlyPriceBerofexpath + i + MonthlyPriceAfterxpath)).getText();
-				System.out.println(" Cancelled Monthly Payment value is = " + MonthlyPayment_cancelled_1);
-				LO.print("Cancelled Monthly Payment value is = " + MonthlyPayment_cancelled_1);
+				System.out.println(" Cancelled Monthly Payment value is = " + MonthlyPayment_cancelled);
+				LO.print("Cancelled Monthly Payment value is = " + MonthlyPayment_cancelled);
 			}
 
 		}
+		
+		
+        String classOrMethodName = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
+		obj_acq_listing_page = new AcquisitionListingPage();		
+		String sheetName = obj_acq_listing_page.calculation_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
+		
+		
+		double MonthlyPayment_new_Expected = GetExcelFormulaValue.get_formula_value(90, 1, sheetName);
+		
+		double MonthlyPayment_new_Actual = Double.parseDouble(RemoveComma.of(MonthlyPayment_new.trim().substring(2)).replace("ex. VAT", "").replace("inc. VAT", ""));
+		
+		boolean flag = false;
+		if(Difference.of_two_Double_Values(MonthlyPayment_new_Expected, MonthlyPayment_new_Actual)<0.2)
+		{
+			flag = true;
+			
+			System.out.println("Monthly Payment verified (found ok) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
+			LO.print          ("Monthly Payment verified (found ok) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
+			
+		}
+		else
+		{
+			System.out.println("Monthly Payment verified (found wrong) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
+			LO.print          ("Monthly Payment verified (found wrong) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
 
-		String[] DataValue1 = new String[4];
+		}
+		
+		return flag;
+		
+		
+		
+		
 
-		DataValue1[0] = Quoteref_web_1;
-		DataValue1[1] = MonthlyPayment_web_1;
-
-		DataValue1[2] = QuoteCancelled_web_1;
-		DataValue1[3] = MonthlyPayment_cancelled_1;
-		return DataValue1;
+//		String[] DataValue1 = new String[4];
+//
+//		DataValue1[0] = QuoteRef_new;
+//		DataValue1[1] = MonthlyPayment_new;
+//
+//		DataValue1[2] = QuoteRef_new;
+//		DataValue1[3] = MonthlyPayment_cancelled;
+//		return DataValue1;
 
 	}
 
@@ -1128,9 +1136,9 @@ public class Opportunities extends TestBase {
 		 * 
 		 * String OwbbookStatusAfterxpath = "]/td[7]/div/div/div/span";
 		 * 
-		 * String Quoteref_web_1 = null; String MonthlyPayment_web_1 = null;
+		 * String QuoteRef_new = null; String MonthlyPayment_web_1 = null;
 		 * 
-		 * String QuoteCancelled_web_1 = null; String MonthlyPayment_cancelled_1 = null;
+		 * String QuoteRef_new = null; String MonthlyPayment_cancelled = null;
 		 * 
 		 * double screen_total_cap_maint_value =0;
 		 * 
@@ -1151,10 +1159,10 @@ public class Opportunities extends TestBase {
 		 * 
 		 * String QuoteAfterXpath = "]";
 		 * 
-		 * //Quoteref_web_1 = driver.findElement(By.xpath(QuoteBerofexpath + i +
+		 * //QuoteRef_new = driver.findElement(By.xpath(QuoteBerofexpath + i +
 		 * QuoteAfterXpath)).getText();
-		 * System.out.println("New Quote ref in Opportunity " + Quoteref_web_1);
-		 * LO.print("New Quote ref in Opportunity " + Quoteref_web_1);
+		 * System.out.println("New Quote ref in Opportunity " + QuoteRef_new);
+		 * LO.print("New Quote ref in Opportunity " + QuoteRef_new);
 		 * 
 		 * 
 		 * 
@@ -1316,7 +1324,7 @@ public class Opportunities extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);		
 		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 50);
 		String oppCurrentStatusQuoteref = opp_current_status_quoteref.getText().trim();
-		if(oppCurrentStatusQuoteref.equals("Contract signed"))
+		if(oppCurrentStatusQuoteref.equals("Contract signed")||oppCurrentStatusQuoteref.equals("Underwriting accepted"))
 		{
 			break;
 		}		
@@ -2078,51 +2086,32 @@ public class Opportunities extends TestBase {
 
 	}
 
-	public void verify_opportunity_ownbook_quote_search_text_box() throws InterruptedException, IOException {
+	public void verify_opportunity_ownbook_quote_search_text_box() throws InterruptedException, IOException, ClassNotFoundException {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
-		ExplicitWait.visibleElement(driver, search_bar, 20);
+
 
 		HelperClass.highlightElement(driver, search_bar);
 		System.out.println("Click on Search text box on opportunity page");
 		LO.print("Click on Search text box on Opportunity page");
 		Thread.sleep(4000);
 
-		FileInputStream fis = new FileInputStream(prop.getProperty("quote_save_excel_path"));
-		XSSFWorkbook book = new XSSFWorkbook(fis);
-		XSSFSheet sheet = book.getSheet("HPNRBCHQuoteNo");// selecting sheet with its name as a parameter
-		Thread.sleep(3000);
-		// System.out.println("Taking the sheet name is =" + fis);
-		System.out.println("Taking the sheet name is  =" + sheet.getSheetName());
+		
+        String classOrMethodName = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
 
-		XSSFRow row = sheet.getRow(0);// read data from first row as 0th row contains header
-		XSSFCell cell = row.getCell(0);// read data from first cell
-
-		// System.out.println(cell);
-		System.out.println(sheet.getRow(0).getCell(0));
-		Thread.sleep(1000);
-		String UnderwritingQuoteId = cell.getStringCellValue();
-
-		System.out.println("Getting the  Quote id from excel sheet  =" + UnderwritingQuoteId);
-		LO.print("Getting the  quote id from excel sheet =" + UnderwritingQuoteId);
-
-		Thread.sleep(2000);
-//System.out.println(cellval);
-
-		// String UnderwritingPrposalId =cell.getStringCellValue();
-
-		// System.out.println("proposal id before send to search text box =" +
-		// UnderwritingPrposalId);
-
-		// Obj_Underwriting_Page = new Underwriting();
-
+		obj_acq_listing_page = new AcquisitionListingPage();
+		
+		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
+		
+		String OppoID = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);
+		
 		ExplicitWait.visibleElement(driver, search_bar, 20);
 
-		Click.sendKeys(driver, search_bar, UnderwritingQuoteId, 20);
+		Click.sendKeys(driver, search_bar, OppoID, 20);
 
-		System.out.println("Enter the proposal in search text box =" + UnderwritingQuoteId);
-		LO.print("Enter the proposal in search text box =" + UnderwritingQuoteId);
+		System.out.println("Enter the opportunity ID in search text box =" + OppoID);
+		LO.print("Enter the opportunity ID in search text box =" + OppoID);
 
 		search_bar.sendKeys(Keys.ENTER);
 
@@ -2289,14 +2278,14 @@ public class Opportunities extends TestBase {
 	{
 		Thread.sleep(3000);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		// ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
-		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 30);
+		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 60);
 
-		ExplicitWait.visibleElement(driver, opp_current_status_channel, 20);
-		ExplicitWait.visibleElement(driver, opp_current_status_quoteref1, 20);
-		ExplicitWait.visibleElement(driver, opp_current_status_quoteref2, 20);
+		ExplicitWait.visibleElement(driver, opp_current_status_channel, 60);
+		ExplicitWait.visibleElement(driver, opp_current_status_quoteref1, 60);
+		ExplicitWait.visibleElement(driver, opp_current_status_quoteref2, 60);
 
 		// String OppCurrentStatusOpen = opp_current_status_open.getText().trim();
 
@@ -2533,7 +2522,7 @@ public class Opportunities extends TestBase {
 
 		String OwbbookStatusAfterxpath = "]/td[7]/div/div/div/span";
 
-		String Quoteref_web_1 = "";
+		String QuoteRef_new = "";
 		for (int i = 1; i <= 2; i++)
 
 		{
@@ -2550,20 +2539,23 @@ public class Opportunities extends TestBase {
 
 				String QuoteAfterXpath = "]/td[1]/div/div";
 
-				Quoteref_web_1 = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
-				System.out.println("Quoteref_web_1 " + Quoteref_web_1);
+				QuoteRef_new = driver.findElement(By.xpath(QuoteBerofexpath + i + QuoteAfterXpath)).getText();
+				System.out.println("QuoteRef_new " + QuoteRef_new);
 
 			}
 		}
-		return Quoteref_web_1;
+		return QuoteRef_new;
 
 	}
 
 	public void search_and_verify_underwriting_icon_is_availabale_after_cancel_flow() throws InterruptedException {
 
-		String UnderwitingWeblementBeforexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
+		String UnderwitingWeblementBeforexpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 		String UnderwitingWeblementAfterxpath = "]/td[7]/div/div/div/span";
+		
+		
+		                                         
 
 		for (int i = 1; i <= 2; i++)
 
@@ -2578,7 +2570,7 @@ public class Opportunities extends TestBase {
 
 			{
 
-				String QuoteBerofexpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
+				String QuoteBerofexpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[";
 
 				String QuoteAfterXpath = "]/td[8]/div/a[5]";
 

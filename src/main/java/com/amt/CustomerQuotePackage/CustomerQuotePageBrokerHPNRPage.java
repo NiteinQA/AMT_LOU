@@ -29,33 +29,27 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
 
-// vehicle_discount_cost_price
-
+	// vehicle_discount_cost_price
 	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
 	private WebElement vehicle_discount_cost_price;
 
 	// vehicle_additional_discount_cost_price
-
 	@FindBy(xpath = "(//*[@id='bdiscountvalue']//ancestor::div[3]//div)[1]")
 	private WebElement vehicle_additional_discount_cost_price;
 
 	// paint_discount_cost_price
-
 	@FindBy(xpath = "(//*[@id='pdiscountper']//ancestor::div[3]//div)[1]")
 	private WebElement paint_discount_cost_price;
 
 	// paint_additional_discount_cost_price
-
 	@FindBy(xpath = "(//*[@id='pdiscountvalue']//ancestor::div[3]//div)[1]")
 	private WebElement paint_additional_discount_cost_price;
 
 	// options_discount_cost_price
-
 	@FindBy(xpath = "(//*[@id='odiscount']//ancestor::div[3]//div)[1]")
 	private WebElement options_discount_cost_price;
 
 	// options_additional_discount_cost_price
-
 	@FindBy(xpath = "(//*[@id='odiscountvalue']//ancestor::div[3]//div)[1]")
 	private WebElement options_additional_discount_cost_price;
 
@@ -228,7 +222,7 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 	private WebElement check_box_supplier_setting_finance;
 
 	public CustomerQuotePageBrokerHPNRPage() {
-		PageFactory.initElements(driver,this);
+		PageFactory.initElements(driver, this);
 	}
 
 	public boolean edit_otr_sales_price_and_verify_profit(String sales_price_percentage, String sheet_name)
@@ -240,11 +234,11 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 		LO.print("Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price");
 		System.out.println("Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price");
 
-// getting screen otr price
+		// getting screen otr price
 		ExplicitWait.visibleElement(driver, otr_cost_price, 30);
 		double otrCostPrice = Double.parseDouble(RemoveComma.of(otr_cost_price.getText().trim().substring(2)));
 
-// code for sending input to sales total input
+		// code for sending input to sales total input
 		ExplicitWait.visibleElement(driver, sales_total_input, 30);
 		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		double salesPricePercentage = Double.parseDouble(sales_price_percentage);
@@ -281,335 +275,128 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 	}
 
 	public boolean edit_otr_sales_price_and_verify_profit_broker_purchase_used_vehicle(String sales_price_percentage,
-String sheet_name) throws InterruptedException, UnsupportedFlavorException, IOException {
+			String sheet_name) throws InterruptedException, UnsupportedFlavorException, IOException {
 
-LO.print("");
- System.out.println("");
+		LO.print("");
+		System.out.println("");
 
- LO.print("Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price");
- System.out.println("Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price");
+		LO.print("Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price");
+		System.out.println("Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price");
 
-// getting screen otr price
-ExplicitWait.visibleElement(driver, otr_cost_price, 30);
-double otrCostPrice = Double.parseDouble(RemoveComma.of(otr_cost_price.getText().trim().substring(2)));
+		// getting screen otr price
+		ExplicitWait.visibleElement(driver, otr_cost_price, 30);
+		double otrCostPrice = Double.parseDouble(RemoveComma.of(otr_cost_price.getText().trim().substring(2)));
 
-// code for sending input to sales total input
-ExplicitWait.visibleElement(driver, sales_total_input, 30);
- sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-double salesPricePercentage = Double.parseDouble(sales_price_percentage);
- double salesPrice = (((otrCostPrice * salesPricePercentage) / 100) + otrCostPrice);
- Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
- Actions act = new Actions(driver);
- act.sendKeys(Keys.TAB).build().perform();
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
- LO.print("Sending " + salesPrice + " to sales total input field");
-System.out.println("Sending " + salesPrice + " to sales total input field");
+		// code for sending input to sales total input
+		ExplicitWait.visibleElement(driver, sales_total_input, 30);
+		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+		double salesPricePercentage = Double.parseDouble(sales_price_percentage);
+		double salesPrice = (((otrCostPrice * salesPricePercentage) / 100) + otrCostPrice);
+		Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.TAB).build().perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
- double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
+		LO.print("Sending " + salesPrice + " to sales total input field");
+		System.out.println("Sending " + salesPrice + " to sales total input field");
 
-ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
- vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
- Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
- String vehicle_profit_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
 
- double vehicel_profit_actual = Double.parseDouble(vehicle_profit_copied);
+		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		String vehicle_profit_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
 
-double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
+		double vehicel_profit_actual = Double.parseDouble(vehicle_profit_copied);
 
- boolean status = false;
+		double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
 
- if (diff1 < 0.2) {
-status = true;
+		boolean status = false;
 
- LO.print("Vehicle profit verified on editing Vehicle Sales Price");
-System.out.println("Vehicle profit verified on editing Vehicle Sales Price");
-}
+		if (diff1 < 0.2) {
+			status = true;
 
- return status;}
+			LO.print("Vehicle profit verified on editing Vehicle Sales Price");
+			System.out.println("Vehicle profit verified on editing Vehicle Sales Price");
+		}
 
-	
+		return status;
+	}
 
 	public boolean customer_Quote_vehicle_profit_checking_broker_hpnr(String vehicleProfit, String quoteRef,
- String quoteExpiryDate, String term, String milesperannum, String contractMileage, String cahDeposit,
- String noOfMonthlyPayments, String monthlyFinancePayment, String finalBallonPayment,
- String optionToPurchaseFee, String rflIncluded, String aPR, String commission2, String partExchangeActual,
- String partExchangeGiven, String lessFinanceSettlement, String sheet_name)
-throws InterruptedException, IOException {
+			String quoteExpiryDate, String term, String milesperannum, String contractMileage, String cahDeposit,
+			String noOfMonthlyPayments, String monthlyFinancePayment, String finalBallonPayment,
+			String optionToPurchaseFee, String rflIncluded, String aPR, String commission2, String partExchangeActual,
+			String partExchangeGiven, String lessFinanceSettlement, String sheet_name)
+			throws InterruptedException, IOException {
 
- Click.on(driver, customer_quote, 25);
+		Click.on(driver, customer_quote, 25);
 
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
- ExplicitWait.visibleElement(driver, otrScreenPrice, 30);
-String otr_screen_price = otrScreenPrice.getText().trim().substring(2);
-String otr = RemoveComma.of(otr_screen_price);
-double otr_screen_price_converted = Double.parseDouble(otr);
+		ExplicitWait.visibleElement(driver, otrScreenPrice, 30);
+		String otr_screen_price = otrScreenPrice.getText().trim().substring(2);
+		String otr = RemoveComma.of(otr_screen_price);
+		double otr_screen_price_converted = Double.parseDouble(otr);
 
- ExplicitWait.visibleElement(driver, vehicleprofit, 20);
+		ExplicitWait.visibleElement(driver, vehicleprofit, 20);
 
-vehicleprofit.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+		vehicleprofit.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
-int profit = Integer.parseInt(vehicleProfit);
+		int profit = Integer.parseInt(vehicleProfit);
+		
+		Thread.sleep(2000);
 
-Click.sendKeysint(driver, vehicleprofit, profit, 40);
- Actions act = new Actions(driver);
- act.sendKeys(Keys.TAB).build().perform();
+		Click.sendKeysint(driver, vehicleprofit, profit, 40);
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.TAB).build().perform();
 
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
- double vehicleProfit_converted = Double.parseDouble(vehicleProfit);
- ExplicitWait.visibleElement(driver, vehicle_sale_price, 20);
- String vehicle_sale_price_from_screen = RemoveComma.of(vehicle_sale_price.getText().trim().substring(2));
- double vehicle_sale_price_from_screen_converted = Double.parseDouble(vehicle_sale_price_from_screen);
+		double vehicleProfit_converted = Double.parseDouble(vehicleProfit);
+		ExplicitWait.visibleElement(driver, vehicle_sale_price, 20);
+		String vehicle_sale_price_from_screen = RemoveComma.of(vehicle_sale_price.getText().trim().substring(2));
+		double vehicle_sale_price_from_screen_converted = Double.parseDouble(vehicle_sale_price_from_screen);
 
- double diff2 = Difference.of_two_Double_Values(otr_screen_price_converted,
- vehicle_sale_price_from_screen_converted);
+		double diff2 = Difference.of_two_Double_Values(otr_screen_price_converted,
+				vehicle_sale_price_from_screen_converted);
 
-LO.print("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
- + otr_screen_price_converted);
-System.out.println("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
- + otr_screen_price_converted);
+		LO.print("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
+				+ otr_screen_price_converted);
+		System.out.println("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
+				+ otr_screen_price_converted);
 
-LO.print("After adding profit to cost price " + otr_screen_price_converted
- + " sales price is shown as (considering VAT%) " + vehicle_sale_price_from_screen_converted);
- System.out.println("After adding profit to cost price " + otr_screen_price_converted
-+ " sales price is shown as (considering VAT%) " + vehicle_sale_price_from_screen_converted);
+		LO.print("After adding profit to cost price " + otr_screen_price_converted
+				+ " sales price is shown as (considering VAT%) " + vehicle_sale_price_from_screen_converted);
+		System.out.println("After adding profit to cost price " + otr_screen_price_converted
+				+ " sales price is shown as (considering VAT%) " + vehicle_sale_price_from_screen_converted);
 
- boolean vehicle_profit_status = false;
+		boolean vehicle_profit_status = false;
 
-if (diff2 == (vehicleProfit_converted * 1.2)) {
-vehicle_profit_status = true;
- LO.print("Vehicle profit verified");
- System.out.println("Vehicle profit verified");
-}
+		if (diff2 == (vehicleProfit_converted * 1.2)) {
+			vehicle_profit_status = true;
+			LO.print("Vehicle profit verified");
+			System.out.println("Vehicle profit verified");
+		}
 
-return vehicle_profit_status;}
+		return vehicle_profit_status;
+	}
 
 	public boolean customer_Quote_balance_to_finance_checking_broker_hpnr(String vehicleProfit, String quoteRef,
- String quoteExpiryDate, String term, String milesperannum, String contractMileage, String cahDeposit,
-String financeCharges, String noOfMonthlyPayments, String monthlyFinancePayment, String finalBallonPayment,
- String optionToPurchaseFee, String rflIncluded, String aPR, String commission2, String partExchangeActual,
- String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel, String sheet_name)
- throws InterruptedException, IOException {
-
-ExplicitWait.visibleElement(driver, vehicle_sale_price, 30);
- String otr_screen_price = vehicle_sale_price.getText().trim().substring(2);
- String otr = RemoveComma.of(otr_screen_price);
- double otr_screen_price_converted = Double.parseDouble(otr);
-
-double on_road_price_for_invoice = GetExcelFormulaValue.get_formula_value(14, 4, sheet_name);
- double diff = Difference.of_two_Double_Values(on_road_price_for_invoice, otr_screen_price_converted);
- LO.print("");
- System.out.println("");
-
-LO.print("Adding Funder Quote Values to Screen");
-System.out.println("Adding Funder Quote Values to Screen");
-
- Thread.sleep(4000);
-Click.on(driver, customer_quote_funder, 60);
-
- Actions act = new Actions(driver);
- act.sendKeys(Keys.ENTER).build().perform();
-
- Thread.sleep(2000);
-
- Click.sendKeys(driver, quote_reference, quoteRef, 60);
-
- Click.sendKeys(driver, expiry_date, quoteExpiryDate, 60);
-
- Click.sendKeys(driver, term_period, term, 60);
- Click.sendKeys(driver, miles_per_annum, milesperannum, 60);
-Click.on(driver, contract_miles, 20);
-
- Click.sendKeys(driver, cashdeposit, cahDeposit, 60);
-
- Click.sendKeys(driver, financecharges, financeCharges, 60);
-
- Click.sendKeys(driver, noOfMonthlyPayment, noOfMonthlyPayments, 60);
- Click.sendKeys(driver, monthlyfinancePayment, monthlyFinancePayment, 60);
-
- finalBalloonPayment.clear();
- Click.sendKeys(driver, finalBalloonPayment, finalBallonPayment, 60);
- Click.sendKeys(driver, optiontoPurchaseFee, optionToPurchaseFee, 60);
-
- Dropdown.selectByVisibleText(driver, rFLIncluded, rflIncluded, 60);
-
- Click.sendKeys(driver, apr, aPR, 60);
-
-Click.sendKeys(driver, commission, commission2, 60);
-
-Thread.sleep(3000);
-Click.on(driver, add, 60);
-
-LO.print("Funder Quote Added Successfully");
- System.out.println("Funder Quote Added Successfully");
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
- LO.print("");
-System.out.println("");
-
- LO.print("Entering Part Exchange Values to screen");
-System.out.println("Entering Part Exchange Values to screen");
-
-LO.print("");
-System.out.println("");
-
-LO.print("Started verifying Balance To Finance Value");
-System.out.println("Started verifying Balance To Finance Value");
-
-ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
- Thread.sleep(4000);
-// Click.on(driver, part_exchange_payment, 70);
-LO.print("Clicked on Part Exchange panel");
-System.out.println("Clicked on Part Exchange panel");
-
-Click.on(driver, given_part_exchange_value, 20);
-
- given_part_exchange_value.clear();
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
- Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
- act.sendKeys(Keys.TAB).perform();
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-// Clicking on outstanding finance and suppliersettling finance checkbox
-
- JavascriptExecutor jse = (JavascriptExecutor) driver;
-
-// ExplicitWait.clickableElement(driver, check_box_outstanding_finance, 20);
- jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
-// 20);
-
- jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
-
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
- Click.sendKeys(driver, funder_name, "Funder X", 20);
-act.sendKeys(Keys.TAB).perform();
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
- Click.sendKeys(driver, agreement_number, "123", 20);
- act.sendKeys(Keys.TAB).perform();
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
- ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
- less_finance_settlement.clear();
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
- Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
- act.sendKeys(Keys.TAB).perform();
- ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
- LO.print("");
-System.out.println("");
-
- LO.print("Started verifying Balance To Finance");
- System.out.println("Started verifying Balance To Finance");
-
- ExplicitWait.visibleElement(driver, part_exchange_value, 30);
-
- double part_exchange_profit_from_screen = Double
-.parseDouble(RemoveComma.of(part_exchange_value.getText().trim().substring(2)));
-
-Click.on(driver, customer_quote_summary, 60);
-
-double balance_to_finance_expected = (otr_screen_price_converted - Double.parseDouble(cahDeposit)
-- part_exchange_profit_from_screen);
-LO.print("Balance To Finance Expected is =" + balance_to_finance_expected);
-System.out.println("Balance To Finance Expected is =" + balance_to_finance_expected);
-
-ExplicitWait.visibleElement(driver, balance_to_finance, 20);
-
- double balance_to_finance_actual = Double.parseDouble(RemoveComma.of(balance_to_finance.getText().trim().substring(2)));
-
-LO.print("Balance To Finance Actual From Screen is =" + balance_to_finance_actual);
-System.out.println("Balance To Finance Actual From Screen is =" + balance_to_finance_actual);
-
-boolean balance_to_finance_status = false;
-
- if (Difference.of_two_Double_Values(balance_to_finance_expected, balance_to_finance_actual) < 0.2) {
- balance_to_finance_status = true;
- LO.print("Balance to finance value from customer quote summary - verified");
-System.out.println("Balance to finance value from customer quote summary - verified");
-} else {
-LO.print("xxx -Please check Balance to finance value from customer quote summary");
- System.err.println("xxx -Please check Balance to finance value from customer quote summary");
-}
-
-return balance_to_finance_status; }
-
-	public boolean customer_Quote_page_verification_broker_purchase_used_vehicle(String vehicleProfit, String quoteRef,
- String quoteExpiryDate, String term, String milesperannum, String contractMileage, String cahDeposit,
- String noOfMonthlyPayments, String monthlyFinancePayment, String finalBallonPayment,
- String optionToPurchaseFee, String rflIncluded, String aPR, String commission2, String partExchangeActual,
- String partExchangeGiven, String lessFinanceSettlement, String sheet_name)
- throws InterruptedException, IOException, UnsupportedFlavorException {
-
-Click.on(driver, customer_quote, 25);
-
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-ExplicitWait.visibleElement(driver, otrScreenPriceUsedVehicle, 30);
-String otr_screen_price = otrScreenPriceUsedVehicle.getText().trim().substring(2);
-String otr = RemoveComma.of(otr_screen_price);
-double otr_screen_price_converted = Double.parseDouble(otr);
-
-ExplicitWait.visibleElement(driver, vehicleprofit, 20);
-
-vehicleprofit.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
-int profit = Integer.parseInt(vehicleProfit);
-
-Click.sendKeysint(driver, vehicleprofit, profit, 40);
-Actions act = new Actions(driver);
-act.sendKeys(Keys.TAB).build().perform();
-
-ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
- double vehicleProfit_converted = Double.parseDouble(vehicleProfit);
-ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 20);
-
-vehicle_sale_price_used_vehicle.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
- String vehicle_sales_price_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
- double vehicle_sales_price_from_screen_converted = Double.parseDouble(vehicle_sales_price_copied);
-
-double diff2 = Difference.of_two_Double_Values(otr_screen_price_converted,
- vehicle_sales_price_from_screen_converted);
-
-LO.print("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
- + otr_screen_price_converted);
-System.out.println("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
- + otr_screen_price_converted);
-
-LO.print("After adding profit to otr price " + otr_screen_price_converted
-+ " sales price is shown as (considering VAT%) " + vehicle_sales_price_from_screen_converted);
-System.out.println("After adding profit to otr price " + otr_screen_price_converted
- + " sales price is shown as (considering VAT%) " + vehicle_sales_price_from_screen_converted);
-
-boolean vehicle_profit_status = false;
-
-if (diff2 == (vehicleProfit_converted * 1.2)) {
- vehicle_profit_status = true;
-LO.print("Vehicle profit verified");
-System.out.println("Vehicle profit verified");
-}
- return vehicle_profit_status;
- }
-
-
-	public boolean customer_Quote_balance_to_finance_checking_broker_purchase_used_vehicle(
-			String vehicleProfit,String quoteRef,String quoteExpiryDate,String term,String milesperannum,String contractMileage,String cashDeposit,String financeCharges,String noOfMonthlyPayments,String monthlyFinancePayment,String finalBallonPayment,String optionToPurchaseFee,String rflIncluded,String aPR,String commission2,String partExchangeActual,String given_part_exchange_value_from_excel,String less_finance_settlement_from_excel,String sheet_name)throws InterruptedException,IOException,NumberFormatException,UnsupportedFlavorException {
-
-		ExplicitWait.visibleElement(driver,vehicle_sale_price_used_vehicle,30);
-		vehicle_sale_price_used_vehicle.sendKeys(Keys.chord(Keys.CONTROL,"a","c"));
-		Clipboard clipboard=Toolkit.getDefaultToolkit().getSystemClipboard();
-		double vehicle_sales_price_copied=Double.parseDouble((String)clipboard.getData(DataFlavor.stringFlavor));
+			String quoteExpiryDate, String term, String milesperannum, String contractMileage, String cahDeposit,
+			String financeCharges, String noOfMonthlyPayments, String monthlyFinancePayment, String finalBallonPayment,
+			String optionToPurchaseFee, String rflIncluded, String aPR, String commission2, String partExchangeActual,
+			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel, String sheet_name)
+			throws InterruptedException, IOException {
+
+		ExplicitWait.visibleElement(driver, vehicle_sale_price, 30);
+		String otr_screen_price = vehicle_sale_price.getText().trim().substring(2);
+		String otr = RemoveComma.of(otr_screen_price);
+		double otr_screen_price_converted = Double.parseDouble(otr);
+
+		double on_road_price_for_invoice = GetExcelFormulaValue.get_formula_value(14, 4, sheet_name);
+
+		double diff = Difference.of_two_Double_Values(on_road_price_for_invoice, otr_screen_price_converted);
 
 		LO.print("");
 		System.out.println("");
@@ -618,105 +405,111 @@ System.out.println("Vehicle profit verified");
 		System.out.println("Adding Funder Quote Values to Screen");
 
 		Thread.sleep(4000);
-		Click.on(driver,customer_quote_funder,60);
+		Click.on(driver, customer_quote_funder, 60);
 
-		Actions act=new Actions(driver);
+		Actions act = new Actions(driver);
 		act.sendKeys(Keys.ENTER).build().perform();
 
 		Thread.sleep(2000);
 
-		Click.sendKeys(driver,quote_reference,quoteRef,60);
+		Click.sendKeys(driver, quote_reference, quoteRef, 60);
 
-		Click.sendKeys(driver,expiry_date,quoteExpiryDate,60);
+		Click.sendKeys(driver, expiry_date, quoteExpiryDate, 60);
 
-		Click.sendKeys(driver,term_period,term,60);
+		Click.sendKeys(driver, term_period, term, 60);
 
-		Click.sendKeys(driver,miles_per_annum,milesperannum,60);
+		Click.sendKeys(driver, miles_per_annum, milesperannum, 60);
 
-		Click.on(driver,contract_miles,20);
+		Click.on(driver, contract_miles, 20);
 
-		Click.sendKeys(driver,cashdeposit,cashDeposit,60);
+		Click.sendKeys(driver, cashdeposit, cahDeposit, 60);
 
-		Click.sendKeys(driver,financecharges,financeCharges,60);
+		Click.sendKeys(driver, financecharges, financeCharges, 60);
 
-		Click.sendKeys(driver,noOfMonthlyPayment,noOfMonthlyPayments,60);
+		Click.sendKeys(driver, noOfMonthlyPayment, noOfMonthlyPayments, 60);
 
-		Click.sendKeys(driver,monthlyfinancePayment,monthlyFinancePayment,60);
+		Click.sendKeys(driver, monthlyfinancePayment, monthlyFinancePayment, 60);
 
 		finalBalloonPayment.clear();
 
-		Click.sendKeys(driver,finalBalloonPayment,finalBallonPayment,60);
+		Click.sendKeys(driver, finalBalloonPayment, finalBallonPayment, 60);
 
-		Click.sendKeys(driver,optiontoPurchaseFee,optionToPurchaseFee,60);
+		Click.sendKeys(driver, optiontoPurchaseFee, optionToPurchaseFee, 60);
 
-		Dropdown.selectByVisibleText(driver,rFLIncluded,rflIncluded,60);
+		Dropdown.selectByVisibleText(driver, rFLIncluded, rflIncluded, 60);
 
-		Click.sendKeys(driver,apr,aPR,60);
+		Click.sendKeys(driver, apr, aPR, 60);
 
-		Click.sendKeys(driver,commission,commission2,60);
+		Click.sendKeys(driver, commission, commission2, 60);
 
 		Thread.sleep(3000);
 
-		Click.on(driver,add,60);
+		Click.on(driver, add, 60);
 
 		LO.print("Funder Quote Added Successfully");
 		System.out.println("Funder Quote Added Successfully");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		LO.print("");System.out.println("");
+		LO.print("");
+		System.out.println("");
 
-	LO.print("Started verifying Balance To Finance Value");
-	System.out.println("Started verifying Balance To Finance Value");
+		LO.print("Entering Part Exchange Values to screen");
+		System.out.println("Entering Part Exchange Values to screen");
 
-		ExplicitWait.clickableElement(driver,part_exchange_payment,50);
-		Thread.sleep(4000);// Click.on(driver,
-																										// part_exchange_payment,
-																										// 70);
+		LO.print("");
+		System.out.println("");
+
+		LO.print("Started verifying Balance To Finance Value");
+		System.out.println("Started verifying Balance To Finance Value");
+
+		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+		Thread.sleep(4000);
+		// Click.on(driver, part_exchange_payment, 70);
 		LO.print("Clicked on Part Exchange panel");
 		System.out.println("Clicked on Part Exchange panel");
 
-		Click.on(driver,given_part_exchange_value,20);
+		Click.on(driver, given_part_exchange_value, 20);
 
 		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		Click.sendKeys(driver,given_part_exchange_value,given_part_exchange_value_from_excel,30);
+		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		// Clicking on outstanding finance and suppliersettling finance checkbox
 
-		JavascriptExecutor jse=(JavascriptExecutor)driver;
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
 		// ExplicitWait.clickableElement(driver, check_box_outstanding_finance, 20);
 
-		jse.executeScript("arguments[0].click();",check_box_outstanding_finance,20);
+		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,// 20);
+		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
+		// 20);
 
-		jse.executeScript("arguments[0].click();",check_box_supplier_setting_finance,20);
+		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		Click.sendKeys(driver,funder_name,"Funder X",20);
+		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		Click.sendKeys(driver,agreement_number,"123",20);
+		Click.sendKeys(driver, agreement_number, "123", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver,less_finance_settlement,20);
+		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
 		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		Click.sendKeys(driver,less_finance_settlement,less_finance_settlement_from_excel,20);
+		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver,loading_icon,60);
-		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		LO.print("");
 		System.out.println("");
@@ -724,29 +517,261 @@ System.out.println("Vehicle profit verified");
 		LO.print("Started verifying Balance To Finance");
 		System.out.println("Started verifying Balance To Finance");
 
-		ExplicitWait.visibleElement(driver,part_exchange_value,30);
+		ExplicitWait.visibleElement(driver, part_exchange_value, 30);
 
-		double part_exchange_profit_from_screen=Double.parseDouble(RemoveComma.of(part_exchange_value.getText().trim().substring(2)));
+		double part_exchange_profit_from_screen = Double
+				.parseDouble(RemoveComma.of(part_exchange_value.getText().trim().substring(2)));
 
-	Click.on(driver,customer_quote_summary,60);
+		Click.on(driver, customer_quote_summary, 60);
 
-		double balance_to_finance_expected=(vehicle_sales_price_copied-Double.parseDouble(cashDeposit)-part_exchange_profit_from_screen);
+		double balance_to_finance_expected = (otr_screen_price_converted - Double.parseDouble(cahDeposit)
+				- part_exchange_profit_from_screen);
 
-		LO.print("Balance To Finance Expected is ="+balance_to_finance_expected);
-		System.out.println("Balance To Finance Expected is ="+balance_to_finance_expected);
+		LO.print("Balance To Finance Expected is =" + balance_to_finance_expected);
+		System.out.println("Balance To Finance Expected is =" + balance_to_finance_expected);
 
-		ExplicitWait.visibleElement(driver,balance_to_finance,20);
+		ExplicitWait.visibleElement(driver, balance_to_finance, 20);
 
-		double balance_to_finance_actual=Double.parseDouble(RemoveComma.of(balance_to_finance.getText().trim().substring(2)));
+		double balance_to_finance_actual = Double
+				.parseDouble(RemoveComma.of(balance_to_finance.getText().trim().substring(2)));
 
-		LO.print("Balance To Finance Actual From Screen is ="+balance_to_finance_actual);
-		System.out.println("Balance To Finance Actual From Screen is ="+balance_to_finance_actual);
+		LO.print("Balance To Finance Actual From Screen is =" + balance_to_finance_actual);
+		System.out.println("Balance To Finance Actual From Screen is =" + balance_to_finance_actual);
 
-		boolean balance_to_finance_status=false;
+		boolean balance_to_finance_status = false;
 
-		if(Difference.of_two_Double_Values(balance_to_finance_expected,balance_to_finance_actual)<0.2){balance_to_finance_status=true;
-		LO.print("Balance to finance value from customer quote summary - verified");
-		System.out.println("Balance to finance value from customer quote summary - verified");}else{LO.print("xxx -Please check Balance to finance value from customer quote summary");
-		System.err.println("xxx -Please check Balance to finance value from customer quote summary");}
-return balance_to_finance_status;
-}}
+		if (Difference.of_two_Double_Values(balance_to_finance_expected, balance_to_finance_actual) < 0.2) {
+			balance_to_finance_status = true;
+			LO.print("Balance to finance value from customer quote summary - verified");
+			System.out.println("Balance to finance value from customer quote summary - verified");
+		} else {
+			LO.print("xxx -Please check Balance to finance value from customer quote summary");
+			System.err.println("xxx -Please check Balance to finance value from customer quote summary");
+		}
+
+		return balance_to_finance_status;
+	}
+
+	public boolean customer_Quote_page_verification_broker_purchase_used_vehicle(String vehicleProfit, String quoteRef,
+			String quoteExpiryDate, String term, String milesperannum, String contractMileage, String cahDeposit,
+			String noOfMonthlyPayments, String monthlyFinancePayment, String finalBallonPayment,
+			String optionToPurchaseFee, String rflIncluded, String aPR, String commission2, String partExchangeActual,
+			String partExchangeGiven, String lessFinanceSettlement, String sheet_name)
+			throws InterruptedException, IOException, UnsupportedFlavorException {
+
+		Click.on(driver, customer_quote, 25);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, otrScreenPriceUsedVehicle, 30);
+		String otr_screen_price = otrScreenPriceUsedVehicle.getText().trim().substring(2);
+		String otr = RemoveComma.of(otr_screen_price);
+		double otr_screen_price_converted = Double.parseDouble(otr);
+
+		ExplicitWait.visibleElement(driver, vehicleprofit, 20);
+
+		vehicleprofit.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+
+		int profit = Integer.parseInt(vehicleProfit);
+
+		Click.sendKeysint(driver, vehicleprofit, profit, 40);
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.TAB).build().perform();
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		double vehicleProfit_converted = Double.parseDouble(vehicleProfit);
+		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 20);
+
+		vehicle_sale_price_used_vehicle.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		String vehicle_sales_price_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+
+		double vehicle_sales_price_from_screen_converted = Double.parseDouble(vehicle_sales_price_copied);
+
+		double diff2 = Difference.of_two_Double_Values(otr_screen_price_converted,
+				vehicle_sales_price_from_screen_converted);
+
+		LO.print("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
+				+ otr_screen_price_converted);
+		System.out.println("Vehicle profit from test data " + vehicleProfit_converted + " added to otr cost price "
+				+ otr_screen_price_converted);
+
+		LO.print("After adding profit to otr price " + otr_screen_price_converted
+				+ " sales price is shown as (considering VAT%) " + vehicle_sales_price_from_screen_converted);
+		System.out.println("After adding profit to otr price " + otr_screen_price_converted
+				+ " sales price is shown as (considering VAT%) " + vehicle_sales_price_from_screen_converted);
+
+		boolean vehicle_profit_status = false;
+
+		if (diff2 == (vehicleProfit_converted * 1.2)) {
+			vehicle_profit_status = true;
+			LO.print("Vehicle profit verified");
+			System.out.println("Vehicle profit verified");
+		}
+
+		return vehicle_profit_status;
+	}
+
+	public boolean customer_Quote_balance_to_finance_checking_broker_purchase_used_vehicle(String vehicleProfit,
+			String quoteRef, String quoteExpiryDate, String term, String milesperannum, String contractMileage,
+			String cashDeposit, String financeCharges, String noOfMonthlyPayments, String monthlyFinancePayment,
+			String finalBallonPayment, String optionToPurchaseFee, String rflIncluded, String aPR, String commission2,
+			String partExchangeActual, String given_part_exchange_value_from_excel,
+			String less_finance_settlement_from_excel, String sheet_name) throws InterruptedException, IOException, NumberFormatException, UnsupportedFlavorException {
+
+		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 30);
+		vehicle_sale_price_used_vehicle.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		double vehicle_sales_price_copied = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+
+		LO.print("");
+		System.out.println("");
+
+		LO.print("Adding Funder Quote Values to Screen");
+		System.out.println("Adding Funder Quote Values to Screen");
+
+		Thread.sleep(4000);
+		Click.on(driver, customer_quote_funder, 60);
+
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.ENTER).build().perform();
+
+		Thread.sleep(2000);
+
+		Click.sendKeys(driver, quote_reference, quoteRef, 60);
+
+		Click.sendKeys(driver, expiry_date, quoteExpiryDate, 60);
+
+		Click.sendKeys(driver, term_period, term, 60);
+
+		Click.sendKeys(driver, miles_per_annum, milesperannum, 60);
+
+		Click.on(driver, contract_miles, 20);
+
+		Click.sendKeys(driver, cashdeposit, cashDeposit, 60);
+
+		Click.sendKeys(driver, financecharges, financeCharges, 60);
+
+		Click.sendKeys(driver, noOfMonthlyPayment, noOfMonthlyPayments, 60);
+
+		Click.sendKeys(driver, monthlyfinancePayment, monthlyFinancePayment, 60);
+
+		finalBalloonPayment.clear();
+
+		Click.sendKeys(driver, finalBalloonPayment, finalBallonPayment, 60);
+
+		Click.sendKeys(driver, optiontoPurchaseFee, optionToPurchaseFee, 60);
+
+		Dropdown.selectByVisibleText(driver, rFLIncluded, rflIncluded, 60);
+
+		Click.sendKeys(driver, apr, aPR, 60);
+
+		Click.sendKeys(driver, commission, commission2, 60);
+
+		Thread.sleep(3000);
+
+		Click.on(driver, add, 60);
+
+		LO.print("Funder Quote Added Successfully");
+		System.out.println("Funder Quote Added Successfully");
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		LO.print("");
+		System.out.println("");
+
+		LO.print("Started verifying Balance To Finance Value");
+		System.out.println("Started verifying Balance To Finance Value");
+
+		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+		Thread.sleep(4000);
+		// Click.on(driver, part_exchange_payment, 70);
+		LO.print("Clicked on Part Exchange panel");
+		System.out.println("Clicked on Part Exchange panel");
+
+		Click.on(driver, given_part_exchange_value, 20);
+
+		given_part_exchange_value.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		// Clicking on outstanding finance and suppliersettling finance checkbox
+
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+
+		// ExplicitWait.clickableElement(driver, check_box_outstanding_finance, 20);
+
+		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
+		// 20);
+
+		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, funder_name, "Funder X", 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, agreement_number, "123", 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
+		less_finance_settlement.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		LO.print("");
+		System.out.println("");
+
+		LO.print("Started verifying Balance To Finance");
+		System.out.println("Started verifying Balance To Finance");
+
+		ExplicitWait.visibleElement(driver, part_exchange_value, 30);
+
+		double part_exchange_profit_from_screen = Double
+				.parseDouble(RemoveComma.of(part_exchange_value.getText().trim().substring(2)));
+
+		Click.on(driver, customer_quote_summary, 60);
+
+		double balance_to_finance_expected = (vehicle_sales_price_copied - Double.parseDouble(cashDeposit)
+				- part_exchange_profit_from_screen);
+
+		LO.print("Balance To Finance Expected is =" + balance_to_finance_expected);
+		System.out.println("Balance To Finance Expected is =" + balance_to_finance_expected);
+
+		ExplicitWait.visibleElement(driver, balance_to_finance, 20);
+
+		double balance_to_finance_actual = Double
+				.parseDouble(RemoveComma.of(balance_to_finance.getText().trim().substring(2)));
+
+		LO.print("Balance To Finance Actual From Screen is =" + balance_to_finance_actual);
+		System.out.println("Balance To Finance Actual From Screen is =" + balance_to_finance_actual);
+
+		boolean balance_to_finance_status = false;
+
+		if (Difference.of_two_Double_Values(balance_to_finance_expected, balance_to_finance_actual) < 0.2) {
+			balance_to_finance_status = true;
+			LO.print("Balance to finance value from customer quote summary - verified");
+			System.out.println("Balance to finance value from customer quote summary - verified");
+		} else {
+			LO.print("xxx -Please check Balance to finance value from customer quote summary");
+			System.err.println("xxx -Please check Balance to finance value from customer quote summary");
+		}
+
+		return balance_to_finance_status;
+	}
+
+}

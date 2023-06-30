@@ -38,7 +38,7 @@ public class LOU_broker_business_hire_accept_flow_Test extends TestBase {
 		obj_Leads_Page.lead_vehicle_request_broker();
 
 		// Business = Broker + BCH
-		obj_Leads_Page.lead_map_new_quote_broker_business();
+		obj_Leads_Page.lead_map_new_quote();
 
 		// verifying table values with Quote save excel sheet values before saving
 
@@ -47,7 +47,7 @@ public class LOU_broker_business_hire_accept_flow_Test extends TestBase {
 		// save lead and convert it to opportunity
 		obj_Leads_Page.save_and_convert_after_mapping_a_quote();
 
-		// verifying table values with Quote save excel sheet values before saving
+		// verifying table values with Quote save excel sheet values after saving
 		boolean table_verification_after_save = obj_Leads_Page.verify_table_values_on_lead_page();
 
 		boolean flag = false;
@@ -116,8 +116,6 @@ public class LOU_broker_business_hire_accept_flow_Test extends TestBase {
 		
 		obj_Opportunities_Page = new Opportunities();
 		
-		System.out.println("Test 4");
-
 		boolean opp_CurrentStatus = obj_Opportunities_Page
 				.verify_current_status_of_opportunity_before_sending_to_proposal();
 
@@ -191,29 +189,6 @@ public class LOU_broker_business_hire_accept_flow_Test extends TestBase {
 
 	}
 
-	/*
-	 * @Test( priority=7)
-	 * 
-	 * public void
-	 * broker_create_opportunity_business_currentstatus_after_sending_to_contract()
-	 * throws Exception { obj_Opportunities_Page = new Opportunities();
-	 * 
-	 * 
-	 * 
-	 * 
-	 * // Opportunity listing screen - Proposal status boolean
-	 * opp_AfterCurrentStatus_contract =obj_Opportunities_Page.
-	 * verify_current_status_of_opportunity_after_sending_to_customer_contract();
-	 * 
-	 * Assert.assertTrue(opp_AfterCurrentStatus_contract);
-	 * 
-	 * 
-	 * 
-	 * System.out.println( "Status Verified : Sent to customer ");
-	 * LO.print("Status Verified : Status Verified : Sent to customer");
-	 * 
-	 * }
-	 */
 
 	@Test(priority = 8)
 
@@ -259,7 +234,8 @@ public class LOU_broker_business_hire_accept_flow_Test extends TestBase {
 
 		Assert.assertEquals(statuscode, 200);
 
-		System.out.println("Status code 200 received ");
+		LO.print          ("Status code "+statuscode+" received ");
+		System.out.println("Status code "+statuscode+" received ");
 
 		obj_Opportunities_Page.opp_search_textbox();
 
@@ -397,6 +373,9 @@ public class LOU_broker_business_hire_accept_flow_Test extends TestBase {
 		
 		 boolean statusofaccept =obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept();
 		  Assert.assertTrue(statusofaccept);
+		  
+			System.out.println("Underwriting Status Verified : Accepted");
+			LO.print          ("Underwriting Status Verified : Accepted");
 		 
 
 	}

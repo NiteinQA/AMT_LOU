@@ -28,6 +28,8 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 	@Test(priority = 1)
 	public void L1_create_lead_convert_to_lead_for_ownbook_business_flow() throws Exception {
 
+		System.out.println("Test 1");
+		
 		obj_Leads_Page = new Leads();
 		obj_Leads_Page.lead_General_info();
 		obj_Leads_Page.lead_Customer_info_business();
@@ -65,6 +67,8 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 	@Test(priority = 2, dependsOnMethods = { "L1_create_lead_convert_to_lead_for_ownbook_business_flow" })
 	public void L2_ownbook_business_current_status_before_sending_to_proposal() throws Exception {
 
+		System.out.println("Test 2");
+		
 		// Opportunity flow
 
 		obj_Opportunities_Page = new Opportunities();
@@ -84,8 +88,8 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 
 		// Assert.assertTrue(opp_CurrentStatus);
 
-		System.out.println("Status Verified : Before sending the proposal ");
-		LO.print("Status Verified : Before sending the proposal");
+		System.out.println("Status Verified : Before sending the proposal");
+		LO.print          ("Status Verified : Before sending the proposal");
 
 	}
 
@@ -109,7 +113,7 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 
 	@Test(priority = 4, dependsOnMethods = { "L3_verify_table_values_on_opportunity_page_before_sending_proposal" })
 
-	public void L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_business_flow()
+	public void L4_fill_up_the_required_fields_for_sending_a_proposal()
 			throws Exception {
 
 		System.out.println("Test 4");
@@ -128,7 +132,7 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 	}
 
 	@Test(priority = 5, dependsOnMethods = {
-			"L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_business_flow" })
+			"L4_fill_up_the_required_fields_for_sending_a_proposal" })
 
 	public void L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal() throws Exception {
 
@@ -244,6 +248,9 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 		//Assert.assertTrue(underwriting_pop_up_value_verification);
 
 		obj_Underwriting_Popup_Page.verify_send_for_underwriting_button();
+		
+		System.out.println("Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting");
+		LO.print          ("Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting");
 
 	}
 
@@ -293,21 +300,12 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 
 		obj_Underwriting_page = new Underwriting();
 
-		// obj_Underwriting_page.verify_underwriting_menulink();
-
-		// obj_Underwriting_page.verify_underwriting_menulink_broker();
-
 		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-
-		// obj_Underwriting_page.find_underwriting_listing_detail_listing_yes_option();
 
 		boolean quote_tab_status = obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_ownbook_hire_flow();
 
-		//Assert.assertTrue(quote_tab_status);
-		
-		// obj_Underwriting_page.find_underwriting_tab_creditfile_page();
+		//Assert.assertTrue(quote_tab_status);	
 
-		// obj_Underwriting_page.find_underwriting_tab_document_page();
 		obj_Underwriting_page.find_underwriting_tab_decision_page();
 
 	}

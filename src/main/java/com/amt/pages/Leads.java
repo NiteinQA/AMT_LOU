@@ -459,7 +459,9 @@ public class Leads extends TestBase {
 		Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
 		// Dropdown.selectByVisibleText(driver, status, " Closed ", 120);
 
-		Click.sendKeys(driver, general_assigned_to, "Automation Tester", 120);
+		Click.sendKeys(driver, general_assigned_to, "Automation ", 120);
+	    Thread.sleep(1000);
+		Click.sendKeys(driver, general_assigned_to, "Tester", 120);
 
 		LO.print("Lead is assigned");
 		System.out.println("Lead is assigned");
@@ -491,9 +493,19 @@ public class Leads extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		Click.sendKeys(driver, customer_name, "QA ", 120);
-
-		// Thread.sleep(4000);
+		ExplicitWait.visibleElement(driver, customer_name, 30);
+		customer_name.sendKeys("U");
+		Thread.sleep(500);
+		customer_name.sendKeys("s");
+		Thread.sleep(500);
+		customer_name.sendKeys("e");
+		Thread.sleep(500);
+		customer_name.sendKeys("r");
+		Thread.sleep(500);
+		customer_name.sendKeys(" ");
+		
+		
+   	// Thread.sleep(4000);
 
 		Click.on(driver, customer_name_option, 20);
 
@@ -517,8 +529,9 @@ public class Leads extends TestBase {
 		Thread.sleep(2000);
 		Click.sendKeys(driver, customer_name, "Comp", 120);
 		Thread.sleep(1000);
-		customer_name.sendKeys(" QA2");
+		customer_name.sendKeys(" QA");
 		Thread.sleep(1000);
+		customer_name.sendKeys("2");
 
 		Click.on(driver, customer_name_option, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);

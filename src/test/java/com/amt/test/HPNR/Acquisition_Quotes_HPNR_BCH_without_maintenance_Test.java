@@ -189,6 +189,8 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_Test extends TestBa
 
 		System.out.println("");
 		System.out.println("");
+		
+
 
 		boolean cust_quote_for_upsell_values_boolean_status = obj_customer_quote_page
 				.check_monthly_payments_on_adding_upsell_values_without_maintenance(security_deposit, matrix_upsell,
@@ -198,9 +200,19 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_Test extends TestBa
 
 		System.out.println("");
 		System.out.println("");
+		
+		boolean finance_rental_with_part_exchange = obj_customer_quote_page
+				.check_monthly_finance_rental_with_part_exchange_without_maintenance(
+						actual_part_exchange_value_from_excel, given_part_exchange_value_from_excel,
+						less_finance_settlement_from_excel, order_deposit_from_excel, document_fee_from_excel,
+						sheet_name);
 
-		  
-		  System.out.println(""); System.out.println("");
+		Assert.assertTrue(finance_rental_with_part_exchange);
+		
+		System.out.println("");
+		System.out.println("");
+
+
 		  
 		  boolean monthly_rental_values_on_updating_upsell_value
 		  =obj_customer_quote_page.

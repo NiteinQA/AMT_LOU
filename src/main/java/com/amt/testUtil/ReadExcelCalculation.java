@@ -1431,6 +1431,9 @@ public class ReadExcelCalculation extends TestBase {
 		wb.getSheet(sheet_name).getRow(79).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("delivery_and_collection_ex_vat")));
 
+		wb.getSheet(sheet_name).getRow(104).getCell(1)
+		.setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
+		
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
 		out.close();

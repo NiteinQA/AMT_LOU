@@ -1317,12 +1317,20 @@ public class Opportunities extends TestBase {
 		Thread.sleep(5000);
 		
 		int i=0;
-		while(i<2)
+		while(i<4)
 		{
 			
 		driver.navigate().refresh();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);		
+		
+		try {
 		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 50);
+		}catch(Exception e) 
+		{
+			driver.navigate().refresh();
+			ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 50);
+		}
+		
 		String oppCurrentStatusQuoteref = opp_current_status_quoteref.getText().trim();
 		if(oppCurrentStatusQuoteref.equals("Contract signed")||oppCurrentStatusQuoteref.equals("Underwriting accepted"))
 		{

@@ -62,6 +62,13 @@ public class AcquisitionListingPage extends TestBase {
 
 	@FindBy(xpath = "//span[normalize-space()='Copy']")
 	private WebElement acquisition_quote_copy_button;
+	
+	@FindBy(xpath = "//*[@id='dropdownRole']")
+	private WebElement roles_dropdown;	
+	
+	
+	@FindBy(xpath = "//*[contains(text(), 'Super Admin')]")
+	private WebElement super_admin;
 
 	public AcquisitionListingPage() {
 		PageFactory.initElements(driver, this);
@@ -81,6 +88,14 @@ public class AcquisitionListingPage extends TestBase {
 
 	public void aquisition_Listingpage_AddnewQuote() throws InterruptedException {
 
+		Click.on(driver, roles_dropdown, 60);
+		
+		 Thread.sleep(1000);
+		
+		Click.on(driver, super_admin, 60);		
+					
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;

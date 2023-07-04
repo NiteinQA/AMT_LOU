@@ -313,7 +313,7 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 
 		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
 
-		boolean quote_tab_status = obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_ownbook_hire_flow();
+		boolean quote_tab_status = obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_ownbook_purchase_flow();
 
 		//Assert.assertTrue(quote_tab_status);	
 
@@ -363,7 +363,7 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 	 // //
 	  obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon()
 	 ; obj_Underwriting_page.
-	  verification_underwriting_tab_decision_page_saveandexit_button();
+	  verification_underwriting_tab_decision_page_save_and_exit_button();
 	  
 	 // Assert for Accept condition 
 	 boolean statusofaccept =

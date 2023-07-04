@@ -1673,9 +1673,8 @@ public class UnderwritingPopupPage extends TestBase {
 		double customer_quote_summary_total_deposit = Double.parseDouble(
 				RemoveComma.of(underwriting_popup_customer_quote_summary_total_deposit.getText().trim().substring(2)));
 
-		double customer_quote_summary_part_exchange_value =0;
-		try{ customer_quote_summary_part_exchange_value = Double.parseDouble(
-				RemoveComma.of(underwriting_popup_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));}catch(Exception e) {}
+		double  customer_quote_summary_part_exchange_value = Double.parseDouble(
+				RemoveComma.of(underwriting_popup_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
 
 		double customer_quote_summary_balance_to_finance = Double.parseDouble(
 				RemoveComma.of(underwriting_popup_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
@@ -2527,6 +2526,14 @@ public class UnderwritingPopupPage extends TestBase {
 			System.out.println("");
 			LO.print          ("");
 
+		}else
+		{
+			System.out.println("");
+			LO.print          ("");
+			LO.print          ("One or More than One values on underwriting pop up may be wrong , please check all above values printed on console");
+			System.err.println("One or More than One values on underwriting pop up may be wrong , please check all above values printed on console");
+			System.out.println("");
+			LO.print          ("");
 		}
 		
 		return status;

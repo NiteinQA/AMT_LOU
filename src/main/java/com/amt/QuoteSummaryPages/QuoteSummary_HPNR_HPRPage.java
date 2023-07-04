@@ -2959,28 +2959,28 @@ try {
 			status = true;
 		}
 
-		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
-		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		quote_summary_configuration_base_int_rate_input.sendKeys("6.5");
-
-		act.sendKeys(Keys.TAB).build().perform();
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-		LO.print("Base Interest Rate changed to 6.5 %");
-		System.out.println("Base Interest Rate changed to 6.5 %");
-
-		// writing values to excel
-
-		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-		wb1.getSheet(sheet_name).getRow(34).getCell(10).setCellValue(0.065);
-		wb1.getSheet(sheet_name).getRow(62).getCell(1).setCellValue(0.065);
-
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-		wb1.write(out1);
+//		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
+//		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+//		quote_summary_configuration_base_int_rate_input.sendKeys("6.5");
+//
+//		act.sendKeys(Keys.TAB).build().perform();
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//
+//		LO.print("Base Interest Rate changed to 6.5 %");
+//		System.out.println("Base Interest Rate changed to 6.5 %");
+//
+//		// writing values to excel
+//
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//		wb1.getSheet(sheet_name).getRow(34).getCell(10).setCellValue(0.065);
+//		wb1.getSheet(sheet_name).getRow(62).getCell(1).setCellValue(0.065);
+//
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//		wb1.write(out1);
 
 		return status;
 	}
@@ -3141,7 +3141,7 @@ try {
 	}
 
 	public boolean quote_summary_edit_customer_rate_over_base_value_verification(String sheet_name)
-			throws IOException, InterruptedException {
+			throws IOException, InterruptedException, UnsupportedFlavorException {
 
 		LO.print(
 				"*************Editing Customer Rate Over Base and Verifying Values on quote summary page has been started************");
@@ -3149,6 +3149,14 @@ try {
 				"*************Editing Customer Rate Over Base and Verifying Values on quote summary page has been started************");
 
 		// Edit finance margin configuration values from screen
+		
+		
+		ExplicitWait.visibleElement(driver, quote_summary_configuration_customer_base_over_rate, 30);
+		quote_summary_configuration_default_broker_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		String temp_cust_base_over_rate_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		double cust_base_over_rate_copied = Double.parseDouble(temp_cust_base_over_rate_copied);
 
 		ExplicitWait.visibleElement(driver, quote_summary_configuration_customer_base_over_rate, 30);
 		quote_summary_configuration_customer_base_over_rate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
@@ -3232,6 +3240,30 @@ try {
 		if (count == 3) {
 			status = true;
 		}
+		
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//		wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellValue(cust_base_over_rate_copied/100);
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//		wb.write(out1);
+		
+		
+		ExplicitWait.visibleElement(driver, quote_summary_save_button, 30);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", quote_summary_save_button);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 150);
+		
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_monthly_finance_rental, 30);
+		String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_monthly_finance_rental.getText().trim().substring(2));
+			
+		
+		FileInputStream in1 = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+		String sheetname = prop.getProperty("HPNRHPNRQuoteNo");
+		wb1.getSheet(sheetname).getRow(6).getCell(3).setCellValue(customer_quote_summary_monthly_finance_rental);		
+		FileOutputStream out1 = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+		wb1.write(out1);
+		wb1.close();		
 
 		return status;
 	}

@@ -1803,7 +1803,7 @@ public class Opportunities extends TestBase {
 	{
 		Thread.sleep(3000);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
 		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 30);

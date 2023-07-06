@@ -79,6 +79,14 @@ public class Copy_Quote_Test extends TestBase {
 		 
 		 obj_acq_listing_page.copy_quote();
 	}
+	
+	@Test
+	public void copy_Quote_for_ownbook_business_hire_funder_Test() throws IOException, InterruptedException, ClassNotFoundException{			
+		
+		 obj_acq_listing_page = new AcquisitionListingPage();
+		 
+		 obj_acq_listing_page.copy_quote();
+	}
 
 
 }

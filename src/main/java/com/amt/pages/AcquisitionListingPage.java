@@ -240,6 +240,10 @@ public class AcquisitionListingPage extends TestBase {
 		if (classOrMethodName.contains("ownbook_individual_purchase")) {
 			sheetName = prop.getProperty("HPNRPCPQuoteNo");
 		}
+		
+		if (classOrMethodName.contains("ownbook_business_hire_funder")) {
+			sheetName = prop.getProperty("HPNRBCHFunderQuoteNo");
+		}
 		return sheetName;
 	}
 
@@ -264,6 +268,11 @@ public String calculation_sheet_name_from_quote_save_excel_sheet(String classOrM
 
 	if (classOrMethodName.contains("ownbook_individual_purchase")) {
 		sheetName = prop.getProperty("calculation_sheet_ownbook_individual_purchase");
+	}
+	
+	
+	if (classOrMethodName.contains("ownbook_business_hire_funder")) {
+		sheetName = prop.getProperty("calculation_sheet_ownbook_business_hire_funder");
 	}
 	return sheetName;
 }

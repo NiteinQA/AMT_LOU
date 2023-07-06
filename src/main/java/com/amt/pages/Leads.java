@@ -1016,7 +1016,7 @@ public class Leads extends TestBase {
 
 			}
 			
-			else if (i == 20) {
+			else if (i == 50) {
 
 				LO.print          ("The given quote "+quote_no+" is not available in pop up listing");
 				System.err.println("The given quote "+quote_no+" is not available in pop up listing");
@@ -1118,7 +1118,7 @@ public class Leads extends TestBase {
 		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 
 		String quotRefNoExpected = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
-		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 9, sheetName);
+		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 
 		String contractTypeExpected = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
 		double termExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(4, 3, sheetName));

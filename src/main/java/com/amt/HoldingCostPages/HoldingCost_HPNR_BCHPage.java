@@ -152,6 +152,12 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='collapseCustomerQuote']/div/div/div/div/div/form/div/div/div[4]/div/p/strong")
 	private WebElement cap_monthly_maint_cost;
+	
+	
+	@FindBy(xpath = "//*[normalize-space()='CAP monthly maint. cost']//ancestor::div[1]//p/strong")
+	private WebElement cap_monthly_maintenance_cost;
+	
+	
 
 	@FindBy(xpath = "//input[@id='monthlyMaintenanceRental']")
 	private WebElement monthly_maintenance_rental;
@@ -199,10 +205,10 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 
 		Click.on(driver, holding_cost_summary, 30);
 
-		ExplicitWait.visibleElement(driver, cap_monthly_maint_cost, 10);
+		ExplicitWait.visibleElement(driver, cap_monthly_maintenance_cost, 10);
 
 		String capMaintValue = RemoveComma
-				.of(cap_monthly_maint_cost.getText().trim().substring(2));
+				.of(cap_monthly_maintenance_cost.getText().trim().substring(2));
 		
 		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);

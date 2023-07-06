@@ -108,6 +108,10 @@ public class Underwriting extends TestBase {
 //accept_increased_order_deposit
 	@FindBy(xpath = "(//input[@id='increasedOrderDeposit'])[1]")
 	private WebElement accept_increased_order_deposit;
+	
+	//accept_increased_finance_deposit
+	@FindBy(xpath = "//input[@id='increasedFinanceDeposit']")
+	private WebElement accept_increased_finance_deposit;
 
 	// accept_Maintained contract required
 
@@ -558,6 +562,18 @@ public class Underwriting extends TestBase {
 	// Monthly finance payment
 	@FindBy(xpath = "//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong")
 	private WebElement underwriting_quote_tab_customer_quote_summary_monthly_finance_payment;
+	
+	// Balloon
+	@FindBy(xpath = "//*[normalize-space()='Guaranteed future value']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_guaranteed_future_value;
+
+	// Final payment (inc. option to purchase fee)
+	@FindBy(xpath = "//*[normalize-space()='Final payment (inc. option to purchase fee)']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_final_payment_inc_option_to_purchase_fee;
+
+	// Pence per excess mile - finance
+	@FindBy(xpath = "//*[normalize-space()='Pence per excess mile - finance']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_customer_quote_summary_pence_per_excess_mile_finance;
 
 	// Monthly maint payment
 	@FindBy(xpath = "(//*[normalize-space()='Monthly maint. payment']//ancestor::div[1]//div//strong)[2]")
@@ -2517,8 +2533,9 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_initial_cash_payment, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_followed_by, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_monthly_finance_payment, 20);
-		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_balloon, 20);
-		ExplicitWait.visibleElement(driver,	underwriting_quote_tab_customer_quote_summary_final_payment_inc_option_to_purchase_fee, 20);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_guaranteed_future_value, 20);
+		ExplicitWait.visibleElement(driver,	quote_summary_customer_quote_summary_final_payment_inc_option_to_purchase_fee, 20);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_finance, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_vehicle_comm, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_default_finance_comm, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_document_fee_comm, 20);
@@ -2588,9 +2605,14 @@ public class Underwriting extends TestBase {
 
 		double customer_quote_summary_monthly_finance_payment = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_customer_quote_summary_monthly_finance_payment.getText().trim().substring(2)));
 
-		double customer_quote_summary_balloon = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_customer_quote_summary_balloon.getText().trim().substring(2)));
+		double customer_quote_summary_balloon = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_guaranteed_future_value.getText().trim().substring(2)));
 
-		double customer_quote_summary_final_payment_inc_option_to_purchase_fee = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_customer_quote_summary_final_payment_inc_option_to_purchase_fee.getText().trim().substring(2)));
+        double customer_quote_summary_final_payment_inc_option_to_purchase_fee = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_final_payment_inc_option_to_purchase_fee.getText()
+				.trim().substring(2)));
+
+        double customer_quote_summary_pence_per_excess_mile_finance = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_summary_pence_per_excess_mile_finance.getText().trim().substring(0, 4)));
+		
+				
 
 		double customer_quote_summary_vehicle_comm = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_customer_quote_summary_vehicle_comm.getText().trim().substring(2)));
 
@@ -2620,7 +2642,7 @@ public class Underwriting extends TestBase {
 		double documentFeeMarginFromScreen = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_configuration_decument_fee_margin.getText().trim().substring(2)));
 
 		// copying default broker margin from input field	
-		double default_broker_margin_copied = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_configuration_configuration_default_broker_margin.getText().trim().substring(2)));
+		double default_broker_margin_copied = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_configuration_configuration_default_broker_margin.getAttribute("value")));
 
     	// Vehicle details
 		String vehicleNameActual = underwriting_quote_tab_vehicle_heading.getText().trim();
@@ -2643,12 +2665,13 @@ public class Underwriting extends TestBase {
 		
 		//Getting expected values from calculation sheet
 		//OTR section elements		
-		double costOtrPriceExpected = GetExcelFormulaValue.get_formula_value(14, 4, sheetName);
-		double costPriceExVatAndRflExpected = GetExcelFormulaValue.get_formula_value(9, 9,
+		double costOtrPriceExpected = GetExcelFormulaValue.get_formula_value(14, 7, sheetName);
+		double costPriceExVatAndRflExpected = GetExcelFormulaValue.get_formula_value(9, 12,
 				sheetName);
-		double otrVatExpected = GetExcelFormulaValue.get_formula_value(10, 4, sheetName);
-		double otrRflAndFrfExpected = GetExcelFormulaValue.get_formula_value(7, 9, sheetName);		
+		double otrVatExpected = GetExcelFormulaValue.get_formula_value(10, 7, sheetName);
+		double otrRflAndFrfExpected = GetExcelFormulaValue.get_formula_value(7, 12, sheetName);	
 		
+	
 		//getting expected values for cust quote summary section elements
 		
 			
@@ -2681,6 +2704,8 @@ public class Underwriting extends TestBase {
 
 		double balloon = GetExcelFormulaValue.get_formula_value(232, 0, sheetName);
 		double finalPayment = GetExcelFormulaValue.get_formula_value(232, 1, sheetName);
+		
+		double pencePerExcessMileFinance = GetExcelFormulaValue.get_formula_value(232, 4, sheetName);
 
 		double vehicleCommission = GetExcelFormulaValue.get_formula_value(239, 0, sheetName);
 		double defaultFinanceCommission = GetExcelFormulaValue.get_formula_value(239, 1, sheetName);
@@ -2715,7 +2740,7 @@ public class Underwriting extends TestBase {
 		sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 		
 		String quotRefNoExpected = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
-		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
+		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 9, sheetName);
 
 		String contractTypeExpected = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
 		
@@ -3401,8 +3426,33 @@ public class Underwriting extends TestBase {
 			LO.print          ("Final Payment - found wrong");
 			System.err.println("Final Payment - found wrong");
 		}
+		
+		// 28.comparing Final Payment
+        if ((Difference.of_two_Double_Values(pencePerExcessMileFinance, customer_quote_summary_pence_per_excess_mile_finance)) < 0.2) {
+           count++;
 
-		// 28.comparing Vehicle Commission	
+           System.out.println("");
+           LO.print          ("");	
+
+           System.out.println(customer_quote_summary_pence_per_excess_mile_finance + " = " + pencePerExcessMileFinance);
+           LO.print          (customer_quote_summary_pence_per_excess_mile_finance + " = " + pencePerExcessMileFinance);			
+
+           LO.print          ("Pence Per Excess Mile Finance - found OK");
+           System.out.println("Pence Per Excess Mile Finance - found OK");
+
+            } else {
+
+            System.out.println("");
+            LO.print          ("");	
+
+            System.err.println(customer_quote_summary_pence_per_excess_mile_finance + " != " + pencePerExcessMileFinance);
+            LO.print          (customer_quote_summary_pence_per_excess_mile_finance + " != " + pencePerExcessMileFinance);			
+
+            LO.print          ("Pence Per Excess Mile Finance - found wrong");
+            System.err.println("Pence Per Excess Mile Finance - found wrong");
+            }
+
+		// 29.comparing Vehicle Commission	
 		
 		if ((Difference.of_two_Double_Values(vehicleCommission, customer_quote_summary_vehicle_comm)) < 0.2) {
 			
@@ -3429,7 +3479,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Vehicle Commission - found wrong");
 		}
 
-		// 29.comparing Default Finance Commission
+		// 30.comparing Default Finance Commission
 		if ((Difference.of_two_Double_Values(defaultFinanceCommission,customer_quote_summary_default_finance_comm)) < 0.2) {
 			
 			count++;
@@ -3455,7 +3505,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Default Finance Commission - found wrong");
 		}
 
-		// 30.comparing Document Fee Commission
+		// 31.comparing Document Fee Commission
 		if ((Difference.of_two_Double_Values(docFeeCommission, customer_quote_summary_document_fee_comm)) < 0.2) {
 			
 			count++;
@@ -3481,7 +3531,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Document Fee Commission - found wrong");
 		}
 
-		// 31.comparing Total Commission
+		// 32.comparing Total Commission
 		if ((Difference.of_two_Double_Values(totalCommission, customer_quote_summary_total_commission)) < 0.2) {
 			
 			count++;
@@ -3511,8 +3561,8 @@ public class Underwriting extends TestBase {
 		}
 		
 		
-		// 32.comparing Base Interest Rate
-		if (baseInterestRateFromExcel == baseInterestRateFromScreen) {
+		// 33.comparing Base Interest Rate
+		if (Difference.of_two_Double_Values(baseInterestRateFromExcel , baseInterestRateFromScreen)<0.05) {
 			
 			count++;
 			
@@ -3538,7 +3588,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Base Interest Rate found wrong");
 		}
 
-		// 33.comparing Finance Margin
+		// 34.comparing Finance Margin
 		if (Difference.of_two_Double_Values(financeMarginFromScreen, financeMarginFromExcel) < 0.2) {
 			
 			count++;
@@ -3563,7 +3613,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Finance Margin found wrong");
 		}
 
-		// 34.comparing Deductions
+		// 35.comparing Deductions
 		if (Difference.of_two_Double_Values(deductionsFromScreen, deductionsFromExcel) < 0.2) {
 			
 			count++;
@@ -3589,7 +3639,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Deductions found wrong");
 		}
 
-		// 35.comparing Additional Margin
+		// 36.comparing Additional Margin
 		if (Difference.of_two_Double_Values(additionalMarginFromScreen, additionalMarginFromExcel) < 0.2) {
 			
 			count++;
@@ -3616,7 +3666,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Additional Margin found wrong");
 		}
 
-		// 36.comparing Total Margin
+		// 37.comparing Total Margin
 		if (Difference.of_two_Double_Values(totalMarginFromScreen, totalMarginFromExcel) < 0.2) {
 			count++;
 			
@@ -3642,7 +3692,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Total Margin found wrong");
 		}
 
-		// 37.comparing Default Broker Margin percentage
+		// 38.comparing Default Broker Margin percentage
 		if (Difference.of_two_Double_Values(defaultBrokerMarginPercentageFromExcel , defaultBrokerMarginPercentageFromScreen)<0.2) {
 			
 			count++;
@@ -3668,7 +3718,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Default Broker Margin percentage found wrong");
 		}
 
-		// 38.comparing Customer Interest Rate
+		// 39.comparing Customer Interest Rate
 		if (Difference.of_two_Double_Values(customerInterestRateFromScreen , customerInterestRateFromExcel)<0.2) {
 			
 			count++;
@@ -3695,7 +3745,7 @@ public class Underwriting extends TestBase {
 			System.err.println("Customer Interest Rate found wrong");
 		}
 
-		// 39.comparing Document Fee
+		// 40.comparing Document Fee
 		if (Difference.of_two_Double_Values(documentFeeMarginFromScreen, documentFeeMarginFromExcel) < 0.2) {
 			count++;
 			
@@ -3719,7 +3769,7 @@ public class Underwriting extends TestBase {
 			LO.print          ("Document Fee Margin  found wrong");
 			System.err.println("Document Fee Margin  found wrong");
 		}
-		// 40.comparing Default Broker Margin
+		// 41.comparing Default Broker Margin
 		if ((Difference.of_two_Double_Values(default_broker_margin_copied, defaultBrokerMarginFromExcel) < 0.2)) {
 			
 			count++;
@@ -3747,15 +3797,21 @@ public class Underwriting extends TestBase {
 		
 
 		boolean status = false;
-		if (count == 40)
+		if (count == 41)
 
 		{
 			status = true;
 			
+	        // ANSI escape code for green color
+	        String ansiGreen = "\u001B[32m";
+	        
+	        // ANSI escape code to reset the console color
+	        String ansiReset = "\u001B[0m";
+			
 			System.out.println("");
 			LO.print          ("");
-			LO.print          ("All values on underwriting quote tab verified successfully");
-			System.err.println("All values on underwriting quote tab verified successfully");
+			LO.print          (ansiGreen+"All values on underwriting quote tab verified successfully"+ansiReset);
+			System.out.println(ansiGreen+"All values on underwriting quote tab verified successfully"+ansiReset);
 			System.out.println("");
 			LO.print          ("");
 			
@@ -5391,35 +5447,91 @@ public class Underwriting extends TestBase {
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 			
 		}		
-
-		
 		
 		//write all these values to calculation sheet as below
 		
+		    
+		obj_acq_listing_page = new AcquisitionListingPage();		
+		sheetName = obj_acq_listing_page.calculation_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 		
-     
+		Underwriting uw = new  Underwriting();	
+		if(sheetName.contains("Formula1"))
+		{
+		uw.write_edit_data_to_excel_for_ownboook_hire_contract(sheetName, orderDeposit, maintRequired, capMaintCost, paymentProfile, initialpayment);
+		}
+		if(sheetName.contains("Formula 3"))
+		{
+			uw.write_edit_data_to_excel_for_ownboook_hire_funder_contract(sheetName, orderDeposit, maintRequired, capMaintCost, paymentProfile, initialpayment);	
+		}
+	}
+
+	
+	public void ownbook_purchase_decision_accept_and_change_the_quote_data() throws Exception
+
+	{
+		//Identifying which sheet name to be used
+        String classOrMethodName = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
+		obj_acq_listing_page = new AcquisitionListingPage();		
+		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
+		
+		//Getting data values from quote save excel sheet 
+		//1. Sec Deposity
+		String securityDeposit = GetExcelFormulaValue.get_cell_value(4, 5, sheetName);
+		
+		//2. Finance Deposit
+		String financeDeposit = GetExcelFormulaValue.get_cell_value(4, 6, sheetName);
+		
+		//3. Order Deposit
+		String orderDeposit = GetExcelFormulaValue.get_cell_value(4, 7, sheetName);
+		
+		//5. maint required 
+		String maintRequired = GetExcelFormulaValue.get_cell_value(4, 8, sheetName);
+		
+		
+		//4. Cap maint cost annual
+		String capMaintCost = GetExcelFormulaValue.get_cell_value(4, 9, sheetName);		
+		
+		LO.print          ("Entering values to input field");
+		System.out.println("Entering values to input field");
+		
+		//putting values to input field		
+		// 1.sending security deposit
+		ExplicitWait.visibleElement(driver, accept_security_deposit_required, 20);
+		Click.sendKeys(driver, accept_security_deposit_required, securityDeposit, 60);
+
+		
+		// 2.sending finance deposit
+		ExplicitWait.visibleElement(driver, accept_increased_finance_deposit, 120);
+		Click.sendKeys(driver, accept_increased_finance_deposit, financeDeposit, 60);
+		
+		// 3.sending order deposit
+		ExplicitWait.visibleElement(driver, accept_increased_order_deposit, 120);
+		Click.sendKeys(driver, accept_increased_order_deposit, orderDeposit, 60);
+
+		
+		try{ ExplicitWait.visibleElement(driver, maint_contract_checkbox, 10);}catch(Exception e1) {}
+		
+		if(maintRequired.equalsIgnoreCase("Yes")&&maint_contract_checkbox.isEnabled())
+		{	
+			
+			js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].click();", maint_contract_checkbox);				
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+			
+		}		
+		
+		//write all these values to calculation sheet as below
+		     
 		obj_acq_listing_page = new AcquisitionListingPage();		
 		sheetName = obj_acq_listing_page.calculation_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 		
 		Underwriting uw = new  Underwriting();				
-		uw.write_edit_data_to_excel_for_ownboook_hire_contract(sheetName, orderDeposit, maintRequired, capMaintCost, paymentProfile, initialpayment);
-
-		
-		
-		
-//		ExplicitWait.visibleElement(driver, underw_accept_spread_rental_payment_value, 20);
-//		underw_accept_spread_rental_payment_value.click();
-//		Thread.sleep(2000);
-//
-//     	ExplicitWait.visibleElement(driver, Initial_payment_amount, 60);
-//		Thread.sleep(2000);
-//		Click.sendKeys(driver, Initial_payment_amount, "500", 60);
-//		Thread.sleep(2000);
-		
-		
+		uw.write_edit_data_to_excel_for_ownboook_purchase_contract(sheetName, orderDeposit,financeDeposit, maintRequired, capMaintCost);
 
 	}
 
+	
+	
 	public void write_edit_data_to_excel_for_ownboook_hire_contract(String sheetName, String orderDeposit,
 			String maintRequired, String capMaintCost, String paymentProfile, String initialpayment) throws FileNotFoundException, IOException {
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
@@ -5437,6 +5549,46 @@ public class Underwriting extends TestBase {
 		wb.write(out);
 		out.close();
 	}
+	
+	
+	public void write_edit_data_to_excel_for_ownboook_hire_funder_contract(String sheetName, String orderDeposit,
+			String maintRequired, String capMaintCost, String paymentProfile, String initialpayment) throws FileNotFoundException, IOException {
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		
+		wb.getSheet(sheetName).getRow(37).getCell(1).setCellValue(maintRequired);
+		wb.getSheet(sheetName).getRow(40).getCell(0).setCellValue(Double.parseDouble(capMaintCost));
+		wb.getSheet(sheetName).getRow(104).getCell(1).setCellValue(" "+paymentProfile+" ");
+		wb.getSheet(sheetName).getRow(104).getCell(3).setCellValue(Double.parseDouble(orderDeposit));
+		wb.getSheet(sheetName).getRow(110).getCell(0).setCellValue(maintRequired);
+		wb.getSheet(sheetName).getRow(110).getCell(1).setCellValue(0.2);
+		wb.getSheet(sheetName).getRow(110).getCell(3).setCellValue(Double.parseDouble(initialpayment));
+
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+		out.close();
+	}
+
+	
+	
+	public void write_edit_data_to_excel_for_ownboook_purchase_contract(String sheetName, String orderDeposit,String financeDeposit,
+			String maintRequired, String capMaintCost) throws FileNotFoundException, IOException {
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		
+		wb.getSheet(sheetName).getRow(25).getCell(1).setCellValue(maintRequired);
+		wb.getSheet(sheetName).getRow(31).getCell(10).setCellValue(Double.parseDouble(capMaintCost));	
+		wb.getSheet(sheetName).getRow(104).getCell(4).setCellValue(maintRequired);
+		wb.getSheet(sheetName).getRow(110).getCell(1).setCellValue(Double.parseDouble(orderDeposit));
+		wb.getSheet(sheetName).getRow(110).getCell(4).setCellValue(Double.parseDouble(financeDeposit));	
+		wb.getSheet(sheetName).getRow(107).getCell(0).setCellValue(0.2);	
+
+
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+		out.close();
+	}
+
 
 	public void ownbook_hire_accept_with_change_the_data_quote() throws Exception
 

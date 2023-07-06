@@ -115,11 +115,6 @@ public class LOU_ownbook_individual_hire_accept_without_any_changes_Test extends
 
 		obj_Opportunities_Page.opp_listing_detail_update_individual();
 		
-		//obj_Opportunities_Page.opp_opp_fact_find();
-
-		// Proposal page for adding data in opportunity - Customer info, Additionalinfo
-		// , Bank detail
-
 		obj_Proposal_Page = new Proposal();
 
 		obj_Proposal_Page.proposal_Add_Individual_info();

@@ -1024,8 +1024,22 @@ public class Opportunities extends TestBase {
 		obj_acq_listing_page = new AcquisitionListingPage();		
 		String sheetName = obj_acq_listing_page.calculation_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 		
+		double MonthlyPayment_new_Expected =0;
 		
-		double MonthlyPayment_new_Expected = GetExcelFormulaValue.get_formula_value(90, 1, sheetName);
+		if(classOrMethodName.contains("hire"))
+		{
+		MonthlyPayment_new_Expected = GetExcelFormulaValue.get_formula_value(90, 1, sheetName);
+		}
+		
+		if(classOrMethodName.contains("hire_funder"))
+		{
+		MonthlyPayment_new_Expected = GetExcelFormulaValue.get_formula_value(96, 1, sheetName);
+		}
+		
+		if(classOrMethodName.contains("purchase"))
+		{
+		MonthlyPayment_new_Expected = GetExcelFormulaValue.get_formula_value(95, 1, sheetName);
+		}
 		
 		double MonthlyPayment_new_Actual = Double.parseDouble(RemoveComma.of(MonthlyPayment_new.trim().substring(2)).replace("ex. VAT", "").replace("inc. VAT", ""));
 		
@@ -1034,33 +1048,26 @@ public class Opportunities extends TestBase {
 		{
 			flag = true;
 			
-			System.out.println("Monthly Payment verified (found ok) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
-			LO.print          ("Monthly Payment verified (found ok) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
+	        // ANSI escape code for green color
+	        String ansiGreen = "\u001B[32m";
+	        
+	        // ANSI escape code to reset the console color
+	        String ansiReset = "\u001B[0m";
+	        
+			System.out.println(ansiGreen+"Monthly Payment verified (found ok) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected+ansiReset);
+			LO.print          (ansiGreen+"Monthly Payment verified (found ok) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected+ansiReset);
 			
 		}
 		else
 		{
-			System.out.println("Monthly Payment verified (found wrong) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
+			System.err.println("Monthly Payment verified (found wrong) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
 			LO.print          ("Monthly Payment verified (found wrong) after accepting new quote, Actual value is "+MonthlyPayment_new_Actual+" and Expected value is "+MonthlyPayment_new_Expected);
 
 		}
 		
 		return flag;
 		
-		
-		
-		
-
-//		String[] DataValue1 = new String[4];
-//
-//		DataValue1[0] = QuoteRef_new;
-//		DataValue1[1] = MonthlyPayment_new;
-//
-//		DataValue1[2] = QuoteRef_new;
-//		DataValue1[3] = MonthlyPayment_cancelled;
-//		return DataValue1;
-
-	}
+}
 
 	public double fetching_the_new_quote_monthly_payment_sending_to_excel() throws IOException, InterruptedException {
 		// Click.on(driver, new_quote_monthly_payment, 30);
@@ -1321,7 +1328,7 @@ public class Opportunities extends TestBase {
 		{
 			
 		driver.navigate().refresh();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);		
 		
 		try {
 		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 50);
@@ -1506,13 +1513,13 @@ public class Opportunities extends TestBase {
 
 		opp_find_send_contract_icon.click();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, send_contract_to_customer_pop_up_send_button, 60);
 
 		send_contract_to_customer_pop_up_send_button.click();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 300);
 
 
 
@@ -2099,8 +2106,9 @@ public class Opportunities extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
 
-
+        ExplicitWait.visibleElement(driver, search_bar, 50);
 		HelperClass.highlightElement(driver, search_bar);
+		
 		System.out.println("Click on Search text box on opportunity page");
 		LO.print("Click on Search text box on Opportunity page");
 		Thread.sleep(4000);
@@ -2122,6 +2130,8 @@ public class Opportunities extends TestBase {
 		LO.print("Enter the opportunity ID in search text box =" + OppoID);
 
 		search_bar.sendKeys(Keys.ENTER);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 	}
 
@@ -2284,9 +2294,11 @@ public class Opportunities extends TestBase {
 	public boolean verify_current_status_after_accept_new_changes_from_underwriting_pop_up() throws Exception
 
 	{
-		Thread.sleep(3000);
+		
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Thread.sleep(5000);
 
 		// ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
 		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 60);

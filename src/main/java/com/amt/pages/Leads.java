@@ -460,8 +460,7 @@ public class Leads extends TestBase {
 		// Dropdown.selectByVisibleText(driver, status, " Closed ", 120);
 
 		Click.sendKeys(driver, general_assigned_to, "Automation ", 120);
-	    Thread.sleep(1000);
-		Click.sendKeys(driver, general_assigned_to, "Tester", 120);
+		general_assigned_to.sendKeys("Tester");
 
 		LO.print("Lead is assigned");
 		System.out.println("Lead is assigned");
@@ -484,7 +483,7 @@ public class Leads extends TestBase {
 
 	{
 
-		Dropdown.selectByVisibleText(driver, customer_type, " Individual ", 120);
+		Dropdown.selectByVisibleText(driver, customer_type, " Personal ", 120);
 
 		LO.print("Customer type - " + "Individual" + " selected");
 		System.out.println("Customer type - " + "Individual" + " selected");
@@ -494,20 +493,23 @@ public class Leads extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		ExplicitWait.visibleElement(driver, customer_name, 30);
+		Thread.sleep(3000);
+		customer_name.sendKeys("Q");
+		Thread.sleep(500);
+		customer_name.sendKeys("A");
+		Thread.sleep(500);
+		customer_name.sendKeys(" ");
+		Thread.sleep(500);
 		customer_name.sendKeys("U");
 		Thread.sleep(500);
 		customer_name.sendKeys("s");
-		Thread.sleep(500);
-		customer_name.sendKeys("e");
-		Thread.sleep(500);
-		customer_name.sendKeys("r");
-		Thread.sleep(500);
-		customer_name.sendKeys(" ");
 		
 		
    	// Thread.sleep(4000);
 
 		Click.on(driver, customer_name_option, 20);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 	}
 
@@ -536,11 +538,7 @@ public class Leads extends TestBase {
 		Click.on(driver, customer_name_option, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		// Thread.sleep(4000);
 
-		// Click.on(driver, customer_name_option, 20);
-
-		// ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 	}
 
@@ -588,9 +586,7 @@ public class Leads extends TestBase {
 
 	{
 
-		// Thread.sleep(4000);
-
-		// HelperClass.highlightElement(driver, add_new_vehicle_request);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		Click.on(driver, add_new_vehicle_request, 120);
 
@@ -919,6 +915,7 @@ public class Leads extends TestBase {
 	{
 
 //Map New Quote 
+		ExplicitWait.visibleElement(driver, Map_New_quote_icon, 30);
 
 		HelperClass.highlightElement(driver, Map_New_quote_icon);
 
@@ -929,6 +926,8 @@ public class Leads extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
+		Thread.sleep(5000);
+		
 		Click.on(driver, acquisition_contract_type, 120);
 
 		LO.print("Click on acquisition contract type icon");
@@ -1017,10 +1016,12 @@ public class Leads extends TestBase {
 
 			}
 			
-			else if (i == 10) {
+			else if (i == 20) {
 
 				LO.print          ("The given quote "+quote_no+" is not available in pop up listing");
-				System.out.println("The given quote "+quote_no+" is not available in pop up listing");
+				System.err.println("The given quote "+quote_no+" is not available in pop up listing");
+				
+				break;
 				
 			}
 
@@ -1117,7 +1118,7 @@ public class Leads extends TestBase {
 		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 
 		String quotRefNoExpected = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
-		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
+		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 9, sheetName);
 
 		String contractTypeExpected = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
 		double termExpected = Double.parseDouble(GetExcelFormulaValue.get_cell_value(4, 3, sheetName));
@@ -1127,45 +1128,36 @@ public class Leads extends TestBase {
 
 
 		String expiryDateExpected = "";
-
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
-				.contains("broker_business_hire")) {
-
-			expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);
-
-		}
-
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
-				.contains("broker_individual_hire")) {
-
-			expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);
-
-		}
-
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
-				.contains("broker_business_purchase")) {
-
-			expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);
-
-		}
-
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
-				.contains("broker_individual_purchase")) {
-
-			expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);
-
-		}
 		
-		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName()
-				.contains("ownbook")) {
+		String className = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
 
-			LocalDate futureDate = LocalDate.now().plusMonths(1);
-			
-			String str1[] = String.valueOf(futureDate).split("-");
-			
-			expiryDateExpected = str1[2].concat("/").concat(str1[1]).concat("/").concat(str1[0]);
+		if (className.contains("broker_business_hire")) 
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);}
+
+		
+		if (className.contains("broker_individual_hire")) 
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);}
+
+		
+		if (className.contains("broker_business_purchase")) 
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);}
+
+		
+		if (className.contains("broker_individual_purchase")) 
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);}
 	
+		
+		if (className.contains("ownbook")) 
+		{
+			LocalDate futureDate = LocalDate.now().plusMonths(1);			
+			String str1[] = String.valueOf(futureDate).split("-");			
+			expiryDateExpected = str1[2].concat("/").concat(str1[1]).concat("/").concat(str1[0]);
 		}
+	
+		
+		if (className.contains("funder")) 
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(1, 5, sheetName);}
+	
 
 
 

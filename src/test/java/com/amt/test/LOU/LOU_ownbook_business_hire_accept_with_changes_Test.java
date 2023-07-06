@@ -332,9 +332,8 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 		  obj_Underwriting_page.ownbook_hire_decision_accept_and_change_the_quote_data();
 		  
 		
-		  obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
-		  
-		 // obj_Underwriting_page.find_underwriting_decision_yes_option();
+		  obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button(); 
+	
 		  
 		  
 		  // Assert for Accept condition 

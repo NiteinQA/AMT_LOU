@@ -19,7 +19,7 @@ import com.amt.testUtil.GetExcelFormulaValue;
 import com.amt.testUtil.RemoveComma;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class LOU_ownbook_business_purchase_accept_with_changes_Test extends TestBase {
+public class LOU_ownbook_individual_purchase_accept_with_changes_Test extends TestBase {
 
 	Leads obj_Leads_Page;
 	Opportunities obj_Opportunities_Page;
@@ -32,16 +32,16 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 	
 
 	@Test(priority = 1)
-	public void L1_create_lead_convert_to_lead_for_ownbook_business_flow() throws Exception {
+	public void L1_create_lead_convert_to_lead_for_ownbook_individual_flow() throws Exception {
 
 		System.out.println("Test 1");
 		
 		obj_Leads_Page = new Leads();
 		obj_Leads_Page.lead_General_info();
-		obj_Leads_Page.lead_Customer_info_business();
+		obj_Leads_Page.lead_Customer_info_individual();
 		obj_Leads_Page.lead_vehicle_request_ownbook();
 
-		// Business = HPNR + HPNR
+		// individual = HPNR + HPNR
 		obj_Leads_Page.lead_map_new_quote();
 
 		boolean table_verification_before_save = obj_Leads_Page.verify_table_values_on_lead_page();
@@ -68,8 +68,8 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 
 	}
 
-	@Test(priority = 2, dependsOnMethods = { "L1_create_lead_convert_to_lead_for_ownbook_business_flow" })
-	public void L2_ownbook_business_current_status_before_sending_to_proposal() throws Exception {
+	@Test(priority = 2, dependsOnMethods = { "L1_create_lead_convert_to_lead_for_ownbook_individual_flow" })
+	public void L2_ownbook_individual_current_status_before_sending_to_proposal() throws Exception {
 
 		System.out.println("Test 2");
 		
@@ -99,7 +99,7 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 
 	}
 
-	@Test(priority = 3, dependsOnMethods = { "L2_ownbook_business_current_status_before_sending_to_proposal" })
+	@Test(priority = 3, dependsOnMethods = { "L2_ownbook_individual_current_status_before_sending_to_proposal" })
 
 	public void L3_verify_table_values_on_opportunity_page_before_sending_proposal() throws Exception {
 
@@ -124,17 +124,21 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 	public void L4_fill_up_the_required_fields_for_sending_a_proposal() throws Exception {
 
 		System.out.println("Test 4");
-		
+
 		obj_Opportunities_Page.opp_listing_detail_page();
 
-		obj_Opportunities_Page.opp_opp_fact_find();
+		obj_Opportunities_Page.opp_listing_detail_update_individual();
+		
+		obj_Proposal_Page = new Proposal();
 
-		// Proposal page for adding data in opportunity - Customer info, Additionalinfo
-		// , Bank detail
-
-		obj_Proposal_Page.proposal_Add_Customer_info();
+		obj_Proposal_Page.proposal_Add_Individual_info();
 
 		obj_Proposal_Page.Opp_listing_proposal_fill_form_manually();
+		
+		System.out.println("");
+		LO.print          ("");
+		System.out.println("Proposal Received Successfully");
+		LO.print          ("Proposal Received Successfully");
 
 	}
 
@@ -142,7 +146,7 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 	@Test(priority = 5, dependsOnMethods = {
 	"L4_fill_up_the_required_fields_for_sending_a_proposal" })
 
-	public void L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal() throws Exception {
+	public void L5_ownbook_create_opportunity_individual_currentstatus_after_sending_to_proposal() throws Exception {
 		System.out.println("Test 5");
 
 		obj_Opportunities_Page = new Opportunities();
@@ -160,7 +164,7 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 	
 	
 	@Test(priority = 6 ,dependsOnMethods = {
-	"L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal" })
+	"L5_ownbook_create_opportunity_individual_currentstatus_after_sending_to_proposal" })
 
 	public void L6_ownbook_sending_contract() throws Exception {
 
@@ -177,7 +181,7 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 
 	@Test(priority = 7, dependsOnMethods = {"L6_ownbook_sending_contract" } )
 
-	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow() throws Exception {
+	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow() throws Exception {
 		
 		
 
@@ -254,7 +258,7 @@ public class LOU_ownbook_business_purchase_accept_with_changes_Test extends Test
 
 		obj_Underwriting_Popup_Page.search_and_verify_underwriting_icon_is_availabale();
 
-		boolean underwriting_pop_up_value_verification = obj_Underwriting_Popup_Page.verify_underwriting_pop_up_summary_values_for_ownbook_business_purchase_flow();
+		boolean underwriting_pop_up_value_verification = obj_Underwriting_Popup_Page.verify_underwriting_pop_up_summary_values_for_ownbook_individual_purchase_flow();
 
 		//Assert.assertTrue(underwriting_pop_up_value_verification);
 

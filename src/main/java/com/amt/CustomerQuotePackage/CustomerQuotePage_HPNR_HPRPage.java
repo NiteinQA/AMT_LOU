@@ -136,7 +136,11 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 	@FindBy(xpath = "//*[@name='salesTotal']")
 	private WebElement sales_total_input;
+	
 
+	@FindBy(xpath = "//*[@class='salepricerighttpart']//*[normalize-space()='Vehicle sales price']//ancestor::div[1]//div[3]//p")
+	private WebElement sales_price_total;
+	
 	@FindBy(xpath = "//*[@id='headingCustomerQuote']/div[1]/button/div")
 	private WebElement customer_quote_summary;
 
@@ -1301,13 +1305,16 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_maintenance_rental, 30);
-		ExplicitWait.visibleElement(driver, sales_total_input, 30);
+		ExplicitWait.visibleElement(driver, sales_price_total, 30);
 		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 
 		// getting sales price from screen
 
-		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double salesPriceActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+//		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+//		double salesPriceActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		
+		
+		double salesPriceActualFromSCreen = Double.parseDouble(RemoveComma.of(sales_price_total.getText().trim().substring(2)));
 
 		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);
@@ -1558,13 +1565,16 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 		// waiting for elements
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
-		ExplicitWait.visibleElement(driver, sales_total_input, 30);
+		ExplicitWait.visibleElement(driver, sales_price_total, 30);
 		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 
 		// getting sales price from screen
 
-		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double salesPriceActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+//		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+//		double salesPriceActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		
+		double salesPriceActualFromSCreen = Double.parseDouble(RemoveComma.of(sales_price_total.getText().trim().substring(2)));
+		
 
 		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);

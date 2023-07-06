@@ -136,13 +136,15 @@ public class AcquisitionListingPage extends TestBase {
 
 		// ***************Part 2 - Copying the quote to make new
 		// quote***************************
+		Thread.sleep(2000);
 		
 		Click.on(driver, aquisition_quotes_button, 60);
-		Thread.sleep(2000);
+		
+		Thread.sleep(5000);
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
-		
+		Thread.sleep(2000);
 		
 		Click.sendKeys(driver, acquisition_quote_search_bar, quote_no, 60);		
 		

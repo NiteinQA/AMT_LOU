@@ -5036,7 +5036,7 @@ public void save_quote() throws InterruptedException {
 		   //quote ref no 
 			wb.getSheet(sheetname).getRow(1).getCell(0).setCellValue(quote_ref_no);
 		    //quote ref no 
-			wb.getSheet(sheetname).getRow(1).getCell(10).setCellValue(vehicle_name);
+			wb.getSheet(sheetname).getRow(1).getCell(9).setCellValue(vehicle_name);
 			
 			wb.getSheet(sheetname).getRow(4).getCell(1).setCellValue(customer_contract_type);
 			wb.getSheet(sheetname).getRow(4).getCell(3).setCellValue(customer_quote_summary_terms);

@@ -4,9 +4,14 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -22,7 +27,8 @@ import com.amt.testUtil.RemoveComma;
 
 public class HoldingCost_HPNR_PCP_Page extends TestBase {
 	ReadExcelCalculationForPurchaseAgreement obj_read_excel_calculation_page;
-
+	Properties prop;
+	
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
 
@@ -162,6 +168,19 @@ public class HoldingCost_HPNR_PCP_Page extends TestBase {
 	private WebElement add;
 
 	public HoldingCost_HPNR_PCP_Page() {
+		
+		try {
+			// Properties class object initialization
+			prop = new Properties();
+			FileInputStream ip = new FileInputStream(
+					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+			// load property file
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		PageFactory.initElements(driver, this);
 	}
 
@@ -181,6 +200,29 @@ public class HoldingCost_HPNR_PCP_Page extends TestBase {
 
 		LO.print("Clicked on holding cost summary");
 		System.out.println("Clicked on holding cost summary");
+		
+		Click.on(driver, maintenance_toggle_button, 120);		
+		
+		ExplicitWait.visibleElement(driver, total_cap_maintenance_value, 120);
+		
+		String capMaintValue = RemoveComma.of(total_cap_maintenance_value.getText().substring(2));
+		
+		
+		
+		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+
+		String sheetname = prop.getProperty("HPNRPCPQuoteNo");
+
+		wb.getSheet(sheetname).getRow(4).getCell(9).setCellValue(capMaintValue);
+	
+		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+		wb.write(out);
+		wb.close();
+		
+		Click.on(driver, maintenance_toggle_button, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
 
 		// code for checking default holding cost based on CAP data
 

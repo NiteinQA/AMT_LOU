@@ -251,7 +251,7 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_Test extends TestBa
 		System.out.println("");
 		System.out.println("");
 
-		obj_quote_summary_page.quote_summary_HPNR_BCH_without_maintenance(sheet_name);
+		obj_quote_summary_page.quote_summary_HPNR_BCH_without_maintenance("HPNRBCHQuoteNo");
 
 		System.out.println("");
 		System.out.println("");

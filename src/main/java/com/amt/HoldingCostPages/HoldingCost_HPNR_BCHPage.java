@@ -190,11 +190,39 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 			String monthlyPayment, String finalBalloonPayment, String optionToPurchaseFee, String sheet_name)
 			throws InterruptedException, IOException {
 		Click.on(driver, holding_cost, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120); 
+		
+        Click.on(driver, common_maintenance_toggle, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+
+		Click.on(driver, holding_cost_summary, 30);
+
+		ExplicitWait.visibleElement(driver, cap_monthly_maint_cost, 10);
+
+		String capMaintValue = RemoveComma
+				.of(cap_monthly_maint_cost.getText().trim().substring(2));
+		
+		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+
+		String sheetname = prop.getProperty("HPNRBCHFunderQuoteNo");
+
+		wb.getSheet(sheetname).getRow(1).getCell(5).setCellValue(expiryDate);
+		wb.getSheet(sheetname).getRow(4).getCell(10).setCellValue(capMaintValue);
+		
+	
+		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+		wb.write(out);
+		wb.close();
+		
+		Click.on(driver, maintenance_toggle_button, 120);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
 		Click.on(driver, add_funder_quote, 30);
 

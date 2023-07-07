@@ -228,6 +228,79 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 		}
 		PageFactory.initElements(driver, this);
 	}
+	
+	
+	public void quote_summary_HPNR_PCH_without_maintenance(String sheet_name) throws InterruptedException, IOException {		LO.print("*************Calculations for Quote Summary page gas been started************");
+	System.out.println("*************Calculations for Quote Summary page gas been started************");
+
+	obj_read_excel_calculation_page = new ReadExcelCalculation();
+
+	Click.on(driver, quote_summary, 90);
+	
+	//First collect OTR elements
+	
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+
+	LO.print("Reading values from OTR calculation -Quote Summary Page");
+	System.out.println("Reading values from OTR calculation -Quote Summary Page");
+
+
+	//cust summary elements
+	
+	String customer_contract_type = quote_summary_customer_contract_type.getText();
+	
+	String customer_quote_summary_terms = quote_summary_customer_quote_summary_terms.getText().trim().substring(0,2);
+
+	String customer_quote_summary_miles = RemoveComma.of(quote_summary_customer_quote_summary_miles_per_annum.getText().trim());
+
+	String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_monthly_finance_rental.getText().trim().substring(2));
+	
+
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+
+	ExplicitWait.visibleElement(driver, quote_summary_save_button, 30);
+
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	js.executeScript("arguments[0].click();", quote_summary_save_button);
+
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 150);
+
+	ExplicitWait.visibleElement(driver, quote_summary_vehicle_heading, 120);
+	ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
+
+	// Vehicle details
+	String vehicle_name = quote_summary_vehicle_heading.getText().trim();
+
+	// quote no.
+	String quote_ref_no = quote_summary_ref_no.getText();
+
+	
+	FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+	XSSFWorkbook wb = new XSSFWorkbook(in);
+
+	String sheetname = prop.getProperty(sheet_name);
+   //quote ref no 
+	wb.getSheet(sheetname).getRow(1).getCell(0).setCellValue(quote_ref_no);
+    //quote ref no 
+	wb.getSheet(sheetname).getRow(1).getCell(10).setCellValue(vehicle_name);
+	
+	wb.getSheet(sheetname).getRow(4).getCell(1).setCellValue(customer_contract_type);
+	wb.getSheet(sheetname).getRow(4).getCell(3).setCellValue(customer_quote_summary_terms);
+	wb.getSheet(sheetname).getRow(6).getCell(1).setCellValue(customer_quote_summary_miles);
+	wb.getSheet(sheetname).getRow(6).getCell(3).setCellValue(customer_quote_summary_monthly_finance_rental);
+	
+	
+	FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+	wb.write(out);
+	wb.close();
+	
+	
+	LO.print("Writing completed for some of the important required values to quote save excel sheet in the sheet "+sheetname);
+	System.out.println("Writing completed for some of the important required values to quote save excel sheet in the sheet "+sheetname);
+
+}
+
 
 	public boolean verify_balance_due_value(String sheet_name)
 			throws UnsupportedFlavorException, IOException, InterruptedException, ClassNotFoundException {
@@ -2758,14 +2831,14 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 
 		// writing values to excel
 
-		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-		wb1.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
-
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-		wb1.write(out1);
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//		wb1.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
+//
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//		wb1.write(out1);
 
 		return status;
 	}
@@ -2849,77 +2922,6 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 		return status;
 	}
 
-	public void quote_summary_HPNR_PCH_without_maintenance(String sheet_name)
-			throws InterruptedException, IOException {		LO.print("*************Calculations for Quote Summary page gas been started************");
-			System.out.println("*************Calculations for Quote Summary page gas been started************");
-
-			obj_read_excel_calculation_page = new ReadExcelCalculation();
-
-			Click.on(driver, quote_summary, 90);
-			
-			//First collect OTR elements
-			
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
-
-			LO.print("Reading values from OTR calculation -Quote Summary Page");
-			System.out.println("Reading values from OTR calculation -Quote Summary Page");
-
-
-			//cust summary elements
-			
-			String customer_contract_type = quote_summary_customer_contract_type.getText();
-			
-			String customer_quote_summary_terms = quote_summary_customer_quote_summary_terms.getText().trim().substring(0,2);
-
-			String customer_quote_summary_miles = RemoveComma.of(quote_summary_customer_quote_summary_miles_per_annum.getText().trim());
-
-			String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_monthly_finance_rental.getText().trim().substring(2));
-			
-
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
-
-			ExplicitWait.visibleElement(driver, quote_summary_save_button, 30);
-
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-
-			js.executeScript("arguments[0].click();", quote_summary_save_button);
-
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 150);
-
-			ExplicitWait.visibleElement(driver, quote_summary_vehicle_heading, 120);
-			ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
-
-			// Vehicle details
-			String vehicle_name = quote_summary_vehicle_heading.getText().trim();
-
-			// quote no.
-			String quote_ref_no = quote_summary_ref_no.getText();
-
-			
-			FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
-			XSSFWorkbook wb = new XSSFWorkbook(in);
-
-			String sheetname = prop.getProperty("HPNRPCHQuoteNo");
-		   //quote ref no 
-			wb.getSheet(sheetname).getRow(1).getCell(0).setCellValue(quote_ref_no);
-		    //quote ref no 
-			wb.getSheet(sheetname).getRow(1).getCell(10).setCellValue(vehicle_name);
-			
-			wb.getSheet(sheetname).getRow(4).getCell(1).setCellValue(customer_contract_type);
-			wb.getSheet(sheetname).getRow(4).getCell(3).setCellValue(customer_quote_summary_terms);
-			wb.getSheet(sheetname).getRow(6).getCell(1).setCellValue(customer_quote_summary_miles);
-			wb.getSheet(sheetname).getRow(6).getCell(3).setCellValue(customer_quote_summary_monthly_finance_rental);
-			
-			
-			FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
-			wb.write(out);
-			wb.close();
-			
-			
-			LO.print("Writing completed for some of the important required values to quote save excel sheet in the sheet "+sheetname);
-			System.out.println("Writing completed for some of the important required values to quote save excel sheet in the sheet "+sheetname);
-
-}
 
 	public boolean quote_summary_HPNR_PCH_for_funder_quote_without_maintenance(String sheet_name)
 			throws InterruptedException, IOException {

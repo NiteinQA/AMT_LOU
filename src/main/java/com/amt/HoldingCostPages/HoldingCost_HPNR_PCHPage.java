@@ -22,14 +22,14 @@ import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
+import com.amt.testUtil.HelperClass;
 import com.amt.testUtil.ReadExcelCalculation;
 import com.amt.testUtil.RemoveComma;
 
 public class HoldingCost_HPNR_PCHPage extends TestBase {
 	ReadExcelCalculation obj_read_excel_calculation_page;
 	Properties prop;
-	
-	
+
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
 
@@ -68,6 +68,9 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='vehicleSummery']/div/div[2]/div[2]/div[6]/div[2]/div[10]/p")
 	private WebElement holding_cost_maintenance_cost_used;
+	
+	@FindBy(xpath = "//*[normalize-space()='CAP monthly maint. cost']//ancestor::div[1]//p/strong")
+	private WebElement cap_monthly_maintenance_cost;
 
 	@FindBy(xpath = "//*[@id='ResidualPercentage']")
 	private WebElement holding_cost_percentage_cap_residual_value_used;
@@ -166,7 +169,7 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 	private WebElement cap_monthly_maint_cost;
 
 	public HoldingCost_HPNR_PCHPage() {
-		
+
 		try {
 			// Properties class object initialization
 			prop = new Properties();
@@ -182,6 +185,45 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void save_maint_value_to_excel(String expiryDate , String sheet_name) throws InterruptedException, IOException {
+		
+		
+		Click.on(driver, holding_cost, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+
+		Click.on(driver, common_maintenance_toggle, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+
+		Click.on(driver, holding_cost_summary, 30);
+
+		ExplicitWait.visibleElement(driver, cap_monthly_maintenance_cost, 10);
+		
+		HelperClass.highlightElement(driver,cap_monthly_maintenance_cost);
+
+		String capMaintValue = RemoveComma.of(cap_monthly_maintenance_cost.getText().trim().substring(2));
+
+		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+
+		String sheetname = prop.getProperty(sheet_name);
+
+		wb.getSheet(sheetname).getRow(1).getCell(5).setCellValue(expiryDate);
+		wb.getSheet(sheetname).getRow(4).getCell(10).setCellValue(capMaintValue);
+
+		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+		wb.write(out);
+		wb.close();
+
+		Click.on(driver, maintenance_toggle_button, 120);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+	}
+	
+	
+	
 
 	public boolean verify_holding_cost_after_adding_funder_quote_without_maintenance(String quoteRef, String expiryDate,
 			String term, String milesPerAnnum, String cashDeposit, String financeCharges, String documentFee,
@@ -189,10 +231,11 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 			throws InterruptedException, IOException {
 		Click.on(driver, holding_cost, 30);
 
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+
+	
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
 		Click.on(driver, add_funder_quote, 30);
 
@@ -375,31 +418,27 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 
 		LO.print("Clicked on holding cost summary");
 		System.out.println("Clicked on holding cost summary");
-		
-		
+
 		Click.on(driver, maintenance_toggle_button, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		
+
 		ExplicitWait.visibleElement(driver, total_cap_maintenance_value, 120);
-		
+
 		String capMaintValue = RemoveComma.of(total_cap_maintenance_value.getText().substring(2));
-		
-		
-		
+
 		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		String sheetname = prop.getProperty("HPNRPCHQuoteNo");
 
 		wb.getSheet(sheetname).getRow(4).getCell(10).setCellValue(capMaintValue);
-	
+
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		wb.write(out);
 		wb.close();
-		
+
 		Click.on(driver, maintenance_toggle_button, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
 
 		// code for checking default holding cost based on CAP data
 		obj_read_excel_calculation_page = new ReadExcelCalculation();

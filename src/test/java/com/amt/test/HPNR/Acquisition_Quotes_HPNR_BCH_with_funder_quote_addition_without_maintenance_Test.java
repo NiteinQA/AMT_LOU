@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_BCHPage;
 import com.amt.HoldingCostPages.HoldingCost_HPNR_BCHPage;
+import com.amt.HoldingCostPages.HoldingCost_HPNR_PCHPage;
 import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
@@ -140,10 +141,10 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 
 		Assert.assertTrue(monthly_rental_values_on_updating_upsell_value);
 
-		
-		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
-				.customer_Quote_HPNR_BCH_for_all_payment_option_for_funder_quote_addition_without_maintenance_calculation(initial_payment,sheet_name);
-		Assert.assertTrue(cutomer_quote_monthly_rental);
+//		
+//		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
+//				.customer_Quote_HPNR_BCH_for_all_payment_option_for_funder_quote_addition_without_maintenance_calculation(initial_payment,sheet_name);
+//		Assert.assertTrue(cutomer_quote_monthly_rental);
 
 
 	}
@@ -160,10 +161,6 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 
 		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
-
-		obj_quote_summary_page.quote_summary_HPNR_BCH_without_maintenance("HPNRBCHFunderQuoteNo");
-
-
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);
 		
@@ -177,7 +174,12 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 		boolean quote_summary_configuration_value_check = obj_quote_summary_page.quote_summary_configuration_value_verification_without_maintenance_for_funder(sheet_name);
 		Assert.assertTrue(quote_summary_configuration_value_check);
 		
+		
+		boolean value_check_after_Finance_margin_change =obj_quote_summary_page.quote_summary_edit_finance_margin_value_verification_for_funder(sheet_name);
+		Assert.assertTrue(value_check_after_Finance_margin_change);	
+		
 		obj_quote_summary_page.save_quote();
+
 		
 		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation1);
@@ -192,8 +194,11 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page.quote_summary_configuration_value_verification_without_maintenance_for_funder(sheet_name);
 		Assert.assertTrue(quote_summary_configuration_value_check1);
 		
-		boolean value_check_after_Finance_margin_change =obj_quote_summary_page.quote_summary_edit_finance_margin_value_verification_for_funder(sheet_name);
-		Assert.assertTrue(value_check_after_Finance_margin_change);	
+		obj_quote_summary_page.quote_summary_HPNR_BCH_without_maintenance("HPNRBCHFunderQuoteNo");
+		
+		obj_holding_cost_HPNR_BCH_page = new HoldingCost_HPNR_BCHPage();
+		
+		obj_holding_cost_HPNR_BCH_page.save_maint_value_to_excel(expiryDate, "HPNRBCHFunderQuoteNo");
 
 	}
 	

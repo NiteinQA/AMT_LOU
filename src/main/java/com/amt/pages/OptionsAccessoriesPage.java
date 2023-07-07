@@ -42,11 +42,11 @@ public class OptionsAccessoriesPage extends TestBase {
 		LO.print("Paint option has been selected");
 		System.out.println("Paint option has been selected");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
-
-		js.executeScript("arguments[0].click();", paint);
-
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 		
+		Thread.sleep(3000);
+
+		js.executeScript("arguments[0].click();", paint);		
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 

@@ -1625,9 +1625,10 @@ public class ReadExcelCalculation extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		// rfl values fakt on hotya baki sarv comment hotya
-
+		
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));		
+		wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
 		wb.getSheet(sheet_name).getRow(70).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 		

@@ -6553,7 +6553,7 @@ public class Underwriting extends TestBase {
 		wb.getSheet(sheetName).getRow(104).getCell(1).setCellValue(" "+paymentProfile+" ");
 		wb.getSheet(sheetName).getRow(104).getCell(3).setCellValue(Double.parseDouble(orderDeposit));
 		wb.getSheet(sheetName).getRow(110).getCell(0).setCellValue(maintRequired);
-		wb.getSheet(sheetName).getRow(110).getCell(1).setCellValue(0.2);
+		wb.getSheet(sheetName).getRow(110).getCell(1).setCellValue(20);
 		wb.getSheet(sheetName).getRow(110).getCell(3).setCellValue(Double.parseDouble(initialpayment));
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
@@ -6811,14 +6811,14 @@ public class Underwriting extends TestBase {
 
 		System.out.println("Click on save and exit button");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// Yes button on confirmation
 
 		try
 		{		
 		Click.on(driver, desicion_save_exit_button_confirm_yes, 10);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		}catch(Exception e) {}
 
 	}

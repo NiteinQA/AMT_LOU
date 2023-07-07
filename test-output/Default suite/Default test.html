@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>19/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 06 19:06:48 IST 2023</td>
+<td>Started on:</td><td>Fri Jul 07 19:20:24 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>728 seconds (728342 ms)</td>
+<tr><td>Total time:</td><td>470 seconds (470163 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,97 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()'><b>OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-897182700" onClick='toggleBox("Output-897182700", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-897182700" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-897182700">
-<b>New Quote ref in Opportunity SCK86241</b> <br /><br/>
-<b>New Quote Monthly Payment is  = £ 1,015.17 ex. VAT</b> <br /><br/>
-<b>Cancelled Quote ref in Opportunity is = null</b> <br /><br/>
-<b>Cancelled Monthly Payment value is = £ 960.90 ex. VAT</b> <br /><br/>
-<b>Monthly Payment verified (found wrong) after accepting new quote, Actual value is 1015.17 and Expected value is 1039.5286758062273</b> <br /><br/>
-<br>----------Screenshot---------<br><br/>
-<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price_06_07_2023_07_18_57.png" height="800" width="1000"><br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price(LOU_ownbook_business_hire_funder_accept_with_changes_Test.java:475)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace897182700", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace897182700'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price(LOU_ownbook_business_hire_funder_accept_with_changes_Test.java:475)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>4</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -166,97 +75,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()'><b>UW2_verify_status_after_sending_to_underwriting</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-695637046" onClick='toggleBox("Output-695637046", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L8_ownbook_signed_contract_status_with_api_call()'><b>L8_ownbook_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-1451732454" onClick='toggleBox("Output-1451732454", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-695637046" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-695637046">
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Awaiting underwriting</b> <br /><br/>
-<b>Current Status of  Quote ref is = Awaiting underwriting</b> <br /><br/>
-<b>Status Verified : Awaiting Underwriting </b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()'><b>UW3_verify_underwriting_lisitig_page</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-833249322" onClick='toggleBox("Output-833249322", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-833249322" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-833249322">
-<b>Click on Underwriting menu_link </b> <br /><br/>
-<b>Click on Underwriting - ownbook tab </b> <br /><br/>
-<b>Click on Search text box - broker tab</b> <br /><br/>
-<b>Getting the  proposal id from excel sheet =WVV2223</b> <br /><br/>
-<b>Enter the proposal in search text box =WVV2223</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>10</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()'><b>L4_fill_up_the_required_fields_for_sending_a_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-597521407" onClick='toggleBox("Output-597521407", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-597521407" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-597521407">
-<b>click on Proposal icon</b> <br /><br/>
-<b>Proposal page will display </b> <br /><br/>
-<b>Send proposal to customer pop up  will open</b> <br /><br/>
-<b>Click on Manual fill radio button - Yes</b> <br /><br/>
-<b>Click on manually submit behalf of customer link</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>48</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW5_ownbook_underwriting_decision_accept_with_changes()'><b>UW5_ownbook_underwriting_decision_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-677348221" onClick='toggleBox("Output-677348221", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-677348221" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-677348221">
-<b>Click on decision Accept button</b> <br /><br/>
-<b>Entering values to input field</b> <br /><br/>
-<b>Now selecting the payment profile option </b> <br /><br/>
-<b>Current Status of accept value is = Conditional acceptance</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>42</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()'><b>L2_ownbook_business_current_status_before_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-1933551964" onClick='toggleBox("Output-1933551964", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1933551964" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1933551964">
-<b>Clicked on Opportunity link from Menu </b> <br /><br/>
-<b>listing_proposal_status is = Proposal Required</b> <br /><br/>
+<a href="#Output-1451732454" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1451732454">
+<b>Status code 200 received </b> <br /><br/>
 <b>Enter the Opportunity id in Search Text box</b> <br /><br/>
-<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
-<b>Current Status of Proposal value is = Proposal Required</b> <br /><br/>
-<b>Current Status of Channel value is =  Draft</b> <br /><br/>
-<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
-<b>Status Verified : Before sending the proposal</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>30</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>27</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow()'><b>L1_create_lead_convert_to_lead_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-752772379" onClick='toggleBox("Output-752772379", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_decline()'><b>UW5_verify_ownbook_underwriting_proposal_decision_with_decline</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-178894603" onClick='toggleBox("Output-178894603", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-752772379" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-752772379">
+<a href="#Output-178894603" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-178894603">
+<b>Current Status of decline value is = Declined</b> <br /><br/>
+<b>Underwriting Status Verified : declined</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L1_create_lead_convert_to_lead_for_ownbook_individual_flow()'><b>L1_create_lead_convert_to_lead_for_ownbook_individual_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-1069163325" onClick='toggleBox("Output-1069163325", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1069163325" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1069163325">
 <b>Clicked on Leads on Side Menu</b> <br /><br/>
 <b>Clicked on add lead</b> <br /><br/>
 <b>Lead is assigned</b> <br /><br/>
 <b>Added data in General Notes</b> <br /><br/>
-<b>Customer type - Business selected</b> <br /><br/>
+<b>Customer type - Individual selected</b> <br /><br/>
 <b>Clicked on Add new vehicle request</b> <br /><br/>
 <b>Clicked on ownbook channel</b> <br /><br/>
 <b>Vehicle request for broker has been saved</b> <br /><br/>
@@ -271,92 +125,131 @@ function toggleAllBoxes() {
 <b></b> <br /><br/>
 <b>Started Verifying Table values</b> <br /><br/>
 <b></b> <br /><br/>
-<b>TUO57078 = TUO57078</b> <br /><br/>
+<b>NFB02650 = NFB02650</b> <br /><br/>
 <b>Quote no. compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
 <b>Vehicle name compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>Business Contract Hire = Business Contract Hire</b> <br /><br/>
+<b>Personal Contract Hire = Personal Contract Hire</b> <br /><br/>
 <b>Contract type compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>960.9 = 960.9</b> <br /><br/>
+<b>1586.42 = 1586.42</b> <br /><br/>
 <b>Monthly finance rental compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>5000.0 = 5000.0</b> <br /><br/>
+<b>10000.0 = 10000.0</b> <br /><br/>
 <b>Mileage compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>12.0 = 12.0</b> <br /><br/>
+<b>36.0 = 36.0</b> <br /><br/>
 <b>Terms compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>05/12/2023 != 05/12/23</b> <br /><br/>
+<b>06/08/2023 != 07/08/2023</b> <br /><br/>
 <b>Expiry date compared but found not ok</b> <br /><br/>
 <b>Click on Lead save and Convert button</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Started Verifying Table values</b> <br /><br/>
 <b></b> <br /><br/>
-<b>TUO57078 = TUO57078</b> <br /><br/>
+<b>NFB02650 = NFB02650</b> <br /><br/>
 <b>Quote no. compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
 <b>Vehicle name compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>Business Contract Hire = Business Contract Hire</b> <br /><br/>
+<b>Personal Contract Hire = Personal Contract Hire</b> <br /><br/>
 <b>Contract type compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>960.9 = 960.9</b> <br /><br/>
+<b>1586.42 = 1586.42</b> <br /><br/>
 <b>Monthly finance rental compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>5000.0 = 5000.0</b> <br /><br/>
+<b>10000.0 = 10000.0</b> <br /><br/>
 <b>Mileage compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>12.0 = 12.0</b> <br /><br/>
+<b>36.0 = 36.0</b> <br /><br/>
 <b>Terms compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>05/12/2023 != 05/12/23</b> <br /><br/>
+<b>06/08/2023 != 07/08/2023</b> <br /><br/>
 <b>Expiry date compared but found not ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>In Lead created Opportunity Id is =UA-8936</b> <br /><br/>
+<b>In Lead created Opportunity Id is =IX-6819</b> <br /><br/>
 <b></b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>89</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>91</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()'><b>L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-752030228" onClick='toggleBox("Output-752030228", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal()'><b>L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-630910066" onClick='toggleBox("Output-630910066", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-752030228" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-752030228">
+<a href="#Output-630910066" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-630910066">
+<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
 <b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Sent to customer</b> <br /><br/>
-<b>Current Status of  Quote ref is = Sent to customer</b> <br /><br/>
-<b>Status Verified : Sent to customer</b> <br /><br/>
+<b>Current Status of Channel value is =  Draft</b> <br /><br/>
+<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
+<b>Status Verified : After sending the proposal</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW1_verify_status_after_contract_signed()'><b>UW1_verify_status_after_contract_signed</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-731431696" onClick='toggleBox("Output-731431696", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-731431696" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-731431696">
+<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
+<b>Current Status of Channel value is =  Contract signed</b> <br /><br/>
+<b>Current Status of  Quote ref is = Contract signed</b> <br /><br/>
+<b>Status Verified : Contract Signed </b> <br /><br/>
 </div>
 </td>
 <td></td>
 <td>4</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()'><b>L8_ownbook_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-1340734309" onClick='toggleBox("Output-1340734309", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()'><b>L3_verify_table_values_on_opportunity_page_before_sending_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-312529481" onClick='toggleBox("Output-312529481", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1340734309" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1340734309">
-<b>Status code 200 received </b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
+<a href="#Output-312529481" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-312529481">
+<b></b> <br /><br/>
+<b>Started Verifying Table values</b> <br /><br/>
+<b></b> <br /><br/>
+<b>NFB02650 = NFB02650</b> <br /><br/>
+<b>Quote no. compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
+<b>Vehicle name compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Personal Contract Hire = Personal Contract Hire</b> <br /><br/>
+<b>Contract type compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>1586.42 = 1586.42</b> <br /><br/>
+<b>Monthly finance rental compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>10000.0 = 10000.0</b> <br /><br/>
+<b>Mileage compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>36.0 = 36.0</b> <br /><br/>
+<b>Terms compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>06/08/2023 != 07/08/2023</b> <br /><br/>
+<b>Expiry date compared but found not ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Table values verified Successfully</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>23</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>4</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW4_verify_values_on_underwriting_quote_tab_for_ownbook_business_flow()'><b>UW4_verify_values_on_underwriting_quote_tab_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-1534055264" onClick='toggleBox("Output-1534055264", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow()'><b>UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-872379092" onClick='toggleBox("Output-872379092", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1534055264" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1534055264">
+<a href="#Output-872379092" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-872379092">
 <b>Click on Underwriting detail page for proposal</b> <br /><br/>
 <b>Clicked on Underwriting quote page</b> <br /><br/>
 <b></b> <br /><br/>
@@ -372,71 +265,71 @@ function toggleAllBoxes() {
 <b>640.0 = 640.0</b> <br /><br/>
 <b>Otr Rfl And Frf compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>TUO57078 = TUO57078</b> <br /><br/>
+<b>NFB02650 = NFB02650</b> <br /><br/>
 <b>Quote no. compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
 <b>Vehicle name compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>Business Contract Hire = Business Contract Hire</b> <br /><br/>
+<b>Personal Contract Hire = Personal Contract Hire</b> <br /><br/>
 <b>Contract type compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>12.0 = 12.0</b> <br /><br/>
+<b>36.0 = 36.0</b> <br /><br/>
 <b>Terms compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>5000.0 = 5000.0</b> <br /><br/>
+<b>10000.0 = 10000.0</b> <br /><br/>
 <b>Mileage compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>960.9 = 960.900732822375</b> <br /><br/>
+<b>1586.42 = 1586.4236246664805</b> <br /><br/>
 <b>Monthly Finance Rental compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>8648.11 = 8648.106595401376</b> <br /><br/>
+<b>1586.42 = 1586.42362466648</b> <br /><br/>
 <b>Initial Finance Rental found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>3.0 = 3.0</b> <br /><br/>
+<b>35.0 = 35.0</b> <br /><br/>
 <b>Followed By months - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>41.6 = 41.6772</b> <br /><br/>
 <b>Pence per excess mile finance - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>199.99 = 199.99</b> <br /><br/>
+<b>239.99 = 239.99</b> <br /><br/>
 <b>Document Fee - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>400.0 = 400.0</b> <br /><br/>
 <b>Upsell - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>578.85 = 578.85</b> <br /><br/>
+<b>1157.7 = 1157.7</b> <br /><br/>
 <b>Default Finance Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>400.0 = 400.0</b> <br /><br/>
 <b>Upsell Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
+<b>99.99 = 99.99166666666667</b> <br /><br/>
 <b>Document Fee Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>1078.84 = 1078.8400000000001</b> <br /><br/>
+<b>1657.69 = 1657.6916666666666</b> <br /><br/>
 <b>Total Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>200.0 = 200.0</b> <br /><br/>
 <b>Referrer Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>4051.95 = 4051.95</b> <br /><br/>
+<b>6.5 = 6.5</b> <br /><br/>
+<b>Base Interest Rate found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>6077.93 = 6077.925</b> <br /><br/>
 <b>Finance Margin found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>578.85 = 578.85</b> <br /><br/>
+<b>1157.7 = 1157.7</b> <br /><br/>
 <b>Deductions found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>339.99 = 339.99</b> <br /><br/>
+<b>339.99 = 339.9916666666667</b> <br /><br/>
 <b>Additional Margin found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>3813.09 = 3813.09</b> <br /><br/>
+<b>5260.22 = 5260.216666666667</b> <br /><br/>
 <b>Total Margin found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>1.0 = 1.0</b> <br /><br/>
+<b>2.0 = 2.0</b> <br /><br/>
 <b>Default Broker Margin percentage found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>578.85 = 578.85</b> <br /><br/>
-<b>Default Broker Margin Value found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>0.1 = 0.1</b> <br /><br/>
 <b>Broker Upsell Margin percentage found OK</b> <br /><br/>
@@ -444,7 +337,7 @@ function toggleAllBoxes() {
 <b>40.0 = 40.0</b> <br /><br/>
 <b>Broker Upsell Margin  found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
+<b>99.99 = 99.99166666666667</b> <br /><br/>
 <b>Document Fee Margin  found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>200.0 = 200.00000000000003</b> <br /><br/>
@@ -454,224 +347,169 @@ function toggleAllBoxes() {
 </td>
 <td></td>
 <td>74</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()'><b>UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-2046100218" onClick='toggleBox("Output-2046100218", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow()'><b>L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-1902437002" onClick='toggleBox("Output-1902437002", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2046100218" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2046100218">
+<a href="#Output-1902437002" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1902437002">
 <b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
 <b>Current Status of Channel value is =  Sent to customer</b> <br /><br/>
-<b>Current Status of  Quote ref is = Cancelled</b> <br /><br/>
 <b>Current Status of  Quote ref is = Sent to customer</b> <br /><br/>
 <b>Status Verified : Sent to customer</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>6</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW1_verify_status_after_contract_signed()'><b>UW1_verify_status_after_contract_signed</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-214869182" onClick='toggleBox("Output-214869182", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-214869182" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-214869182">
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Contract signed</b> <br /><br/>
-<b>Current Status of  Quote ref is = Contract signed</b> <br /><br/>
-<b>Status Verified : Contract Signed </b> <br /><br/>
-</div>
-</td>
-<td></td>
 <td>4</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()'><b>L3_verify_table_values_on_opportunity_page_before_sending_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-370723210" onClick='toggleBox("Output-370723210", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L6_ownbook_sending_contract()'><b>L6_ownbook_sending_contract</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-1655630081" onClick='toggleBox("Output-1655630081", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-370723210" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-370723210">
-<b></b> <br /><br/>
-<b>Started Verifying Table values</b> <br /><br/>
-<b></b> <br /><br/>
-<b>TUO57078 = TUO57078</b> <br /><br/>
-<b>Quote no. compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Business Contract Hire = Business Contract Hire</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>960.9 = 960.9</b> <br /><br/>
-<b>Monthly finance rental compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>5000.0 = 5000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>12.0 = 12.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>05/12/2023 != 05/12/23</b> <br /><br/>
-<b>Expiry date compared but found not ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Table values verified Successfully</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal()'><b>L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-640995328" onClick='toggleBox("Output-640995328", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-640995328" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-640995328">
-<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Draft</b> <br /><br/>
-<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
-<b>Status Verified : After sending the proposal</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.L6_ownbook_sending_contract()'><b>L6_ownbook_sending_contract</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-2088366799" onClick='toggleBox("Output-2088366799", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2088366799" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2088366799">
+<a href="#Output-1655630081" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1655630081">
 <b>click on Send_Contract icon</b> <br /><br/>
 <b>Contract Sent Successfully</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>122</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>124</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()'><b>UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-265355494" onClick='toggleBox("Output-265355494", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L2_ownbook_individual_current_status_before_sending_to_proposal()'><b>L2_ownbook_individual_current_status_before_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-905404580" onClick='toggleBox("Output-905404580", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-265355494" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-265355494">
-<b> Underwriting icon is available </b> <br /><br/>
-<b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
+<a href="#Output-905404580" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-905404580">
+<b>Clicked on Opportunity link from Menu </b> <br /><br/>
+<b>listing_proposal_status is = Proposal Required</b> <br /><br/>
+<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
+<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
+<b>Current Status of Proposal value is = Proposal Required</b> <br /><br/>
+<b>Current Status of Channel value is =  Draft</b> <br /><br/>
+<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
+<b>Status Verified : Before sending the proposal</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>158</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>12</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up()'><b>UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-1076804534" onClick='toggleBox("Output-1076804534", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow()'><b>UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-4008846" onClick='toggleBox("Output-4008846", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1076804534" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1076804534">
-<b>Click on Search text box on Opportunity page</b> <br /><br/>
-<b>Enter the opportunity ID in search text box =UA-8936</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>7</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow()'><b>UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-277698998" onClick='toggleBox("Output-277698998", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-277698998" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-277698998">
+<a href="#Output-4008846" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-4008846">
 <b> Underwriting icon is available </b> <br /><br/>
 <b>Underwriting pop up -quote ref no => Quote reference no.:
-TUO57078</b> <br /><br/>
-<b>Underwriting Popup Proposal Id is =WVV2223</b> <br /><br/>
+NFB02650</b> <br /><br/>
+<b>Underwriting Popup Proposal Id is =CZX7966</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Started Verifying Summary values</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Quote reference no.:
-TUO57078 != TUO57078</b> <br /><br/>
+NFB02650 != NFB02650</b> <br /><br/>
 <b>Quote no. compared but found not ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
 <b>Vehicle name compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>Business Contract Hire = Business Contract Hire</b> <br /><br/>
+<b>Personal Contract Hire = Personal Contract Hire</b> <br /><br/>
 <b>Contract type compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>12.0 = 12.0</b> <br /><br/>
+<b>36.0 = 36.0</b> <br /><br/>
 <b>Terms compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>5000.0 = 5000.0</b> <br /><br/>
+<b>10000.0 = 10000.0</b> <br /><br/>
 <b>Mileage compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>960.9 = 960.900732822375</b> <br /><br/>
+<b>1586.42 = 1586.4236246664805</b> <br /><br/>
 <b>Monthly Finance Rental compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>8648.11 = 8648.106595401376</b> <br /><br/>
+<b>1586.42 = 1586.42362466648</b> <br /><br/>
 <b>Initial Finance Rental found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>3.0 = 3.0</b> <br /><br/>
+<b>35.0 = 35.0</b> <br /><br/>
 <b>Followed By months - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>41.6 = 41.6772</b> <br /><br/>
 <b>Pence per excess mile finance - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>199.99 = 199.99</b> <br /><br/>
+<b>239.99 = 239.99</b> <br /><br/>
 <b>Document Fee - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>400.0 = 400.0</b> <br /><br/>
 <b>Upsell - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>578.85 = 578.85</b> <br /><br/>
+<b>1157.7 = 1157.7</b> <br /><br/>
 <b>Default Finance Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>400.0 = 400.0</b> <br /><br/>
 <b>Upsell Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
+<b>99.99 = 99.99166666666667</b> <br /><br/>
 <b>Document Fee Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>1078.84 = 1078.8400000000001</b> <br /><br/>
+<b>1657.69 = 1657.6916666666666</b> <br /><br/>
 <b>Total Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>200.0 = 200.0</b> <br /><br/>
 <b>Referrer Commission - found OK</b> <br /><br/>
 <b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
-<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>44</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>43</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()'><b>UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-715482462" onClick='toggleBox("Output-715482462", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow()'><b>L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-158744161" onClick='toggleBox("Output-158744161", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-715482462" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-715482462">
-<b>Clicked on Opportunity link from Menu </b> <br /><br/>
-<b>Click on Search text box on Opportunity page</b> <br /><br/>
-<b>Enter the opportunity ID in search text box =UA-8936</b> <br /><br/>
+<a href="#Output-158744161" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-158744161">
+<b>click on Proposal icon</b> <br /><br/>
+<b>Send proposal to customer pop up  will open</b> <br /><br/>
+<b>Click on Manual fill radio button - Yes</b> <br /><br/>
+<b>Click on manually submit behalf of customer link</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Proposal Received Successfully</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>18</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>43</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test.UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()'><b>UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test<br/>
-<a href="#Output-562597428" onClick='toggleBox("Output-562597428", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW2_verify_status_after_sending_to_underwriting()'><b>UW2_verify_status_after_sending_to_underwriting</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-1561658511" onClick='toggleBox("Output-1561658511", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-562597428" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-562597428">
-<b>Status code 200 received </b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
+<a href="#Output-1561658511" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1561658511">
+<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
+<b>Current Status of Channel value is =  Awaiting underwriting</b> <br /><br/>
+<b>Current Status of  Quote ref is = Awaiting underwriting</b> <br /><br/>
+<b>Status Verified : Awaiting Underwriting </b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>25</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test@3012646b</td></tr>
+<td>1</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW3_verify_underwriting_lisitig_page()'><b>UW3_verify_underwriting_lisitig_page</b><br>Test class: com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test<br/>
+<a href="#Output-389627460" onClick='toggleBox("Output-389627460", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-389627460" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-389627460">
+<b>Click on Underwriting menu_link </b> <br /><br/>
+<b>Click on Underwriting - ownbook tab </b> <br /><br/>
+<b>Click on Search text box - broker tab</b> <br /><br/>
+<b>Getting the  proposal id from excel sheet =CZX7966</b> <br /><br/>
+<b>Enter the proposal in search text box =CZX7966</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe</td></tr>
 </table><p>
 </body>
 </html>

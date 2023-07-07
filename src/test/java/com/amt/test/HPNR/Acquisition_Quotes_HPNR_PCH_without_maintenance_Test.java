@@ -235,14 +235,8 @@ public class Acquisition_Quotes_HPNR_PCH_without_maintenance_Test extends TestBa
 
 		obj_quote_summary_page = new QuoteSummary_HPNR_PCHPage();
 
-		System.out.println("");
-		System.out.println("");
-		
-		
-		System.out.println("");
-		System.out.println("");
 
-		obj_quote_summary_page.quote_summary_HPNR_PCH_without_maintenance(sheet_name);
+		obj_quote_summary_page.quote_summary_HPNR_PCH_without_maintenance("HPNRPCHQuoteNo");
 
 		System.out.println("");
 		System.out.println("");

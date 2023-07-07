@@ -4986,7 +4986,8 @@ public class UnderwritingPopupPage extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_send_for_underwriting_button, 60);
 
 		underwriting_send_for_underwriting_button.click();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 250);
 
 		System.out.println("click on underwriting_send_for_underwriting  button");
 		LO.print("click on underwriting_send_for_underwriting  button ");
@@ -5002,7 +5003,7 @@ public class UnderwritingPopupPage extends TestBase {
 
 		ownbook_underwriting_popup_accept_ok_button.click();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 300);
 
 		System.out.println("click on underwriting_send_for_underwriting  button");
 		LO.print("click on underwriting_send_for_underwriting  button ");

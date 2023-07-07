@@ -1328,7 +1328,7 @@ public class Opportunities extends TestBase {
 		{
 			
 		driver.navigate().refresh();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 300);		
 		
 		try {
 		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 50);

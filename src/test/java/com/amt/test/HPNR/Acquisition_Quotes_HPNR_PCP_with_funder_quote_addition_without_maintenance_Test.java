@@ -182,7 +182,7 @@ public class Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_main
 					.quote_summary_edit_customer_rate_over_base_value_verification(sheet_name);
 			// Assert.assertTrue(value_check_after_customer_rate_over_base_change);
 			
-			obj_quote_summary_page.quote_summary_HPNR_PCP_with_maintenance("HPNRPCPFunderQuoteNo");
+			obj_quote_summary_page.quote_summary_HPNR_PCP_without_maintenance("HPNRPCPFunderQuoteNo");
 			
 			HoldingCost_HPNR_HPRPage obj_holding_cost_page = new HoldingCost_HPNR_HPRPage();
 			

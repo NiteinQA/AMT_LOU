@@ -37,7 +37,7 @@ public class LOU_broker_individual_hire_accept_flow_Test extends TestBase {
 
 		
 		// Individual = Broker + PCH
-		obj_Leads_Page.lead_map_new_quote_broker_individual();
+		obj_Leads_Page.lead_map_new_quote();
 		
 
 		// verifying table values with Quote save excel sheet values before saving

@@ -6,29 +6,29 @@
 			
 			
 			
-			<!-- Group 1 - Generate New Quote for Broker Business and LOU accept flow for the same -->
-			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
-			<class name="com.amt.test.LOU.LOU_broker_business_purchase_accept_flow_Test" />
+			<!-- Group 1 - Generate New Quote for Broker individual and LOU accept flow for the same -->
+			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_PCP_without_maintenance_Test" />
+			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_accept_flow_Test" />
 			
 			
 			
-			<!-- Group 2 - Copy Existing Quote for Broker Business and LOU refer flow  for the same -->
+			<!-- Group 2 - Copy Existing Quote for Broker individual and LOU refer flow  for the same -->
 			<class name="com.amt.test.copyquote.Copy_Quote_Test">
 				<methods>
-				 <include name="copy_Quote_for_broker_business_purchase_Test" />
+				 <include name="copy_Quote_for_broker_individual_purchase_Test" />
 				</methods>
 			</class>
-			<class name="com.amt.test.LOU.LOU_broker_business_purchase_refer_flow_Test" />
+			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_refer_flow_Test" />
 			
 			
 			
-			<!-- Group 3 - Copy Existing Quote for Broker Business and LOU Decline flow  for the same -->
+			<!-- Group 3 - Copy Existing Quote for Broker individual and LOU Decline flow  for the same -->
 			<class name="com.amt.test.copyquote.Copy_Quote_Test">
 				<methods>
-				 <include name="copy_Quote_for_broker_business_purchase_Test" />
+				 <include name="copy_Quote_for_broker_individual_purchase_Test" />
 				</methods>
 			</class>
-			<class name="com.amt.test.LOU.LOU_broker_business_purchase_decline_flow_Test" />
+			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_decline_flow_Test" />
 			
 				
 		

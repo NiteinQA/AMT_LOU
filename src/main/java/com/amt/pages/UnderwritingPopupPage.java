@@ -3658,7 +3658,7 @@ public class UnderwritingPopupPage extends TestBase {
 		//21
 		String [] APR = underwriting_popup_customer_quote_summary_APR.getText().trim().split(" ");
 		
-		String aPRActual = APR[0];
+		double aPRActual = Double.parseDouble(APR[0]);
 
 		//22
 		double commissionActual = Double.parseDouble(RemoveComma.of(underwriting_popup_customer_quote_summary_commission.getText().trim().substring(2)));
@@ -4174,7 +4174,7 @@ public class UnderwritingPopupPage extends TestBase {
 		
 	// 21.comparing APR
 		
-		if (aPRActual.equals(aPRExpected)) {
+		if (aPRActual==aPRExpected) {
 			count++;
 
 			System.out.println("");
@@ -4313,7 +4313,7 @@ public class UnderwritingPopupPage extends TestBase {
 		String pencePerExcessMileFinanceActual = RemoveComma.of(underwriting_popup_customer_quote_summary_pence_per_excess_mile_finance.getText().trim());
     	//19
 		String [] APR = underwriting_popup_customer_quote_summary_APR.getText().trim().split(" ");
-		String aPRActual = APR[0];
+		double aPRActual = Double.parseDouble(APR[0]);
 		//20
 		double commissionActual = Double.parseDouble(RemoveComma.of(underwriting_popup_customer_quote_summary_commission.getText().trim().substring(2)));
 		
@@ -4760,7 +4760,7 @@ public class UnderwritingPopupPage extends TestBase {
 
 		// 18.comparing Pence Per Excess Mile Finance
 		
-		if (pencePerExcessMileFinanceActual.equals(rFLIncludedExpected)) {
+		if (pencePerExcessMileFinanceActual.equals(pencePerExcessMileFinanceExpected)) {
 			count++;
 
 			System.out.println("");
@@ -4783,7 +4783,7 @@ public class UnderwritingPopupPage extends TestBase {
 
 	// 19.comparing APR
 		
-		if (aPRActual.equals(aPRExpected)) {
+		if (aPRActual==aPRExpected) {
 			count++;
 
 			System.out.println("");

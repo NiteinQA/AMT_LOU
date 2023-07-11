@@ -373,7 +373,7 @@ public class Underwriting extends TestBase {
 	private WebElement underwriting_quote_tab_customer_underwriting_quote_tab_commission;
 
 	// Monthly finance payment
-	@FindBy(xpath = "//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong")
+	@FindBy(xpath = "//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong|//*[normalize-space()='Monthly finance rental']//ancestor::div[1]//div//strong")
 	private WebElement underwriting_quote_tab_customer_underwriting_quote_tab_monthly_finance_payment;
 	
 	// Edit underwriting pop up
@@ -7023,7 +7023,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		String pencePerExcessMileFinanceActual = RemoveComma.of(underwriting_quote_tab_customer_underwriting_quote_tab_pence_per_excess_mile_finance.getText().trim());
     	//19
 		String [] APR = underwriting_quote_tab_customer_underwriting_quote_tab_APR.getText().trim().split(" ");
-		String aPRActual = APR[0];
+		double aPRActual = Double.parseDouble(APR[0]);
 		//20
 		double commissionActual = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_customer_underwriting_quote_tab_commission.getText().trim().substring(2)));
 		
@@ -7456,7 +7456,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 
 		// 18.comparing Pence Per Excess Mile Finance
 		
-		if (pencePerExcessMileFinanceActual.equals(rFLIncludedExpected)) {
+		if (pencePerExcessMileFinanceActual.equals(pencePerExcessMileFinanceExpected)) {
 			count++;
 
 			System.out.println("");
@@ -7479,7 +7479,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 
 	// 19.comparing APR
 		
-		if (aPRActual.equals(aPRExpected)) {
+		if (aPRActual==aPRExpected) {
 			count++;
 
 			System.out.println("");

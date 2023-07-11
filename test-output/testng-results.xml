@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="12" failed="2" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[<b>Clicked on Leads on Side Menu</b> <br />]]>
@@ -14,13 +14,13 @@
       <![CDATA[<b>Added data in General Notes</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Customer type - Business selected</b> <br />]]>
+      <![CDATA[<b>Customer type - Individual selected</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Clicked on Add new vehicle request</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Clicked on ownbook channel</b> <br />]]>
+      <![CDATA[<b>Clicked on broker channel</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Vehicle request for broker has been saved</b> <br />]]>
@@ -59,7 +59,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
+      <![CDATA[<b>ONU35053 = ONU35053</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -68,16 +68,16 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+      <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -86,7 +86,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
+      <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -104,7 +104,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+      <![CDATA[<b>13.0 = 13.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -113,7 +113,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
+      <![CDATA[<b>05/12/2023 != 04/12/2023</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -131,7 +131,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
+      <![CDATA[<b>ONU35053 = ONU35053</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -140,16 +140,16 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+      <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -158,7 +158,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
+      <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -176,7 +176,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+      <![CDATA[<b>13.0 = 13.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -185,7 +185,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
+      <![CDATA[<b>05/12/2023 != 04/12/2023</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -194,16 +194,13 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>In Lead created Opportunity Id is =SS-5056</b> <br />]]>
+      <![CDATA[<b>In Lead created Opportunity Id is =KZ-7635</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Clicked on Opportunity link from Menu </b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>listing_proposal_status is = Proposal Required</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Enter the Opportunity id in Search Text box</b> <br />]]>
@@ -233,7 +230,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
+      <![CDATA[<b>ONU35053 = ONU35053</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -242,16 +239,16 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+      <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -260,7 +257,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
+      <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -278,7 +275,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+      <![CDATA[<b>13.0 = 13.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -287,7 +284,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
+      <![CDATA[<b>05/12/2023 != 04/12/2023</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -299,10 +296,22 @@
       <![CDATA[<b>Table values verified Successfully</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>click on Proposal icon</b> <br />]]>
+      <![CDATA[<b>Current Status of Opportunity Status value is = Open</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Proposal page will display </b> <br />]]>
+      <![CDATA[<b>Current Status of Proposal value is = Proposal Required</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Current Status of Channel value is =  Draft</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Current Status of  Quote ref is = Draft</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Status Verified : Before sending the proposal</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>click on Proposal icon</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Send proposal to customer pop up  will open</b> <br />]]>
@@ -312,6 +321,12 @@
     </line>
     <line>
       <![CDATA[<b>Click on manually submit behalf of customer link</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Proposal Received Successfully</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Current Status of Opportunity Status value is = Open</b> <br />]]>
@@ -330,9 +345,6 @@
     </line>
     <line>
       <![CDATA[<b>click on Send_Contract icon</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Contract Sent Successfully</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -369,10 +381,10 @@
     </line>
     <line>
       <![CDATA[<b>Underwriting pop up -quote ref no => Quote reference no.:
-FLB23306</b> <br />]]>
+ONU35053</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Underwriting Popup Proposal Id is =QMO2522</b> <br />]]>
+      <![CDATA[<b>Underwriting Popup Proposal Id is =LTD5479</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
@@ -385,7 +397,7 @@ FLB23306</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote reference no.:
-FLB23306 != FLB23306</b> <br />]]>
+ONU35053 != ONU35053</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared but found not ok</b> <br />]]>
@@ -394,16 +406,16 @@ FLB23306 != FLB23306</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+      <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -412,10 +424,10 @@ FLB23306 != FLB23306</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+      <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Terms compared and found ok</b> <br />]]>
+      <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
@@ -430,205 +442,85 @@ FLB23306 != FLB23306</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
+      <![CDATA[<b>13.0 = 13.0</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>VAT found OK</b> <br />]]>
+      <![CDATA[<b>Terms compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>640.0 = 640.0</b> <br />]]>
+      <![CDATA[<b>04/12/2023 = 04/12/2023</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+      <![CDATA[<b>Expiry date compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+      <![CDATA[<b>Popular Fiat = Popular Fiat</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Order Deposit found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+      <![CDATA[<b>Funder name compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+      <![CDATA[<b>REF001 = REF001</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Total Deposit found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+      <![CDATA[<b>Funder quote ref no. compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
+      <![CDATA[<b>Monthly in advance = Monthly in advance</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>199.99 = 199.99</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Document Fee - found OK</b> <br />]]>
+      <![CDATA[<b>Payment profile compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
+      <![CDATA[<b>5417.0 = 5417.0</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>10.0 = 10.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+      <![CDATA[<b>Contract mileage compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>239.99 = 239.988</b> <br />]]>
+      <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>32.0 = 32.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+      <![CDATA[<b>Initial finance rental compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
+      <![CDATA[<b>2.00 p = 2.00 p</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
+      <![CDATA[<b>Pense per excess mile finance compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
+      <![CDATA[<b>5.0 = 5.0</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Final Payment - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Total Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>One or More than One values on underwriting pop up may be wrong , please check all above values printed on console</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
+      <![CDATA[<b>commission compared and found ok</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -646,16 +538,16 @@ FLB23306 != FLB23306</b> <br />]]>
       <![CDATA[<b>Click on Underwriting menu_link </b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Click on Underwriting - ownbook tab </b> <br />]]>
+      <![CDATA[<b>Click on Underwriting - broker tab </b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Click on Search text box - broker tab</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Getting the  proposal id from excel sheet =QMO2522</b> <br />]]>
+      <![CDATA[<b>Getting the  proposal id from excel sheet =LTD5479</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Enter the proposal in search text box =QMO2522</b> <br />]]>
+      <![CDATA[<b>Enter the proposal in search text box =LTD5479</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Click on Underwriting detail page for proposal</b> <br />]]>
@@ -664,445 +556,28 @@ FLB23306 != FLB23306</b> <br />]]>
       <![CDATA[<b>Clicked on Underwriting quote page</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b></b> <br />]]>
+      <![CDATA[<br>----------Screenshot---------<br>]]>
     </line>
     <line>
-      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+      <![CDATA[<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\UW4_verify_underwriting_proposal_page_flow_11_07_2023_04_36_40.png" height="800" width="1000">]]>
     </line>
     <line>
-      <![CDATA[<b>Cost Otr Price compared and found ok</b> <br />]]>
+      <![CDATA[<br>----------Screenshot---------<br>]]>
     </line>
     <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Cost Otr Price compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Otr Vat compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>640.0 = 640.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Otr Rfl And Frf compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Terms compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>VAT found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>640.0 = 640.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Order Deposit found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Total Deposit found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>199.99 = 199.99</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Document Fee - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>10.0 = 10.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>239.99 = 239.988</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>32.0 = 32.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Final Payment - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Total Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>7.0 = 7.000000000000001</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>3941.52 != -7761.538334864323</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Finance Margin found wrong</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Deductions found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Additional Margin found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>3492.84 != -8210.220209864323</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Total Margin found wrong</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>0.94 = 0.9375000000000001</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>12.0 = 12.000000000000002</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>One or More than One values on underwriting quote tab may be wrong , please check all above values printed on console</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Click on decision tab page</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Click on decision Accept button</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Entering values to input field</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Current Status of accept value is = Conditional acceptance</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Clicked on Opportunity link from Menu </b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b> Underwriting icon is available </b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Current Status of Channel value is =  Sent to customer</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Current Status of  Quote ref is = Sent to customer</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Current Status of  Quote ref is = Cancelled</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Status Verified : Sent to customer</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Status code 200 received </b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Enter the Opportunity id in Search Text box</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>New Quote ref in Opportunity LRJ45426</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>New Quote Monthly Payment is  = £ 1,614.89</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Cancelled Quote ref in Opportunity is = null</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Cancelled Monthly Payment value is = £ 1,597.27</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>[32mMonthly Payment verified (found ok) after accepting new quote, Actual value is 1614.89 and Expected value is 1614.8914270354908[0m</b> <br />]]>
+      <![CDATA[<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\UW5_verify_underwriting_proposal_decision_with_accept_11_07_2023_04_37_05.png" height="800" width="1000">]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-07-11T11:16:35 IST" name="Default suite" finished-at="2023-07-11T11:30:19 IST" duration-ms="823716">
+  <suite started-at="2023-07-11T16:27:05 IST" name="Default suite" finished-at="2023-07-11T16:37:05 IST" duration-ms="599591">
     <groups>
     </groups>
-    <test started-at="2023-07-11T11:16:35 IST" name="Default test" finished-at="2023-07-11T11:30:19 IST" duration-ms="823716">
-      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:16:35 IST" name="setup" finished-at="2023-07-11T11:17:26 IST" duration-ms="51147" status="PASS">
+    <test started-at="2023-07-11T16:27:05 IST" name="Default test" finished-at="2023-07-11T16:37:05 IST" duration-ms="599591">
+      <class name="com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:27:05 IST" name="setup" finished-at="2023-07-11T16:27:18 IST" duration-ms="13058" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="L1_create_lead_convert_to_lead_for_ownbook_business_flow()[pri:1, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:17:26 IST" name="L1_create_lead_convert_to_lead_for_ownbook_business_flow" finished-at="2023-07-11T11:19:50 IST" duration-ms="143818" status="PASS">
+        <test-method signature="L1_create_lead_for_broker_individual()[pri:1, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:27:18 IST" name="L1_create_lead_for_broker_individual" finished-at="2023-07-11T16:29:03 IST" duration-ms="104523" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Clicked on Leads on Side Menu</b> <br />]]>
@@ -1117,13 +592,13 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b>Added data in General Notes</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Customer type - Business selected</b> <br />]]>
+              <![CDATA[<b>Customer type - Individual selected</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Clicked on Add new vehicle request</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Clicked on ownbook channel</b> <br />]]>
+              <![CDATA[<b>Clicked on broker channel</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Vehicle request for broker has been saved</b> <br />]]>
@@ -1162,7 +637,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
+              <![CDATA[<b>ONU35053 = ONU35053</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -1171,16 +646,16 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+              <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1189,7 +664,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
+              <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -1207,7 +682,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+              <![CDATA[<b>13.0 = 13.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -1216,7 +691,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
+              <![CDATA[<b>05/12/2023 != 04/12/2023</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -1234,7 +709,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
+              <![CDATA[<b>ONU35053 = ONU35053</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -1243,16 +718,16 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+              <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1261,7 +736,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
+              <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -1279,7 +754,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+              <![CDATA[<b>13.0 = 13.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -1288,7 +763,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
+              <![CDATA[<b>05/12/2023 != 04/12/2023</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -1297,20 +772,17 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>In Lead created Opportunity Id is =SS-5056</b> <br />]]>
+              <![CDATA[<b>In Lead created Opportunity Id is =KZ-7635</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L1_create_lead_convert_to_lead_for_ownbook_business_flow -->
-        <test-method signature="L2_ownbook_business_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:19:50 IST" name="L2_ownbook_business_current_status_before_sending_to_proposal" finished-at="2023-07-11T11:20:14 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow" duration-ms="23310" status="PASS">
+        </test-method> <!-- L1_create_lead_for_broker_individual -->
+        <test-method signature="L2_broker_individual_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:29:03 IST" name="L2_broker_individual_current_status_before_sending_to_proposal" finished-at="2023-07-11T16:29:43 IST" duration-ms="40129" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Clicked on Opportunity link from Menu </b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>listing_proposal_status is = Proposal Required</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Enter the Opportunity id in Search Text box</b> <br />]]>
@@ -1331,8 +803,8 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b>Status Verified : Before sending the proposal</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L2_ownbook_business_current_status_before_sending_to_proposal -->
-        <test-method signature="L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:20:14 IST" name="L3_verify_table_values_on_opportunity_page_before_sending_proposal" finished-at="2023-07-11T11:20:18 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal" duration-ms="4105" status="PASS">
+        </test-method> <!-- L2_broker_individual_current_status_before_sending_to_proposal -->
+        <test-method signature="L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:29:43 IST" name="L3_verify_table_values_on_opportunity_page_before_sending_proposal" finished-at="2023-07-11T16:29:47 IST" duration-ms="4113" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b></b> <br />]]>
@@ -1344,7 +816,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
+              <![CDATA[<b>ONU35053 = ONU35053</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -1353,16 +825,16 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+              <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1371,7 +843,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
+              <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -1389,7 +861,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+              <![CDATA[<b>13.0 = 13.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -1398,7 +870,7 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
+              <![CDATA[<b>05/12/2023 != 04/12/2023</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -1411,13 +883,29 @@ FLB23306 != FLB23306</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- L3_verify_table_values_on_opportunity_page_before_sending_proposal -->
-        <test-method signature="L4_fill_up_the_required_fields_for_sending_a_proposal()[pri:4, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:20:18 IST" name="L4_fill_up_the_required_fields_for_sending_a_proposal" finished-at="2023-07-11T11:21:02 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal" duration-ms="44749" status="PASS">
+        <test-method signature="L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_broker_individual_flow()[pri:4, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:29:47 IST" name="L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_broker_individual_flow" finished-at="2023-07-11T16:29:47 IST" duration-ms="108" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Current Status of Opportunity Status value is = Open</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of Proposal value is = Proposal Required</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of Channel value is =  Draft</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of  Quote ref is = Draft</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Status Verified : Before sending the proposal</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_broker_individual_flow -->
+        <test-method signature="L5_adding_proposal_on_opportunity_page_broker_individual_flow()[pri:5, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:29:47 IST" name="L5_adding_proposal_on_opportunity_page_broker_individual_flow" finished-at="2023-07-11T16:31:28 IST" duration-ms="100989" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>click on Proposal icon</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Proposal page will display </b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Send proposal to customer pop up  will open</b> <br />]]>
@@ -1428,9 +916,15 @@ FLB23306 != FLB23306</b> <br />]]>
             <line>
               <![CDATA[<b>Click on manually submit behalf of customer link</b> <br />]]>
             </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Proposal Received Successfully</b> <br />]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- L4_fill_up_the_required_fields_for_sending_a_proposal -->
-        <test-method signature="L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()[pri:5, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:21:02 IST" name="L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal" finished-at="2023-07-11T11:21:03 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal" duration-ms="167" status="PASS">
+        </test-method> <!-- L5_adding_proposal_on_opportunity_page_broker_individual_flow -->
+        <test-method signature="L6_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow()[pri:6, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:31:28 IST" name="L6_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow" finished-at="2023-07-11T16:31:29 IST" duration-ms="174" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Opportunity Status value is = Open</b> <br />]]>
@@ -1448,19 +942,12 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b>Status Verified : After sending the proposal</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal -->
-        <test-method signature="L6_ownbook_sending_contract()[pri:6, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:21:03 IST" name="L6_ownbook_sending_contract" finished-at="2023-07-11T11:22:49 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal" duration-ms="106234" status="PASS">
+        </test-method> <!-- L6_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow -->
+        <test-method signature="broker_business_sending_contract()[pri:7, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:31:29 IST" name="broker_business_sending_contract" finished-at="2023-07-11T16:33:18 IST" duration-ms="109114" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>click on Send_Contract icon</b> <br />]]>
             </line>
-            <line>
-              <![CDATA[<b>Contract Sent Successfully</b> <br />]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- L6_ownbook_sending_contract -->
-        <test-method signature="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()[pri:7, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:22:49 IST" name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow" finished-at="2023-07-11T11:22:53 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L6_ownbook_sending_contract" duration-ms="4277" status="PASS">
-          <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
             </line>
@@ -1474,8 +961,8 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b>Status Verified : Sent to customer</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow -->
-        <test-method signature="L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:22:53 IST" name="L8_ownbook_signed_contract_status_with_api_call" finished-at="2023-07-11T11:23:16 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L6_ownbook_sending_contract" duration-ms="22677" status="PASS">
+        </test-method> <!-- broker_business_sending_contract -->
+        <test-method signature="L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:33:18 IST" name="L8_ownbook_signed_contract_status_with_api_call" finished-at="2023-07-11T16:33:40 IST" duration-ms="22571" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Status code 200 received </b> <br />]]>
@@ -1485,7 +972,7 @@ FLB23306 != FLB23306</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- L8_ownbook_signed_contract_status_with_api_call -->
-        <test-method signature="L9_ownbook_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:23:16 IST" name="L9_ownbook_status_after_contract_signed" finished-at="2023-07-11T11:23:22 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call" duration-ms="6139" status="PASS">
+        <test-method signature="L9_verify_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:33:40 IST" name="L9_verify_status_after_contract_signed" finished-at="2023-07-11T16:33:46 IST" duration-ms="6120" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -1500,18 +987,18 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b>Status Verified : Contract Signed </b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L9_ownbook_status_after_contract_signed -->
-        <test-method signature="UW1_verify_underwriting_flow_ownbook_with_status()[pri:10, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:23:22 IST" name="UW1_verify_underwriting_flow_ownbook_with_status" finished-at="2023-07-11T11:24:44 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L9_ownbook_status_after_contract_signed" duration-ms="82488" status="PASS">
+        </test-method> <!-- L9_verify_status_after_contract_signed -->
+        <test-method signature="UW1_verify_underwriting_flow_ownbook_with_status()[pri:10, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:33:46 IST" name="UW1_verify_underwriting_flow_ownbook_with_status" finished-at="2023-07-11T16:34:08 IST" duration-ms="22046" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b> Underwriting icon is available </b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Underwriting pop up -quote ref no => Quote reference no.:
-FLB23306</b> <br />]]>
+ONU35053</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Underwriting Popup Proposal Id is =QMO2522</b> <br />]]>
+              <![CDATA[<b>Underwriting Popup Proposal Id is =LTD5479</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
@@ -1524,7 +1011,7 @@ FLB23306</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote reference no.:
-FLB23306 != FLB23306</b> <br />]]>
+ONU35053 != ONU35053</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared but found not ok</b> <br />]]>
@@ -1533,16 +1020,16 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
+              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic != AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro S Line 5dr S Tronic</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
+              <![CDATA[<b>Vehicle name compared but found not ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
+              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1551,10 +1038,10 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
+              <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Terms compared and found ok</b> <br />]]>
+              <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
@@ -1569,209 +1056,89 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
+              <![CDATA[<b>13.0 = 13.0</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>VAT found OK</b> <br />]]>
+              <![CDATA[<b>Terms compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>640.0 = 640.0</b> <br />]]>
+              <![CDATA[<b>04/12/2023 = 04/12/2023</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+              <![CDATA[<b>Expiry date compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+              <![CDATA[<b>Popular Fiat = Popular Fiat</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Order Deposit found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+              <![CDATA[<b>Funder name compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+              <![CDATA[<b>REF001 = REF001</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Total Deposit found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+              <![CDATA[<b>Funder quote ref no. compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
+              <![CDATA[<b>Monthly in advance = Monthly in advance</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>199.99 = 199.99</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Document Fee - found OK</b> <br />]]>
+              <![CDATA[<b>Payment profile compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
+              <![CDATA[<b>5417.0 = 5417.0</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>10.0 = 10.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+              <![CDATA[<b>Contract mileage compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>239.99 = 239.988</b> <br />]]>
+              <![CDATA[<b>2000.0 = 2000.0</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>32.0 = 32.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+              <![CDATA[<b>Initial finance rental compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
+              <![CDATA[<b>2.00 p = 2.00 p</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
+              <![CDATA[<b>Pense per excess mile finance compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
+              <![CDATA[<b>5.0 = 5.0</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Final Payment - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Total Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>One or More than One values on underwriting pop up may be wrong , please check all above values printed on console</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
+              <![CDATA[<b>commission compared and found ok</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
             </line>
-            <line>
-              <![CDATA[<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br />]]>
-            </line>
           </reporter-output>
         </test-method> <!-- UW1_verify_underwriting_flow_ownbook_with_status -->
-        <test-method signature="UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:24:44 IST" name="UW2_verify_status_after_sending_to_underwriting" finished-at="2023-07-11T11:24:45 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status" duration-ms="1115" status="PASS">
+        <test-method signature="UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:34:08 IST" name="UW2_verify_status_after_sending_to_underwriting" finished-at="2023-07-11T16:34:09 IST" duration-ms="1122" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -1787,26 +1154,98 @@ FLB23306 != FLB23306</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- UW2_verify_status_after_sending_to_underwriting -->
-        <test-method signature="UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:24:45 IST" name="UW3_verify_underwriting_lisitig_page" finished-at="2023-07-11T11:24:57 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting" duration-ms="11173" status="PASS">
+        <test-method signature="UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:34:09 IST" name="UW3_verify_underwriting_lisitig_page" finished-at="2023-07-11T16:34:21 IST" duration-ms="11120" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Click on Underwriting menu_link </b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Click on Underwriting - ownbook tab </b> <br />]]>
+              <![CDATA[<b>Click on Underwriting - broker tab </b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Click on Search text box - broker tab</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Getting the  proposal id from excel sheet =QMO2522</b> <br />]]>
+              <![CDATA[<b>Getting the  proposal id from excel sheet =LTD5479</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Enter the proposal in search text box =QMO2522</b> <br />]]>
+              <![CDATA[<b>Enter the proposal in search text box =LTD5479</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- UW3_verify_underwriting_lisitig_page -->
-        <test-method signature="UW4_verify_ownbook_underwriting_proposal_page_flow()[pri:13, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:24:57 IST" name="UW4_verify_ownbook_underwriting_proposal_page_flow" finished-at="2023-07-11T11:26:52 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page" duration-ms="114899" status="PASS">
+        <test-method signature="UW4_verify_underwriting_proposal_page_flow()[pri:13, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:34:21 IST" name="UW4_verify_underwriting_proposal_page_flow" finished-at="2023-07-11T16:36:40 IST" duration-ms="139728" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong' (tried for 120 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong' (tried for 120 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+at com.amt.pages.Underwriting.verify_quote_tab_on_underwriting_page_for_broker_hire_flow(Underwriting.java:1000)
+at com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test.UW4_verify_underwriting_proposal_page_flow(LOU_broker_individual_hire_accept_flow_Test.java:299)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong"}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DSK-4052', ip: '172.16.1.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fbbc25056a655f0046f1ae2aa64b7ac4, findElement {using=xpath, value=//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50752}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50752/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fbbc25056a655f0046f1ae2aa64b7ac4
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
             <line>
               <![CDATA[<b>Click on Underwriting detail page for proposal</b> <br />]]>
@@ -1815,461 +1254,96 @@ FLB23306 != FLB23306</b> <br />]]>
               <![CDATA[<b>Clicked on Underwriting quote page</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b></b> <br />]]>
+              <![CDATA[<br>----------Screenshot---------<br>]]>
             </line>
             <line>
-              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Cost Otr Price compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Cost Otr Price compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Otr Vat compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>640.0 = 640.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Otr Rfl And Frf compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Vehicle name compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Terms compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>VAT found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>640.0 = 640.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Order Deposit found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Total Deposit found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>199.99 = 199.99</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Document Fee - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>10.0 = 10.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>239.99 = 239.988</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>32.0 = 32.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Final Payment - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Total Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>7.0 = 7.000000000000001</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>3941.52 != -7761.538334864323</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Finance Margin found wrong</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Deductions found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Additional Margin found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>3492.84 != -8210.220209864323</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Total Margin found wrong</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>0.94 = 0.9375000000000001</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>12.0 = 12.000000000000002</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>One or More than One values on underwriting quote tab may be wrong , please check all above values printed on console</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Click on decision tab page</b> <br />]]>
+              <![CDATA[<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\UW4_verify_underwriting_proposal_page_flow_11_07_2023_04_36_40.png" height="800" width="1000">]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UW4_verify_ownbook_underwriting_proposal_page_flow -->
-        <test-method signature="UW5_verify_ownbook_underwriting_proposal_decision_with_accept()[pri:14, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:26:52 IST" name="UW5_verify_ownbook_underwriting_proposal_decision_with_accept" finished-at="2023-07-11T11:27:17 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow" duration-ms="25791" status="PASS">
+        </test-method> <!-- UW4_verify_underwriting_proposal_page_flow -->
+        <test-method signature="UW5_verify_underwriting_proposal_decision_with_accept()[pri:14, instance:com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test@70e9c95d]" started-at="2023-07-11T16:36:41 IST" name="UW5_verify_underwriting_proposal_decision_with_accept" finished-at="2023-07-11T16:37:05 IST" duration-ms="24299" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[normalize-space()='Accept']' (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[normalize-space()='Accept']' (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+at com.amt.pages.Underwriting.find_underwriting_tab_decision_page_accept_button(Underwriting.java:7674)
+at com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test.UW5_verify_underwriting_proposal_decision_with_accept(LOU_broker_individual_hire_accept_flow_Test.java:342)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Accept']"}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DSK-4052', ip: '172.16.1.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fbbc25056a655f0046f1ae2aa64b7ac4, findElement {using=xpath, value=//button[normalize-space()='Accept']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50752}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50752/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fbbc25056a655f0046f1ae2aa64b7ac4
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
             <line>
-              <![CDATA[<b>Click on decision Accept button</b> <br />]]>
+              <![CDATA[<br>----------Screenshot---------<br>]]>
             </line>
             <line>
-              <![CDATA[<b>Entering values to input field</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Current Status of accept value is = Conditional acceptance</b> <br />]]>
+              <![CDATA[<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\UW5_verify_underwriting_proposal_decision_with_accept_11_07_2023_04_37_05.png" height="800" width="1000">]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UW5_verify_ownbook_underwriting_proposal_decision_with_accept -->
-        <test-method signature="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()[pri:15, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:27:17 IST" name="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes" finished-at="2023-07-11T11:27:33 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept" duration-ms="15455" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<b>Clicked on Opportunity link from Menu </b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes -->
-        <test-method signature="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()[pri:16, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:27:33 IST" name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" finished-at="2023-07-11T11:29:33 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes" duration-ms="119781" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<b> Underwriting icon is available </b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up -->
-        <test-method signature="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()[pri:17, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:29:33 IST" name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification" finished-at="2023-07-11T11:29:46 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" duration-ms="13280" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Current Status of Channel value is =  Sent to customer</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Current Status of  Quote ref is = Sent to customer</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Current Status of  Quote ref is = Cancelled</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Status Verified : Sent to customer</b> <br />]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification -->
-        <test-method signature="UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:29:46 IST" name="UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call" finished-at="2023-07-11T11:30:16 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification" duration-ms="30354" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<b>Status code 200 received </b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Enter the Opportunity id in Search Text box</b> <br />]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call -->
-        <test-method signature="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:30:16 IST" name="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price" finished-at="2023-07-11T11:30:19 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call" duration-ms="2705" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<b>New Quote ref in Opportunity LRJ45426</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>New Quote Monthly Payment is  = £ 1,614.89</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Cancelled Quote ref in Opportunity is = null</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Cancelled Monthly Payment value is = £ 1,597.27</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>[32mMonthly Payment verified (found ok) after accepting new quote, Actual value is 1614.89 and Expected value is 1614.8914270354908[0m</b> <br />]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price -->
-      </class> <!-- com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test -->
+        </test-method> <!-- UW5_verify_underwriting_proposal_decision_with_accept -->
+      </class> <!-- com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

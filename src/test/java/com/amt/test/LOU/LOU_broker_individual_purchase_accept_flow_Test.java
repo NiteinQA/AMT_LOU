@@ -38,7 +38,7 @@ public class LOU_broker_individual_purchase_accept_flow_Test extends TestBase {
 		obj_Leads_Page.lead_vehicle_request_broker();
 
 		// individual = Broker + PCP
-		obj_Leads_Page.lead_map_new_quote_broker_individual();
+		obj_Leads_Page.lead_map_new_quote();
 
 //		boolean table_verification_before_save = obj_Leads_Page.verify_table_values_on_lead_page();
 

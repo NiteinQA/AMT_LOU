@@ -1140,11 +1140,11 @@ public class Leads extends TestBase {
 
 		
 		if (className.contains("broker_business_purchase")) 
-		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);}
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);}
 
 		
 		if (className.contains("broker_individual_purchase")) 
-		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);}
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);}
 	
 		
 		if (className.contains("ownbook")) 

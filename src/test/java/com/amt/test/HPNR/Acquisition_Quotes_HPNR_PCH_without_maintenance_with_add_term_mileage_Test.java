@@ -21,7 +21,7 @@ import com.amt.testBase.TestBase;
 import com.amt.testUtil.ReadExcelData;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class Acquisition_Quotes_HPNR_PCH_without_maintenance_Test extends TestBase {
+public class Acquisition_Quotes_HPNR_PCH_without_maintenance_with_add_term_mileage_Test extends TestBase {
 
 	LoginPage obj_Login_Page;
 	AcquisitionListingPage obj_acq_listing_page;
@@ -324,7 +324,6 @@ public class Acquisition_Quotes_HPNR_PCH_without_maintenance_Test extends TestBa
 		HoldingCost_HPNR_BCHPage obj_holding_cost_page = new HoldingCost_HPNR_BCHPage();
 		
 		obj_holding_cost_page.save_maint_value_to_excel_for_without_funder_scenario("HPNRPCHQuoteNo");
-
 	}
 
 	@DataProvider(name = "testData")

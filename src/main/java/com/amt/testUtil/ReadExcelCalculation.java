@@ -1394,10 +1394,19 @@ public class ReadExcelCalculation extends TestBase {
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
-		// rfl values fakt on hotya baki sarv comment hotya
-
+	
 		wb.getSheet(sheet_name).getRow(61).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+		
+		if (sheet_name.contains("Use")) {
+
+			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
+
+		} else {
+			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
+		}
+		
+		
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 		wb.getSheet(sheet_name).getRow(67).getCell(1)

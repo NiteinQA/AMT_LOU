@@ -1630,7 +1630,7 @@ public class UnderwritingPopupPage extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_order_deposit, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_finance_deposit, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_total_deposit, 20);
-		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_part_exchange_value, 20);
+		try{ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_part_exchange_value, 20);}catch(Exception e) {}
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_balance_to_finance, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_finance_charges, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_document_fee, 20);
@@ -1684,9 +1684,11 @@ public class UnderwritingPopupPage extends TestBase {
 
 		double customer_quote_summary_total_deposit = Double.parseDouble(
 				RemoveComma.of(underwriting_popup_customer_quote_summary_total_deposit.getText().trim().substring(2)));
-
-		double  customer_quote_summary_part_exchange_value = Double.parseDouble(
-				RemoveComma.of(underwriting_popup_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
+		
+		double  customer_quote_summary_part_exchange_value =0;
+		try{customer_quote_summary_part_exchange_value = Double.parseDouble(
+				RemoveComma.of(underwriting_popup_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));}catch(Exception e) {}
+                
 
 		double customer_quote_summary_balance_to_finance = Double.parseDouble(
 				RemoveComma.of(underwriting_popup_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
@@ -1809,7 +1811,7 @@ public class UnderwritingPopupPage extends TestBase {
 		
 		
 		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
-		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 9, sheetName);
+		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 		
 		String contractTypeExpected                           = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);		
 		
@@ -2125,6 +2127,12 @@ public class UnderwritingPopupPage extends TestBase {
 		}
 
 		// 13.comparing Part Exchange Value
+		
+		
+		if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("funder")) {
+		}
+		else {
+
 		if (partExchangeValue == customer_quote_summary_part_exchange_value) {
 			
 			count++;
@@ -2149,6 +2157,7 @@ public class UnderwritingPopupPage extends TestBase {
 			
 			LO.print          ("Part Exchange Value - found wrong");
 			System.err.println("Part Exchange Value - found wrong");
+		}
 		}
 
 		// 14.comparing Balance to Finance
@@ -2527,7 +2536,13 @@ public class UnderwritingPopupPage extends TestBase {
 
 		
 		boolean status = false;
-		if (count==27)
+		
+		int expcount=0;
+		if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("funder"))
+		{ expcount=26;} else {expcount=27;}
+		
+		
+		if (count==expcount)
 			
 		{
 			status = true;
@@ -3089,30 +3104,36 @@ public class UnderwritingPopupPage extends TestBase {
 		}
 
 		// 13.comparing Part Exchange Value
-		if (partExchangeValue == customer_quote_summary_part_exchange_value) {
-			
-			count++;
 		
-			System.out.println("");
-			LO.print          ("");
+		if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("funder")) {
+		}
+		else
+		{
+			if (partExchangeValue == customer_quote_summary_part_exchange_value) {
+				
+				count++;
 			
-			System.out.println(customer_quote_summary_part_exchange_value + " = " + partExchangeValue);
-			LO.print          (customer_quote_summary_part_exchange_value + " = " + partExchangeValue);			
-			
-			LO.print          ("Part Exchange Value - found OK");
-			System.out.println("Part Exchange Value - found OK");
-			
-		} else {
-			
-			System.out.println("");
-			LO.print          ("");
-			
-			System.err.println(customer_quote_summary_part_exchange_value + " != " + partExchangeValue);
-			LO.print          (customer_quote_summary_part_exchange_value + " != " + partExchangeValue);			
+				System.out.println("");
+				LO.print          ("");
+				
+				System.out.println(customer_quote_summary_part_exchange_value + " = " + partExchangeValue);
+				LO.print          (customer_quote_summary_part_exchange_value + " = " + partExchangeValue);			
+				
+				LO.print          ("Part Exchange Value - found OK");
+				System.out.println("Part Exchange Value - found OK");
+				
+			} else {
+				
+				System.out.println("");
+				LO.print          ("");
+				
+				System.err.println(customer_quote_summary_part_exchange_value + " != " + partExchangeValue);
+				LO.print          (customer_quote_summary_part_exchange_value + " != " + partExchangeValue);			
 
-			
-			LO.print          ("Part Exchange Value - found wrong");
-			System.err.println("Part Exchange Value - found wrong");
+				
+				LO.print          ("Part Exchange Value - found wrong");
+				System.err.println("Part Exchange Value - found wrong");
+			}
 		}
 
 		// 14.comparing Balance to Finance

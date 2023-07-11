@@ -22,7 +22,7 @@ import com.amt.testBase.TestBase;
 import com.amt.testUtil.ReadExcelData;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class Acquisition_Quotes_HPNR_PCP_without_maintenance_Test extends TestBase {
+public class Acquisition_Quotes_HPNR_PCP_without_maintenance_with_add_term_mileage_Test extends TestBase {
 
 
 
@@ -176,8 +176,6 @@ public class Acquisition_Quotes_HPNR_PCP_without_maintenance_Test extends TestBa
 
 
 		obj_quote_summary_page = new QuoteSummary_HPNR_PCP_Page();
-		
-		
 		
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);

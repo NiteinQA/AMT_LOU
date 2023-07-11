@@ -30,9 +30,7 @@ public class HoldingCost_HPNR_HPNRPage extends TestBase {
 	private WebElement additional_terms;
 
 	@FindBy(xpath = "//*[@name='MileagePerAnnum']")
-	private WebElement additional_mileage;
-	
-	
+	private WebElement additional_mileage;	
 	
 	@FindBy(xpath = " //*[normalize-space()='CAP residual value (inc. VAT):']//ancestor::div[1]//p")
 	private WebElement holding_cost_summary_residual_value_used;
@@ -45,7 +43,6 @@ public class HoldingCost_HPNR_HPNRPage extends TestBase {
 	
 	@FindBy(xpath = "//div[@class='acc-head havebtns']")
 	private WebElement holding_cost_summary;	
-	
 
 	
 	@FindBy(xpath = "//*[@id='ResidualValue']")

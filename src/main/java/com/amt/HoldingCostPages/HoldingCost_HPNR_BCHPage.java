@@ -192,7 +192,7 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void save_maint_value_to_excel(String expiryDate , String sheet_name) throws InterruptedException, IOException {
+	public void save_maint_value_to_excel_for_with_funder_scenario(String expiryDate , String sheet_name) throws InterruptedException, IOException {
 		
 		
 		Click.on(driver, holding_cost, 30);
@@ -229,6 +229,42 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 	}
 
 
+	public void save_maint_value_to_excel_for_without_funder_scenario(String sheet_name) throws InterruptedException, IOException {
+		
+		
+		Click.on(driver, holding_cost, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+
+		Click.on(driver, common_maintenance_toggle, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+
+		Click.on(driver, holding_cost_summary, 30);
+
+		ExplicitWait.visibleElement(driver, cap_monthly_maintenance_cost, 30);
+		
+		HelperClass.highlightElement(driver,cap_monthly_maintenance_cost);
+
+		String capMaintValue = RemoveComma.of(cap_monthly_maintenance_cost.getText().trim().substring(2));
+
+		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+
+		String sheetname = prop.getProperty(sheet_name);
+
+		wb.getSheet(sheetname).getRow(4).getCell(10).setCellValue(capMaintValue);
+
+		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
+		wb.write(out);
+		wb.close();
+
+		Click.on(driver, maintenance_toggle_button, 120);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+	}
+
+	
 	public boolean verify_holding_cost_after_adding_funder_quote_without_maintenance(String quoteRef, String expiryDate,
 			String term, String milesPerAnnum, String cashDeposit, String financeCharges, String documentFee,
 			String monthlyPayment, String finalBalloonPayment, String optionToPurchaseFee, String sheet_name)
@@ -454,31 +490,6 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 		System.out.println("Clicked on holding cost summary");
 		
 		
-		Click.on(driver, maintenance_toggle_button, 120);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		
-		ExplicitWait.visibleElement(driver, total_cap_maintenance_value, 120);
-		
-		String capMaintValue = RemoveComma.of(total_cap_maintenance_value.getText().substring(2));
-		
-		
-		
-		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
-		XSSFWorkbook wb = new XSSFWorkbook(in);
-
-		String sheetname = prop.getProperty("HPNRBCHQuoteNo");
-
-		wb.getSheet(sheetname).getRow(4).getCell(10).setCellValue(capMaintValue);
-	
-		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
-		wb.write(out);
-		wb.close();
-		
-		Click.on(driver, maintenance_toggle_button, 120);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		
-		
-
 		// code for checking default holding cost based on CAP data
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 
@@ -487,6 +498,8 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 				total_monthly_holding_cost, residual_value_used_from_excel, percentage_cap_residual_value_used,
 				sheet_name);
 	}
+	
+	
 
 	public boolean edit_percentage_residual_verify_holding_cost_without_maintenance(
 			String residual_value_used_from_excel, String percentage_cap_residual_value_used,

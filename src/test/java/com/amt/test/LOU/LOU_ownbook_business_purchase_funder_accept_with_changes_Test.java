@@ -19,7 +19,7 @@ import com.amt.testUtil.GetExcelFormulaValue;
 import com.amt.testUtil.RemoveComma;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class LOU_ownbook_business_purchase_refer_flow_Test extends TestBase {
+public class LOU_ownbook_business_purchase_funder_accept_with_changes_Test extends TestBase {
 
 	Leads obj_Leads_Page;
 	Opportunities obj_Opportunities_Page;
@@ -324,30 +324,136 @@ public class LOU_ownbook_business_purchase_refer_flow_Test extends TestBase {
 
 	 @Test(priority = 14 , dependsOnMethods = {"UW4_verify_ownbook_underwriting_proposal_page_flow" } )
 	  
-	  public void UW5_verify_ownbook_underwriting_proposal_decision_with_refer()
+	  public void UW5_verify_ownbook_underwriting_proposal_decision_with_accept()
 	  throws Exception {
 	  
 	  System.out.println("Test 14");
 		 
 	 obj_Underwriting_page = new Underwriting();
 	  
-	 obj_Underwriting_page.find_underwriting_tab_decision_page_refer_button();
+	 obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
 	 
-//	 obj_Underwriting_page.ownbook_purchase_decision_refer_and_change_the_quote_data();
+	 obj_Underwriting_page.ownbook_purchase_decision_accept_and_change_the_quote_data();
 	 
     obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
 	  
-	 // Assert for refer condition 
-	 boolean statusofrefer =
-	 obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_refer();
-	  Assert.assertTrue(statusofrefer);
-	  
-		System.out.println("Status Verified : referred");
-		LO.print          ("Status Verified : referred"); 
+	 // Assert for Accept condition 
+	 boolean statusofaccept =
+	 obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept_with_changes();
+	  Assert.assertTrue(statusofaccept);
 	  
 	 }
 	 
 	 
 	 
-	
+	 @Test(priority = 15 ,dependsOnMethods = {"UW5_verify_ownbook_underwriting_proposal_decision_with_accept" })
+	 
+	 public void UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes ()throws Exception {
+	 
+		 System.out.println("Test 15");
+		 
+	 obj_Opportunities_Page = new Opportunities();
+	 obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
+	 
+	 obj_Opportunities_Page.opp_menu_link();
+	 
+	 obj_Opportunities_Page.verify_opportunity_ownbook_quote_search_text_box();
+	 
+		
+	 }
+	 
+	 
+	 @Test(priority = 16, dependsOnMethods = {"UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes" })
+	 
+	 public void UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up ()throws Exception
+	 
+	 {
+		 
+		 System.out.println("Test 16");
+		 
+		 
+		 obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
+		 
+	 
+	 obj_Underwriting_Popup_Page.search_and_verify_underwriting_icon_is_availabale();
+	 
+	 obj_Underwriting_Popup_Page.verify_ownbook_underwriting_popup_accept_with_change_flow();
+	 
+	 
+	 
+	 }
+	 
+	 
+	 @Test(priority = 17 , dependsOnMethods = {"UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" })
+	 
+	 public void UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification ()throws Exception
+	 
+	 {
+		 
+		 System.out.println("Test 17");
+		 
+		 
+		 obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
+		 obj_Opportunities_Page = new Opportunities();
+	 
+		 obj_Opportunities_Page.verify_opportunity_ownbook_quote_search_text_box();	 
+		 
+		 
+		 boolean CurrentStatusafterAcceptingTheNewChangesFromUnderwritingPopup = obj_Opportunities_Page.verify_current_status_after_accept_new_changes_from_underwriting_pop_up();
+		 Assert.assertTrue(CurrentStatusafterAcceptingTheNewChangesFromUnderwritingPopup);
+		 
+			System.out.println("Status Verified : Sent to customer");
+			LO.print          ("Status Verified : Sent to customer"); 		
+	 
+	 
+	 } 
+	 
+	 
+ 
+	 
+		@Test(priority = 18 ,  dependsOnMethods = {"UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification" })
+		public void UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call() throws Exception
+
+		{
+
+			 System.out.println("Test 19");
+			
+			obj_Opportunities_Page = new Opportunities();
+
+			String[] OppDATA = obj_Opportunities_Page.get_api_data_opp_after_decision_underwriting_accpet_the_changes();
+
+			String opp_id_screen = OppDATA[0];
+			String quote_ref_screen2 = OppDATA[1];
+
+			System.out.println("opp_id_screen" + opp_id_screen);
+			
+			System.out.println("quote_ref_screen" + quote_ref_screen2);
+			
+			int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen2, opp_id_screen);
+
+			Assert.assertEquals(statuscode, 200);
+
+			LO.print          ("Status code "+statuscode+" received ");
+			System.out.println("Status code "+statuscode+" received ");
+
+			obj_Opportunities_Page.opp_search_textbox();
+		}
+		
+		
+		@Test(priority = 19 , dependsOnMethods = {"UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call" })
+		public void OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price() throws Exception
+
+		{
+			System.out.println("Test 20");
+
+			obj_Opportunities_Page = new Opportunities();
+
+			boolean monthlyPaymentStatus = obj_Opportunities_Page.get_new_quote_price_after_underwriting_accepted();	
+			
+			Assert.assertTrue(monthlyPaymentStatus);
+				
+		}
+	 
+
+
 }

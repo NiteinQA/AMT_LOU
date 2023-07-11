@@ -216,6 +216,17 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 	
 	
 	public QuoteSummary_HPNR_BCHPage() {
+		
+		try {
+			prop = new Properties();
+			FileInputStream ip = new FileInputStream(
+					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -315,27 +326,27 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			status = true;
 		}
 
-		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
-		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		quote_summary_configuration_base_int_rate_input.sendKeys("6.5");
-
-		act.sendKeys(Keys.TAB).build().perform();
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-		LO.print("Base Interest Rate changed to 6.5 %");
-		System.out.println("Base Interest Rate changed to 6.5 %");
-
-		// writing values to excel
-
-		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-		wb1.getSheet(sheet_name).getRow(34).getCell(7).setCellValue(0.065);
-
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-		wb1.write(out1);
+//		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
+//		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+//		quote_summary_configuration_base_int_rate_input.sendKeys("6.5");
+//
+//		act.sendKeys(Keys.TAB).build().perform();
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//
+//		LO.print("Base Interest Rate changed to 6.5 %");
+//		System.out.println("Base Interest Rate changed to 6.5 %");
+//
+//		// writing values to excel
+//
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//		wb1.getSheet(sheet_name).getRow(34).getCell(7).setCellValue(0.065);
+//
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//		wb1.write(out1);
 
 		return status;
 	}
@@ -540,26 +551,26 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 		// writing values to excel
 
-		if (sheet_name.contains("Use")) {
-
-			FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-			XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-			wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
-
-			FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-			wb1.write(out1);
-		} else {
-			FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-			XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-			wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
-
-			FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-			wb1.write(out1);
-		}
+//		if (sheet_name.contains("Use")) {
+//
+//			FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//			XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//			wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
+//
+//			FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//			wb1.write(out1);
+//		} else {
+//			FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//			XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//			wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
+//
+//			FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//			wb1.write(out1);
+//		}
 
 		return status;
 	}
@@ -2025,7 +2036,7 @@ public boolean quote_summary_OTR_calculation(String sheet_name) throws Interrupt
 		Click.on(driver, quote_summary, 60);
 		
 	
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);		
    	
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 	

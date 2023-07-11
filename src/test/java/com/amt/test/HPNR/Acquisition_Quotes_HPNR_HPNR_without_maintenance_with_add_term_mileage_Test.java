@@ -20,7 +20,7 @@ import com.amt.testBase.TestBase;
 import com.amt.testUtil.ReadExcelData;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test extends TestBase {
+public class Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test extends TestBase {
 
 	LoginPage obj_Login_Page;
 	AcquisitionListingPage obj_acq_listing_page;
@@ -220,8 +220,6 @@ public class Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test extends TestB
 
 		obj_quote_summary_page = new QuoteSummary_HPNR_HPRPage();
 		
-	
-
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);
 
@@ -252,7 +250,8 @@ public class Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test extends TestB
 
 		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
 				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_configuration_value_check1);		
+		Assert.assertTrue(quote_summary_configuration_value_check1);	
+		
 
 
 		boolean value_check_after_Base_Int_change = obj_quote_summary_page
@@ -263,15 +262,9 @@ public class Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test extends TestB
 				.quote_summary_edit_customer_rate_over_base_value_verification(sheet_name);
 		//Assert.assertTrue(value_check_after_customer_rate_over_base_change);
 		
-		
-		
 		obj_quote_summary_page.quote_summary_HPNR_HPR_without_maintenance("HPNRHPNRQuoteNo");	
 		
-		obj_holding_cost_page = new HoldingCost_HPNR_HPRPage();
-		
 		obj_holding_cost_page.save_maint_value_to_excel_for_without_funder_scenario("HPNRHPNRQuoteNo");
-		
-		
 
 	}
 

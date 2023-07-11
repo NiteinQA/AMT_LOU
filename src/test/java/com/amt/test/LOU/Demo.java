@@ -46,6 +46,15 @@ public class Demo {
 		System.out.println("All values on underwriting quote tab verified successfully");
 		System.out.println("");
 		
+		
+		String a ="";
+		if(a.contains("funder"))
+		{}
+		else
+		{
+			System.out.println("funder nahi hai");
+		}
+		
 	}
 
 }

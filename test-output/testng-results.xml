@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[<b>Clicked on Leads on Side Menu</b> <br />]]>
@@ -14,7 +14,7 @@
       <![CDATA[<b>Added data in General Notes</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Customer type - Individual selected</b> <br />]]>
+      <![CDATA[<b>Customer type - Business selected</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Clicked on Add new vehicle request</b> <br />]]>
@@ -59,7 +59,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -77,7 +77,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -86,7 +86,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1586.42 = 1586.42</b> <br />]]>
+      <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -95,7 +95,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+      <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -104,7 +104,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -113,7 +113,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>06/08/2023 != 07/08/2023</b> <br />]]>
+      <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -131,7 +131,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -149,7 +149,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -158,7 +158,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1586.42 = 1586.42</b> <br />]]>
+      <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -167,7 +167,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+      <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -176,7 +176,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -185,7 +185,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>06/08/2023 != 07/08/2023</b> <br />]]>
+      <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -194,7 +194,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>In Lead created Opportunity Id is =IX-6819</b> <br />]]>
+      <![CDATA[<b>In Lead created Opportunity Id is =SS-5056</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
@@ -233,7 +233,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -251,7 +251,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -260,7 +260,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1586.42 = 1586.42</b> <br />]]>
+      <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -269,7 +269,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+      <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -278,7 +278,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -287,7 +287,7 @@
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>06/08/2023 != 07/08/2023</b> <br />]]>
+      <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -302,6 +302,9 @@
       <![CDATA[<b>click on Proposal icon</b> <br />]]>
     </line>
     <line>
+      <![CDATA[<b>Proposal page will display </b> <br />]]>
+    </line>
+    <line>
       <![CDATA[<b>Send proposal to customer pop up  will open</b> <br />]]>
     </line>
     <line>
@@ -309,12 +312,6 @@
     </line>
     <line>
       <![CDATA[<b>Click on manually submit behalf of customer link</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Proposal Received Successfully</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Current Status of Opportunity Status value is = Open</b> <br />]]>
@@ -372,10 +369,10 @@
     </line>
     <line>
       <![CDATA[<b>Underwriting pop up -quote ref no => Quote reference no.:
-NFB02650</b> <br />]]>
+FLB23306</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Underwriting Popup Proposal Id is =CZX7966</b> <br />]]>
+      <![CDATA[<b>Underwriting Popup Proposal Id is =QMO2522</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
@@ -388,7 +385,7 @@ NFB02650</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote reference no.:
-NFB02650 != NFB02650</b> <br />]]>
+FLB23306 != FLB23306</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared but found not ok</b> <br />]]>
@@ -406,7 +403,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -415,7 +412,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -424,7 +421,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+      <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -433,43 +430,88 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1586.42 = 1586.4236246664805</b> <br />]]>
+      <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>1586.42 = 1586.42362466648</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Initial Finance Rental found OK</b> <br />]]>
+      <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>35.0 = 35.0</b> <br />]]>
+      <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>41.6 = 41.6772</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Pence per excess mile finance - found OK</b> <br />]]>
+      <![CDATA[<b>VAT found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>239.99 = 239.99</b> <br />]]>
+      <![CDATA[<b>640.0 = 640.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>199.99 = 199.99</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Document Fee - found OK</b> <br />]]>
@@ -478,16 +520,79 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>400.0 = 400.0</b> <br />]]>
+      <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Upsell - found OK</b> <br />]]>
+      <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1157.7 = 1157.7</b> <br />]]>
+      <![CDATA[<b>10.0 = 10.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>239.99 = 239.988</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>32.0 = 32.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Final Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
@@ -496,16 +601,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>400.0 = 400.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Upsell Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>99.99 = 99.99166666666667</b> <br />]]>
+      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
@@ -514,7 +610,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1657.69 = 1657.6916666666666</b> <br />]]>
+      <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Total Commission - found OK</b> <br />]]>
@@ -523,13 +619,16 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>200.0 = 200.0</b> <br />]]>
+      <![CDATA[<b>One or More than One values on underwriting pop up may be wrong , please check all above values printed on console</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Referrer Commission - found OK</b> <br />]]>
+      <![CDATA[<b></b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -553,10 +652,10 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b>Click on Search text box - broker tab</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Getting the  proposal id from excel sheet =CZX7966</b> <br />]]>
+      <![CDATA[<b>Getting the  proposal id from excel sheet =QMO2522</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Enter the proposal in search text box =CZX7966</b> <br />]]>
+      <![CDATA[<b>Enter the proposal in search text box =QMO2522</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Click on Underwriting detail page for proposal</b> <br />]]>
@@ -604,7 +703,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+      <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -622,7 +721,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+      <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -631,7 +730,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+      <![CDATA[<b>33.0 = 33.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -640,7 +739,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+      <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -649,43 +748,88 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1586.42 = 1586.4236246664805</b> <br />]]>
+      <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental compared and found ok</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>1586.42 = 1586.42362466648</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Initial Finance Rental found OK</b> <br />]]>
+      <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>35.0 = 35.0</b> <br />]]>
+      <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>41.6 = 41.6772</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Pence per excess mile finance - found OK</b> <br />]]>
+      <![CDATA[<b>VAT found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>239.99 = 239.99</b> <br />]]>
+      <![CDATA[<b>640.0 = 640.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>199.99 = 199.99</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Document Fee - found OK</b> <br />]]>
@@ -694,16 +838,79 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>400.0 = 400.0</b> <br />]]>
+      <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Upsell - found OK</b> <br />]]>
+      <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1157.7 = 1157.7</b> <br />]]>
+      <![CDATA[<b>10.0 = 10.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>239.99 = 239.988</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>32.0 = 32.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Final Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
@@ -712,16 +919,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>400.0 = 400.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Upsell Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>99.99 = 99.99166666666667</b> <br />]]>
+      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
@@ -730,7 +928,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1657.69 = 1657.6916666666666</b> <br />]]>
+      <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Total Commission - found OK</b> <br />]]>
@@ -739,16 +937,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>200.0 = 200.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Referrer Commission - found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>6.5 = 6.5</b> <br />]]>
+      <![CDATA[<b>7.0 = 7.000000000000001</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
@@ -757,16 +946,16 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>6077.93 = 6077.925</b> <br />]]>
+      <![CDATA[<b>3941.52 != -7761.538334864323</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Finance Margin found OK</b> <br />]]>
+      <![CDATA[<b>Finance Margin found wrong</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>1157.7 = 1157.7</b> <br />]]>
+      <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Deductions found OK</b> <br />]]>
@@ -775,7 +964,7 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>339.99 = 339.9916666666667</b> <br />]]>
+      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Additional Margin found OK</b> <br />]]>
@@ -784,16 +973,16 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>5260.22 = 5260.216666666667</b> <br />]]>
+      <![CDATA[<b>3492.84 != -8210.220209864323</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Total Margin found OK</b> <br />]]>
+      <![CDATA[<b>Total Margin found wrong</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>2.0 = 2.0</b> <br />]]>
+      <![CDATA[<b>0.94 = 0.9375000000000001</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
@@ -802,58 +991,118 @@ NFB02650 != NFB02650</b> <br />]]>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>0.1 = 0.1</b> <br />]]>
+      <![CDATA[<b>12.0 = 12.000000000000002</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Broker Upsell Margin percentage found OK</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b></b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>40.0 = 40.0</b> <br />]]>
-    </line>
-    <line>
-      <![CDATA[<b>Broker Upsell Margin  found OK</b> <br />]]>
+      <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>99.99 = 99.99166666666667</b> <br />]]>
+      <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Document Fee Margin  found OK</b> <br />]]>
+      <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>200.0 = 200.00000000000003</b> <br />]]>
+      <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Refferer Margin  found OK</b> <br />]]>
+      <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>One or More than One values on underwriting quote tab may be wrong , please check all above values printed on console</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Click on decision tab page</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Current Status of decline value is = Declined</b> <br />]]>
+      <![CDATA[<b>Click on decision Accept button</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Underwriting Status Verified : declined</b> <br />]]>
+      <![CDATA[<b>Entering values to input field</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Current Status of accept value is = Conditional acceptance</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Clicked on Opportunity link from Menu </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b> Underwriting icon is available </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Current Status of Channel value is =  Sent to customer</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Current Status of  Quote ref is = Sent to customer</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Current Status of  Quote ref is = Cancelled</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Status Verified : Sent to customer</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Status code 200 received </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Enter the Opportunity id in Search Text box</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>New Quote ref in Opportunity LRJ45426</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>New Quote Monthly Payment is  = £ 1,614.89</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cancelled Quote ref in Opportunity is = null</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cancelled Monthly Payment value is = £ 1,597.27</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>[32mMonthly Payment verified (found ok) after accepting new quote, Actual value is 1614.89 and Expected value is 1614.8914270354908[0m</b> <br />]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-07-07T19:20:24 IST" name="Default suite" finished-at="2023-07-07T19:28:14 IST" duration-ms="470163">
+  <suite started-at="2023-07-11T11:16:35 IST" name="Default suite" finished-at="2023-07-11T11:30:19 IST" duration-ms="823716">
     <groups>
     </groups>
-    <test started-at="2023-07-07T19:20:24 IST" name="Default test" finished-at="2023-07-07T19:28:14 IST" duration-ms="470163">
-      <class name="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:20:24 IST" name="setup" finished-at="2023-07-07T19:20:32 IST" duration-ms="7901" status="PASS">
+    <test started-at="2023-07-11T11:16:35 IST" name="Default test" finished-at="2023-07-11T11:30:19 IST" duration-ms="823716">
+      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:16:35 IST" name="setup" finished-at="2023-07-11T11:17:26 IST" duration-ms="51147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="L1_create_lead_convert_to_lead_for_ownbook_individual_flow()[pri:1, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:20:32 IST" name="L1_create_lead_convert_to_lead_for_ownbook_individual_flow" finished-at="2023-07-07T19:22:04 IST" duration-ms="91696" status="PASS">
+        <test-method signature="L1_create_lead_convert_to_lead_for_ownbook_business_flow()[pri:1, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:17:26 IST" name="L1_create_lead_convert_to_lead_for_ownbook_business_flow" finished-at="2023-07-11T11:19:50 IST" duration-ms="143818" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Clicked on Leads on Side Menu</b> <br />]]>
@@ -868,7 +1117,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b>Added data in General Notes</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Customer type - Individual selected</b> <br />]]>
+              <![CDATA[<b>Customer type - Business selected</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Clicked on Add new vehicle request</b> <br />]]>
@@ -913,7 +1162,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -931,7 +1180,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -940,7 +1189,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1586.42 = 1586.42</b> <br />]]>
+              <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -949,7 +1198,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+              <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -958,7 +1207,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -967,7 +1216,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>06/08/2023 != 07/08/2023</b> <br />]]>
+              <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -985,7 +1234,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -1003,7 +1252,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1012,7 +1261,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1586.42 = 1586.42</b> <br />]]>
+              <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -1021,7 +1270,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+              <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -1030,7 +1279,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -1039,7 +1288,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>06/08/2023 != 07/08/2023</b> <br />]]>
+              <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -1048,14 +1297,14 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>In Lead created Opportunity Id is =IX-6819</b> <br />]]>
+              <![CDATA[<b>In Lead created Opportunity Id is =SS-5056</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L1_create_lead_convert_to_lead_for_ownbook_individual_flow -->
-        <test-method signature="L2_ownbook_individual_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:22:04 IST" name="L2_ownbook_individual_current_status_before_sending_to_proposal" finished-at="2023-07-07T19:22:16 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L1_create_lead_convert_to_lead_for_ownbook_individual_flow" duration-ms="12234" status="PASS">
+        </test-method> <!-- L1_create_lead_convert_to_lead_for_ownbook_business_flow -->
+        <test-method signature="L2_ownbook_business_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:19:50 IST" name="L2_ownbook_business_current_status_before_sending_to_proposal" finished-at="2023-07-11T11:20:14 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow" duration-ms="23310" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Clicked on Opportunity link from Menu </b> <br />]]>
@@ -1082,8 +1331,8 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b>Status Verified : Before sending the proposal</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L2_ownbook_individual_current_status_before_sending_to_proposal -->
-        <test-method signature="L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:22:16 IST" name="L3_verify_table_values_on_opportunity_page_before_sending_proposal" finished-at="2023-07-07T19:22:20 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L2_ownbook_individual_current_status_before_sending_to_proposal" duration-ms="4109" status="PASS">
+        </test-method> <!-- L2_ownbook_business_current_status_before_sending_to_proposal -->
+        <test-method signature="L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:20:14 IST" name="L3_verify_table_values_on_opportunity_page_before_sending_proposal" finished-at="2023-07-11T11:20:18 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal" duration-ms="4105" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b></b> <br />]]>
@@ -1095,7 +1344,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -1113,7 +1362,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1122,7 +1371,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1586.42 = 1586.42</b> <br />]]>
+              <![CDATA[<b>1597.27 = 1597.27</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance rental compared and found ok</b> <br />]]>
@@ -1131,7 +1380,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+              <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -1140,7 +1389,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -1149,7 +1398,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>06/08/2023 != 07/08/2023</b> <br />]]>
+              <![CDATA[<b>05/12/2023 != 05/12/23</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Expiry date compared but found not ok</b> <br />]]>
@@ -1162,10 +1411,13 @@ NFB02650 != NFB02650</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- L3_verify_table_values_on_opportunity_page_before_sending_proposal -->
-        <test-method signature="L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow()[pri:4, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:22:20 IST" name="L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow" finished-at="2023-07-07T19:23:03 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal" duration-ms="43130" status="PASS">
+        <test-method signature="L4_fill_up_the_required_fields_for_sending_a_proposal()[pri:4, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:20:18 IST" name="L4_fill_up_the_required_fields_for_sending_a_proposal" finished-at="2023-07-11T11:21:02 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal" duration-ms="44749" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>click on Proposal icon</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Proposal page will display </b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Send proposal to customer pop up  will open</b> <br />]]>
@@ -1176,15 +1428,9 @@ NFB02650 != NFB02650</b> <br />]]>
             <line>
               <![CDATA[<b>Click on manually submit behalf of customer link</b> <br />]]>
             </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Proposal Received Successfully</b> <br />]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow -->
-        <test-method signature="L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal()[pri:5, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:23:03 IST" name="L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal" finished-at="2023-07-07T19:23:03 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow" duration-ms="163" status="PASS">
+        </test-method> <!-- L4_fill_up_the_required_fields_for_sending_a_proposal -->
+        <test-method signature="L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()[pri:5, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:21:02 IST" name="L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal" finished-at="2023-07-11T11:21:03 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal" duration-ms="167" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Opportunity Status value is = Open</b> <br />]]>
@@ -1202,8 +1448,8 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b>Status Verified : After sending the proposal</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal -->
-        <test-method signature="L6_ownbook_sending_contract()[pri:6, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:23:03 IST" name="L6_ownbook_sending_contract" finished-at="2023-07-07T19:25:08 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal" duration-ms="124579" status="PASS">
+        </test-method> <!-- L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal -->
+        <test-method signature="L6_ownbook_sending_contract()[pri:6, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:21:03 IST" name="L6_ownbook_sending_contract" finished-at="2023-07-11T11:22:49 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal" duration-ms="106234" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>click on Send_Contract icon</b> <br />]]>
@@ -1213,7 +1459,7 @@ NFB02650 != NFB02650</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- L6_ownbook_sending_contract -->
-        <test-method signature="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow()[pri:7, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:25:08 IST" name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow" finished-at="2023-07-07T19:25:12 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L6_ownbook_sending_contract" duration-ms="4286" status="PASS">
+        <test-method signature="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()[pri:7, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:22:49 IST" name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow" finished-at="2023-07-11T11:22:53 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L6_ownbook_sending_contract" duration-ms="4277" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -1228,8 +1474,8 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b>Status Verified : Sent to customer</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow -->
-        <test-method signature="L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:25:12 IST" name="L8_ownbook_signed_contract_status_with_api_call" finished-at="2023-07-07T19:25:40 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow" duration-ms="27686" status="PASS">
+        </test-method> <!-- L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow -->
+        <test-method signature="L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:22:53 IST" name="L8_ownbook_signed_contract_status_with_api_call" finished-at="2023-07-11T11:23:16 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L6_ownbook_sending_contract" duration-ms="22677" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Status code 200 received </b> <br />]]>
@@ -1239,7 +1485,7 @@ NFB02650 != NFB02650</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- L8_ownbook_signed_contract_status_with_api_call -->
-        <test-method signature="UW1_verify_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:25:40 IST" name="UW1_verify_status_after_contract_signed" finished-at="2023-07-07T19:25:44 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.L8_ownbook_signed_contract_status_with_api_call" duration-ms="4129" status="PASS">
+        <test-method signature="L9_ownbook_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:23:16 IST" name="L9_ownbook_status_after_contract_signed" finished-at="2023-07-11T11:23:22 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call" duration-ms="6139" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -1254,18 +1500,18 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b>Status Verified : Contract Signed </b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UW1_verify_status_after_contract_signed -->
-        <test-method signature="UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow()[pri:10, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:25:44 IST" name="UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow" finished-at="2023-07-07T19:26:28 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW1_verify_status_after_contract_signed" duration-ms="43474" status="PASS">
+        </test-method> <!-- L9_ownbook_status_after_contract_signed -->
+        <test-method signature="UW1_verify_underwriting_flow_ownbook_with_status()[pri:10, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:23:22 IST" name="UW1_verify_underwriting_flow_ownbook_with_status" finished-at="2023-07-11T11:24:44 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L9_ownbook_status_after_contract_signed" duration-ms="82488" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b> Underwriting icon is available </b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Underwriting pop up -quote ref no => Quote reference no.:
-NFB02650</b> <br />]]>
+FLB23306</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Underwriting Popup Proposal Id is =CZX7966</b> <br />]]>
+              <![CDATA[<b>Underwriting Popup Proposal Id is =QMO2522</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
@@ -1278,7 +1524,7 @@ NFB02650</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote reference no.:
-NFB02650 != NFB02650</b> <br />]]>
+FLB23306 != FLB23306</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared but found not ok</b> <br />]]>
@@ -1296,7 +1542,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1305,7 +1551,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -1314,7 +1560,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+              <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -1323,43 +1569,88 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1586.42 = 1586.4236246664805</b> <br />]]>
+              <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>1586.42 = 1586.42362466648</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Initial Finance Rental found OK</b> <br />]]>
+              <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>35.0 = 35.0</b> <br />]]>
+              <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>41.6 = 41.6772</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Pence per excess mile finance - found OK</b> <br />]]>
+              <![CDATA[<b>VAT found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>239.99 = 239.99</b> <br />]]>
+              <![CDATA[<b>640.0 = 640.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>199.99 = 199.99</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Document Fee - found OK</b> <br />]]>
@@ -1368,16 +1659,79 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>400.0 = 400.0</b> <br />]]>
+              <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Upsell - found OK</b> <br />]]>
+              <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1157.7 = 1157.7</b> <br />]]>
+              <![CDATA[<b>10.0 = 10.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>239.99 = 239.988</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>32.0 = 32.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Final Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
@@ -1386,16 +1740,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>400.0 = 400.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Upsell Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>99.99 = 99.99166666666667</b> <br />]]>
+              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
@@ -1404,7 +1749,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1657.69 = 1657.6916666666666</b> <br />]]>
+              <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Total Commission - found OK</b> <br />]]>
@@ -1413,17 +1758,20 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>200.0 = 200.0</b> <br />]]>
+              <![CDATA[<b>One or More than One values on underwriting pop up may be wrong , please check all above values printed on console</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Referrer Commission - found OK</b> <br />]]>
+              <![CDATA[<b></b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
             </line>
+            <line>
+              <![CDATA[<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br />]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow -->
-        <test-method signature="UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:26:28 IST" name="UW2_verify_status_after_sending_to_underwriting" finished-at="2023-07-07T19:26:29 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow" duration-ms="1122" status="PASS">
+        </test-method> <!-- UW1_verify_underwriting_flow_ownbook_with_status -->
+        <test-method signature="UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:24:44 IST" name="UW2_verify_status_after_sending_to_underwriting" finished-at="2023-07-11T11:24:45 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status" duration-ms="1115" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
@@ -1439,7 +1787,7 @@ NFB02650 != NFB02650</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- UW2_verify_status_after_sending_to_underwriting -->
-        <test-method signature="UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:26:29 IST" name="UW3_verify_underwriting_lisitig_page" finished-at="2023-07-07T19:26:40 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW2_verify_status_after_sending_to_underwriting" duration-ms="11596" status="PASS">
+        <test-method signature="UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:24:45 IST" name="UW3_verify_underwriting_lisitig_page" finished-at="2023-07-11T11:24:57 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting" duration-ms="11173" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Click on Underwriting menu_link </b> <br />]]>
@@ -1451,14 +1799,14 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b>Click on Search text box - broker tab</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Getting the  proposal id from excel sheet =CZX7966</b> <br />]]>
+              <![CDATA[<b>Getting the  proposal id from excel sheet =QMO2522</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Enter the proposal in search text box =CZX7966</b> <br />]]>
+              <![CDATA[<b>Enter the proposal in search text box =QMO2522</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- UW3_verify_underwriting_lisitig_page -->
-        <test-method signature="UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow()[pri:13, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:26:40 IST" name="UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow" finished-at="2023-07-07T19:27:55 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW3_verify_underwriting_lisitig_page" duration-ms="74944" status="PASS">
+        <test-method signature="UW4_verify_ownbook_underwriting_proposal_page_flow()[pri:13, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:24:57 IST" name="UW4_verify_ownbook_underwriting_proposal_page_flow" finished-at="2023-07-11T11:26:52 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page" duration-ms="114899" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<b>Click on Underwriting detail page for proposal</b> <br />]]>
@@ -1506,7 +1854,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>NFB02650 = NFB02650</b> <br />]]>
+              <![CDATA[<b>FLB23306 = FLB23306</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Quote no. compared and found ok</b> <br />]]>
@@ -1524,7 +1872,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Personal Contract Hire = Personal Contract Hire</b> <br />]]>
+              <![CDATA[<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Contract type compared and found ok</b> <br />]]>
@@ -1533,7 +1881,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>36.0 = 36.0</b> <br />]]>
+              <![CDATA[<b>33.0 = 33.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Terms compared and found ok</b> <br />]]>
@@ -1542,7 +1890,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>10000.0 = 10000.0</b> <br />]]>
+              <![CDATA[<b>5000.0 = 5000.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Mileage compared and found ok</b> <br />]]>
@@ -1551,43 +1899,88 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1586.42 = 1586.4236246664805</b> <br />]]>
+              <![CDATA[<b>48237.5 = 48237.5</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental compared and found ok</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>1586.42 = 1586.42362466648</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Initial Finance Rental found OK</b> <br />]]>
+              <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>35.0 = 35.0</b> <br />]]>
+              <![CDATA[<b>9647.5 = 9647.5</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>41.6 = 41.6772</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Pence per excess mile finance - found OK</b> <br />]]>
+              <![CDATA[<b>VAT found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>239.99 = 239.99</b> <br />]]>
+              <![CDATA[<b>640.0 = 640.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>58525.0 = 58525.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>-1412.36 = -1412.3783348643192</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>199.99 = 199.99</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Document Fee - found OK</b> <br />]]>
@@ -1596,16 +1989,79 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>400.0 = 400.0</b> <br />]]>
+              <![CDATA[<b>57362.63 = 57362.60966513568</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Upsell - found OK</b> <br />]]>
+              <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1157.7 = 1157.7</b> <br />]]>
+              <![CDATA[<b>10.0 = 10.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>239.99 = 239.988</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>32.0 = 32.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>1597.27 = 1597.2694270354907</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>6000.0 = 6000.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balloon Value - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>6010.0 = 6010.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Final Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>0.0 = 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>457.23 = 457.2265625</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
@@ -1614,16 +2070,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>400.0 = 400.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Upsell Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>99.99 = 99.99166666666667</b> <br />]]>
+              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
@@ -1632,7 +2079,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1657.69 = 1657.6916666666666</b> <br />]]>
+              <![CDATA[<b>557.22 = 557.2165625</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Total Commission - found OK</b> <br />]]>
@@ -1641,16 +2088,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>200.0 = 200.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Referrer Commission - found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>6.5 = 6.5</b> <br />]]>
+              <![CDATA[<b>7.0 = 7.000000000000001</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
@@ -1659,16 +2097,16 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>6077.93 = 6077.925</b> <br />]]>
+              <![CDATA[<b>3941.52 != -7761.538334864323</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Finance Margin found OK</b> <br />]]>
+              <![CDATA[<b>Finance Margin found wrong</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>1157.7 = 1157.7</b> <br />]]>
+              <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Deductions found OK</b> <br />]]>
@@ -1677,7 +2115,7 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>339.99 = 339.9916666666667</b> <br />]]>
+              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Additional Margin found OK</b> <br />]]>
@@ -1686,16 +2124,16 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>5260.22 = 5260.216666666667</b> <br />]]>
+              <![CDATA[<b>3492.84 != -8210.220209864323</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Total Margin found OK</b> <br />]]>
+              <![CDATA[<b>Total Margin found wrong</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>2.0 = 2.0</b> <br />]]>
+              <![CDATA[<b>0.94 = 0.9375000000000001</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
@@ -1704,54 +2142,134 @@ NFB02650 != NFB02650</b> <br />]]>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>0.1 = 0.1</b> <br />]]>
+              <![CDATA[<b>12.0 = 12.000000000000002</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Broker Upsell Margin percentage found OK</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b></b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>40.0 = 40.0</b> <br />]]>
-            </line>
-            <line>
-              <![CDATA[<b>Broker Upsell Margin  found OK</b> <br />]]>
+              <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>99.99 = 99.99166666666667</b> <br />]]>
+              <![CDATA[<b>99.99 = 99.99000000000001</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Document Fee Margin  found OK</b> <br />]]>
+              <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>200.0 = 200.00000000000003</b> <br />]]>
+              <![CDATA[<b>548.67 = 548.671875</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Refferer Margin  found OK</b> <br />]]>
+              <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>One or More than One values on underwriting quote tab may be wrong , please check all above values printed on console</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Click on decision tab page</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow -->
-        <test-method signature="UW5_verify_ownbook_underwriting_proposal_decision_with_decline()[pri:14, instance:com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test@a38c7fe]" started-at="2023-07-07T19:27:55 IST" name="UW5_verify_ownbook_underwriting_proposal_decision_with_decline" finished-at="2023-07-07T19:28:14 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test.UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow" duration-ms="19069" status="PASS">
+        </test-method> <!-- UW4_verify_ownbook_underwriting_proposal_page_flow -->
+        <test-method signature="UW5_verify_ownbook_underwriting_proposal_decision_with_accept()[pri:14, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:26:52 IST" name="UW5_verify_ownbook_underwriting_proposal_decision_with_accept" finished-at="2023-07-11T11:27:17 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow" duration-ms="25791" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[<b>Current Status of decline value is = Declined</b> <br />]]>
+              <![CDATA[<b>Click on decision Accept button</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Underwriting Status Verified : declined</b> <br />]]>
+              <![CDATA[<b>Entering values to input field</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of accept value is = Conditional acceptance</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UW5_verify_ownbook_underwriting_proposal_decision_with_decline -->
-      </class> <!-- com.amt.test.LOU.LOU_ownbook_individual_hire_decline_flow_Test -->
+        </test-method> <!-- UW5_verify_ownbook_underwriting_proposal_decision_with_accept -->
+        <test-method signature="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()[pri:15, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:27:17 IST" name="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes" finished-at="2023-07-11T11:27:33 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept" duration-ms="15455" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Clicked on Opportunity link from Menu </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes -->
+        <test-method signature="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()[pri:16, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:27:33 IST" name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" finished-at="2023-07-11T11:29:33 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes" duration-ms="119781" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<b> Underwriting icon is available </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>click on underwriting_send_for_underwriting  button </b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up -->
+        <test-method signature="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()[pri:17, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:29:33 IST" name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification" finished-at="2023-07-11T11:29:46 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" duration-ms="13280" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Click on Search text box on Opportunity page</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Enter the opportunity ID in search text box =SS-5056</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of Proposal value is = Proposal Received</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of Channel value is =  Sent to customer</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of  Quote ref is = Sent to customer</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Current Status of  Quote ref is = Cancelled</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Status Verified : Sent to customer</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification -->
+        <test-method signature="UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:29:46 IST" name="UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call" finished-at="2023-07-11T11:30:16 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification" duration-ms="30354" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Status code 200 received </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Enter the Opportunity id in Search Text box</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call -->
+        <test-method signature="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@52719fb6]" started-at="2023-07-11T11:30:16 IST" name="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price" finished-at="2023-07-11T11:30:19 IST" depends-on-methods="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call" duration-ms="2705" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>New Quote ref in Opportunity LRJ45426</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>New Quote Monthly Payment is  = £ 1,614.89</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cancelled Quote ref in Opportunity is = null</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cancelled Monthly Payment value is = £ 1,597.27</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>[32mMonthly Payment verified (found ok) after accepting new quote, Actual value is 1614.89 and Expected value is 1614.8914270354908[0m</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price -->
+      </class> <!-- com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

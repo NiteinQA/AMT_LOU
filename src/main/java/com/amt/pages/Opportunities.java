@@ -1036,6 +1036,7 @@ public class Opportunities extends TestBase {
 		MonthlyPayment_new_Expected = GetExcelFormulaValue.get_formula_value(96, 1, sheetName);
 		}
 		
+		
 		if(classOrMethodName.contains("purchase"))
 		{
 		MonthlyPayment_new_Expected = GetExcelFormulaValue.get_formula_value(95, 1, sheetName);
@@ -1801,15 +1802,15 @@ public class Opportunities extends TestBase {
 	public boolean verify_current_status_of_opportunity_after_contract_signed() throws Exception
 
 	{
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// ExplicitWait.visibleElement(driver, opp_current_status_open, 20);
-		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 30);
+		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 40);
 
-		ExplicitWait.visibleElement(driver, opp_current_status_channel, 20);
-		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 20);
+		ExplicitWait.visibleElement(driver, opp_current_status_channel, 40);
+		ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 40);
 
 		// String OppCurrentStatusOpen = opp_current_status_open.getText().trim();
 

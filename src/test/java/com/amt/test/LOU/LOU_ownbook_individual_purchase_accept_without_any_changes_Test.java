@@ -317,7 +317,7 @@ public class LOU_ownbook_individual_purchase_accept_without_any_changes_Test ext
 
 		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
 
-		boolean quote_tab_status = obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_ownbook_purchase_flow();
+		boolean quote_tab_status = obj_Underwriting_page.verify_quote_tab_on_underwriting_page_for_ownbook_individual_purchase_flow();
 
 		//Assert.assertTrue(quote_tab_status);	
 

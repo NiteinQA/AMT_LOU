@@ -3247,23 +3247,7 @@ try {
 //		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
 //		wb.write(out1);
 		
-		
-		ExplicitWait.visibleElement(driver, quote_summary_save_button, 30);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", quote_summary_save_button);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 150);
-		
-		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_monthly_finance_rental, 30);
-		String customer_quote_summary_monthly_finance_rental = RemoveComma.of(quote_summary_customer_quote_summary_monthly_finance_rental.getText().trim().substring(2));
-			
-		
-		FileInputStream in1 = new FileInputStream(prop.getProperty("quote_save_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-		String sheetname = prop.getProperty("HPNRHPNRQuoteNo");
-		wb1.getSheet(sheetname).getRow(6).getCell(3).setCellValue(customer_quote_summary_monthly_finance_rental);		
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
-		wb1.write(out1);
-		wb1.close();		
+	
 
 		return status;
 	}
@@ -5032,11 +5016,11 @@ public void save_quote() throws InterruptedException {
 			FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 			XSSFWorkbook wb = new XSSFWorkbook(in);
 
-			String sheetname = prop.getProperty("HPNRHPNRQuoteNo");
+			String sheetname = prop.getProperty(sheet_name);
 		   //quote ref no 
 			wb.getSheet(sheetname).getRow(1).getCell(0).setCellValue(quote_ref_no);
 		    //quote ref no 
-			wb.getSheet(sheetname).getRow(1).getCell(9).setCellValue(vehicle_name);
+			wb.getSheet(sheetname).getRow(1).getCell(10).setCellValue(vehicle_name);
 			
 			wb.getSheet(sheetname).getRow(4).getCell(1).setCellValue(customer_contract_type);
 			wb.getSheet(sheetname).getRow(4).getCell(3).setCellValue(customer_quote_summary_terms);

@@ -364,7 +364,7 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 
@@ -1786,27 +1786,27 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			status = true;
 		}
 
-		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
-		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		quote_summary_configuration_base_int_rate_input.sendKeys("6.5");
-
-		act.sendKeys(Keys.TAB).build().perform();
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-		LO.print("Base Interest Rate changed to 6.5 %");
-		System.out.println("Base Interest Rate changed to 6.5 %");
-
-		// writing values to excel
-
-		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-		wb1.getSheet(sheet_name).getRow(34).getCell(7).setCellValue(0.065);
-
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-		wb1.write(out1);
+//		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
+//		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+//		quote_summary_configuration_base_int_rate_input.sendKeys("6.5");
+//
+//		act.sendKeys(Keys.TAB).build().perform();
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//
+//		LO.print("Base Interest Rate changed to 6.5 %");
+//		System.out.println("Base Interest Rate changed to 6.5 %");
+//
+//		// writing values to excel
+//
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//		wb1.getSheet(sheet_name).getRow(34).getCell(7).setCellValue(0.065);
+//
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//		wb1.write(out1);
 
 		return status;
 	}

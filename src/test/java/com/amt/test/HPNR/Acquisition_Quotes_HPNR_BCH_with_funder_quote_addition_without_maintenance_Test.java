@@ -198,7 +198,7 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 		
 		obj_holding_cost_HPNR_BCH_page = new HoldingCost_HPNR_BCHPage();
 		
-		obj_holding_cost_HPNR_BCH_page.save_maint_value_to_excel(expiryDate, "HPNRBCHFunderQuoteNo");
+		obj_holding_cost_HPNR_BCH_page.save_maint_value_to_excel_for_with_funder_scenario(expiryDate, "HPNRBCHFunderQuoteNo");
 
 	}
 	

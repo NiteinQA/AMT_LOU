@@ -12,7 +12,7 @@ import com.amt.pages.UnderwritingPopupPage;
 import com.amt.testBase.TestBase;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-publipc class LOU_ownbook_individual_hire_decline_flow_Test extends TestBase {
+public class LOU_ownbook_individual_hire_decline_flow_Test extends TestBase {
 
 	Leads obj_Leads_Page;
 	Opportunities obj_Opportunities_Page;

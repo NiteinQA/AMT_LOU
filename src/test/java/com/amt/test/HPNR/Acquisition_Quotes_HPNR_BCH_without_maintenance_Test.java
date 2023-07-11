@@ -250,15 +250,16 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_Test extends TestBa
 
 		System.out.println("");
 		System.out.println("");
-
-		obj_quote_summary_page.quote_summary_HPNR_BCH_without_maintenance("HPNRBCHQuoteNo");
+		
+		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
+		Assert.assertTrue(quote_summary_OTR_calculation);
 
 		System.out.println("");
 		System.out.println("");
 
-		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
+		boolean quote_summary_holding_cost_calculation = obj_quote_summary_page
 				.quote_summary_holding_cost_calculation_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_holding_cost_calculation1);
+		Assert.assertTrue(quote_summary_holding_cost_calculation);
 		
 		System.out.println("");
 		System.out.println("");
@@ -272,12 +273,48 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_Test extends TestBa
 
 		
 
+		boolean quote_summary_configuration_value_check = obj_quote_summary_page
+				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_configuration_value_check);
+
+		System.out.println("");
+		System.out.println("");
+		
+		obj_quote_summary_page.save_quote();
+		
+		System.out.println("");
+		System.out.println("");
+		
+		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
+		Assert.assertTrue(quote_summary_OTR_calculation1);
+		
+		System.out.println("");
+		System.out.println("");
+
+		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
+				.quote_summary_holding_cost_calculation_without_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_holding_cost_calculation1);
+		
+		System.out.println("");
+		System.out.println("");
+		
+		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
+				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);
+		//Assert.assertTrue(quote_summary_customer_quote_calculation1);
+
+		System.out.println("");
+		System.out.println("");
+
+		
+
 		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
 				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_configuration_value_check1);
 
 		System.out.println("");
 		System.out.println("");
+		
+		
 
 		boolean value_check_after_Base_Int_change = obj_quote_summary_page
 				.quote_summary_edit_base_int_rate_value_verification_without_maintenance(sheet_name);
@@ -292,6 +329,13 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_Test extends TestBa
 
 		System.out.println("");
 		System.out.println("");
+
+		obj_quote_summary_page.quote_summary_HPNR_BCH_without_maintenance("HPNRBCHQuoteNo");
+		
+		obj_holding_cost_page = new HoldingCost_HPNR_BCHPage();
+		
+		obj_holding_cost_page.save_maint_value_to_excel_for_without_funder_scenario("HPNRBCHQuoteNo");
+		
 
 	}
 

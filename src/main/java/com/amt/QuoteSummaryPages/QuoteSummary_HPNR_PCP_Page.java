@@ -30,6 +30,8 @@ import com.amt.testUtil.RemoveComma;
 public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 	ReadExcelCalculationForPurchaseAgreement obj_read_excel_calculation_page;
+	
+	Properties prop;
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
@@ -917,9 +919,11 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 		Thread.sleep(2000);
 
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 
@@ -3731,8 +3735,8 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		System.out.println("holding_cost_total_monthly_holding_cost_from_screen ="
 				+ holding_cost_total_monthly_holding_cost_from_screen_converted);
 
-		double holding_cost_terms_from_excel = GetExcelFormulaValue.get_string_value(52, 0, sheet_name);
-		double holding_cost_miles_per_annum_from_excel = GetExcelFormulaValue.get_string_value(51, 1, sheet_name);
+		double holding_cost_terms_from_excel = GetExcelFormulaValue.get_formula_value(52, 0, sheet_name);
+		double holding_cost_miles_per_annum_from_excel = GetExcelFormulaValue.get_formula_value(51, 1, sheet_name);
 		double holding_cost_monthly_finance_cost_from_excel = GetExcelFormulaValue.get_formula_value(45, 7, sheet_name);
 		double holding_cost_total_monthly_holding_cost_from_excel = GetExcelFormulaValue.get_formula_value(52, 1,
 				sheet_name);
@@ -4986,8 +4990,8 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 		// getting values from excel
 
-		double terms = GetExcelFormulaValue.get_string_value(208, 1, sheet_name);
-		double miles = GetExcelFormulaValue.get_string_value(208, 4, sheet_name);
+		double terms = GetExcelFormulaValue.get_formula_value(208, 1, sheet_name);
+		double miles = GetExcelFormulaValue.get_formula_value(208, 4, sheet_name);
 
 		double basicCashPrice = GetExcelFormulaValue.get_formula_value(214, 0, sheet_name);
 		double vat = GetExcelFormulaValue.get_formula_value(214, 1, sheet_name);

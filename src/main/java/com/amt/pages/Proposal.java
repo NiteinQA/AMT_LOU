@@ -1800,7 +1800,7 @@ private WebElement proposal_save ;
 			
 			 proposal_save.click();
 			 
-			 
+			 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 			 
 			 //10.
 			 
@@ -1809,27 +1809,9 @@ private WebElement proposal_save ;
 		
 			ExplicitWait.visibleElement(driver,  proposal_udpate_and_exit , 30);
 			
-			  proposal_udpate_and_exit.click();
-			 	
-	
-	
-	
-	
-	
-	
-	
+			  proposal_udpate_and_exit.click();	
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			  ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
 	}
 

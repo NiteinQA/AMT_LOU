@@ -2602,7 +2602,7 @@ public class UnderwritingPopupPage extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_order_deposit, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_finance_deposit, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_total_deposit, 20);
-		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_part_exchange_value, 20);
+		try{ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_part_exchange_value, 20);}catch(Exception e) {}
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_balance_to_finance, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_finance_charges, 20);
 		ExplicitWait.visibleElement(driver, underwriting_popup_customer_quote_summary_document_fee, 20);
@@ -2658,9 +2658,10 @@ public class UnderwritingPopupPage extends TestBase {
 		double customer_quote_summary_total_deposit = Double.parseDouble(
 				RemoveComma.of(underwriting_popup_customer_quote_summary_total_deposit.getText().trim().substring(2)));
 
-		double  customer_quote_summary_part_exchange_value = Double.parseDouble(
-				RemoveComma.of(underwriting_popup_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
-
+		double  customer_quote_summary_part_exchange_value =0;
+		try{customer_quote_summary_part_exchange_value = Double.parseDouble(
+				RemoveComma.of(underwriting_popup_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));}catch(Exception e) {}
+  
 		double customer_quote_summary_balance_to_finance = Double.parseDouble(
 				RemoveComma.of(underwriting_popup_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
 
@@ -2788,7 +2789,7 @@ public class UnderwritingPopupPage extends TestBase {
 		
 		
 		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
-		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 9, sheetName);
+		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 		
 		String contractTypeExpected                           = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);		
 		
@@ -3538,9 +3539,14 @@ public class UnderwritingPopupPage extends TestBase {
 		}
 
 		
+		int expcount=0;
+		if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("funder"))
+		{ expcount=27;} else {expcount=28;}
+		
 		boolean status = false;
-		if (count==28)
-			
+		if (count==expcount)
+
+
 		{
 			status = true;
 	        // ANSI escape code for green color

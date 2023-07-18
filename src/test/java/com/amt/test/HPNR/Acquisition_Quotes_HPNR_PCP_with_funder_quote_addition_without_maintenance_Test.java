@@ -193,7 +193,7 @@ public class Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_main
 
 	@DataProvider(name = "testData")
 	public Object[][] getTestData() throws IOException {
-		Object[][] data = ReadExcelData.getTestData("HPNR_CP_funder_withoutMainten");
+		Object[][] data = ReadExcelData.getTestData("HPNR_PCP_funder_withoutMainten");
 		return data;
 	}
 

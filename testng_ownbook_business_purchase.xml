@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+		
+	  <!-- Ownbook business purchase flow without additional term and mileage  -Accept Flow-->
+	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test"/>  	
+      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test"/> 
+      
+  
+  	  <!-- Ownbook business purchase flow with additional term and mileage  -Accept Flow-->
+	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test"/>  	
+      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test"/> 
+      
+  	  <!-- Ownbook business purchase flow with funder  -Accept Flow--> 
+  	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test"/>  	
+      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test"/>
+      
+ 	  <!-- Ownbook business purchase flow without additional term and mileage  -Refer Flow-->
+	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test"/>     
+      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_refer_flow_Test"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -103,10 +103,10 @@ public class Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mile
 						maintenance_status, sheet_name);
 		Assert.assertTrue(holding_cost_after_editing_residual_value);
 		
-//		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
-//				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(additional_terms, additional_mileage,
-//						maintenance_status,  sheet_name);
-//		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
+		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
+				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(additional_terms, additional_mileage,
+						maintenance_status,  sheet_name);
+		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
 
 
 	}

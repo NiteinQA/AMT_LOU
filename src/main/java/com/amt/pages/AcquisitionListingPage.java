@@ -226,7 +226,14 @@ public class AcquisitionListingPage extends TestBase {
 		}
 		
 		if (classOrMethodName.contains("ownbook_business_hire")) {
-			sheetName = prop.getProperty("HPNRBCHQuoteNo");
+			
+			if (classOrMethodName.contains("ownbook_business_hire_accept_with_changes_for_quotes_of_maint_exists"))
+			{				
+				sheetName = prop.getProperty("HPNRBCH_withMaint");					
+			}else
+			{
+				sheetName = prop.getProperty("HPNRBCHQuoteNo");
+			}
 		}
 
 		if (classOrMethodName.contains("ownbook_individual_hire")) {
@@ -256,6 +263,9 @@ public class AcquisitionListingPage extends TestBase {
 		if (classOrMethodName.contains("ownbook_individual_purchase_funder")) {
 			sheetName = prop.getProperty("HPNRPCPFunderQuoteNo");
 		}
+		
+		
+		
 		return sheetName;
 	}
 

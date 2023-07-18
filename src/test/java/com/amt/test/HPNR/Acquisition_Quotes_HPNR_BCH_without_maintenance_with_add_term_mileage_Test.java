@@ -334,7 +334,7 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_milea
 		
 		obj_holding_cost_page = new HoldingCost_HPNR_BCHPage();
 		
-		obj_holding_cost_page.save_maint_value_to_excel_for_without_funder_scenario("HPNRBCHFunderQuoteNo");
+		obj_holding_cost_page.save_maint_value_to_excel_for_without_funder_scenario("HPNRBCHQuoteNo");
 	}
 
 	@DataProvider(name = "testData")

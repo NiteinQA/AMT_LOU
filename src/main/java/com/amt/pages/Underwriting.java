@@ -2537,7 +2537,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_total_commission, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_referrer_commission, 20);
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		Click.on(driver, underwriting_quote_tab_configuration_heading_button, 30);
 		
@@ -5070,7 +5070,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 		
 		String quotRefNoExpected = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
-		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 9, sheetName);
+		String vehicleNameExpected = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 
 		String contractTypeExpected = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
 		
@@ -7780,12 +7780,38 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		
 		if(maintRequired.equalsIgnoreCase("Yes")&&maint_contract_checkbox.isEnabled())
 		{	
+			LO.print          ("");
+			System.out.println("");
 			System.out.println("Maint Req "+maintRequired);		
 			js = (JavascriptExecutor)driver;
 			js.executeScript("arguments[0].click();", maint_contract_checkbox);				
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+			LO.print          ("");
+			System.out.println("");
 			
-		}		
+		}	
+		
+		if(maintRequired.equalsIgnoreCase("No"))
+		{	
+			System.out.println("Maint Req "+maintRequired);		
+					
+			if(maint_contract_checkbox.isEnabled())
+			{	
+			}
+			else
+			{
+				LO.print          ("");
+				System.out.println("");	
+				LO.print          ("Maintenance checkbox is not enabled as Maintenance is already present for the mapped quote");
+				System.out.println("Maintenance checkbox is not enabled as Maintenance is already present for the mapped quote");	
+				LO.print          ("");
+				System.out.println("");	
+			}
+		}
+			
+			
+				
+
 		
 		//write all these values to calculation sheet as below
 		
@@ -7796,7 +7822,14 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		Underwriting uw = new  Underwriting();	
 		if(sheetName.contains("Formula1"))
 		{
+		if(maintRequired.contains("Yes")) {
 		uw.write_edit_data_to_excel_for_ownboook_hire_contract(sheetName, orderDeposit, maintRequired, capMaintCost, paymentProfile, initialpayment);
+		}
+		
+		if(maintRequired.contains("No")) {
+		uw.write_edit_data_to_excel_for_ownboook_hire_contract_with_maintenance(sheetName, orderDeposit,  paymentProfile, initialpayment);
+		}
+			
 		}
 		if(sheetName.contains("Formula 3"))
 		{
@@ -7878,6 +7911,19 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 	}
 
 	
+	public void write_edit_data_to_excel_for_ownboook_hire_contract_with_maintenance(String sheetName, String orderDeposit,
+			String paymentProfile, String initialpayment) throws FileNotFoundException, IOException {
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+
+		wb.getSheet(sheetName).getRow(98).getCell(1).setCellValue(" "+paymentProfile+" ");
+		wb.getSheet(sheetName).getRow(98).getCell(3).setCellValue(Double.parseDouble(orderDeposit));
+		wb.getSheet(sheetName).getRow(104).getCell(3).setCellValue(Double.parseDouble(initialpayment));
+
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+		out.close();
+	}
 	
 	public void write_edit_data_to_excel_for_ownboook_hire_contract(String sheetName, String orderDeposit,
 			String maintRequired, String capMaintCost, String paymentProfile, String initialpayment) throws FileNotFoundException, IOException {

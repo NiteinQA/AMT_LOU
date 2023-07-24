@@ -3,31 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_for_quotes_of_maint_exists_Test">
+      <class name="com.amt.test.LOU.LOU_broker_individual_purchase_accept_flow_Test">
         <methods>
-          <include name="L8_ownbook_signed_contract_status_with_api_call"/>
-          <include name="UW4_verify_values_on_underwriting_quote_tab_for_ownbook_business_flow"/>
-          <include name="L4_fill_up_the_required_fields_for_sending_a_proposal"/>
+          <include name="L9_verify_status_after_contract_signed"/>
+          <include name="L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow"/>
+          <include name="L6_broker_create_opportunity_individual_sending_to_contract"/>
           <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
-          <include name="L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal"/>
-          <include name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification"/>
-          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow"/>
-          <include name="UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow"/>
-          <include name="UW5_ownbook_underwriting_decision_accept_with_changes"/>
+          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow"/>
+          <include name="UW1_verify_underwriting_flow_ownbook_with_status"/>
+          <include name="L1_broker_create_lead_individual"/>
           <include name="setup"/>
-          <include name="UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up"/>
-          <include name="UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call"/>
+          <include name="UW5_verify_underwriting_proposal_decision_with_accept"/>
+          <include name="L8_verify_signed_contract_status_with_api_call"/>
+          <include name="L4_adding_proposal_on_opportunity_page_broker_individual_flow"/>
+          <include name="UW4_verify_underwriting_proposal_page_flow"/>
+          <include name="L2_broker_individual_current_status_before_sending_to_proposal"/>
           <include name="UW2_verify_status_after_sending_to_underwriting"/>
-          <include name="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes"/>
-          <include name="UW1_verify_status_after_contract_signed"/>
           <include name="UW3_verify_underwriting_lisitig_page"/>
-          <include name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up"/>
-          <include name="L6_ownbook_sending_contract"/>
-          <include name="L1_create_lead_convert_to_lead_for_ownbook_business_flow"/>
-          <include name="L2_ownbook_business_current_status_before_sending_to_proposal"/>
-          <include name="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price"/>
         </methods>
-      </class> <!-- com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_for_quotes_of_maint_exists_Test -->
+      </class> <!-- com.amt.test.LOU.LOU_broker_individual_purchase_accept_flow_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

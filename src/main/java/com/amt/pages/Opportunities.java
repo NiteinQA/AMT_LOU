@@ -1507,7 +1507,11 @@ public class Opportunities extends TestBase {
 		// Thread.sleep(5000);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
+		try{ExplicitWait.visibleElement(driver, opp_find_send_contract_icon, 10);}
+		catch(Exception e) { driver.navigate().refresh();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		ExplicitWait.visibleElement(driver, opp_find_send_contract_icon, 10);
+		}
 
 		LO.print("click on Send_Contract icon");
 		System.out.println("click on  Send_Contract icon");

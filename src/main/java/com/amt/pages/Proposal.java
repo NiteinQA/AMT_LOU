@@ -816,6 +816,8 @@ private WebElement proposal_save ;
 			
 					
 					//4
+					 
+					 Thread.sleep(5000);
 				  ExplicitWait.visibleElement(driver, proposal_update_and_exit_button, 60);
 					 proposal_update_and_exit_button.click();
 				

@@ -122,7 +122,7 @@ public class QuoteSummaryBrokerPCPPage extends TestBase {
 	private WebElement quote_summary_customer_quote_summary_cash_deposit;
 	
 	//Balance to finance
-	@FindBy(xpath = "//*[normalize-space()='Balance to finance']//ancestor::div[1]//div//strong")
+	@FindBy(xpath = "(//*[normalize-space()='Balance to finance']//ancestor::div[1]//div//strong)[2]")
 	private WebElement quote_summary_customer_quote_summary_balance_to_finance;
 	
 	//Finance charges
@@ -322,8 +322,10 @@ public class QuoteSummaryBrokerPCPPage extends TestBase {
 	wb.getSheet(sheetname).getRow(12).getCell(1).setCellValue(customer_quote_summary_quote_exp_date);
 	wb.getSheet(sheetname).getRow(12).getCell(3).setCellValue(customer_quote_summary_contract_mileage);
 	wb.getSheet(sheetname).getRow(14).getCell(1).setCellValue(customer_quote_summary_total_cash_price);
+	System.out.println(customer_quote_summary_total_cash_price);
 	wb.getSheet(sheetname).getRow(14).getCell(3).setCellValue(customer_quote_summary_cash_deposit);
 	wb.getSheet(sheetname).getRow(16).getCell(1).setCellValue(customer_quote_summary_balance_to_finance);
+	System.out.println(customer_quote_summary_balance_to_finance);	
 	wb.getSheet(sheetname).getRow(16).getCell(3).setCellValue(customer_quote_summary_no_of_monthly_payments);
 	wb.getSheet(sheetname).getRow(18).getCell(1).setCellValue(customer_quote_summary_optional_final_payment);
 	wb.getSheet(sheetname).getRow(18).getCell(3).setCellValue(customer_quote_summary_option_to_purchase_fee);

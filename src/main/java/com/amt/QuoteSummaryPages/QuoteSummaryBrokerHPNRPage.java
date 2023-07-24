@@ -114,7 +114,7 @@ public class QuoteSummaryBrokerHPNRPage extends TestBase {
 	private WebElement quote_summary_customer_quote_summary_cash_deposit;
 	
 	//Balance to finance
-	@FindBy(xpath = "//*[normalize-space()='Balance to finance']//ancestor::div[1]//div//strong")
+	@FindBy(xpath = "(//*[normalize-space()='Balance to finance']//ancestor::div[1]//div//strong)[2]")
 	private WebElement quote_summary_customer_quote_summary_balance_to_finance;
 	
 	//Finance charges

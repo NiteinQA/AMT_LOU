@@ -720,7 +720,7 @@ public class Underwriting extends TestBase {
 
 		underwriting_menu_link.click();
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		System.out.println("Click on Underwriting menu_link ");
 		LO.print("Click on Underwriting menu_link ");
@@ -729,12 +729,14 @@ public class Underwriting extends TestBase {
 
 	public void verify_underwriting_menulink_broker() throws InterruptedException {
 
-		ExplicitWait.visibleElement(driver, underwriting_menu_link_broker, 20);
+		ExplicitWait.visibleElement(driver, underwriting_menu_link_broker, 120);
 
 		HelperClass.highlightElement(driver, underwriting_menu_link_broker);
+		
+		Thread.sleep(2000);
 
 		underwriting_menu_link_broker.click();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		System.out.println("Click on Underwriting - broker tab ");
 		LO.print("Click on Underwriting - broker tab ");
@@ -3495,6 +3497,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_vehicle_heading, 120);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_contract_type, 60);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_button, 120);
+		ExplicitWait.visibleElement(driver, underwriting_quote_tab_configuration_heading_button, 120);
 		
 		// waiting for otr section elements
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_cost_otr_price, 120);
@@ -6277,7 +6280,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 			//21
 			String [] APR = underwriting_quote_tab_customer_underwriting_quote_tab_APR.getText().trim().split(" ");
 			
-			String aPRActual = APR[0];
+			double aPRActual = Double.parseDouble(APR[0]);
 
 			//22
 			double commissionActual = Double.parseDouble(RemoveComma.of(underwriting_quote_tab_customer_underwriting_quote_tab_commission.getText().trim().substring(2)));
@@ -6779,7 +6782,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		
 	// 21.comparing APR
 		
-		if (aPRActual.equals(aPRExpected)) {
+		if (aPRActual==aPRExpected) {
 			count++;
 
 			System.out.println("");

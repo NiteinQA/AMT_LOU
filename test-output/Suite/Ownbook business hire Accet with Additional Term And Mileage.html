@@ -1,0 +1,1055 @@
+<html>
+<head>
+<title>TestNG:  Ownbook business hire Accet with Additional Term And Mileage</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Ownbook business hire Accet with Additional Term And Mileage</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/25</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 20 13:21:39 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>250 seconds (250890 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.setup()'><b>setup</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@placeholder=&apos;Email&apos;]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+	at com.amt.pages.LoginPage.enter_credentials(LoginPage.java:45)
+	at com.amt.testBase.TestBase.setup(TestBase.java:108)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Email&apos;]&quot;}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09512c366f9e039935476a3ce99caf1e, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53577/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09512c366f9e039935476a3ce99caf1e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 27 more
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1776212983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1776212983'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@placeholder=&apos;Email&apos;]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+	at com.amt.pages.LoginPage.enter_credentials(LoginPage.java:45)
+	at com.amt.testBase.TestBase.setup(TestBase.java:108)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Email&apos;]&quot;}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09512c366f9e039935476a3ce99caf1e, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53577/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09512c366f9e039935476a3ce99caf1e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 27 more
+</pre></div></td>
+<td>65</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow()'><b>L1_create_lead_convert_to_lead_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test<br/>
+<a href="#Output-585852451" onClick='toggleBox("Output-585852451", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-585852451" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-585852451">
+<b>Clicked on Leads on Side Menu</b> <br /><br/>
+<b>Clicked on add lead</b> <br /><br/>
+<b>Lead is assigned</b> <br /><br/>
+<b>Added data in General Notes</b> <br /><br/>
+<b>Customer type - Business selected</b> <br /><br/>
+<b>Clicked on Add new vehicle request</b> <br /><br/>
+<b>Clicked on ownbook channel</b> <br /><br/>
+<b>Vehicle request for broker has been saved</b> <br /><br/>
+<b>Click on Map New Quote icon</b> <br /><br/>
+<b>Click on acquisition contract type icon</b> <br /><br/>
+<b>Click on customer contract type icon</b> <br /><br/>
+<b>Click on search button</b> <br /><br/>
+<b>Click on created date button 1st </b> <br /><br/>
+<b>Click on created date button 2nd</b> <br /><br/>
+<b>The given quote OZR74240 is not available in pop up listing</b> <br /><br/>
+<b>New Quote has been mapped with lead</b> <br /><br/>
+<b>click ok button on Map  new quote </b> <br /><br/>
+<br>----------Screenshot---------<br><br/>
+<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\L1_create_lead_convert_to_lead_for_ownbook_business_flow_20_07_2023_01_25_50.png" height="800" width="1000"><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53642/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d3393d858bd95e57f560b439ca2843e7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.waitForListOfVisibleElements(ExplicitWait.java:48)
+	at com.amt.pages.Leads.verify_table_values_on_lead_page(Leads.java:1083)
+	at com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow(LOU_ownbook_business_hire_accept_with_changes_Test.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace585852451", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace585852451'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53642/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d3393d858bd95e57f560b439ca2843e7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.waitForListOfVisibleElements(ExplicitWait.java:48)
+	at com.amt.pages.Leads.verify_table_values_on_lead_page(Leads.java:1083)
+	at com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow(LOU_ownbook_business_hire_accept_with_changes_Test.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>145</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up()'><b>UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1981064912", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1981064912'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()'><b>UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()[pri:17, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1619298241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1619298241'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()[pri:17, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_quote_summary_values_verification_without_maintenance_test()'><b>aquisition_quotes_HPNR_BCH_quote_summary_values_verification_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2012593394", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2012593394'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()'><b>UW2_verify_status_after_sending_to_underwriting</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1094135100", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1094135100'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()'><b>L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()[pri:7, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1575471475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1575471475'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()[pri:7, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L6_ownbook_sending_contract()'><b>L6_ownbook_sending_contract</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L6_ownbook_sending_contract()[pri:6, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2147113314", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2147113314'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L6_ownbook_sending_contract()[pri:6, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_customer_quote_payment_profile_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_BCH_customer_quote_payment_profile_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_customer_quote_payment_profile_calculations_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace477786403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace477786403'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_customer_quote_payment_profile_calculations_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()'><b>L2_ownbook_business_current_status_before_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace450149645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace450149645'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()'><b>UW3_verify_underwriting_lisitig_page</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace23578302", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23578302'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_OTR_calculation_without_maintenance_test()'><b>aquisition_quotes_HPNR_BCH_OTR_calculation_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 0, 0, 100, 100, 20000, 10000, 6000, 2000, 1000, 199.99, 500, 200, 200, 35, 35000, NO, 0, 200, NO, 0, Formula1-BCH</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@placeholder=&apos;Email&apos;]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+	at com.amt.pages.LoginPage.enter_credentials(LoginPage.java:45)
+	at com.amt.testBase.TestBase.setup(TestBase.java:108)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Email&apos;]&quot;}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09512c366f9e039935476a3ce99caf1e, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53577/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09512c366f9e039935476a3ce99caf1e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 27 more
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1390892604", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1390892604'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@placeholder=&apos;Email&apos;]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+	at com.amt.pages.LoginPage.enter_credentials(LoginPage.java:45)
+	at com.amt.testBase.TestBase.setup(TestBase.java:108)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Email&apos;]&quot;}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09512c366f9e039935476a3ce99caf1e, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53577/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09512c366f9e039935476a3ce99caf1e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 27 more
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()'><b>UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1273182904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1273182904'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_after_discount_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_BCH_after_discount_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_after_discount_calculations_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace579171737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace579171737'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_after_discount_calculations_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()'><b>L8_ownbook_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1744634208", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1744634208'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_other_support_check_without_maintenance_test()'><b>aquisition_quotes_HPNR_BCH_other_support_check_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_other_support_check_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1620255730", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1620255730'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_other_support_check_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal()'><b>L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal()[pri:5, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1596377472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1596377472'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L5_ownbook_create_opportunity_business_current_status_after_sending_to_proposal()[pri:5, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()'><b>L3_verify_table_values_on_opportunity_page_before_sending_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace905704210", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace905704210'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW4_verify_values_on_underwriting_quote_tab_for_ownbook_business_flow()'><b>UW4_verify_values_on_underwriting_quote_tab_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW4_verify_values_on_underwriting_quote_tab_for_ownbook_business_flow()[pri:13, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1436939983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1436939983'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW4_verify_values_on_underwriting_quote_tab_for_ownbook_business_flow()[pri:13, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW1_verify_status_after_contract_signed()'><b>UW1_verify_status_after_contract_signed</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW1_verify_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace329524042", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace329524042'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW1_verify_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()'><b>OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:20, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace943380117", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace943380117'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:20, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()'><b>L4_fill_up_the_required_fields_for_sending_a_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()[pri:4, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace239511985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace239511985'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()[pri:4, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_holding_cost_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_BCH_holding_cost_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_holding_cost_calculations_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace56088302", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace56088302'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_BCH_holding_cost_calculations_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test@15043a2f</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()'><b>UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()[pri:16, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1447636338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1447636338'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()[pri:16, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()'><b>UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()[pri:15, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace44380569", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace44380569'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()[pri:15, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow()'><b>UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow()[pri:10, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1568535872", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1568535872'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow()[pri:10, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test.UW5_ownbook_underwriting_decision_accept_with_changes()'><b>UW5_ownbook_underwriting_decision_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW5_ownbook_underwriting_decision_accept_with_changes()[pri:14, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1325251840", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1325251840'><pre>java.lang.Throwable: Method LOU_ownbook_business_hire_accept_with_changes_Test.UW5_ownbook_underwriting_decision_accept_with_changes()[pri:14, instance:com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test@4a83a74a</td></tr>
+</table><p>
+</body>
+</html>

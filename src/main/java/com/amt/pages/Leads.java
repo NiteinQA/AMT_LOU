@@ -163,37 +163,37 @@ public class Leads extends TestBase {
 
 	// 7.Send email button - yes button
 
-	@FindBy(xpath = "//*[@id=\"save_email_popup1\"]/div/div//button[@class='btn btn-secondary float-right']")
+	@FindBy(xpath = "//*[@id='save_email_popup1']/div/div//button[@class='btn btn-secondary float-right']")
 	private WebElement communication_send_email_button_confirm_yes_button;
 
 // Add new Vehicle request 
 
-	@FindBy(xpath = "//*[@id=\"vehiclinfo2\"]/div/div/div/div[1]/div/ng-multiselect-dropdown/div/div[2]/ul[2]/li[1]/div")
+	@FindBy(xpath = "//*[@id='vehiclinfo2']/div/div/div/div[1]/div/ng-multiselect-dropdown/div/div[2]/ul[2]/li[1]/div")
 	private WebElement channel_broker_value;
 
 	// Ownbook value selection
 
-	@FindBy(xpath = "//*[@id=\"vehiclinfo2\"]/div/div/div/div[1]/div/ng-multiselect-dropdown/div/div[2]/ul[2]/li[5]/div")
+	@FindBy(xpath = "//*[@id='vehiclinfo2']/div/div/div/div[1]/div/ng-multiselect-dropdown/div/div[2]/ul[2]/li[5]/div")
 	private WebElement channel_ownbook_value;
 
-	@FindBy(xpath = "//*[@id=\"LeadVehicleRequest\"]/div/div/div[3]/div/button[1]")
+	@FindBy(xpath = "//*[@id='LeadVehicleRequest']/div/div/div[3]/div/button[1]")
 	private WebElement add_new_vehicle_save;
 
 // 	 	Map_New_quote_icon
 
-	@FindBy(xpath = "//*[@id=\"vehicleRequest2\"]/div/div/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div/table/tbody/tr/td[8]/div/a[3]/img")
+	@FindBy(xpath = "//*[@id='vehicleRequest2']/div/div/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div/table/tbody/tr/td[8]/div/a[3]/img")
 	private WebElement Map_New_quote_icon;
 
 	// *[@id="vehicleRequest2"]/div/div/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div/table/tbody/tr/td[9]/div/a[3]/img
 
 	//// *[@id="MapNewQuote"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span
 
-	@FindBy(xpath = "//*[@id=\"MapNewQuote\"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span")
+	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span")
 	private WebElement acquisition_contract_type;
 
 	// *[@id="MapNewQuote"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[1]
 
-	@FindBy(xpath = "//*[@id=\"MapNewQuote\"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[2]/ul[2]/li/div")
+	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[2]/ul[2]/li/div")
 	private WebElement acquisition_contract_type_broker_value;
 
 	// acquisition_contract_type_ownbook_value
@@ -201,7 +201,7 @@ public class Leads extends TestBase {
 	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[4]/div[1]")
 	private WebElement acquisition_contract_type_ownbook_value;
 
-	@FindBy(xpath = "//*[@id=\"MapNewQuote\"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[2]/div/ng-multiselect-dropdown/div/div[1]/span/span[1]")
+	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[2]/div/ng-multiselect-dropdown/div/div[1]/span/span[1]")
 	private WebElement customer_contract_type;
 
 	@FindBy(xpath = "//div[contains(text(),'Personal Contract Hire')]")
@@ -219,33 +219,35 @@ public class Leads extends TestBase {
 	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[4]/div[1]")
 	private WebElement customer_business_contract_type_hpnr_value;
 
-	@FindBy(xpath = "//*[@id=\"MapNewQuote\"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[2]/div/button[2]")
+	@FindBy(xpath = "//*[normalize-space()='Search']")
 	private WebElement map_new_quote_search;
 
 	@FindBy(xpath = "//th[contains(text(),'Created date')]")
 	private WebElement map_new_quote_createddate_sorting;
 
-	@FindBy(xpath = "//*[@id=\"MapNewQuote\"]/div/div/div[2]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[1]/td[1]")
+	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[2]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[1]/td[1]")
 	private WebElement select_new_quoted;
 
-	@FindBy(xpath = "//*[@id=\"MapNewQuote\"]/div/div/div[3]/div/button[1]")
+	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[3]/div/button[1]")
 	private WebElement select_new_quoted_save;
+	
+	//*[normalize-space()='Ok']
 
 	// lead update_convert into opportunity button
 	@FindBy(xpath = "//*[normalize-space()='Save & Convert']")
 	private WebElement lead_update_convert_into_opp_button;
 
-	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-add-opportunities/div/div/div/div/form/div[1]/div[1]/div/div[2]/div[2]")
+	@FindBy(xpath = "//*[@id='cWraper']/div/app-add-opportunities/div/div/div/div/form/div[1]/div[1]/div/div[2]/div[2]")
 	private WebElement lead_Opp_location;
 
 
 	@FindBy(xpath = "//button[contains(text(),'Confirm')]")
 	private WebElement lead_already_exits_quote_availbale;
 
-	@FindBy(xpath = "//*[@id=\"new_map_copy_quote\"]/div/div/div[3]/div/button[1]")
+	@FindBy(xpath = "//*[@id='new_map_copy_quote']/div/div/div[3]/div/button[1]")
 	private WebElement lead_already_exits_quote_availbale_second_popup_visible;
 
-	@FindBy(xpath = "//*[@id=\"MapNewQuote\"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span")
+	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span")
 	private WebElement acquisition_contract_type_ownbook;
 
 	// env table elements list
@@ -494,15 +496,21 @@ public class Leads extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_name, 30);
 		Thread.sleep(3000);
+		customer_name.sendKeys("N");
+		Thread.sleep(500);
+		customer_name.sendKeys("i");
+		Thread.sleep(500);
+		customer_name.sendKeys("t");
+		Thread.sleep(500);
+		customer_name.sendKeys("e");
+		Thread.sleep(500);
+		customer_name.sendKeys("i");
+		Thread.sleep(500);
+		customer_name.sendKeys("n");
+		Thread.sleep(500);
 		customer_name.sendKeys("Q");
 		Thread.sleep(500);
 		customer_name.sendKeys("A");
-		Thread.sleep(500);
-		customer_name.sendKeys(" ");
-		Thread.sleep(500);
-		customer_name.sendKeys("U");
-		Thread.sleep(500);
-		customer_name.sendKeys("s");
 		
 		
    	// Thread.sleep(4000);
@@ -528,8 +536,10 @@ public class Leads extends TestBase {
 		// js = (JavascriptExecutor) driver;
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
-		Thread.sleep(2000);
-		Click.sendKeys(driver, customer_name, "Comp", 120);
+		Thread.sleep(4000);
+		Click.sendKeys(driver, customer_name, "Co", 120);
+		Thread.sleep(1000);
+		customer_name.sendKeys("mp");	
 		Thread.sleep(1000);
 		customer_name.sendKeys(" QA");
 		Thread.sleep(1000);
@@ -1140,7 +1150,7 @@ public class Leads extends TestBase {
 
 		
 		if (className.contains("broker_business_purchase")) 
-		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(12, 1, sheetName);}
+		{expiryDateExpected = GetExcelFormulaValue.get_cell_value(10, 1, sheetName);}
 
 		
 		if (className.contains("broker_individual_purchase")) 

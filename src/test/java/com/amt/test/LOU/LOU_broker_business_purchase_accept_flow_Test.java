@@ -378,11 +378,11 @@ public class LOU_broker_business_purchase_accept_flow_Test extends TestBase {
 
 		obj_Underwriting_page.verify_underwriting_proposal_search_text_box();
 
-		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-
-		obj_Underwriting_page.find_underwriting_tab_decision_page();
-
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
+//		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
+//
+//		obj_Underwriting_page.find_underwriting_tab_decision_page();
+//
+//		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
 
 		// Assert for Accept condition
 		

@@ -41,7 +41,10 @@ public class AcquisitionListingPage extends TestBase {
      @FindBy(xpath = "//*[@ref='eCenterContainer']")
 	public WebElement quote_at_first_position;
      
-   
+ 	// acquisition_quote_search_bar
+
+ 	@FindBy(xpath = "// *[@id='vehicleSearchInp']")
+ 	private WebElement acquisition_quote_search_bar;  
      
  	// save button
  	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
@@ -53,10 +56,7 @@ public class AcquisitionListingPage extends TestBase {
 
 	
 
-	// acquisition_quote_search_bar
 
-	@FindBy(xpath = "// *[@id='vehicleSearchInp']")
-	private WebElement acquisition_quote_search_bar;
 
 	// copy_quote_button
 

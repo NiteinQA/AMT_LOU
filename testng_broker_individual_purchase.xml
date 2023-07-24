@@ -1,40 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test">
-		<classes>
-			
-			
-			
+	<test thread-count="5" name="Test_Accept">
+		<classes>			
 			<!-- Group 1 - Generate New Quote for Broker individual and LOU accept flow for the same -->
 			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_PCP_without_maintenance_Test" />
-			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_accept_flow_Test" />
-			
-			
-			
-			<!-- Group 2 - Copy Existing Quote for Broker individual and LOU refer flow  for the same -->
-			<class name="com.amt.test.copyquote.Copy_Quote_Test">
-				<methods>
-				 <include name="copy_Quote_for_broker_individual_purchase_Test" />
-				</methods>
-			</class>
-			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_refer_flow_Test" />
-			
-			
-			
-			<!-- Group 3 - Copy Existing Quote for Broker individual and LOU Decline flow  for the same -->
-			<class name="com.amt.test.copyquote.Copy_Quote_Test">
-				<methods>
-				 <include name="copy_Quote_for_broker_individual_purchase_Test" />
-				</methods>
-			</class>
-			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_decline_flow_Test" />
-			
-				
-		
-			
+			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_accept_flow_Test" />		
 		</classes>
-	</test> <!--
+	</test>
+	
+	<test thread-count="5" name="Test_Refer">
+		<classes>			
+			<!-- Group 2 - Copy Existing Quote for Broker individual and LOU refer flow  for the same -->
+			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_PCP_without_maintenance_Test" />
+			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_refer_flow_Test" />			
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="Test_Decline">
+		<classes>			
+			<!-- Group 3 - Copy Existing Quote for Broker individual and LOU Decline flow  for the same -->
+			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_PCP_without_maintenance_Test" />
+			<class name="com.amt.test.LOU.LOU_broker_individual_purchase_decline_flow_Test" />			
+		</classes>	</test>	
+	
+	 <!--
 	Test -->
 </suite> <!--
 Suite -->

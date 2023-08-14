@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test1">
-		<classes>		
-			<!-- Group 1 - Generate New Quote for Broker Business and LOU accept flow for the same -->
-			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
-			<class name="com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test" />			
-	
+	<test thread-count="5" name="Broker Business hire LOU accept flow">
+		<classes>
+			<!-- Group 1 - Generate New Quote for Broker Business  and LOU accept
+			flow for the same -->
+			<class
+				name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
+			<class
+				name="com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test" />
+
 		</classes>
-	</test> 
-	
-		<test thread-count="5" name="Test2">
-		<classes>		
-		
-			<!-- Group 2 - Copy Existing Quote for Broker Business and LOU refer flow  for the same -->
-			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
-			<class name="com.amt.test.LOU.LOU_broker_business_hire_refer_flow_Test" />			
-			
+	</test>
+
+	<test thread-count="5" name="Broker Business hire LOU refer">
+		<classes>
+
+			<!-- Group 2 - Copy Existing Quote for Broker Business and LOU refer
+			flow  for the same-->
+			<class
+				name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
+			<class
+				name="com.amt.test.LOU.LOU_broker_business_hire_refer_flow_Test" />
+
 		</classes>
-			</test> 
-				<test thread-count="5" name="Test3">
-		<classes>		
-			
-			<!-- Group 3 - Copy Existing Quote for Broker Business and LOU Decline flow  for the same -->
-			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
-			<class name="com.amt.test.LOU.LOU_broker_business_hire_decline_flow_Test" />			
+	</test>
+	<test thread-count="5" name="Broker Business hire LOU Decline">
+		<classes>
+
+			<!--  Group 3 - Copy Existing Quote for Broker Business and LOU
+			Decline flow  for the same-->
+			<class
+				name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
+			<class
+				name="com.amt.test.LOU.LOU_broker_business_hire_decline_flow_Test" />
 		</classes>
-	</test> 
+	</test>
 </suite> <!--
 Suite -->

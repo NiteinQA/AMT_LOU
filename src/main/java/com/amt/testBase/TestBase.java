@@ -19,6 +19,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
 import com.amt.pages.LoginPage;
 import com.amt.testUtil.Logger;
@@ -62,14 +63,9 @@ public class TestBase {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			options.addArguments("force-device-scale-factor=1.00");
-			options.addArguments("high-dpi-support=1.00");
+			options.addArguments("force-device-scale-factor=0.67");
+			options.addArguments("high-dpi-support=0.67");
 			options.addArguments("enable-automation");
-//			options.addArguments("--headless");
-//			options.addArguments("--no-sandbox");
-//			options.addArguments("--disable-extensions");
-//			options.addArguments("--dns-prefetch-disable");
-//			options.addArguments("--disable-gpu");
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			
 
@@ -95,6 +91,26 @@ public class TestBase {
 		 driver.get(prop.getProperty("url"));		 
 	}
 	
+	
+	@BeforeTest
+	public void start_info() throws InterruptedException, IOException {
+
+		prop = new Properties();
+		FileInputStream ip = new FileInputStream(
+				"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\config.properties");
+		prop.load(ip);
+
+
+		
+		System.out.println("Welcome to the AMT Automation");
+		System.out.println("");
+		System.out.println("We are running suite on "+prop.getProperty("browser")+" browser");
+		System.out.println("");
+		System.out.println("Url of the enviroment is "+prop.getProperty("url"));
+		System.out.println("");
+
+	}
+	
 	@BeforeClass
 	public void setup() throws InterruptedException, IOException {
      
@@ -108,7 +124,7 @@ public class TestBase {
 		obj_Login_Page.enter_credentials();
 	}
 
-//  @AfterClass public void tearDown() { driver.close(); }
+  @AfterClass public void tearDown() { driver.close(); }
 	
 	
 	}

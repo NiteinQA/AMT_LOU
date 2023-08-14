@@ -1316,6 +1316,8 @@ public class Opportunities extends TestBase {
 		CloseableHttpResponse closebaleHttpResponse;
 		closebaleHttpResponse = restClient.post(prop.getProperty("APIURL"), usersJsonString, headerMap); // call the API
 
+		System.out.println(prop.getProperty("APIURL"));
+		
 		// validate response from API:
 		// 1. status code:
 		// int statusCode = closebaleHttpResponse.getStatusLine().getStatusCode();

@@ -429,7 +429,10 @@ public class Leads extends TestBase {
 
 		ExplicitWait.clickableElement(driver, leads, 60);
 		HelperClass.highlightElement(driver, leads); // Click on Leads Menu Link
-		Click.on(driver, leads, 120);
+		//Click.on(driver, leads, 120);
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		js.executeScript("arguments[0].click();", leads);
 
 		LO.print("Clicked on Leads on Side Menu");
 		System.out.println("Clicked on Leads on Side Menu");
@@ -461,8 +464,8 @@ public class Leads extends TestBase {
 		Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
 		// Dropdown.selectByVisibleText(driver, status, " Closed ", 120);
 
-		Click.sendKeys(driver, general_assigned_to, "Automation ", 120);
-		general_assigned_to.sendKeys("Tester");
+		Click.sendKeys(driver, general_assigned_to, "arpita ", 120);
+		general_assigned_to.sendKeys("thakkar");
 
 		LO.print("Lead is assigned");
 		System.out.println("Lead is assigned");
@@ -496,22 +499,30 @@ public class Leads extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_name, 30);
 		Thread.sleep(3000);
-		customer_name.sendKeys("N");
+		customer_name.sendKeys("D");
 		Thread.sleep(500);
-		customer_name.sendKeys("i");
+		customer_name.sendKeys("u");
 		Thread.sleep(500);
-		customer_name.sendKeys("t");
+		customer_name.sendKeys("m");
 		Thread.sleep(500);
-		customer_name.sendKeys("e");
+		customer_name.sendKeys("m");
 		Thread.sleep(500);
-		customer_name.sendKeys("i");
+		customer_name.sendKeys("y");
 		Thread.sleep(500);
+		customer_name.sendKeys(" ");
+		Thread.sleep(500);
+		customer_name.sendKeys("P");
+		Thread.sleep(500);
+		customer_name.sendKeys("e");		
+		Thread.sleep(500);
+		customer_name.sendKeys("r");
+		Thread.sleep(500);
+		customer_name.sendKeys("s");
+	    Thread.sleep(500);
+		customer_name.sendKeys("o");
+	    Thread.sleep(500);
 		customer_name.sendKeys("n");
-		Thread.sleep(500);
-		customer_name.sendKeys("Q");
-		Thread.sleep(500);
-		customer_name.sendKeys("A");
-		
+
 		
    	// Thread.sleep(4000);
 
@@ -537,13 +548,16 @@ public class Leads extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		Thread.sleep(4000);
-		Click.sendKeys(driver, customer_name, "Co", 120);
-		Thread.sleep(1000);
-		customer_name.sendKeys("mp");	
-		Thread.sleep(1000);
-		customer_name.sendKeys(" QA");
-		Thread.sleep(1000);
-		customer_name.sendKeys("2");
+		customer_name.sendKeys("D");
+		Thread.sleep(500);
+		customer_name.sendKeys("u");
+		Thread.sleep(500);
+		customer_name.sendKeys("m");
+		Thread.sleep(500);
+		customer_name.sendKeys("m");
+		Thread.sleep(500);
+		customer_name.sendKeys("y");
+		Thread.sleep(500);
 
 		Click.on(driver, customer_name_option, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);

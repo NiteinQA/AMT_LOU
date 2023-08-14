@@ -1,73 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test_Accept(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amt.test.LOU.LOU_broker_individual_purchase_accept_flow_Test">
+      <class name="com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test">
         <methods>
-          <include name="L9_verify_status_after_contract_signed"/>
-          <include name="L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow"/>
-          <include name="L6_broker_create_opportunity_individual_sending_to_contract"/>
-          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
-          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow"/>
-          <include name="UW1_verify_underwriting_flow_ownbook_with_status"/>
-          <include name="L1_broker_create_lead_individual"/>
-          <include name="setup"/>
           <include name="UW5_verify_underwriting_proposal_decision_with_accept"/>
-          <include name="L8_verify_signed_contract_status_with_api_call"/>
-          <include name="L4_adding_proposal_on_opportunity_page_broker_individual_flow"/>
-          <include name="UW4_verify_underwriting_proposal_page_flow"/>
-          <include name="L2_broker_individual_current_status_before_sending_to_proposal"/>
-          <include name="UW2_verify_status_after_sending_to_underwriting"/>
-          <include name="UW3_verify_underwriting_lisitig_page"/>
-        </methods>
-      </class> <!-- com.amt.test.LOU.LOU_broker_individual_purchase_accept_flow_Test -->
-    </classes>
-  </test> <!-- Test_Accept(failed) -->
-  <test thread-count="5" name="Test_Refer(failed)">
-    <classes>
-      <class name="com.amt.test.LOU.LOU_broker_individual_purchase_refer_flow_Test">
-        <methods>
-          <include name="L2_broker_individual_current_status_before_sending_to_proposal"/>
-          <include name="UW4_verify_underwriting_proposal_page_flow"/>
-          <include name="L8_verify_signed_contract_status_with_api_call"/>
-          <include name="L4_adding_proposal_on_opportunity_page_broker_individual_flow"/>
-          <include name="UW2_verify_status_after_sending_to_underwriting"/>
-          <include name="UW3_verify_underwriting_lisitig_page"/>
-          <include name="UW6_verify_ownbook_underwriting_proposal_decision_with_referred"/>
+          <include name="start_info"/>
           <include name="setup"/>
-          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
-          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow"/>
-          <include name="L6_broker_create_opportunity_individual_sending_to_contract"/>
-          <include name="L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow"/>
-          <include name="L9_verify_status_after_contract_signed"/>
-          <include name="L1_broker_create_lead_individual"/>
-          <include name="UW1_verify_underwriting_flow_ownbook_with_status"/>
         </methods>
-      </class> <!-- com.amt.test.LOU.LOU_broker_individual_purchase_refer_flow_Test -->
+      </class> <!-- com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test -->
     </classes>
-  </test> <!-- Test_Refer(failed) -->
-  <test thread-count="5" name="Test_Decline(failed)">
-    <classes>
-      <class name="com.amt.test.LOU.LOU_broker_individual_purchase_decline_flow_Test">
-        <methods>
-          <include name="UW1_verify_underwriting_flow_ownbook_with_status"/>
-          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow"/>
-          <include name="L4_adding_proposal_on_opportunity_page_broker_individual_flow"/>
-          <include name="L1_broker_create_lead_individual"/>
-          <include name="L5_verify_current_status_on_opportunity_page_after_sending_to_proposal_for_broker_individual_flow"/>
-          <include name="UW6_verify_ownbook_underwriting_proposal_decision_with_declined"/>
-          <include name="L9_verify_status_after_contract_signed"/>
-          <include name="L6_broker_create_opportunity_individual_sending_to_contract"/>
-          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
-          <include name="setup"/>
-          <include name="UW3_verify_underwriting_lisitig_page"/>
-          <include name="UW2_verify_status_after_sending_to_underwriting"/>
-          <include name="UW4_verify_underwriting_proposal_page_flow"/>
-          <include name="L2_broker_individual_current_status_before_sending_to_proposal"/>
-          <include name="L8_verify_signed_contract_status_with_api_call"/>
-        </methods>
-      </class> <!-- com.amt.test.LOU.LOU_broker_individual_purchase_decline_flow_Test -->
-    </classes>
-  </test> <!-- Test_Decline(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

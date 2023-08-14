@@ -3,6 +3,7 @@ package com.amt.pages;
 
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
+import com.amt.testUtil.Click;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.HelperClass;
 
@@ -29,6 +31,18 @@ public class LoginPage extends TestBase {
 	
 	@FindBy(xpath="//a[@id='dropdownMenuButton']")
 	private WebElement profile_icon;
+	
+	
+	@FindBy(xpath = "//*[@id='dropdownRole']")
+	private WebElement roles_dropdown;	
+	
+	
+	@FindBy(xpath = "//*[contains(text(), 'Super Admin')]")
+	private WebElement super_admin;
+	
+	
+	@FindBy(xpath = "//img[@alt='Loading...']")
+	private List<WebElement> loading_icon;	
 	
 	
 	public LoginPage(){
@@ -60,6 +74,14 @@ public class LoginPage extends TestBase {
 		jse.executeScript("arguments[0].click();", submit);
 		
 		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+
+		Click.on(driver, roles_dropdown, 60);
+				
+		Thread.sleep(1000);
+				
+		Click.on(driver, super_admin, 60);				
+							
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
 		 
 	}

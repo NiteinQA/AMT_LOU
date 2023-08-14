@@ -2009,16 +2009,16 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			status = true;
 		}
 
-		// writing values to excel
-
-		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-		wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
-
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-		wb1.write(out1);
+//		// writing values to excel
+//
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//		wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
+//
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//		wb1.write(out1);
 
 		return status;
 	}

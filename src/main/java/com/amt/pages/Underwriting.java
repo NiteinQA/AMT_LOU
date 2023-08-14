@@ -57,11 +57,11 @@ public class Underwriting extends TestBase {
 	private WebElement underwriting_menu_link;
 
 	// 2a.underwriting_menu_link_broker;
-	@FindBy(xpath = "/html/body/app-root/div[1]/div[2]/div[1]/div/app-sidemenu/div/div[11]/ul/li[1]/a/span")
+	@FindBy(xpath = "//span[normalize-space()='Broker']")
 	private WebElement underwriting_menu_link_broker;
 
 	// 2a.underwriting_menu_link_ownbook;
-	@FindBy(xpath = "/html/body/app-root/div[1]/div[2]/div[1]/div/app-sidemenu/div/div[11]/ul/li[2]/a/span")
+	@FindBy(xpath = "//span[normalize-space()='Own Book']")
 	private WebElement underwriting_menu_link_ownbook;
 
 	// 3.underwriting_proposal_id
@@ -734,8 +734,12 @@ public class Underwriting extends TestBase {
 		HelperClass.highlightElement(driver, underwriting_menu_link_broker);
 		
 		Thread.sleep(2000);
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		js.executeScript("arguments[0].click();", underwriting_menu_link_broker);
 
-		underwriting_menu_link_broker.click();
+		//underwriting_menu_link_broker.click();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		System.out.println("Click on Underwriting - broker tab ");
@@ -752,7 +756,13 @@ public class Underwriting extends TestBase {
 		// underwriting_menu_link_ownbookclick();
 		
 		
-		underwriting_menu_link_ownbook.click();
+		Thread.sleep(2000);
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		js.executeScript("arguments[0].click();", underwriting_menu_link_ownbook);
+		
+	//	underwriting_menu_link_ownbook.click();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		System.out.println("Click on Underwriting - ownbook tab ");

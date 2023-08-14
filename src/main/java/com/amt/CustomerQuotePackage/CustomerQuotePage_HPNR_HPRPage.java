@@ -2206,9 +2206,9 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();

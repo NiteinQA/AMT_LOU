@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test">
+      <class name="com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test">
         <methods>
-          <include name="UW5_verify_underwriting_proposal_decision_with_accept"/>
+          <include name="L1_create_lead_for_broker_individual"/>
           <include name="start_info"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test -->
+      </class> <!-- com.amt.test.LOU.LOU_broker_individual_hire_accept_flow_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,8 +1,5 @@
 package com.amt.HoldingCostPages;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -672,12 +669,11 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 		ExplicitWait.visibleElement(driver, residual_value_used, 20);
 		ExplicitWait.visibleElement(driver, maintenance_cost_used, 20);
 
-		residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String residual_value_used_from_screen = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		String maint_cost_used_from_screen = (String) clipboard.getData(DataFlavor.stringFlavor);
+	    ExplicitWait.visibleElement(driver, residual_value_used, 20);
+		String residual_value_used_from_screen = residual_value_used.getAttribute("value");
+			
+		ExplicitWait.visibleElement(driver, maintenance_cost_used, 20);
+		String maint_cost_used_from_screen = maintenance_cost_used.getAttribute("value");
 
 		return obj_read_excel_calculation_page
 				.edit_additional_terms_and_mileage_then_verify_holding_cost_with_maintenance(driver,
@@ -708,9 +704,9 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 		// Taking updated values of residual value and maint cost from screen
 		ExplicitWait.visibleElement(driver, residual_value_used, 20);
 
-		residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String residual_value_used_from_screen = (String) clipboard.getData(DataFlavor.stringFlavor);
+	    ExplicitWait.visibleElement(driver, residual_value_used, 20);
+		String residual_value_used_from_screen = residual_value_used.getAttribute("value");
+			
 
 		return obj_read_excel_calculation_page
 				.edit_additional_terms_and_mileage_then_verify_holding_cost_without_maintenance(driver,

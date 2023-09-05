@@ -212,7 +212,7 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 	@FindBy(xpath = "//*[@class='heading ng-star-inserted']")
 	private WebElement quote_summary_vehicle_heading;
 	
-	
+	Properties prop;
 
 	public QuoteSummary_HPNR_PCHPage() {
 

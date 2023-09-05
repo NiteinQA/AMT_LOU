@@ -206,7 +206,7 @@ public class AcquisitionListingPage extends TestBase {
 
 	}
 
-	public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMethodName) {
+public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMethodName) {
 		String sheetName = "";
 		
 		if (classOrMethodName.contains("broker_business_hire")) {

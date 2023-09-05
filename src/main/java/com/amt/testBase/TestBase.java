@@ -54,41 +54,36 @@ public class TestBase {
 	 
 	public static void initialization(String browser) throws InterruptedException {
 
-		
-		//System.setProperty("webdriver.chrome.driver","D:setup files\\chromedriver.exe");
-		
-		if(browser.equalsIgnoreCase("chrome")) 
-		{
-		//WebDriverManager.chromedriver().setup();
-			WebDriverManager.chromedriver().setup();
+		if (browser.equalsIgnoreCase("chrome")) {
+
+			System.setProperty("webdriver.chrome.driver","D:\\chromedriver-win64\\chromedriver.exe");
+			//WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
+		
+		
+		
 			options.addArguments("--remote-allow-origins=*");
 			options.addArguments("force-device-scale-factor=0.67");
 			options.addArguments("high-dpi-support=0.67");
-			options.addArguments("enable-automation");
-			options.setPageLoadStrategy(PageLoadStrategy.NONE);
-			
+//			options.addArguments("--headless=new");
+			driver = new ChromeDriver(options);
 
-			
-			 driver = new ChromeDriver(options);
-		 
-		}else if(browser.equalsIgnoreCase("firefox"))
-		{
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			 driver= new FirefoxDriver();
-		}else if(browser.equalsIgnoreCase("edge"))
-		{
+			driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
-			 driver= new EdgeDriver();
-		}else {
+			driver = new EdgeDriver();
+		} else {
 			WebDriverManager.chromedriver().setup();
-			 driver= new ChromeDriver();
+			driver = new ChromeDriver();
 		}
-		 
-		 driver.manage().window().maximize();
-		 //driver.manage().deleteAllCookies();
-//		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
-		 driver.get(prop.getProperty("url"));		 
+
+		driver.manage().window().maximize();
+		// driver.manage().deleteAllCookies();
+		// driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
+
+		driver.get(prop.getProperty("url"));
 	}
 	
 	

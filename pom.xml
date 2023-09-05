@@ -78,7 +78,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.0.0</version>
+			<version>4.1.0</version>
 		</dependency>
 
 
@@ -180,7 +180,7 @@
 						<!-- Suite testng xml file to consider for test
 						execution -->
 						<suiteXmlFiles>
-							<suiteXmlFile>testng_broker_individual_hire.xml</suiteXmlFile>
+							<suiteXmlFile>testng_ownbook_individual_hire.xml</suiteXmlFile>
 						</suiteXmlFiles>
 						<testFailureIgnore>true</testFailureIgnore>
 					</configuration>

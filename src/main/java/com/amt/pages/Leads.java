@@ -1495,7 +1495,7 @@ public class Leads extends TestBase {
 
 		FileInputStream in = new FileInputStream(prop.getProperty("quote_save_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
-		wb.getSheet(sheetName).getRow(0).getCell(2).setCellValue(Lead_OpportunityId);
+		wb.getSheet(sheetName).getRow(1).getCell(2).setCellValue(Lead_OpportunityId);
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		wb.write(out);

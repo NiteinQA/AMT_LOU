@@ -16,15 +16,15 @@
       <class name="com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test"/>
       
     </classes>    
-  </test> --><!-- Test -->
+  </test> 
   
     <test thread-count="5" name="Ownbook business hire Accept with funder">
     <classes>	
      
-       <!-- Ownbook business hire flow with funder -Accept Flow-->    
+      
       <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_maintenance_Test"/> 
       <class name="com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test"/>
       
     </classes>    
-  </test> <!-- Test -->
+  </test>--> <!-- Test -->
 </suite> <!-- Suite -->

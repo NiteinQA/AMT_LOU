@@ -1,12 +1,12 @@
 package com.amt.CustomerQuotePackage;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -174,8 +174,24 @@ public class CustomerQuotePageBrokerPCHPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='SupplierSettingFinance']")
 	private WebElement check_box_supplier_setting_finance;
+	
+	Properties prop;
 
 	public CustomerQuotePageBrokerPCHPage() {
+		
+		
+
+		try {
+			 prop = new Properties();
+			FileInputStream ip = new FileInputStream(
+					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		PageFactory.initElements(driver, this);
 	}
 
@@ -304,7 +320,7 @@ public class CustomerQuotePageBrokerPCHPage extends TestBase {
 		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
 		// 20);
 
-		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
+	
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
@@ -332,14 +348,10 @@ public class CustomerQuotePageBrokerPCHPage extends TestBase {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		ExplicitWait.visibleElement(driver, document_fee, 60);
 
-		document_fee.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String documentFeeCopied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		double balanceDueDefault = (Double.parseDouble(documentFeeCopied));
+		   ExplicitWait.visibleElement(driver, document_fee, 30);		
+		   String document_fee_copied = document_fee.getAttribute("value");
+		double balanceDueDefault = (Double.parseDouble(document_fee_copied));
 
 		double orderDepositConverted = (Double.parseDouble(order_deposit_from_excel));
 

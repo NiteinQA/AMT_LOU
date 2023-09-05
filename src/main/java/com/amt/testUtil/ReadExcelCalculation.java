@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.amt.testBase.TestBase;
 
 public class ReadExcelCalculation extends TestBase {
+	
+	static Properties prop;
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
@@ -30,7 +32,7 @@ public class ReadExcelCalculation extends TestBase {
 			// Properties class object initialization
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
 			// load property file
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
@@ -44,7 +46,7 @@ public class ReadExcelCalculation extends TestBase {
 
 	public ReadExcelCalculation obj_read_excel_calculation_page;
 
-	public void write_holding_cost_cap_values_to_excel_with_maintenance_for_used_car(double terms_from_screen,
+	public void write_holding_cost_cap_values_to_excel_with_maintenance(double terms_from_screen,
 			double annual_mileage, double used_residual_value, double total_cap_maintenance_value_converted,
 			double percentage_cap_residual_value, double percentage_cap_maintenance_cost, String sheet_name)
 			throws IOException, ClassNotFoundException {
@@ -247,6 +249,24 @@ public class ReadExcelCalculation extends TestBase {
 
 	}
 
+	public void write_road_tax_for_first_year_to_calculation_excel(String road_tax_for_first_year , String calculation_excel_sheet_name ) throws IOException {
+
+	
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+
+		wb.getSheet(calculation_excel_sheet_name).getRow(12).getCell(4).setCellValue(Double.parseDouble(road_tax_for_first_year));
+
+	
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+		wb.close();
+		out.close();
+		
+	}
+
+	
+	
 	public double verify_table_calculations_contract_types_page_cp_hire(WebDriver driver, String vehicle_price_copied,
 			WebElement acq_contractTypes_table_calculation_basic_paint_price,
 			WebElement acq_contractTypes_table_calculation_basic_options_price,
@@ -1394,9 +1414,11 @@ public class ReadExcelCalculation extends TestBase {
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
-	
+		// rfl values fakt on hotya baki sarv comment hotya
+
 		wb.getSheet(sheet_name).getRow(61).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+		
 		
 		if (sheet_name.contains("Use")) {
 
@@ -1404,9 +1426,7 @@ public class ReadExcelCalculation extends TestBase {
 
 		} else {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
-		}
-		
-		
+	}
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
@@ -1440,9 +1460,6 @@ public class ReadExcelCalculation extends TestBase {
 		wb.getSheet(sheet_name).getRow(79).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("delivery_and_collection_ex_vat")));
 
-		wb.getSheet(sheet_name).getRow(104).getCell(1)
-		.setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-		
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
 		out.close();
@@ -1469,7 +1486,7 @@ public class ReadExcelCalculation extends TestBase {
 	
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
 		}
 		else
 		{
@@ -1634,10 +1651,9 @@ public class ReadExcelCalculation extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		// rfl values fakt on hotya baki sarv comment hotya
-		
+
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));		
-		wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
+				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
 		wb.getSheet(sheet_name).getRow(70).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 		
@@ -1648,7 +1664,7 @@ public class ReadExcelCalculation extends TestBase {
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("E15*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
 			
 			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used_LCV")) {
 				wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");
@@ -1657,7 +1673,12 @@ public class ReadExcelCalculation extends TestBase {
 					
 			
           }
-		else
+		else if(Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used_car"))
+		{
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");
+		}
+		
+		else 
 		{
 			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
 		}
@@ -1861,9 +1882,9 @@ public class ReadExcelCalculation extends TestBase {
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("E15*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
 			
-			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used_LCV")) {
+			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 				wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");
 			}
 

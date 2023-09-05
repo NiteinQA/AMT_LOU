@@ -4,8 +4,11 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -221,7 +224,22 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 	@FindBy(xpath = "//*[@id='SupplierSettingFinance']")
 	private WebElement check_box_supplier_setting_finance;
 
+	Properties prop;
+	
 	public CustomerQuotePageBrokerHPNRPage() {
+	
+
+		try {
+			 prop = new Properties();
+			FileInputStream ip = new FileInputStream(
+					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		PageFactory.initElements(driver, this);
 	}
 
@@ -253,12 +271,9 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 
 		double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
 
-		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
-		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_profit_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		   ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+			double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
-		double vehicel_profit_actual = Double.parseDouble(vehicle_profit_copied);
 
 		double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
 
@@ -302,12 +317,8 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 
 		double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
 
-		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
-		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_profit_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		double vehicel_profit_actual = Double.parseDouble(vehicle_profit_copied);
+		   ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+			double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
 		double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
 
@@ -488,12 +499,12 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-//		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
-//		// 20);
-//
-//		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
+		// 20);
+
+	
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
@@ -581,15 +592,11 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		double vehicleProfit_converted = Double.parseDouble(vehicleProfit);
+		
 		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 20);
-
-		vehicle_sale_price_used_vehicle.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_sales_price_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		double vehicle_sales_price_from_screen_converted = Double.parseDouble(vehicle_sales_price_copied);
-
+		
+		double vehicle_sales_price_from_screen_converted =  Double.parseDouble(vehicle_sale_price_used_vehicle.getAttribute("value"));
+	
 		double diff2 = Difference.of_two_Double_Values(otr_screen_price_converted,
 				vehicle_sales_price_from_screen_converted);
 
@@ -621,11 +628,9 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 			String partExchangeActual, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String sheet_name) throws InterruptedException, IOException, NumberFormatException, UnsupportedFlavorException {
 
-		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 30);
-		vehicle_sale_price_used_vehicle.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		double vehicle_sales_price_copied = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 20);
+		double vehicle_sales_price_from_screen_converted =  Double.parseDouble(vehicle_sale_price_used_vehicle.getAttribute("value"));
+	
 		LO.print("");
 		System.out.println("");
 
@@ -713,7 +718,7 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
 		// 20);
 
-		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
+	
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
@@ -745,8 +750,10 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 				.parseDouble(RemoveComma.of(part_exchange_value.getText().trim().substring(2)));
 
 		Click.on(driver, customer_quote_summary, 60);
+		
+	
 
-		double balance_to_finance_expected = (vehicle_sales_price_copied - Double.parseDouble(cashDeposit)
+		double balance_to_finance_expected = (vehicle_sales_price_from_screen_converted - Double.parseDouble(cashDeposit)
 				- part_exchange_profit_from_screen);
 
 		LO.print("Balance To Finance Expected is =" + balance_to_finance_expected);

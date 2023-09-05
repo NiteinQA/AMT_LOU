@@ -1,13 +1,12 @@
 package com.amt.CustomerQuotePackage;
 
-import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -154,11 +153,61 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 	@FindBy(xpath = "//*[contains(text(),' Holding cost summary ')]")
 	private WebElement holding_cost_summary;
 
-	@FindBy(xpath = "//*[normalize-space()='Matrix Credit type']//ancestor::div[1]//div//ng-select")
-	private WebElement matrix_credit_type_dropdown;
 
 	@FindBy(xpath = "//*[normalize-space()='Term']//ancestor::div[1]//div//p//strong")
 	private WebElement customer_quote_summary_terms;
+	
+	@FindBy(xpath = "//*[@id='registrationNumber']")
+	private WebElement registration_number;
+
+	@FindBy(xpath = "//*[normalize-space()='Search']")
+	private WebElement search_button;
+
+	@FindBy(xpath = "//*[@id='mileage']")
+	private WebElement mileage;
+
+
+	@FindBy(xpath = "//*[@id='partExchange_1']/button/div")
+	private WebElement part_exchange_payment;
+
+
+
+	@FindBy(xpath = "//*[@name='FunderName']")
+	private WebElement funder_name;
+
+	@FindBy(xpath = "//*[@name='agreementName']")
+	private WebElement agreement_number;
+
+	@FindBy(xpath = "//*[@id='settlementExpiredDate']")
+	private WebElement settlement_expiry_date;
+
+	@FindBy(xpath = "//*[@id='vatQualifying']")
+	private WebElement check_box_vat_qualifying;
+
+	@FindBy(xpath = "//*[@id='OutstandingFinance']")
+	private WebElement check_box_outstanding_finance;
+
+	@FindBy(xpath = "//*[@id='SupplierSettingFinance']")
+	private WebElement check_box_supplier_setting_finance;
+
+	@FindBy(xpath = "//*[normalize-space()='Matrix Credit type']//ancestor::div[1]//div//ng-select")
+	private WebElement matrix_credit_type_dropdown;
+
+	@FindBy(xpath = "//*[@id='ResidualPercentage']")
+	private WebElement holding_cost_percentage_cap_residual_value_used;
+
+	@FindBy(xpath = "//input[@id='CapMaintenancePercentage']")
+	private WebElement holding_cost_percentage_maintenance_cost_used;
+
+	@FindBy(xpath = "//input[@id='ResidualValue']")
+	private WebElement residual_value_used;
+
+	@FindBy(xpath = "//input[@id='Maintenancevalue3']")
+	private WebElement maintenance_cost_used;
+	
+	@FindBy(xpath = "//*[@id='lessFinanceSettlement']")
+	private WebElement less_finance_settlement;
+
 
 	public CustomerQuotePageOutrightHPRPage() {
 		PageFactory.initElements(driver, this);
@@ -193,19 +242,13 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
 
-		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
-		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_profit_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		   ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+			double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
-		double vehicel_profit_actual = Double.parseDouble(vehicle_profit_copied);
+			double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
 
-		double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
-
-		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_additional_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+			ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
+			String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_total_payment_expected_from_excel = obj_read_excel_calculation_page
@@ -260,19 +303,13 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
 
-		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
-		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_profit_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		   ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+			double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
-		double vehicel_profit_actual = Double.parseDouble(vehicle_profit_copied);
+			double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
 
-		double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
-
-		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_additional_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+			ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
+			String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_total_payment_expected_from_excel = obj_read_excel_calculation_page
@@ -374,36 +411,18 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-
-		// getting updated sales discount prices from input fields
-
 		// getting vehicle Discount Sales Price
-		vehicle_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double vehicleDiscountSalesPrice =  Double.parseDouble(vehicle_discount.getAttribute("value"));
 		// getting paint Discount Sales Price
-		paint_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double paintDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double paintDiscountSalesPrice =  Double.parseDouble(paint_discount.getAttribute("value"));
 		// getting options Discount Sales Price
-		options_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double optionsDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+    	double optionsDiscountSalesPrice =  Double.parseDouble(options_discount.getAttribute("value"));
 		// getting vehicle additional Discount Sales Price
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double vehicleAdditionalDiscountSalesPrice =  Double.parseDouble(vehicle_additional_discount.getAttribute("value"));
 		// getting paint additional Discount Sales Price
-		paint_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double paintAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double paintAdditionalDiscountSalesPrice =  Double.parseDouble(paint_additional_discount.getAttribute("value"));
 		// getting otions additional Discount Sales Price
-		options_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double optionsAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		double optionsAdditionalDiscountSalesPrice =  Double.parseDouble(options_additional_discount.getAttribute("value"));
 
 		int count = 0;
 
@@ -529,36 +548,18 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-
-		// getting updated sales discount prices from input fields
-
 		// getting vehicle Discount Sales Price
-		vehicle_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double vehicleDiscountSalesPrice =  Double.parseDouble(vehicle_discount.getAttribute("value"));
 		// getting paint Discount Sales Price
-		paint_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double paintDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double paintDiscountSalesPrice =  Double.parseDouble(paint_discount.getAttribute("value"));
 		// getting options Discount Sales Price
-		options_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double optionsDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+    	double optionsDiscountSalesPrice =  Double.parseDouble(options_discount.getAttribute("value"));
 		// getting vehicle additional Discount Sales Price
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double vehicleAdditionalDiscountSalesPrice =  Double.parseDouble(vehicle_additional_discount.getAttribute("value"));
 		// getting paint additional Discount Sales Price
-		paint_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double paintAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double paintAdditionalDiscountSalesPrice =  Double.parseDouble(paint_additional_discount.getAttribute("value"));
 		// getting otions additional Discount Sales Price
-		options_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double optionsAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		double optionsAdditionalDiscountSalesPrice =  Double.parseDouble(options_additional_discount.getAttribute("value"));
 
 		// writing values to excel
 
@@ -577,8 +578,7 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		// getting sales price from screen
 
-		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double salesPriceActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		double salesPriceActualFromSCreen =  Double.parseDouble(sales_total_input.getAttribute("value"));
 
 		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);
@@ -596,8 +596,8 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		// getting sales price from screen
 
-		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleProfitActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		 ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+			double vehicleProfitActualFromSCreen = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
 		LO.print("Actual Vehicle Profit from screen (on updating sales discount prices) is "
 				+ vehicleProfitActualFromSCreen);
@@ -764,36 +764,18 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-
-		// getting updated sales discount prices from input fields
-
 		// getting vehicle Discount Sales Price
-		vehicle_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double vehicleDiscountSalesPrice =  Double.parseDouble(vehicle_discount.getAttribute("value"));
 		// getting paint Discount Sales Price
-		paint_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double paintDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double paintDiscountSalesPrice =  Double.parseDouble(paint_discount.getAttribute("value"));
 		// getting options Discount Sales Price
-		options_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double optionsDiscountSalesPrice = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+    	double optionsDiscountSalesPrice =  Double.parseDouble(options_discount.getAttribute("value"));
 		// getting vehicle additional Discount Sales Price
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double vehicleAdditionalDiscountSalesPrice =  Double.parseDouble(vehicle_additional_discount.getAttribute("value"));
 		// getting paint additional Discount Sales Price
-		paint_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double paintAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-
+		double paintAdditionalDiscountSalesPrice =  Double.parseDouble(paint_additional_discount.getAttribute("value"));
 		// getting otions additional Discount Sales Price
-		options_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double optionsAdditionalDiscountSalesPrice = Double
-				.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		double optionsAdditionalDiscountSalesPrice =  Double.parseDouble(options_additional_discount.getAttribute("value"));
 
 		// writing values to excel
 
@@ -810,8 +792,7 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		// getting sales price from screen
 
-		sales_total_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double salesPriceActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		double salesPriceActualFromSCreen =  Double.parseDouble(sales_total_input.getAttribute("value"));
 
 		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);
@@ -829,8 +810,8 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		// getting sales price from screen
 
-		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleProfitActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		 ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+			double vehicleProfitActualFromSCreen = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
 		LO.print("Actual Vehicle Profit from screen (on updating sales discount prices) is "
 				+ vehicleProfitActualFromSCreen);
@@ -946,32 +927,26 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 				sheet_name);
 
 		ExplicitWait.visibleElement(driver, vehicle_discount, 30);
+    	String vehicle_discount_copied = vehicle_discount.getAttribute("value");
+		
+		ExplicitWait.visibleElement(driver, paint_discount, 30);
+    	String paint_discount_copied = paint_discount.getAttribute("value");
+	
+		
+		ExplicitWait.visibleElement(driver, options_discount, 30);
+    	String options_discount_copied = options_discount.getAttribute("value");
+	
 
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
+    	String vehicle_additional_copied = vehicle_additional_discount.getAttribute("value");
+	
 
-		vehicle_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String vehicle_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		paint_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String paint_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		options_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String options_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String vehicle_additional_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		paint_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String paint_additional_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		options_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String options_additional_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+    	ExplicitWait.visibleElement(driver, paint_additional_discount, 30);
+    	String paint_additional_copied = paint_additional_discount.getAttribute("value");
+	
+		
+		ExplicitWait.visibleElement(driver, options_additional_discount, 30);
+    	String options_additional_copied = options_additional_discount.getAttribute("value");
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
@@ -1059,33 +1034,27 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 			obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement(term , matrix_credit_type,
 					sheet_name);
 
-		ExplicitWait.visibleElement(driver, vehicle_discount, 30);
+			ExplicitWait.visibleElement(driver, vehicle_discount, 30);
+	    	String vehicle_discount_copied = vehicle_discount.getAttribute("value");
+			
+			ExplicitWait.visibleElement(driver, paint_discount, 30);
+	    	String paint_discount_copied = paint_discount.getAttribute("value");
+		
+			
+			ExplicitWait.visibleElement(driver, options_discount, 30);
+	    	String options_discount_copied = options_discount.getAttribute("value");
+		
 
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+			ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
+	    	String vehicle_additional_copied = vehicle_additional_discount.getAttribute("value");
+		
 
-		vehicle_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String vehicle_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		paint_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String paint_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		options_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String options_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String vehicle_additional_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		paint_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String paint_additional_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		options_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		String options_additional_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+	    	ExplicitWait.visibleElement(driver, paint_additional_discount, 30);
+	    	String paint_additional_copied = paint_additional_discount.getAttribute("value");
+		
+			
+			ExplicitWait.visibleElement(driver, options_additional_discount, 30);
+	    	String options_additional_copied = options_additional_discount.getAttribute("value");
 
 		ExplicitWait.visibleElement(driver, total_monthly_payment, 30);
 
@@ -1124,10 +1093,8 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_additional_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
+
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
 				.get_monthly_finance_payment_after_editing_vehicle_profit(vehicle_additional_discount_copied,
@@ -1156,10 +1123,8 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String vehicle_additional_discount_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
+
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_total_payment_expected_from_excel = obj_read_excel_calculation_page
 				.get_monthly_total_payment_after_editing_vehicle_profit(vehicle_additional_discount_copied, sheet_name);
@@ -1180,38 +1145,67 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 	}
 
 	public boolean put_part_exchange_values_and_check_monthly_finance_payment(String part_exchange_actual,
-			String part_exchange_given, String less_finance_settlement, String order_deposit, String finance_deposit,
+			String part_exchange_given_from_excel, String less_finance_settlement_from_excel, String order_deposit_from_excel, String finance_deposit_from_excel,
 			String sheet_name) throws UnsupportedFlavorException, IOException, InterruptedException {
 		Actions act = new Actions(driver);
 
-		Click.on(driver, part_exchange_and_additional_payment_button, 30);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, actual_part_exchange_value, part_exchange_actual, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, given_part_exchange_value, part_exchange_given, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, less_finance_Settlement, less_finance_settlement, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, order_Deposit, order_deposit, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, finance_Deposit, finance_deposit, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		ExplicitWait.visibleElement(driver, document_fee, 30);
+		ExplicitWait.clickableElement(driver, part_exchange_and_additional_payment_button, 50);
+		Thread.sleep(4000);
+		Click.on(driver, part_exchange_and_additional_payment_button, 70);
+		LO.print("Clicked on Part Exchange panel");
+		System.out.println("Clicked on Part Exchange panel");
+		
 
-		document_fee.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+		Click.on(driver, given_part_exchange_value, 20);
 
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String document_fee_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		given_part_exchange_value.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, given_part_exchange_value, part_exchange_given_from_excel, 30);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+
+		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
+
+	
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, funder_name, "Funder X", 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, agreement_number, "123", 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
+		less_finance_settlement.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, order_Deposit, 20);
+		order_Deposit.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, order_Deposit, order_deposit_from_excel, 30);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, finance_Deposit, 20);
+		finance_Deposit.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, finance_Deposit, finance_deposit_from_excel, 30);
+		act.sendKeys(Keys.TAB).build().perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		 ExplicitWait.visibleElement(driver, document_fee, 30);		
+		   String document_fee_copied = document_fee.getAttribute("value");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
@@ -1228,8 +1222,8 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		double[] monthlyFinanceAndBalanceToFinance = obj_read_excel_calculation_page
 				.get_monthly_finance_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
-						part_exchange_actual, part_exchange_given, less_finance_settlement, order_deposit,
-						finance_deposit, document_fee_copied, sheet_name);
+						part_exchange_actual, part_exchange_given_from_excel, less_finance_settlement_from_excel, order_deposit_from_excel,
+						finance_deposit_from_excel, document_fee_copied, sheet_name);
 
 		double monthly_finance_payment_expected = monthlyFinanceAndBalanceToFinance[0];
 		double balance_to_finance_expected = monthlyFinanceAndBalanceToFinance[1];
@@ -1252,44 +1246,70 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 	}
 
 	public boolean put_part_exchange_values_and_check_monthly_total_payment_with_maintenance(
-			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String order_deposit, String finance_deposit, String sheet_name)
+			String part_exchange_actual, String part_exchange_given_from_excel, String less_finance_settlement_from_excel,
+			String order_deposit_from_excel, String finance_deposit_from_excel, String sheet_name)
 			throws UnsupportedFlavorException, IOException, InterruptedException {
 
 		Actions act = new Actions(driver);
 
-		Click.on(driver, part_exchange_and_additional_payment_button, 30);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, actual_part_exchange_value, part_exchange_actual, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, given_part_exchange_value, part_exchange_given, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, less_finance_Settlement, less_finance_settlement, 30);
-		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-		Thread.sleep(1000);
-		Click.sendKeys(driver, order_Deposit, order_deposit, 30);
-		act.sendKeys(Keys.TAB).build().perform();
+		ExplicitWait.clickableElement(driver, part_exchange_and_additional_payment_button, 50);
+		Thread.sleep(4000);
+		Click.on(driver, part_exchange_and_additional_payment_button, 70);
+		LO.print("Clicked on Part Exchange panel");
+		System.out.println("Clicked on Part Exchange panel");
+		
+
+		Click.on(driver, given_part_exchange_value, 20);
+
+		given_part_exchange_value.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		Thread.sleep(2000);
+		Click.sendKeys(driver, given_part_exchange_value, part_exchange_given_from_excel, 30);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		Click.sendKeys(driver, finance_Deposit, finance_deposit, 30);
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+
+		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
+
+	
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, funder_name, "Funder X", 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, agreement_number, "123", 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
+		less_finance_settlement.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, order_Deposit, 20);
+		order_Deposit.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, order_Deposit, order_deposit_from_excel, 30);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, finance_Deposit, 20);
+		finance_Deposit.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.sendKeys(driver, finance_Deposit, finance_deposit_from_excel, 30);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
-		Thread.sleep(2000);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-
-		document_fee.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String document_fee_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
+		 ExplicitWait.visibleElement(driver, document_fee, 30);		
+		   String document_fee_copied = document_fee.getAttribute("value");
 
 		ExplicitWait.visibleElement(driver, balance_to_finance_value, 30);
 		Thread.sleep(4000);
@@ -1305,8 +1325,8 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 
 		double[] monthlyFinanceAndBalanceToFinance = obj_read_excel_calculation_page
 				.get_monthly_total_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
-						part_exchange_actual, part_exchange_given, less_finance_settlement, order_deposit,
-						finance_deposit, document_fee_copied, sheet_name);
+						part_exchange_actual, part_exchange_given_from_excel, less_finance_settlement_from_excel, order_deposit_from_excel,
+						finance_deposit_from_excel, document_fee_copied, sheet_name);
 
 		double monthly_total_payment_expected = monthlyFinanceAndBalanceToFinance[0];
 		double balance_to_finance_expected = monthlyFinanceAndBalanceToFinance[1];

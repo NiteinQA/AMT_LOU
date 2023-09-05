@@ -1,13 +1,12 @@
 package com.amt.CustomerQuotePackage;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.poi.ss.formula.FormulaParseException;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -152,8 +151,51 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains(text(),' Holding cost summary ')]")
 	private WebElement holding_cost_summary;
+	
+    @FindBy(xpath = "//p[contains(text(),'Holding cost')]")
+	private WebElement holding_cost;
 
+	@FindBy(xpath = "//*[contains(text(),'CAP residual value')]//ancestor::div[1]//p//strong")
+	private WebElement holding_cost_summary_residual_value_used;
+
+	@FindBy(xpath = "//*[normalize-space()='Total CAP maint. value (ex. VAT):']//ancestor::div[1]//p|//*[normalize-space()='Total CAP maint. value (ex. VAT) :']//ancestor::div[1]//p")
+	private WebElement total_cap_maintenance_value;
+
+	@FindBy(xpath = "//*[@id='headingCustomerQuote']/div[2]/div/div[1]/div/p/strong")
+	private WebElement holding_cost_summary_terms;
+
+	@FindBy(xpath = "//*[@id='headingCustomerQuote']/div[2]/div/div[2]/div/p/strong")
+	private WebElement holding_cost_summary_mileage;
+
+	@FindBy(xpath = "//input[@id='ResidualValue']")
+	private WebElement residual_value_used;
+
+	@FindBy(xpath = "//input[@id='Maintenancevalue3']")
+	private WebElement maintenance_cost_used;
+
+	@FindBy(xpath = "//*[@id='ResidualPercentage']")
+	private WebElement holding_cost_percentage_cap_residual_value_used;
+
+	@FindBy(xpath = "//input[@id='CapMaintenancePercentage']")
+	private WebElement holding_cost_percentage_maintenance_cost_used;
+
+	
+	Properties prop;
+	
 	public CustomerQuotePageOutrightFLPage() {
+		
+
+		try {
+			 prop = new Properties();
+			FileInputStream ip = new FileInputStream(
+					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		PageFactory.initElements(driver, this);
 	}
 
@@ -229,7 +271,7 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 
 		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 
-		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
+	
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
@@ -393,7 +435,7 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 
 		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 
-		jse.executeScript("arguments[0].click();", check_box_supplier_setting_finance, 20);
+	
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
@@ -693,8 +735,58 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 			InterruptedException, ClassNotFoundException, FormulaParseException, IllegalStateException {
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 		Click.on(driver, customer_quote, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		Click.on(driver, customer_quote_maintenance_toggle_button, 40);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		Click.on(driver, holding_cost, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.on(driver, holding_cost_summary, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		ExplicitWait.visibleElement(driver, holding_cost_summary_terms, 30);
+
+		double duration = Double.parseDouble(holding_cost_summary_terms.getText().substring(0, 2));
+
+		ExplicitWait.visibleElement(driver, holding_cost_summary_mileage, 30);
+
+		double annual_mileage = Double.parseDouble(RemoveComma.of(holding_cost_summary_mileage.getText()));
+
+		ExplicitWait.visibleElement(driver, holding_cost_percentage_cap_residual_value_used, 20);
+		ExplicitWait.visibleElement(driver, holding_cost_percentage_maintenance_cost_used, 20);
+		ExplicitWait.visibleElement(driver, residual_value_used, 20);
+		ExplicitWait.visibleElement(driver, maintenance_cost_used, 20);
+		
+
+		double percentage_cap_residual_value = Double.parseDouble(holding_cost_percentage_cap_residual_value_used.getAttribute("value"));
+		
+		
+		Thread.sleep(1000);
+		
+
+		double percentage_cap_maintenance_cost =  Double.parseDouble(holding_cost_percentage_maintenance_cost_used.getAttribute("value"));
+
+		Thread.sleep(1000);		
+	
+		double used_residual_value =  Double.parseDouble(residual_value_used.getAttribute("value"));
+
+		
+		Thread.sleep(1000);	
+		
+	
+		double total_cap_maintenance_value_converted =  Double.parseDouble(maintenance_cost_used.getAttribute("value"));
+
+		
+		Thread.sleep(1000);
+
+		Click.on(driver, customer_quote, 50);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 160);	
+		
+		obj_read_excel_calculation_page.write_holding_cost_cap_values_to_excel_with_maintenance(duration,
+				annual_mileage, used_residual_value, total_cap_maintenance_value_converted,
+				percentage_cap_residual_value, percentage_cap_maintenance_cost, sheet_name);
 		obj_read_excel_calculation_page.set_global_variables_to_excel_for_finance_lease(sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_with_maintenance(driver,
@@ -1111,12 +1203,7 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 
 		Actions act = new Actions(driver);
 
-		ExplicitWait.visibleElement(driver, summary_final_balloon_input_field, 30);
-
-		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String default_final_balloon = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_final_balloon_converted = Double.parseDouble(default_final_balloon);
+		double default_final_balloon_converted =  Double.parseDouble(summary_final_balloon_input_field.getAttribute("value"));
 
 		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
@@ -1204,12 +1291,7 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 
 		Actions act = new Actions(driver);
 
-		ExplicitWait.visibleElement(driver, summary_final_balloon_input_field, 30);
-
-		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String default_final_balloon = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_final_balloon_converted = Double.parseDouble(default_final_balloon);
+		double default_final_balloon_converted =  Double.parseDouble(summary_final_balloon_input_field.getAttribute("value"));
 
 		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 

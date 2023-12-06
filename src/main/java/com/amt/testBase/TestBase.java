@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -72,8 +73,17 @@ public class TestBase {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			
+			
+			//WebDriverManager.edgedriver().setup();
+			
+			
+			System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");			
+			EdgeOptions options = new EdgeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			
+			driver = new EdgeDriver(options);
+
 		} else {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -92,7 +102,7 @@ public class TestBase {
 
 		prop = new Properties();
 		FileInputStream ip = new FileInputStream(
-				"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\config.properties");
+				"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\config.properties");
 		prop.load(ip);
 
 

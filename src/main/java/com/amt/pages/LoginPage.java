@@ -75,6 +75,8 @@ public class LoginPage extends TestBase {
 		
 		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
 
+		 Thread.sleep(15000);
+		 
 		Click.on(driver, roles_dropdown, 60);
 				
 		Thread.sleep(1000);

@@ -210,10 +210,10 @@ public class ContractTypesAndOTR_HPNR_PCP_Page extends TestBase {
 	public boolean contractTypes_and_OTR_selection_HPNR_PCP_Ownbook_calculation(String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 		Click.on(driver, acq_acq_contractTypes_HPNR, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
 		LO.print(" Acquisition Contract type option = HPNR has been selected");
 		System.out.println("Acquisition Contract type option = HPNR has been selected");
@@ -222,7 +222,7 @@ public class ContractTypesAndOTR_HPNR_PCP_Page extends TestBase {
 		
 		Click.on(driver, acq_contractTypes_customer_contract_PCP, 30);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 		
 		LO.print(" Customer Contract type option = Personal Contract Purchase (PCP) has been selected");		 
 		System.out.println(" Customer Contract type option =Personal Contract Purchase (PCP) has been selected");
@@ -230,13 +230,8 @@ public class ContractTypesAndOTR_HPNR_PCP_Page extends TestBase {
 			
          
 		ExplicitWait.visibleElement(driver, acq_contractTypes_table_calculation_basic_vehicle_price, 30);
-		   acq_contractTypes_table_calculation_basic_vehicle_price.click();
-	       
-		   acq_contractTypes_table_calculation_basic_vehicle_price.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-	       Clipboard clipboard =Toolkit.getDefaultToolkit().getSystemClipboard();
-	       String vehicle_price_copied =(String) clipboard.getData(DataFlavor.stringFlavor);      
-	           
+		String vehicle_price_copied = acq_contractTypes_table_calculation_basic_vehicle_price.getAttribute("value");           
+	          
 	       
 		   obj_read_excel_calculation_page =new ReadExcelCalculationForPurchaseAgreement();
 		   

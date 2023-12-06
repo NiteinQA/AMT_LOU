@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<test thread-count="5" name="Broker Business purchase LOU accept flow">
 		<classes>			
-			<!-- Group 1 - Generate New Quote for Broker Business LOU accept flow for the same -->
+			<!-- Group 1 - Generate New Quote for Broker Business LOU accept flow for the same --> 
 			<class name="com.amt.test.broker.Acquisition_Quotes_Broker_HPNR_Test" />
 			<class name="com.amt.test.LOU.LOU_broker_business_purchase_accept_flow_Test" />		
 		</classes>

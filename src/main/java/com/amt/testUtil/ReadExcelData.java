@@ -21,7 +21,7 @@ public class ReadExcelData extends TestBase {
 	{
 		FileInputStream fis=new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\com\\amt\\testData\\NewTestData.xlsx");
 		
-		System.out.println("NewTestData excel file will get invoke and get the data from the associated sheet ");
+		
 		XSSFWorkbook wb  = new XSSFWorkbook(fis);
 		 XSSFSheet sheet=wb.getSheet(sheetName);//selecting sheet with its name as a parameter
 		 

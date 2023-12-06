@@ -128,7 +128,7 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 	@FindBy(xpath = "//input[@id='lessFinanceSettlement']")
 	private WebElement lessFinancesettlement;
 
-	@FindBy(xpath = "//*[@id='collapseTwo']/div/div[2]/div[10]/div[2]/p")
+	@FindBy(xpath = "//*[@class='salepricerighttpart']//*[text()=' Vehicle sales price ']//ancestor::div[2]//div[2]//p")
 	private WebElement otrScreenPrice;
 
 	@FindBy(xpath = "//*[@class='salepricerighttpart']//*[normalize-space()='Vehicle sales price']//ancestor::div[1]//div[3]")

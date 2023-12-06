@@ -181,9 +181,25 @@ public class QuoteSummaryBrokerPCPPage extends TestBase {
 	
 	 
 
-	
+	Properties prop;
 	
 	public QuoteSummaryBrokerPCPPage() {
+		
+		try
+    	{
+    		prop=new Properties();
+    		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+    		prop.load(ip);                            
+    	}
+    	catch(FileNotFoundException e)
+    	{
+    		e.printStackTrace();
+    	}
+    	catch(IOException e)
+    	{
+    		e.printStackTrace();
+    	}
+
 		PageFactory.initElements(driver, this);
 	}
 

@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <!--
-  <test thread-count="5" name="Test1">
-	  
-	  
-    <classes>
-		
-	 ownbook individual purchase flow without additional term and mileage - Accept Flow	
-	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_without_maintenance_Test"/>
-      <class name="com.amt.test.LOU.LOU_ownbook_individual_purchase_accept_with_changes_Test"/>  
-       
+
+ <!-- <test thread-count="5" name="Ownbook individual purchase flow with funder - Accept Flow">
+    <classes>		
+    
+      
+	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_maintenance_Test"/>
+      <class name="com.amt.test.LOU.LOU_ownbook_individual_purchase_funder_accept_with_changes_Test"/>
+     
     </classes>
-  </test> --> 
+  </test> -->
+  
+  
+  
+  
+  
+  
+   
   
    
 	    <test thread-count="5" name="Ownbook individual purchase flow with additional term and mileage - Accept Flow">
@@ -22,15 +27,15 @@
       <class name="com.amt.test.LOU.LOU_ownbook_individual_purchase_accept_with_changes_Test"/>  
       
     </classes>
-  </test> 
+  </test>  
   
-    <test thread-count="5" name="Ownbook individual purchase flow with funder - Accept Flow">
+  <!--   <test thread-count="5" name="Ownbook individual purchase flow with funder - Accept Flow">
     <classes>		
     
-      <!-- ownbook individual purchase flow with funder - Accept Flow--> 
+      
 	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_ownbook_individual_purchase_funder_accept_with_changes_Test"/>
      
     </classes>
-  </test> <!-- Test -->
+  </test> --> <!-- Test -->
 </suite> <!-- Suite -->

@@ -153,9 +153,25 @@ public class QuoteSummaryBrokerHPNRPage extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Commission']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_commission;
 
-	
+	Properties prop;
 	
 	public QuoteSummaryBrokerHPNRPage() {
+		
+		try
+    	{
+    		prop=new Properties();
+    		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+    		prop.load(ip);                            
+    	}
+    	catch(FileNotFoundException e)
+    	{
+    		e.printStackTrace();
+    	}
+    	catch(IOException e)
+    	{
+    		e.printStackTrace();
+    	}
+
 		PageFactory.initElements(driver, this);
 	}
 
@@ -316,7 +332,11 @@ public class QuoteSummaryBrokerHPNRPage extends TestBase {
 	FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 	wb.write(out);
 	wb.close();
-	 }
+	 
+	LO.print("Quote Summary Data collected and sent to Quote save Excel");
+	System.out.println("Quote Summary Data collected and sent to Quote save Excel");
+
+	}
 
 	
 }

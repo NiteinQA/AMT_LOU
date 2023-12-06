@@ -201,7 +201,9 @@ public class HoldingCost_HPNR_PCP_Page extends TestBase {
 		LO.print("Clicked on holding cost summary");
 		System.out.println("Clicked on holding cost summary");
 		
-		Click.on(driver, maintenance_toggle_button, 120);		
+		Click.on(driver, maintenance_toggle_button, 120);	
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		
 		ExplicitWait.visibleElement(driver, total_cap_maintenance_value, 120);
 		

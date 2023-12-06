@@ -161,7 +161,7 @@ public class Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_mai
 
 		obj_quote_summary_page = new QuoteSummary_HPNR_HPNRPage();
 		
-		
+		obj_quote_summary_page.save_quote();
 
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);
@@ -178,22 +178,7 @@ public class Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_mai
 				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
 		// Assert.assertTrue(quote_summary_configuration_value_check);
 
-		obj_quote_summary_page.save_quote();
-
-		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
-		Assert.assertTrue(quote_summary_OTR_calculation1);
-
-		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
-				.quote_summary_holding_cost_calculation_for_funder_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_holding_cost_calculation1);
-
-		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
-				.quote_summary_customer_quote_summary_value_verification_for_funder_without_maintenance(sheet_name); // Assert.assertTrue(quote_summary_customer_quote_calculation);
-
-		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
-				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
-		// Assert.assertTrue(quote_summary_configuration_value_check1);
-
+	
 		boolean value_check_after_Base_Int_change = obj_quote_summary_page
 				.quote_summary_edit_base_int_rate_value_verification_for_funder_without_maintenance(sheet_name);
 		// Assert.assertTrue(value_check_after_Base_Int_change);

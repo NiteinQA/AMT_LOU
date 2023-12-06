@@ -141,7 +141,26 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
 	private WebElement quote_summary_save_button;
 	
+	Properties prop;
+	
+	
 	public QuoteSummaryBrokerPCHPage() {
+		
+		try
+    	{
+    		prop=new Properties();
+    		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+    		prop.load(ip);                            
+    	}
+    	catch(FileNotFoundException e)
+    	{
+    		e.printStackTrace();
+    	}
+    	catch(IOException e)
+    	{
+    		e.printStackTrace();
+    	}
+
 		PageFactory.initElements(driver, this);
 	}
 
@@ -269,6 +288,10 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		wb.write(out);
 		wb.close();
+		
+		LO.print("Quote Summary Data collected and sent to Quote save Excel");
+		System.out.println("Quote Summary Data collected and sent to Quote save Excel");
+
 
 	}
 

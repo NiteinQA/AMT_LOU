@@ -697,9 +697,25 @@ public class QuoteSummary_HPNR_HPNRPage extends TestBase {
 				+ holding_cost_total_monthly_holding_cost_from_screen_converted);
 		System.out.println("holding_cost_total_monthly_holding_cost_from_screen ="
 				+ holding_cost_total_monthly_holding_cost_from_screen_converted);
-
-		double holding_cost_terms_from_excel = GetExcelFormulaValue.get_formula_value(52, 0, sheet_name);
-		double holding_cost_miles_per_annum_from_excel = GetExcelFormulaValue.get_formula_value(51, 1, sheet_name);
+		double holding_cost_terms_from_excel=0 ;
+		try {
+		 holding_cost_terms_from_excel = GetExcelFormulaValue.get_formula_value(52, 0, sheet_name);
+        }
+        catch(Exception e)
+           {
+   		 holding_cost_terms_from_excel = GetExcelFormulaValue.get_string_value(52, 0, sheet_name);
+             }
+		
+		double holding_cost_miles_per_annum_from_excel=0 ;
+		try {
+			holding_cost_miles_per_annum_from_excel = GetExcelFormulaValue.get_formula_value(51, 1, sheet_name);
+        }
+        catch(Exception e)
+           {
+        	holding_cost_miles_per_annum_from_excel = GetExcelFormulaValue.get_string_value(51, 1, sheet_name);
+             }
+		
+		
 			double holding_cost_monthly_finance_cost_from_excel = GetExcelFormulaValue.get_formula_value(45, 7, sheet_name);
 		double holding_cost_total_monthly_holding_cost_from_excel = GetExcelFormulaValue.get_formula_value(52, 1,
 				sheet_name);
@@ -1913,10 +1929,23 @@ public class QuoteSummary_HPNR_HPNRPage extends TestBase {
 		
 		
 		// getting values from excel
+		double terms =0;
+		try {
+		 terms = GetExcelFormulaValue.get_formula_value(208, 1, sheet_name);
+        }catch(Exception e)
+        {
+   		 terms = GetExcelFormulaValue.get_string_value(208, 1, sheet_name);	
+        }
+		
+		double miles =0;
+		try {
+			 miles = GetExcelFormulaValue.get_formula_value(208, 4, sheet_name);
+        }catch(Exception e)
+        {
+        	 miles = GetExcelFormulaValue.get_string_value(208, 4, sheet_name);
+        }
 
-		double terms = GetExcelFormulaValue.get_formula_value(208, 1, sheet_name);
-		double miles = GetExcelFormulaValue.get_formula_value(208, 4, sheet_name);
-
+		
 		double basicCashPrice = GetExcelFormulaValue.get_formula_value(214, 0, sheet_name);
 		double vat = GetExcelFormulaValue.get_formula_value(214, 1, sheet_name);
 		double nonVATItems = GetExcelFormulaValue.get_formula_value(214, 4, sheet_name);

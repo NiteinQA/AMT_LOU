@@ -32,7 +32,7 @@ public class ReadExcelCalculation extends TestBase {
 			// Properties class object initialization
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
 			// load property file
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
@@ -1658,9 +1658,7 @@ public class ReadExcelCalculation extends TestBase {
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 		
 		
-		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("CP_")) {
-			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B66*B69");
-		}
+		wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 

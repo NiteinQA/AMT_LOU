@@ -224,14 +224,8 @@ public class ContractTypesAndOTR_CP_PCH_Page extends TestBase {
 		System.out.println(" Customer Contract type option = Purchase Contract Hire(PCH) has been selected");
 
 		ExplicitWait.visibleElement(driver, acq_contractTypes_table_calculation_basic_vehicle_price, 30);
-		   acq_contractTypes_table_calculation_basic_vehicle_price.click();
-	       
-		   acq_contractTypes_table_calculation_basic_vehicle_price.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-	       Clipboard clipboard =Toolkit.getDefaultToolkit().getSystemClipboard();
-	       String vehicle_price_copied =(String) clipboard.getData(DataFlavor.stringFlavor);      
-	           
-	       
+		String vehicle_price_copied = acq_contractTypes_table_calculation_basic_vehicle_price.getAttribute("value");           
+	         
 		   obj_read_excel_calculation_page =new ReadExcelCalculation();
 		   
 		   double subtotal_after_discount_excel= obj_read_excel_calculation_page.verify_table_calculations_contract_types_page(driver, vehicle_price_copied, acq_contractTypes_table_calculation_basic_paint_price,acq_contractTypes_table_calculation_basic_options_price, acq_contractTypes_calculation_table_discount, acq_contractTypes_calculation_table_additional_discount, sheet_name);

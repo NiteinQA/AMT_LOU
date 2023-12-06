@@ -456,6 +456,8 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 
 		Click.sendKeys(driver, document_fee, documentFee, 30);
 		
+		act.sendKeys(Keys.TAB).perform();
+		
 		
 		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 20);
 		double vehicle_sales_price_from_screen_converted =  Double.parseDouble(vehicle_sale_price_used_vehicle.getAttribute("value"));
@@ -474,6 +476,10 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 
 		double pendingAmountFromScreen = Double
 				.parseDouble(RemoveComma.of(pending_amount.getText().trim().substring(2)));
+		
+		System.out.println("Pending Amount from screen " +pendingAmountFromScreen);
+		System.out.println("Pending Amount from formula " +pendingAmountExpected);
+		
 
 		double diff = Difference.of_two_Double_Values(pendingAmountExpected, pendingAmountFromScreen);
 

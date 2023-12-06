@@ -1,9 +1,11 @@
 package com.amt.QuoteSummaryPages;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
@@ -134,7 +136,25 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Monthly maint. rental']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_monthly_maintenance_rental;
 
+	Properties prop;
+	
 	public QuoteSummaryBrokerBCHPage() {
+		
+		try
+    	{
+    		prop=new Properties();
+    		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+    		prop.load(ip);                            
+    	}
+    	catch(FileNotFoundException e)
+    	{
+    		e.printStackTrace();
+    	}
+    	catch(IOException e)
+    	{
+    		e.printStackTrace();
+    	}
+
 		PageFactory.initElements(driver, this);
 	}
 
@@ -264,6 +284,10 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 		FileOutputStream out = new FileOutputStream(prop.getProperty("quote_save_excel_path"));
 		wb.write(out);
 		wb.close();
+		
+		LO.print("Quote Summary Data collected and sent to Quote save Excel");
+		System.out.println("Quote Summary Data collected and sent to Quote save Excel");
+
 
 //		return obj_read_excel_calculation_page
 //				.verify_quote_summary_values_for_broker_bch_pch_fl_from_excel_without_maintenance(

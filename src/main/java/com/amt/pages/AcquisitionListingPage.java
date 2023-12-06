@@ -88,6 +88,8 @@ public class AcquisitionListingPage extends TestBase {
 
 	public void aquisition_Listingpage_AddnewQuote() throws InterruptedException {
 
+		Thread.sleep(25000);
+		
 		Click.on(driver, roles_dropdown, 60);
 		
 		 Thread.sleep(1000);
@@ -96,8 +98,6 @@ public class AcquisitionListingPage extends TestBase {
 					
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
-
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
 		ExplicitWait.clickableElement(driver, aquisition_quotes_button, 30);
@@ -262,6 +262,10 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 		
 		if (classOrMethodName.contains("ownbook_individual_purchase_funder")) {
 			sheetName = prop.getProperty("HPNRPCPFunderQuoteNo");
+		}
+		
+		if (classOrMethodName.contains("OP_OP")) {
+			sheetName = prop.getProperty("OP-OP");
 		}
 		
 		

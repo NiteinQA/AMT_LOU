@@ -178,22 +178,6 @@ public class Acquisition_Quotes_HPNR_PCP_without_maintenance_Test extends TestBa
 		obj_quote_summary_page = new QuoteSummary_HPNR_PCP_Page();
 		
 		
-		
-		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
-		Assert.assertTrue(quote_summary_OTR_calculation);
-
-		boolean quote_summary_holding_cost_calculation = obj_quote_summary_page
-				.quote_summary_holding_cost_calculation_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_holding_cost_calculation);
-
-		boolean quote_summary_customer_quote_calculation = obj_quote_summary_page
-				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);
-		// Assert.assertTrue(quote_summary_customer_quote_calculation);
-
-		boolean quote_summary_configuration_value_check = obj_quote_summary_page
-				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
-		// Assert.assertTrue(quote_summary_configuration_value_check);
-		
 		obj_quote_summary_page.save_quote();
 		
 		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
@@ -211,7 +195,7 @@ public class Acquisition_Quotes_HPNR_PCP_without_maintenance_Test extends TestBa
 				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_configuration_value_check1);
 
-
+		
 		boolean value_check_after_Base_Int_change = obj_quote_summary_page
 				.quote_summary_edit_base_int_rate_value_verification_without_maintenance(sheet_name);
 		//Assert.assertTrue(value_check_after_Base_Int_change);

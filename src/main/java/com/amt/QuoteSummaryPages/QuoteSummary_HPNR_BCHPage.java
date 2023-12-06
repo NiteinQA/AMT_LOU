@@ -217,6 +217,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Total monthly rental']//ancestor::div[1]//div//strong|//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_monthly_total_rental;
 	
+	Properties prop;
+	
 	public QuoteSummary_HPNR_BCHPage() {
 		
 		try {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Used Car Ownbook Individual hire">
+    <classes>
+      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test"/>
+      <class name="com.amt.test.LOU.LOU_used_car_ownbook_individual_hire_accept_with_changes_Test"/>
+    </classes>
+  </test> <!-- Used Car Ownbook Individual hire -->
+</suite> <!-- Suite -->

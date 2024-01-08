@@ -145,26 +145,31 @@ public class Opportunities extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Documents']")
 	private WebElement opp_documents_button;
 
-	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[8]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td[7]/div/div/div/span")
+//	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[8]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td[7]/div/div/div/span")
+//	private WebElement opp_find_channel_status;
+	
+	@FindBy(xpath = "//*[@class='status']")
 	private WebElement opp_find_channel_status;
+	
 
-	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td[8]/div/a[4]")
+//	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td[8]/div/a[4]")
+//	private WebElement opp_find_send_contract_icon;
+
+	@FindBy(xpath = "//*[@title='Send Contract']")
 	private WebElement opp_find_send_contract_icon;
+	
 
-	@FindBy(xpath = "//*[@id=\"sendcontractmodal\"]/div/div/div[3]/div/button[2]")
+	@FindBy(xpath = "//*[@id='sendcontractmodal']//*[text()='Send']")
 	private WebElement send_contract_to_customer_pop_up_send_button;
 
 	// Channel data
-
-	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td")
-	private List<WebElement> channel_data;
 
 	// New status
 
 	@FindBy(xpath = "//tr[@class='ng-star-inserted']//td[9]")
 	private WebElement opp_current_status_open;
 
-	@FindBy(xpath = "//tr[@class='ng-star-inserted']//td[10]")
+	@FindBy(xpath = "//div[@class='status']")
 	private WebElement opp_current_status_proposal;
 
 	@FindBy(xpath = "//tr[@class='border ng-star-inserted']//td[8]")
@@ -1338,6 +1343,7 @@ public class Opportunities extends TestBase {
 		}catch(Exception e) 
 		{
 			driver.navigate().refresh();
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 300);
 			ExplicitWait.visibleElement(driver, opp_current_status_quoteref, 50);
 		}
 		
@@ -1532,53 +1538,7 @@ public class Opportunities extends TestBase {
 
 	}
 
-	public void opp_verify_channel_data() throws Exception
-
-	{
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-
-		ExplicitWait.waitForListOfVisibleElements(driver, channel_data, 20);
-
-		String[] data = new String[channel_data.size()];
-
-		System.out.println("size  =" + channel_data.size());
-
-		for (int i = 0; i <= channel_data.size() - 1; i++)
-
-		{
-
-			data[i] = channel_data.get(i).getText();
-
-			// System.out.println("Data =" + data[i]);
-
-//	System.out.println("Data =" + data[i]);
-
-		}
-
-		System.out.println("Quote Ref => " + data[0]);
-		LO.print("Quote Ref => " + data[0]);
-
-		System.out.println("Vehicle => " + data[1]);
-		LO.print("Vehicle => " + data[1]);
-
-		System.out.println("Contract type => " + data[2]);
-		LO.print("Contract type => " + data[2]);
-
-		System.out.println("Mothly Payment => " + data[3]);
-		LO.print("Mothly Payment => " + data[3]);
-
-		System.out.println("Term/Mileage =>" + data[4]);
-		LO.print("Term/Mileage =>" + data[4]);
-
-		System.out.println("Expiry Date =>" + data[5]);
-		LO.print("Expiry Date =>" + data[5]);
-
-		System.out.println("Status =>" + data[6]);
-		LO.print("Status =>" + data[6]);
-
-	}
-
+	
 	// Add Appointment from
 
 	public void opp_add_appoitment_button() throws Exception
@@ -1808,11 +1768,11 @@ public class Opportunities extends TestBase {
 	public boolean verify_current_status_of_opportunity_after_contract_signed() throws Exception
 
 	{
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		ExplicitWait.visibleElement(driver, opp_current_status_proposal, 40);
 
 		ExplicitWait.visibleElement(driver, opp_current_status_channel, 40);

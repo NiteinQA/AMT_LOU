@@ -72,7 +72,7 @@ public class OptionsAccessoriesPage extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 		
 	    try {
-		 try { Click.on(driver, ok_pop_up, 30);}catch(Exception e) {}
+		 try { Click.on(driver, ok_pop_up, 10);}catch(Exception e) {}
 	    }
 	    catch(Exception e)
 	    {

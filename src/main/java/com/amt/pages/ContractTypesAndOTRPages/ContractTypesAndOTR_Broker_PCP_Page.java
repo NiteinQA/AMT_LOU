@@ -146,7 +146,7 @@ public class ContractTypesAndOTR_Broker_PCP_Page extends TestBase {
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 100);
 		try {
 
 			Click.on(driver, acq_contractTypes_option_broker, 50);
@@ -155,9 +155,13 @@ public class ContractTypesAndOTR_Broker_PCP_Page extends TestBase {
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
-			Click.on(driver, popup_yes, 50);
+			try {
+			Click.on(driver, popup_yes, 10);
 			Thread.sleep(2000);
-
+			}catch(Exception e1)
+			{
+				
+			}
 		}
 	
 

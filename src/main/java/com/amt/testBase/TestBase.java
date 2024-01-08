@@ -59,13 +59,11 @@ public class TestBase {
 
 			System.setProperty("webdriver.chrome.driver","D:\\chromedriver-win64\\chromedriver.exe");
 			//WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-		
-		
+			ChromeOptions options = new ChromeOptions();	
 		
 			options.addArguments("--remote-allow-origins=*");
-			options.addArguments("force-device-scale-factor=0.67");
-			options.addArguments("high-dpi-support=0.67");
+//			options.addArguments("force-device-scale-factor=0.67");
+//			options.addArguments("high-dpi-support=0.67");
 //			options.addArguments("--headless=new");
 			driver = new ChromeDriver(options);
 

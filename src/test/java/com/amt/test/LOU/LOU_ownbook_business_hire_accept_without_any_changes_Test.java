@@ -338,16 +338,8 @@ public class LOU_ownbook_business_hire_accept_without_any_changes_Test extends T
 		
 		obj_Underwriting_page = new Underwriting();
 
-		// obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-
-		// obj_Underwriting_page.find_underwriting_listing_detail_listing_yes_option();
-
-		// obj_Underwriting_page.find_underwriting_tab_decision_page();
 		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
 
-		// obj_Underwriting_page.find_underwriting_tab_decision_page_accept_upload();
-		// //
-		// obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
 
 		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
 

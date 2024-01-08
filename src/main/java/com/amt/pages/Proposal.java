@@ -241,10 +241,8 @@ private List<WebElement> loading_icon;
 		//////////////////////////////// Proposal listing ////////////////////////
 	
 	
-	@FindBy(xpath = "//*[@id='cWraper']/div/app-opportunity-management/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr[1]/td[10]/div/div/div/div")
-	private WebElement 	opp_proposal_status ;
-	
-	
+	@FindBy(xpath = "//*[@class='status']")
+	private WebElement 	opp_proposal_status;	
 	
 	
 	@FindBy(xpath = "//*[@title='Send Proposal']")
@@ -1349,7 +1347,7 @@ private WebElement proposal_save ;
 		 
 		 System.out.println("*****************Proposal updated successfully****************************");
 			System.out.println("*********************************************");
-		 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 			
 	}
 	

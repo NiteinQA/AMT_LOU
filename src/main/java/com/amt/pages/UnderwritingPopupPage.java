@@ -685,7 +685,7 @@ public class UnderwritingPopupPage extends TestBase {
 		
 		
 		
-		String quotRefNoExpected            = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
+		String quotRefNoExpected            = GetExcelFormulaValue.get_cell_value(1, 0, sheetName).trim();
 		String vehicleNameExpected          = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 		
 		String contractTypeExpected         = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
@@ -1175,7 +1175,7 @@ public class UnderwritingPopupPage extends TestBase {
 		wb.write(out);
 		
 		
-		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
+		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName).trim();
 		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 		
 		String contractTypeExpected                           = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);		
@@ -3727,7 +3727,7 @@ public class UnderwritingPopupPage extends TestBase {
 		
 		// Getting Elements from excel sheet 
 		
-		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
+		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName).trim();
 		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 		
 		String contractTypeExpected                          = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);
@@ -4381,7 +4381,7 @@ public class UnderwritingPopupPage extends TestBase {
 		
 		// Getting Elements from excel sheet 
 		
-		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
+		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName).trim();
 		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 		
 		String contractTypeExpected                          = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);

@@ -659,7 +659,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 	}
 
 	public void quote_summary_HPNR_BCH_without_maintenance(String sheet_name) throws InterruptedException, IOException {		LO.print("*************Calculations for Quote Summary page gas been started************");
-	System.out.println("*************Calculations for Quote Summary page gas been started************");
+	
+	System.out.println("");
 
 	obj_read_excel_calculation_page = new ReadExcelCalculation();
 

@@ -82,7 +82,7 @@ public class Leads extends TestBase {
 	@FindBy(xpath = "//button[contains(text(), 'Add new vehicle request')]")
 	private WebElement add_new_vehicle_request;
 
-	@FindBy(xpath = "//*[@id='vehiclinfo2']/div/div/div/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]")
+	@FindBy(xpath = "//ng-multiselect-dropdown//*[text()='Channel']")
 	private WebElement channel;
 
 	@FindBy(xpath = "//*[@class='item2']")
@@ -192,28 +192,21 @@ public class Leads extends TestBase {
 
 // 	 	Map_New_quote_icon
 
-	@FindBy(xpath = "//*[@id='vehicleRequest2']/div/div/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div/table/tbody/tr/td[8]/div/a[3]/img")
+	@FindBy(xpath = "//*[@title='Map New Quote']")
 	private WebElement Map_New_quote_icon;
 
-	// *[@id="vehicleRequest2"]/div/div/div[2]/div/div/div/app-grid/div[2]/div/div[2]/div/table/tbody/tr/td[9]/div/a[3]/img
 
-	//// *[@id="MapNewQuote"]/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span
-
-//	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[1]/span/span[2]/span")
-//	private WebElement acquisition_contract_type;
-	
-	
 	
 	@FindBy(xpath = "//*[@placeholder='Select Acquisition contract']//span//span[1]")
 	private WebElement acquisition_contract_type;
 
 	
-	@FindBy(xpath = "//*[@id='MapNewQuote']/div/div/div[2]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/ng-multiselect-dropdown/div/div[2]/ul[2]/li/div")
+	@FindBy(xpath = "//*[@placeholder='Select Acquisition contract']//*[text()='Broker']")
 	private WebElement acquisition_contract_type_broker_value;
 
 	// acquisition_contract_type_ownbook_value
 
-	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[4]/div[1]")
+	@FindBy(xpath = "//*[@placeholder='Select Acquisition contract']//*[text()='Hire Purchase Non-Regulated']")
 	private WebElement acquisition_contract_type_ownbook_value;	
 	
 	
@@ -1030,6 +1023,8 @@ public class Leads extends TestBase {
 		LO.print("Click on Map New Quote icon");
 		System.out.println("Click on Map New Quote icon");
 
+		Thread.sleep(5000);
+		
 		Click.on(driver, Map_New_quote_icon, 120);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
@@ -1270,7 +1265,7 @@ public class Leads extends TestBase {
 		
 		if (className.contains("ownbook")) 
 		{
-			LocalDate futureDate = LocalDate.now().plusMonths(1);			
+			LocalDate futureDate = LocalDate.now().plusMonths(1).minusDays(1);	
 			String str1[] = String.valueOf(futureDate).split("-");			
 			expiryDateExpected = str1[2].concat("/").concat(str1[1]).concat("/").concat(str1[0]);
 		}

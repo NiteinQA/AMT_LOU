@@ -160,29 +160,6 @@ public class LOU_broker_individual_purchase_accept_flow_Test extends TestBase {
 		obj_Opportunities_Page.opp_find_send_contract_icon();
 	}
 
-	/*
-	 * @Test( priority=7)
-	 * 
-	 * public void
-	 * broker_create_opportunity_individual_currentstatus_after_sending_to_contract()
-	 * throws Exception { obj_Opportunities_Page = new Opportunities();
-	 * 
-	 * 
-	 * 
-	 * 
-	 * // Opportunity listing screen - Proposal status boolean
-	 * opp_AfterCurrentStatus_contract =obj_Opportunities_Page.
-	 * verify_current_status_of_opportunity_after_sending_to_customer_contract();
-	 * 
-	 * Assert.assertTrue(opp_AfterCurrentStatus_contract);
-	 * 
-	 * 
-	 * 
-	 * System.out.println( "Status Verified : Sent to customer ");
-	 * LO.print("Status Verified : Status Verified : Sent to customer");
-	 * 
-	 * }
-	 */
 
 	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_individual_sending_to_contract" })
 
@@ -232,19 +209,6 @@ public class LOU_broker_individual_purchase_accept_flow_Test extends TestBase {
 
 	}
 
-	/*
-	 * @Test(priority = 9)
-	 * 
-	 * public void L9_ownbook_status_after_contract_signed() throws Exception {
-	 * 
-	 * obj_Opportunities_Page = new Opportunities();
-	 * 
-	 * boolean CurrentStatusafterContractSigned = obj_Opportunities_Page
-	 * .verify_current_status_of_opportunity_after_contract_signed();
-	 * Assert.assertTrue(CurrentStatusafterContractSigned);
-	 * 
-	 * }
-	 */
 
 	@Test(priority = 9 , dependsOnMethods = { "L8_verify_signed_contract_status_with_api_call" })
 
@@ -333,26 +297,6 @@ public class LOU_broker_individual_purchase_accept_flow_Test extends TestBase {
 
 	}
 
-	/*
-	 * @Test(priority = 14)
-	 * 
-	 * public void UW6_verify_ownbook_underwriting_proposal_decision_with_declined()
-	 * throws Exception {
-	 * 
-	 * obj_Underwriting_page = new Underwriting();
-	 * 
-	 * //obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-	 * obj_Underwriting_page.find_underwriting_tab_decision_page();
-	 * 
-	 * obj_Underwriting_page.find_decision_decline(); obj_Underwriting_page.
-	 * verification_underwriting_tab_decision_page_saveandexit_button();
-	 * 
-	 * boolean statusofdecline = obj_Underwriting_page
-	 * .verify_current_status_of_underwriting_after_sending_to_decline();
-	 * Assert.assertTrue(statusofdecline);
-	 * 
-	 * }
-	 */
 
 	@Test(priority = 14, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
 
@@ -362,11 +306,6 @@ public class LOU_broker_individual_purchase_accept_flow_Test extends TestBase {
 		
 		obj_Underwriting_page = new Underwriting();
 
-		// obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-
-		// obj_Underwriting_page.find_underwriting_listing_detail_listing_yes_option();
-
-		// obj_Underwriting_page.find_underwriting_tab_decision_page();
 		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
 
 		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_upload();
@@ -375,13 +314,6 @@ public class LOU_broker_individual_purchase_accept_flow_Test extends TestBase {
 
 		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
 
-		obj_Underwriting_page.verify_underwriting_proposal_search_text_box();
-
-		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-
-		obj_Underwriting_page.find_underwriting_tab_decision_page();
-
-		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
 
 		// Assert for Accept condition
 		boolean statusofaccept = obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept();
@@ -389,61 +321,7 @@ public class LOU_broker_individual_purchase_accept_flow_Test extends TestBase {
 
 	}
 
-	/*
-	 * @Test(priority = 13)
-	 * 
-	 * public void
-	 * UW7_verify_ownbook_underwriting_proposal_decision_accept_with_changes
-	 * ()throws Exception {
-	 * 
-	 * obj_Underwriting_page = new Underwriting();
-	 * 
-	 * //obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-	 * 
-	 * 
-	 * 
-	 * //obj_Underwriting_page.find_underwriting_tab_decision_page();
-	 * obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
-	 * obj_Underwriting_page.ownbook_accept_with_change_the_data_quote();
-	 * 
-	 * 
-	 * obj_Underwriting_page.
-	 * verification_underwriting_tab_decision_page_saveandexit_button();
-	 * 
-	 * // obj_Underwriting_page.find_underwriting_decision_yes_option();
-	 * 
-	 * 
-	 * // Assert for Accept condition boolean statusofaccept =
-	 * obj_Underwriting_page.
-	 * verify_current_status_of_underwriting_after_sending_to_accept_with_changes();
-	 * Assert.assertTrue(statusofaccept);
-	 * 
-	 * }
-	 */
 
-//	@Test(priority = 16 , dependsOnMethods = { "UW5_verify_ownbook_underwriting_proposal_decision_with_accept" })
-//
-//	public void UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes() throws Exception {
-//
-//		obj_Opportunities_Page = new Opportunities();
-//		obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
-//
-//		obj_Opportunities_Page.opp_menu_link();
-//
-//		obj_Opportunities_Page.verify_opportunity_broker_individual_quote_search_text_box();
-//
-//	}
-//
-//	@Test(priority = 17, dependsOnMethods = { "UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes" })
-//
-//	public void UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up() throws Exception
-//
-//	{
-//		obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
-//
-//		obj_Underwriting_Popup_Page.search_and_verify_underwriting_icon_is_availabale();
-//
-////obj_Underwriting_Popup_Page.verify_ownbook_underwriting_popup_accept_with_change_flow();
-//
-//	}
+
+
 }

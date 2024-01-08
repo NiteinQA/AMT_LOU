@@ -281,36 +281,112 @@ public String calculation_sheet_name_from_quote_save_excel_sheet(String classOrM
 	
 	
 	if (classOrMethodName.contains("ownbook_business_hire")) {
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_business_hire");	
+		}else
+		{
 		sheetName = prop.getProperty("calculation_sheet_ownbook_business_hire");
-	}
+		}
+		}
 
 	if (classOrMethodName.contains("ownbook_individual_hire")) {
-		sheetName = prop.getProperty("calculation_sheet_ownbook_individual_hire");
+		
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_individual_hire");	
+		}else
+		{
+			sheetName = prop.getProperty("calculation_sheet_ownbook_individual_hire");
+		}
+		
+		
 	}
 
 	if (classOrMethodName.contains("ownbook_business_purchase")) {
-		sheetName = prop.getProperty("calculation_sheet_ownbook_business_purchase");
+		
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_business_purchase");	
+		}else
+		{
+			sheetName = prop.getProperty("calculation_sheet_ownbook_business_purchase");
+		}
+				
 	}
 
 	if (classOrMethodName.contains("ownbook_individual_purchase")) {
-		sheetName = prop.getProperty("calculation_sheet_ownbook_individual_purchase");
+		
+		
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_individual_purchase");	
+		}else
+		{
+			sheetName = prop.getProperty("calculation_sheet_ownbook_individual_purchase");
+		}
+		
+		
 	}
+
 	
 	
 	if (classOrMethodName.contains("ownbook_business_hire_funder")) {
+		
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_business_hire_funder");
+	
+		}else {		
 		sheetName = prop.getProperty("calculation_sheet_ownbook_business_hire_funder");
-	}
+		}
+		}
+	
+
 	
 	if (classOrMethodName.contains("ownbook_individual_hire_funder")) {
-		sheetName = prop.getProperty("calculation_sheet_ownbook_individual_hire_funder");
+		
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_individual_hire_funder");
+
+		}else
+		{
+			sheetName = prop.getProperty("calculation_sheet_ownbook_individual_hire_funder");
+
+		}
+		
+		
 	}
 	
+
+	
+	
 	if (classOrMethodName.contains("ownbook_business_purchase_funder")) {
-		sheetName = prop.getProperty("calculation_sheet_ownbook_business_purchase_funder");
+		
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_business_purchase_funder");
+
+		}else
+		{
+			sheetName = prop.getProperty("calculation_sheet_ownbook_business_purchase_funder");
+	
+		}
+			
 	}
 	
 	if (classOrMethodName.contains("ownbook_individual_purchase_funder")) {
-		sheetName = prop.getProperty("calculation_sheet_ownbook_individual_purchase_funder");
+	
+		if(classOrMethodName.contains("used_car"))
+		{
+			sheetName = prop.getProperty("calculation_sheet_used_car_ownbook_individual_purchase_funder");
+
+		}else
+		{
+			sheetName = prop.getProperty("calculation_sheet_ownbook_individual_purchase_funder");
+
+		}		
 	}
 	
 	return sheetName;

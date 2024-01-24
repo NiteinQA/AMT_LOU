@@ -2087,17 +2087,17 @@ public boolean quote_summary_OTR_calculation(String sheet_name) throws Interrupt
 		 
 		double OTR_calculation_otr_rfl_and_frf_from_screen_converted = Double.parseDouble(RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2)));
 		
-		LO.print("OTR_calculation_cost_otr_price_from_screen ="+OTR_calculation_cost_otr_price_from_screen_converted);
-		System.out.println("OTR_calculation_cost_otr_price_from_screen ="+OTR_calculation_cost_otr_price_from_screen_converted);
+		LO.print("Cost otr price from screen ="+OTR_calculation_cost_otr_price_from_screen_converted);
+		System.out.println("Cost otr price from screen ="+OTR_calculation_cost_otr_price_from_screen_converted);
 		
-		LO.print("OTR_calculation_cost_price_ex_vat_and_rfl_from_screen ="+OTR_calculation_cost_price_ex_vat_and_rfl_from_screen_converted);
-		System.out.println("OTR_calculation_cost_price_ex_vat_and_rfl_from_screen ="+OTR_calculation_cost_price_ex_vat_and_rfl_from_screen_converted);
+		LO.print("Cost price ex vat and rfl from screen ="+OTR_calculation_cost_price_ex_vat_and_rfl_from_screen_converted);
+		System.out.println("Cost price ex vat and rfl from screen ="+OTR_calculation_cost_price_ex_vat_and_rfl_from_screen_converted);
 		
-		LO.print("OTR_calculation_otr_vat_from_screen ="+OTR_calculation_otr_vat_from_screen_converted);
-		System.out.println("OTR_calculation_otr_vat_from_screen ="+OTR_calculation_otr_vat_from_screen_converted);
+		LO.print("Vat from screen ="+OTR_calculation_otr_vat_from_screen_converted);
+		System.out.println("Vat from screen ="+OTR_calculation_otr_vat_from_screen_converted);
 			
-		LO.print("OTR_calculation_otr_rfl_and_frf_from_screen ="+OTR_calculation_otr_rfl_and_frf_from_screen_converted);
-		System.out.println("OTR_calculation_otr_rfl_and_frf_from_screen ="+OTR_calculation_otr_rfl_and_frf_from_screen_converted);
+		LO.print("Otr rfl and frf from screen ="+OTR_calculation_otr_rfl_and_frf_from_screen_converted);
+		System.out.println("Otr rfl and frf from screen ="+OTR_calculation_otr_rfl_and_frf_from_screen_converted);
 		
 		
 		double OTR_calculation_cost_otr_price_from_excel = GetExcelFormulaValue.get_formula_value(14, 4, sheet_name);
@@ -3106,7 +3106,7 @@ public void save_quote() throws InterruptedException, IOException {
 	
 	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
 	
-    ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
+    ExplicitWait.visibleElement(driver, quote_summary_ref_no, 200);
     
     String quote_ref_no = quote_summary_ref_no.getText();
 	

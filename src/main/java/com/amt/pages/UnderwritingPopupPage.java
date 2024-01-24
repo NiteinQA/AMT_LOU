@@ -1072,7 +1072,7 @@ public class UnderwritingPopupPage extends TestBase {
 
 		ExplicitWait.visibleElement(driver, underwriting_popup_quote_ref_no, 30);
 
-		String quotRefNoActual = underwriting_popup_quote_ref_no.getText();
+		String quotRefNoActual = underwriting_popup_quote_ref_no.getText().trim();
 		
 		
 		// customer quote section
@@ -2808,7 +2808,7 @@ public class UnderwritingPopupPage extends TestBase {
 		wb.write(out);
 		
 		
-		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName);
+		String quotRefNoExpected                             = GetExcelFormulaValue.get_cell_value(1, 0, sheetName).trim();
 		String vehicleNameExpected                           = GetExcelFormulaValue.get_cell_value(1, 10, sheetName);
 		
 		String contractTypeExpected                           = GetExcelFormulaValue.get_cell_value(4, 1, sheetName);		

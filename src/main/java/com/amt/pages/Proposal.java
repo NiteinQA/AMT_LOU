@@ -258,6 +258,11 @@ private List<WebElement> loading_icon;
 	private WebElement 	click_manually_submit_behalf_of_customer_link ;
 	
 	
+	
+	
+	@FindBy(xpath = "//*[@title='Next question']|//*[@title='Next section']")
+	private WebElement 	proposal_page_next_button;
+	
 
 	@FindBy(xpath = "//input[@id='privacypolicy']")
 	private WebElement 	proposal_page_privacy_policy_checkbox;
@@ -1318,7 +1323,22 @@ private WebElement proposal_save ;
     
 		
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		try {
+			ExplicitWait.visibleElement(driver, proposal_page_next_button, 10);
+		
+	   while(proposal_page_next_button.isDisplayed())
+	   {
+		   proposal_page_next_button.click();
+		   Thread.sleep(2000);
+	   }
+		}catch(Exception e)
+		{
+			
+		}
+		
+		
 		
 		
 		// Proposal page will open in new existing tab

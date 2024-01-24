@@ -276,7 +276,7 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 
 
 
-public String calculation_sheet_name_from_quote_save_excel_sheet(String classOrMethodName) {
+   public String calculation_sheet_name_from_quote_save_excel_sheet(String classOrMethodName) {
 	String sheetName = "";
 	
 	

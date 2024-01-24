@@ -99,6 +99,8 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 
 		System.out.println("Test 3");
 		obj_Leads_Page = new Leads();
+		
+		
 
 		boolean table_verification_before_save = obj_Leads_Page.verify_table_values_on_lead_page();
 
@@ -139,6 +141,8 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 		System.out.println("Test 5");
 
 		obj_Opportunities_Page = new Opportunities();
+		
+		obj_Opportunities_Page.opp_search_textbox();
 
 		// Opportunity listing screen - Proposal status
 		boolean opp_AfterCurrentStatus = obj_Opportunities_Page
@@ -223,7 +227,8 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 		System.out.println("Test 9");
 
 		obj_Opportunities_Page = new Opportunities();
-
+		
+	
 		boolean CurrentStatusafterContractSigned = obj_Opportunities_Page
 				.verify_current_status_of_opportunity_after_contract_signed();
 		Assert.assertTrue(CurrentStatusafterContractSigned);
@@ -238,6 +243,7 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 	public void UW2_verify_underwriting_pop_up_summary_values_for_ownbook_business_flow() throws Exception {
 
 		System.out.println("Test 10");
+		
 		
 		obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
 
@@ -260,7 +266,7 @@ public class LOU_ownbook_business_hire_accept_with_changes_Test extends TestBase
 
 		System.out.println("Test 11");
 		
-		obj_Opportunities_Page = new Opportunities();
+
 
 		boolean CurrentStatusafterSendingToUnderwriting = obj_Opportunities_Page
 				.verify_current_status_of_opportunity_after_contract_sending_to_underwriting();

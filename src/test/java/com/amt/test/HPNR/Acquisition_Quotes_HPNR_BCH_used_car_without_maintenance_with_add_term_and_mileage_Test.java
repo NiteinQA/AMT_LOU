@@ -11,29 +11,28 @@ import org.testng.annotations.Test;
 import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_BCHPage;
 import com.amt.HoldingCostPages.HoldingCost_HPNR_BCHPage;
 import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
-import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_PCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
 import com.amt.pages.VehicleSelectionPage;
-import com.amt.pages.ContractTypesAndOTRPages.ContractTypesAndOTR_HPNR_PCH_Page;
+import com.amt.pages.ContractTypesAndOTRPages.ContractTypesAndOTR_HPNR_BCH_Page;
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.ReadExcelData;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test extends TestBase {
+public class Acquisition_Quotes_HPNR_BCH_used_car_without_maintenance_with_add_term_and_mileage_Test extends TestBase {
 
 	LoginPage obj_Login_Page;
 	AcquisitionListingPage obj_acq_listing_page;
 	VehicleSelectionPage obj_vehicle_selection_page;
 	OptionsAccessoriesPage obj_options_accessories;
-	ContractTypesAndOTR_HPNR_PCH_Page obj_contract_types_and_OTR_page;
+	ContractTypesAndOTR_HPNR_BCH_Page obj_contract_types_and_OTR_page;
 	HoldingCost_HPNR_BCHPage obj_holding_cost_page;
 	CustomerQuotePage_HPNR_BCHPage obj_customer_quote_page;
-	QuoteSummary_HPNR_PCHPage obj_quote_summary_page;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
-	public void aquisition_quotes_HPNR_PCH_used_car_OTR_calculation_without_maintenance_test(String registrationNumber,
+	public void aquisition_quotes_used_car_OTR_calculation_without_maintenance_test(String registrationNumber,
 			String mileage, String vehicelCostPrice, String options_and_preparation_cost,
 			String percentage_cap_residual_value_used, String residual_value_used,
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -46,7 +45,7 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 		obj_acq_listing_page = new AcquisitionListingPage();
 		obj_vehicle_selection_page = new VehicleSelectionPage();
 		obj_options_accessories = new OptionsAccessoriesPage();
-		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_PCH_Page();
+		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_BCH_Page();
 
 		obj_acq_listing_page.aquisition_Listingpage_AddnewQuote();
 		obj_vehicle_selection_page.select_vehicle_for_used_car_flow(registrationNumber, mileage);
@@ -59,8 +58,8 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 	}
 
 	@Test(priority = 2, dataProvider = "testData", dependsOnMethods = {
-			"aquisition_quotes_HPNR_PCH_used_car_OTR_calculation_without_maintenance_test" })
-	public void aquisition_quotes_HPNR_PCH_used_car_edit_cost_price_and_check_OTR_without_maintenance_test(
+			"aquisition_quotes_used_car_OTR_calculation_without_maintenance_test" })
+	public void aquisition_quotes_used_car_edit_cost_price_and_check_OTR_without_maintenance_test(
 			String registrationNumber, String mileage, String vehicelCostPrice, String options_and_preparation_cost,
 			String percentage_cap_residual_value_used, String residual_value_used,
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -77,9 +76,9 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 	}
 
 	@Test(priority = 3, dataProvider = "testData", dependsOnMethods = {
-			"aquisition_quotes_HPNR_PCH_used_car_edit_cost_price_and_check_OTR_without_maintenance_test" })
+			"aquisition_quotes_used_car_edit_cost_price_and_check_OTR_without_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_PCH_used_car_holding_cost_calculations_without_maintenance_test(
+	public void aquisition_quotes_used_car_holding_cost_calculations_without_maintenance_test(
 			String registrationNumber, String mileage, String vehicelCostPrice, String options_and_preparation_cost,
 			String percentage_cap_residual_value_used, String residual_value_used,
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -106,19 +105,18 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 						percentage_cap_residual_value_used, maintenance_required, target_rental, sheet_name);
 		Assert.assertTrue(holding_cost_after_editing_residual_value);
 		
-//		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
-//				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(add_terms, add_mileage,
-//						maintenance_required, target_rental, sheet_name);
-//		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
-//
-//		
+		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
+				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(add_terms, add_mileage,
+						maintenance_required, target_rental, sheet_name);
+		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
+		
 
 	}
 
 	@Test(priority = 4, dataProvider = "testData", dependsOnMethods = {
-			"aquisition_quotes_HPNR_PCH_used_car_holding_cost_calculations_without_maintenance_test" })
+			"aquisition_quotes_used_car_holding_cost_calculations_without_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_PCH_customer_quote_payment_profile_calculations_without_maintenance_test(
+	public void aquisition_quotes_customer_quote_payment_profile_calculations_without_maintenance_test(
 			String registrationNumber, String mileage, String vehicelCostPrice, String options_and_preparation_cost,
 			String percentage_cap_residual_value_used, String residual_value_used,
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -153,6 +151,7 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 
 		Assert.assertTrue(monthlyFinanceAndMaintenanceWithPartExchange);
 		
+		
 		boolean balance_due_value = obj_customer_quote_page.verify_balance_due_value(sheet_name);
 		
 		Assert.assertTrue(balance_due_value);
@@ -171,9 +170,9 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 	}
 
 	@Test(priority = 5, dataProvider = "testData", dependsOnMethods = {
-			"aquisition_quotes_HPNR_PCH_customer_quote_payment_profile_calculations_without_maintenance_test" })
+			"aquisition_quotes_customer_quote_payment_profile_calculations_without_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_PCH_quote_summary_values_verification_without_maintenance_test(
+	public void aquisition_quotes_quote_summary_values_verification_without_maintenance_test(
 			String registrationNumber, String mileage, String vehicelCostPrice, String options_and_preparation_cost,
 			String percentage_cap_residual_value_used, String residual_value_used,
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -183,7 +182,7 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 			String target_rental, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
-		obj_quote_summary_page = new QuoteSummary_HPNR_PCHPage();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
 		obj_quote_summary_page.save_quote();
 
@@ -196,8 +195,7 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 		Assert.assertTrue(quote_summary_holding_cost_calculation1);
 
 		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
-				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);
-		// Assert.assertTrue(quote_summary_customer_quote_calculation);
+				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name); // Assert.assertTrue(quote_summary_customer_quote_calculation);
 
 		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
 				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
@@ -211,17 +209,17 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test exten
 				.quote_summary_edit_finance_margin_value_verification(sheet_name);
 		// Assert.assertTrue(value_check_after_Finance_margin_change);
 		
-		obj_quote_summary_page.quote_summary_HPNR_PCH_without_maintenance("HPNRPCHQuoteNo");
+		obj_quote_summary_page.quote_summary_HPNR_BCH_without_maintenance("HPNRBCHQuoteNo");
 		
-		HoldingCost_HPNR_BCHPage obj_holding_cost_page = new HoldingCost_HPNR_BCHPage();
+		obj_holding_cost_page = new HoldingCost_HPNR_BCHPage();
 		
-		obj_holding_cost_page.save_maint_value_to_excel_for_without_funder_scenario("HPNRPCHQuoteNo");
+		obj_holding_cost_page.save_maint_value_to_excel_for_without_funder_scenario("HPNRBCHQuoteNo");
 
 	}
 
 	@DataProvider(name = "testData")
 	public Object[][] getTestData() throws IOException {
-		Object[][] data = ReadExcelData.getTestData("HPNR_PCH_withoutMaint_used_car");
+		Object[][] data = ReadExcelData.getTestData("HPNR_BCH_withoutMaint_used_car");
 		return data;
 	}
 

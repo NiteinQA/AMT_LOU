@@ -6,5 +6,26 @@
       <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_used_car_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_used_car_ownbook_individual_purchase_accept_with_changes_Test"/>
     </classes>
-  </test> <!-- Used Car Ownbook Individual Purchase -->
-</suite> <!-- Suite -->
+  </test> 
+  
+ 
+ 
+  
+    <test thread-count="5" name="Used Car Ownbook Individual Purchase with additional term and mileage">
+    <classes>
+      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_used_car_without_maintenance_with_add_term_and_mileage_Test"/>
+      <class name="com.amt.test.LOU.LOU_used_car_ownbook_individual_purchase_accept_with_changes_Test"/>
+    </classes>
+  </test> 
+  
+  
+  
+    <test thread-count="5" name="Used Car Ownbook Individual Purchase with additional term and mileage">
+    <classes>
+      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_used_car_with_funder_quote_addition_without_maintenance_Test"/>
+      <class name="com.amt.test.LOU.LOU_used_car_ownbook_individual_purchase_funder_accept_with_changes_Test"/>
+    </classes>
+  </test> 
+
+ 
+</suite>  

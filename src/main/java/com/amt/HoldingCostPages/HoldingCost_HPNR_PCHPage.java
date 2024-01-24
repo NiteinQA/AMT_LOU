@@ -36,14 +36,11 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 	@FindBy(xpath = "//*[@name='MileagePerAnnum']")
 	private WebElement additional_mileage;
 
-	@FindBy(xpath = "//p[contains(text(),'Holding cost')]")
-	private WebElement holding_cost;
 
 	@FindBy(xpath = "//span[@class='slider round sliderRed']")
 	private WebElement maintenance_toggle_button;
 
-	@FindBy(xpath = "//*[contains(text(),' Holding cost summary ')]")
-	private WebElement holding_cost_summary;
+
 
 	@FindBy(xpath = "//*[contains(text(),'CAP residual value')]//ancestor::div[1]//p//strong")
 	private WebElement holding_cost_summary_residual_value_used;
@@ -65,6 +62,9 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='vehicleSummery']/div/div[2]/div[2]/div[6]/div[2]/div[10]/p")
 	private WebElement holding_cost_maintenance_cost_used;
+	
+	@FindBy(xpath = "//*[contains(text(),' Holding cost summary ')]")
+	private WebElement holding_cost_summary;
 	
 	@FindBy(xpath = "//*[normalize-space()='CAP monthly maint. cost']//ancestor::div[1]//p/strong")
 	private WebElement cap_monthly_maintenance_cost;
@@ -143,6 +143,9 @@ public class HoldingCost_HPNR_PCHPage extends TestBase {
 
 	@FindBy(xpath = "//span[@class='slider round']")
 	private WebElement funder_maintenance_toggle;
+	
+	@FindBy(xpath = "//p[contains(text(),'Holding cost')]")
+	private WebElement holding_cost;
 
 	@FindBy(xpath = "//span[@class='slider round sliderRed']")
 	private WebElement common_maintenance_toggle;

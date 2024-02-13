@@ -230,14 +230,14 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Click.sendKeys(driver, vehicle_profit_input, vehicle_profit, 30);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		ExplicitWait.visibleElement(driver, vehicle_sales_price, 30);
 		double vehicleSalesPriceFromScreen = Double
 				.parseDouble(RemoveComma.of(vehicle_sales_price.getText().trim().substring(2)));
@@ -270,14 +270,14 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Click.sendKeys(driver, vehicle_profit_input, vehicle_profit, 30);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 20);
 		double vehicle_sales_price_from_screen_converted =  Double.parseDouble(vehicle_sale_price_used_vehicle.getAttribute("value"));
@@ -315,11 +315,11 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 		Click.on(driver, given_part_exchange_value, 20);
 
 		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
@@ -327,43 +327,43 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 
 	
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, agreement_number, "123", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, less_finance_Settlement, 20);
 		less_finance_Settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, less_finance_Settlement, less_finance_settlement_from_excel, 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, order_Deposit, order_Deposit_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, document_fee, 30);
 		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, document_fee, 30);
 		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		double vehicleSalesPriceFromScreen = Double
 				.parseDouble(RemoveComma.of(vehicle_sales_price.getText().trim().substring(2)));
@@ -411,48 +411,48 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 		Click.on(driver, given_part_exchange_value, 20);
 
 		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
 		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 	
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, agreement_number, "123", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
 		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		
 		
 
 		Click.on(driver, deposit_required, 30);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, deposit_required, deposit, 30);
 
 		Click.on(driver, document_fee, 30);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, document_fee, documentFee, 30);
 		

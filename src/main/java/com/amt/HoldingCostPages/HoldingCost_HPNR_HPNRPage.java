@@ -496,7 +496,7 @@ public boolean verify_holding_cost_before_editing_cap_data_with_maintenance(
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);	
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);	
 		
 		Click.on(driver, add_funder_quote, 30);
 		

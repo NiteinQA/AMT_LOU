@@ -139,10 +139,10 @@ public class Acquisition_Quotes_HPNR_PCH_without_maintenance_with_add_term_milea
 						percentage_cap_residual_value_used, maintenance_required, target_rental, sheet_name);
 		Assert.assertTrue(holding_cost_after_editing_residual_value);
 		
-//		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
-//				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(add_terms, add_mileage,
-//						maintenance_required, target_rental, sheet_name);
-//		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
+		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
+				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(add_terms, add_mileage,
+						maintenance_required, target_rental, sheet_name);
+		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
 
 
 		System.out.println("");

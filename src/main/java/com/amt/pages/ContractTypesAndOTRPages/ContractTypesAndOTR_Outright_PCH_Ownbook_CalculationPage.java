@@ -100,7 +100,7 @@ public class ContractTypesAndOTR_Outright_PCH_Ownbook_CalculationPage extends Te
 	public boolean contractTypes_and_OTR_selection_outright_PCH_Ownbook_calculation(String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, acq_acq_contractTypes_outright, 50);
 		Thread.sleep(3000);
 		

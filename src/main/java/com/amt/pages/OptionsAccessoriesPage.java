@@ -61,7 +61,7 @@ public class OptionsAccessoriesPage extends TestBase {
 		LO.print("Paint option has been selected");
 		System.out.println("Paint option has been selected");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		Thread.sleep(3000);
 		
@@ -69,7 +69,9 @@ public class OptionsAccessoriesPage extends TestBase {
 
 		js.executeScript("arguments[0].click();", paint);		
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Thread.sleep(6000);
 		
 	    try {
 		 try { Click.on(driver, ok_pop_up, 10);}catch(Exception e) {}
@@ -86,7 +88,7 @@ public class OptionsAccessoriesPage extends TestBase {
 //			ExplicitWait.clickableElement(driver, paint, 30);
 //			js.executeScript("arguments[0].click();", paint);		
 //
-//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 //			 
 //			Click.on(driver, acq_interior, 40);
 //		 
@@ -108,11 +110,11 @@ public class OptionsAccessoriesPage extends TestBase {
 
 		Click.on(driver, acq_interior, 40);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		js.executeScript("arguments[0].click();", acq_interior_trim);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 			
 		LO.print("Interior option has been selected");
 			System.out.println("Interior option has been selected");
@@ -125,7 +127,7 @@ public class OptionsAccessoriesPage extends TestBase {
 	
 public void options_And_Accessories_selection_for_used_car() throws InterruptedException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		Thread.sleep(2000);
 
@@ -134,16 +136,16 @@ public void options_And_Accessories_selection_for_used_car() throws InterruptedE
 		LO.print("Paint option has been selected");
 		System.out.println("Paint option has been selected");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 
 		Click.on(driver, acq_interior, 40);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		js.executeScript("arguments[0].click();", acq_interior_trim_used_LCV);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 			
 		LO.print("Interior option has been selected");
 			System.out.println("Interior option has been selected");			
@@ -153,7 +155,7 @@ public void options_And_Accessories_selection_for_used_car() throws InterruptedE
 
 public void options_And_Accessories_selection_for_used_LCV() throws InterruptedException {
 
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 	
 	Thread.sleep(2000);
 
@@ -162,16 +164,16 @@ public void options_And_Accessories_selection_for_used_LCV() throws InterruptedE
 	LO.print("Paint option has been selected");
 	System.out.println("Paint option has been selected");
 
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 
 	Click.on(driver, acq_interior, 40);
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 	
 	js.executeScript("arguments[0].click();", acq_interior_trim_used_LCV);
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 	LO.print("Interior option has been selected");
 		System.out.println("Interior option has been selected");			

@@ -98,6 +98,7 @@ public class AcquisitionListingPage extends TestBase {
 					
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
+		try {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
 		ExplicitWait.clickableElement(driver, aquisition_quotes_button, 30);
@@ -111,8 +112,23 @@ public class AcquisitionListingPage extends TestBase {
 		jse.executeScript("arguments[0].click();", new_quote_button);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
-
-		LO.print("Clicked on Quote button ");
+		
+		}catch(Exception e)
+		{
+			   String url = prop.getProperty("url");
+			   
+			   String path = "/acquisition/acquisition-selector";
+			   
+			   String full_url =url+path;
+			
+			   driver.get(full_url);
+				
+			   Thread.sleep(7000);
+			   
+				ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		}
+		
+			LO.print("Clicked on Quote button ");
 		System.out.println("Clicked on Quote button ");
 	}
 

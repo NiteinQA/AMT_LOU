@@ -741,15 +741,28 @@ public class Underwriting extends TestBase {
 
 	public void verify_underwriting_menulink_broker() throws InterruptedException {
 
-		ExplicitWait.visibleElement(driver, underwriting_menu_link_broker, 120);
+//		ExplicitWait.visibleElement(driver, underwriting_menu_link_broker, 120);
+//
+//		HelperClass.highlightElement(driver, underwriting_menu_link_broker);
+//		
+//		Thread.sleep(2000);
+//		
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		
+//		js.executeScript("arguments[0].click();", underwriting_menu_link_broker);
+		
+		String currentURL = driver.getCurrentUrl();
+		
+		if(currentURL.contains("staging")) {
+		
+		driver.get("https://stagingamt.azurewebsites.net/underwriting/underwritingmanagement/broker");
+		}
+		else if(currentURL.contains("qa"))
+		{
+			driver.get("https://qaamtmaasapp.azurewebsites.net/underwriting/underwritingmanagement/broker");
+	
+		}
 
-		HelperClass.highlightElement(driver, underwriting_menu_link_broker);
-		
-		Thread.sleep(2000);
-		
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		
-		js.executeScript("arguments[0].click();", underwriting_menu_link_broker);
 
 		//underwriting_menu_link_broker.click();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
@@ -761,21 +774,28 @@ public class Underwriting extends TestBase {
 
 	public void verify_underwriting_menulink_ownbook() throws InterruptedException {
 
-		ExplicitWait.visibleElement(driver, underwriting_menu_link_ownbook, 60);
-
-		// HelperClass.highlightElement(driver, underwriting_menu_link_ownbook);
-
-		// underwriting_menu_link_ownbookclick();
+//		ExplicitWait.visibleElement(driver, underwriting_menu_link_ownbook, 60);
+//
+//	
+//		Thread.sleep(2000);
+//		
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		
+//		js.executeScript("arguments[0].click();", underwriting_menu_link_ownbook);
 		
+		String currentURL = driver.getCurrentUrl();
 		
-		Thread.sleep(2000);
+		if(currentURL.contains("staging")) {
 		
-		JavascriptExecutor js = (JavascriptExecutor)driver;
+		driver.get("https://stagingamt.azurewebsites.net/underwriting/underwritingmanagement/ownbook");
+		}
+		else if(currentURL.contains("qa"))
+		{
+			driver.get("https://qaamtmaasapp.azurewebsites.net/underwriting/underwritingmanagement/ownbook");
+	
+		}
 		
-		js.executeScript("arguments[0].click();", underwriting_menu_link_ownbook);
-		
-	//	underwriting_menu_link_ownbook.click();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		System.out.println("Click on Underwriting - ownbook tab ");
 		LO.print("Click on Underwriting - ownbook tab ");
@@ -1009,6 +1029,8 @@ public class Underwriting extends TestBase {
 
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_button, 120);
 
+		
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -1552,6 +1574,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_vat, 120);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_rfl_and_frf, 120);		
 
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -1570,7 +1593,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_total_commission, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_referrer_commission, 20);
 
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		
 		Click.on(driver, underwriting_quote_tab_configuration_heading_button, 30);
 		
@@ -2559,6 +2582,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_vat, 120);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_rfl_and_frf, 120);		
 
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -3558,6 +3582,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_vat, 120);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_rfl_and_frf, 120);		
 
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -3589,7 +3614,7 @@ public class Underwriting extends TestBase {
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_document_fee_comm, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_total_comm, 20);
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		Click.on(driver, underwriting_quote_tab_configuration_heading_button, 30);
 		
@@ -4914,6 +4939,8 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		
 
 		// Cliking on cust quote summary section
+		Thread.sleep(10000);
+		
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
 		// waiting for cust quote summary section elements
@@ -4944,7 +4971,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_document_fee_comm, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_total_comm, 20);
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		Click.on(driver, underwriting_quote_tab_configuration_heading_button, 30);
 		
@@ -6252,6 +6279,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_vat, 120);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_rfl_and_frf, 120);		
 
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -6283,7 +6311,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_document_fee_comm, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_total_comm, 20);
 
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		
 		Click.on(driver, underwriting_quote_tab_configuration_heading_button, 30);
 		
@@ -7624,7 +7652,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_cost_price_ex_vat_and_rfl, 120);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_otr_vat, 120);
 		
-
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -7656,7 +7684,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_document_fee_comm, 20);
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_total_comm, 20);
 
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		
 		Click.on(driver, underwriting_quote_tab_configuration_heading_button, 30);
 		
@@ -8966,6 +8994,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_button, 120);
 
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -9714,6 +9743,8 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_button, 120);
 
+		
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -10440,6 +10471,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_button, 120);
 
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 
@@ -11141,6 +11173,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 
 		ExplicitWait.visibleElement(driver, underwriting_quote_tab_customer_quote_summary_button, 120);
 
+		Thread.sleep(10000);
 		// Cliking on cust quote summary section
 		Click.on(driver, underwriting_quote_tab_customer_quote_summary_button, 60);
 

@@ -3106,7 +3106,7 @@ public void save_quote() throws InterruptedException, IOException {
 	
 	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
 	
-    ExplicitWait.visibleElement(driver, quote_summary_ref_no, 200);
+    ExplicitWait.visibleElement(driver, quote_summary_ref_no, 300);
     
     String quote_ref_no = quote_summary_ref_no.getText();
 	

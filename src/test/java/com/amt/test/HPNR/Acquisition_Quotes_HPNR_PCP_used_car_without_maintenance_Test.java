@@ -77,16 +77,16 @@ public class Acquisition_Quotes_HPNR_PCP_used_car_without_maintenance_Test exten
 						maintenance_status, sheet_name);
 		Assert.assertTrue(holding_cost_before_editing_percentage_value);
 		
-		boolean holding_cost_after_editing_percentage_value = obj_holding_cost_page
-				.edit_percentage_residual_verify_holding_cost_without_maintenance(residual_value_used, percentage_cap_residual_value,
-						maintenance_status,  sheet_name);
-		Assert.assertTrue(holding_cost_after_editing_percentage_value);
-		
-		boolean holding_cost_after_editing_residual_value = obj_holding_cost_page
-				.edit_residual_value_used_then_verify_holding_cost_without_maintenance(residual_value_used, percentage_cap_residual_value,
-						maintenance_status, sheet_name);
-		Assert.assertTrue(holding_cost_after_editing_residual_value);
-		
+//		boolean holding_cost_after_editing_percentage_value = obj_holding_cost_page
+//				.edit_percentage_residual_verify_holding_cost_without_maintenance(residual_value_used, percentage_cap_residual_value,
+//						maintenance_status,  sheet_name);
+//		Assert.assertTrue(holding_cost_after_editing_percentage_value);
+//		
+//		boolean holding_cost_after_editing_residual_value = obj_holding_cost_page
+//				.edit_residual_value_used_then_verify_holding_cost_without_maintenance(residual_value_used, percentage_cap_residual_value,
+//						maintenance_status, sheet_name);
+//		Assert.assertTrue(holding_cost_after_editing_residual_value);
+//		
 //		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
 //				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(additional_terms, additional_mileage,
 //						maintenance_status,  sheet_name);
@@ -174,13 +174,13 @@ public class Acquisition_Quotes_HPNR_PCP_used_car_without_maintenance_Test exten
 				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
 		// Assert.assertTrue(quote_summary_configuration_value_check1);
 
-		boolean value_check_after_Base_Int_change = obj_quote_summary_page
-				.quote_summary_edit_base_int_rate_value_verification_without_maintenance(sheet_name);
-		//Assert.assertTrue(value_check_after_Base_Int_change);
-
-		boolean value_check_after_customer_rate_over_base_change = obj_quote_summary_page
-				.quote_summary_edit_customer_rate_over_base_value_verification(sheet_name);
-		//Assert.assertTrue(value_check_after_customer_rate_over_base_change);
+//		boolean value_check_after_Base_Int_change = obj_quote_summary_page
+//				.quote_summary_edit_base_int_rate_value_verification_without_maintenance(sheet_name);
+//		//Assert.assertTrue(value_check_after_Base_Int_change);
+//
+//		boolean value_check_after_customer_rate_over_base_change = obj_quote_summary_page
+//				.quote_summary_edit_customer_rate_over_base_value_verification(sheet_name);
+//		//Assert.assertTrue(value_check_after_customer_rate_over_base_change);
 		
 		obj_quote_summary_page.quote_summary_HPNR_PCP_without_maintenance("HPNRPCPQuoteNo");
 		

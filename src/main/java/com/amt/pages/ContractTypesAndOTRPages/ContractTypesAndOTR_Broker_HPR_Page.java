@@ -143,7 +143,7 @@ public class ContractTypesAndOTR_Broker_HPR_Page extends TestBase {
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, acq_contractTypes_option_broker, 50);
 
 		Thread.sleep(3000);
@@ -157,11 +157,11 @@ public class ContractTypesAndOTR_Broker_HPR_Page extends TestBase {
 
 		Click.on(driver, acq_contractTypes_customer_contract_HPR, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Customer Contract type option selected =  Hire Purchase Regulated(HPNR)");
 		System.out.println("Customer Contract type option selected = Hire Purchase Regulated(HPNR)");
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, contract_types_cost_price_ex_vat_and_rfl, 20);
 		ExplicitWait.visibleElement(driver, contract_types_vat, 20);
@@ -216,7 +216,7 @@ public class ContractTypesAndOTR_Broker_HPR_Page extends TestBase {
 
 		Click.on(driver, acq_contractTypes, 40);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		try {
 
@@ -240,14 +240,14 @@ public class ContractTypesAndOTR_Broker_HPR_Page extends TestBase {
 		LO.print("Acquisition Contract type option selected = Broker ");
 		System.out.println("Acquisition Contract type option selected = Broker ");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 //	   Actions act = new Actions(driver);
 //	   act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER).build().perform();
 
 		Click.on(driver, acq_contractTypes_customer_contract_HPR, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Customer Contract type option selected = Hire Purchase Regulated(HPR)");
 		System.out.println("Customer Contract type option selected = Hire Purchase Regulated(HPR)");

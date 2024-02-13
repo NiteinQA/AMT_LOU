@@ -254,7 +254,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		Click.on(driver, customer_quote, 25);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, otrScreenPriceUsedVehicle, 30);
 		String otr_screen_price = otrScreenPriceUsedVehicle.getText().trim().substring(2);
@@ -271,7 +271,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		double vehicleProfit_converted = Double.parseDouble(vehicleProfit);
 
@@ -325,7 +325,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Sending " + salesPrice + " to sales total input field");
 		System.out.println("Sending " + salesPrice + " to sales total input field");
@@ -376,7 +376,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Sending " + salesPrice + " to sales total input field");
 		System.out.println("Sending " + salesPrice + " to sales total input field");
@@ -411,7 +411,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		Click.on(driver, customer_quote, 25);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, otrScreenPrice, 30);
 		String otr_screen_price = otrScreenPrice.getText().trim().substring(2);
@@ -468,7 +468,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		Click.on(driver, customer_quote, 25);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, otrScreenPriceUsedVehicle, 30);
 		String otr_screen_price = otrScreenPriceUsedVehicle.getText().trim().substring(2);
@@ -535,7 +535,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		double diff = Difference.of_two_Double_Values(on_road_price_for_invoice, otr_screen_price_converted);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -583,7 +583,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		LO.print("Funder Quote Added Successfully");
 		System.out.println("Funder Quote Added Successfully");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 
 		LO.print("");
@@ -601,11 +601,11 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		Click.on(driver, given_part_exchange_value, 20);
 
 		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// Clicking on outstanding finance and suppliersettling finance checkbox
 
@@ -615,30 +615,30 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
 		// 20);
 
 	
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, agreement_number, "123", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
 		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -695,7 +695,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		ExplicitWait.visibleElement(driver, vehicle_sale_price_used_vehicle, 20);
 		double vehicle_sales_price_from_screen_converted =  Double.parseDouble(vehicle_sale_price_used_vehicle.getAttribute("value"));
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -743,7 +743,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		LO.print("Funder Quote Added Successfully");
 		System.out.println("Funder Quote Added Successfully");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -760,11 +760,11 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		Click.on(driver, given_part_exchange_value, 20);
 
 		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// Clicking on outstanding finance and suppliersettling finance checkbox
 
@@ -774,30 +774,30 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
 		// 20);
 
 	
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, agreement_number, "123", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
 		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -852,7 +852,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		Click.on(driver, customer_quote, 25);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, otrScreenPrice, 30);
 		String otr_screen_price = otrScreenPrice.getText().trim().substring(2);
@@ -910,7 +910,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		Click.on(driver, customer_quote, 25);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, otrScreenPriceUsedVehicle, 30);
 		String otr_screen_price = otrScreenPriceUsedVehicle.getText().trim().substring(2);
@@ -973,7 +973,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		Click.on(driver, maintenance_toggle_button, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -1025,7 +1025,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		LO.print("Funder quote added successfully");
 		System.out.println("Funder quote added successfully");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -1042,11 +1042,11 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		Click.on(driver, given_part_exchange_value, 20);
 
 		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// Clicking on outstanding finance and suppliersettling finance checkbox
 
@@ -1056,30 +1056,30 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
 		// 20);
 
 	
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, agreement_number, "123", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
 		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -1140,7 +1140,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		Click.on(driver, maintenance_toggle_button, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -1194,7 +1194,7 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		LO.print("Funder quote added successfully");
 		System.out.println("Funder quote added successfully");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");
@@ -1211,11 +1211,11 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 		Click.on(driver, given_part_exchange_value, 20);
 
 		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// Clicking on outstanding finance and suppliersettling finance checkbox
 
@@ -1225,30 +1225,30 @@ public class CustomerQuotePageBrokerCPPage extends TestBase {
 
 		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
 		// 20);
 
 	
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, funder_name, "Funder X", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, agreement_number, "123", 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
 		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
 		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("");
 		System.out.println("");

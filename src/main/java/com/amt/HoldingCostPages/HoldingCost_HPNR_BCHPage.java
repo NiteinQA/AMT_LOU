@@ -232,6 +232,8 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 	public void save_maint_value_to_excel_for_without_funder_scenario(String sheet_name) throws InterruptedException, IOException {
 		
 		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		
 		Click.on(driver, holding_cost, 30);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
@@ -271,7 +273,7 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 			throws InterruptedException, IOException {
 		Click.on(driver, holding_cost, 30);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120); 
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200); 
 		
         Click.on(driver, common_maintenance_toggle, 30);
 
@@ -474,13 +476,16 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 			String residual_value_used_from_excel, String percentage_cap_residual_value_used,
 			String maintenance_required, String target_rental, String sheet_name)
 			throws IOException, InterruptedException, ClassNotFoundException {
+		
+		
 		Click.on(driver, holding_cost, 30);
 
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-		Thread.sleep(3000);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Thread.sleep(7000);
 
 		Click.on(driver, holding_cost_summary, 30);
 

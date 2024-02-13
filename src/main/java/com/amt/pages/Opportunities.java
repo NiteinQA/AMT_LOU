@@ -819,7 +819,9 @@ public class Opportunities extends TestBase {
 		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 		
 
-		String opportunityId = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);		
+		String opportunityId = GetExcelFormulaValue.get_cell_value(1, 2, sheetName);
+		
+		Thread.sleep(5000);
 		
 
 		ExplicitWait.visibleElement(driver, search_bar, 30);	

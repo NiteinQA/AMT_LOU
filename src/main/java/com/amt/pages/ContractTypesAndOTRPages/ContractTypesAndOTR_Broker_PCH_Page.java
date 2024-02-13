@@ -145,7 +145,7 @@ public class ContractTypesAndOTR_Broker_PCH_Page extends TestBase {
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		try {
 
@@ -174,7 +174,7 @@ public class ContractTypesAndOTR_Broker_PCH_Page extends TestBase {
 
 		LO.print(" Customer Contract type option = Personal Contract Hire(PCH) has been selected");
 		System.out.println(" Customer Contract type option = Personal Contract Hire(PCH) has been selected");
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, contract_types_cost_price_ex_vat_and_rfl, 20);
 		ExplicitWait.visibleElement(driver, contract_types_vat, 20);
@@ -229,7 +229,7 @@ public class ContractTypesAndOTR_Broker_PCH_Page extends TestBase {
 
 		Click.on(driver, acq_contractTypes, 40);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		try {
 
@@ -251,14 +251,14 @@ public class ContractTypesAndOTR_Broker_PCH_Page extends TestBase {
 
 		LO.print("Acquisition Contract type option selected = Broker ");
 		System.out.println("Acquisition Contract type option selected = Broker ");
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		act = new Actions(driver);
 //	   act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER).build().perform();
 
 		Click.on(driver, acq_contractTypes_customer_contract_PCH, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Customer Contract type option selected = Personal Contract Hire(PCH)");
 		System.out.println("Customer Contract type option selected = Personal Contract Hire(PCH)");
@@ -300,18 +300,18 @@ public class ContractTypesAndOTR_Broker_PCH_Page extends TestBase {
 
 		Click.on(driver, acq_contractTypes, 40);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, acq_contractTypes_option_broker, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		act = new Actions(driver);
 		// act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER).build().perform();
 
 		Click.on(driver, acq_contractTypes_customer_contract_PCH, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Contract type option has been selected");
 

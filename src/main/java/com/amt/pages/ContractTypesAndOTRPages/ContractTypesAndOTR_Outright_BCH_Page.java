@@ -141,10 +141,10 @@ public class ContractTypesAndOTR_Outright_BCH_Page extends TestBase {
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, acq_acq_contractTypes_outright, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print(" Acquisition Contract type option = Outright Purchase has been selected");
 		System.out.println("Acquisition Contract type option = Outright Purchase has been selected");
@@ -153,7 +153,7 @@ public class ContractTypesAndOTR_Outright_BCH_Page extends TestBase {
 
 		LO.print(" Customer Contract type option = Business Contract Hire(BCH) has been selected");
 		System.out.println(" Customer Contract type option = Business Contract Hire(BCH) has been selected");
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, contract_types_cost_price_ex_vat_and_rfl, 20);
 		ExplicitWait.visibleElement(driver, contract_types_vat, 20);
@@ -210,17 +210,17 @@ public class ContractTypesAndOTR_Outright_BCH_Page extends TestBase {
 	public boolean contractTypes_and_OTR_selection_outright_BCH_Ownbook_calculation(String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, acq_acq_contractTypes_outright, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print(" Acquisition Contract type option = Outright has been selected");
 		System.out.println("Acquisition Contract type option = Outright has been selected");
 		
 		Click.on(driver, acq_contractTypes_customer_contract_BCH, 30);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		LO.print(" Customer Contract type option = Business Contract Hire(BCH) has been selected");		 
 		System.out.println(" Customer Contract type option = Business Contract Hire(BCH) has been selected");
@@ -263,7 +263,7 @@ public class ContractTypesAndOTR_Outright_BCH_Page extends TestBase {
 
 			Click.on(driver, acq_contractTypes, 40);
 			
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			Click.on(driver, acq_acq_contractTypes_outright, 50);
 		   

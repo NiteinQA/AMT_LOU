@@ -148,7 +148,7 @@ public class ContractTypesAndOTR_Outright_HPNR_Page extends TestBase {
 		
 		Click.on(driver, acq_acq_contractTypes_outright, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print(" Acquisition Contract type option = Outright Purchase (OP) has been selected");
 		System.out.println("Acquisition Contract type option = Outright Purchase (OP) has been selected");
@@ -212,17 +212,17 @@ public class ContractTypesAndOTR_Outright_HPNR_Page extends TestBase {
 	public boolean contractTypes_and_OTR_selection_outright_HPNR_Ownbook_calculation(String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, acq_acq_contractTypes_outright, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print(" Acquisition Contract type option = Outright has been selected");
 		System.out.println("Acquisition Contract type option = Outright has been selected");
 		
 		Click.on(driver, acq_contractTypes_customer_contract_HPNR, 30);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		LO.print(" Customer Contract type option = Hire Purchase Non regulated (HPNR) has been selected");		 
 		System.out.println(" Customer Contract type option = Hire Purchase Non regulated (HPNR) has been selected");

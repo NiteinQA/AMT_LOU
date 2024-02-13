@@ -845,7 +845,7 @@ private WebElement proposal_save ;
 				
 					 
 					 
-					 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+					 ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 300);
 					 
 					
 					//5

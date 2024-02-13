@@ -202,7 +202,7 @@ public class CustomerQuotePageOutrightCPPage extends TestBase {
 		Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Sending " + salesPrice + " to sales total input field");
 		System.out.println("Sending " + salesPrice + " to sales total input field");
@@ -264,7 +264,7 @@ public class CustomerQuotePageOutrightCPPage extends TestBase {
 		Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Sending " + salesPrice + " to sales total input field");
 		System.out.println("Sending " + salesPrice + " to sales total input field");

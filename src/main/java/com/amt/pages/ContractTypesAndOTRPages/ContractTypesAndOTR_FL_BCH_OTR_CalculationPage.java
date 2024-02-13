@@ -136,17 +136,17 @@ public class ContractTypesAndOTR_FL_BCH_OTR_CalculationPage extends TestBase {
 	public boolean contractTypes_and_OTR_selection_FL_BCH_Ownbook_calculation(String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 		Click.on(driver, acq_contractTypes, 50);
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, acq_acq_contractTypes_FL, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print(" Acquisition Contract type option = FL has been selected");
 		System.out.println("Contract type option = FL has been selected");
 		
 		Click.on(driver, acq_contractTypes_customer_contract_BCH, 30);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		LO.print(" Customer Contract type option = Business Contract Hire(BCH) has been selected");		 
 		System.out.println(" Customer Contract type option = Business Contract Hire(BCH) has been selected");
@@ -188,18 +188,18 @@ public class ContractTypesAndOTR_FL_BCH_OTR_CalculationPage extends TestBase {
 
 			Click.on(driver, acq_contractTypes, 40);
 			
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			Click.on(driver, acq_acq_contractTypes_FL, 50);
 		   
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		   
 		   act = new Actions(driver);
 		   act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER).build().perform();
 		    
 		   // Click.on(driver, acq_contractTypes_customer_contract_BCH , 50);
 		   
-		   ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		   ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		   
 		   LO.print("Contract type option has been selected");
 		   

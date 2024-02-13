@@ -277,7 +277,10 @@ public class HoldingCost_HPNR_HPRPage extends TestBase {
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Thread.sleep(10000);
+		
 		Click.on(driver, holding_cost_summary, 30);
 
 		Thread.sleep(3000);

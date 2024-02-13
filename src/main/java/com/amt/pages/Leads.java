@@ -451,8 +451,10 @@ public class Leads extends TestBase {
 		System.out.println("*********************************************");
 		System.out.println("*********************************************");
 
+		Thread.sleep(10000);
 		
 		Click.on(driver, leads, 20);
+		
 		HelperClass.highlightElement(driver, leads); // Click on Leads Menu Link
 		//Click.on(driver, leads, 120);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -574,27 +576,55 @@ public class Leads extends TestBase {
 		// js = (JavascriptExecutor) driver;
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+//		Thread.sleep(4000);
+//		customer_name.sendKeys("A");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("u");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("t");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("o");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("m");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("a");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("t");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("i");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("o");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("n");
+//		Thread.sleep(500);
+		
 		Thread.sleep(4000);
-		customer_name.sendKeys("A");
+		customer_name.sendKeys("d");
 		Thread.sleep(500);
 		customer_name.sendKeys("u");
 		Thread.sleep(500);
-		customer_name.sendKeys("t");
-		Thread.sleep(500);
-		customer_name.sendKeys("o");
+		customer_name.sendKeys("m");
 		Thread.sleep(500);
 		customer_name.sendKeys("m");
 		Thread.sleep(500);
-		customer_name.sendKeys("a");
+		customer_name.sendKeys("y");
 		Thread.sleep(500);
-		customer_name.sendKeys("t");
+		customer_name.sendKeys(" ");
 		Thread.sleep(500);
-		customer_name.sendKeys("i");
-		Thread.sleep(500);
-		customer_name.sendKeys("o");
-		Thread.sleep(500);
-		customer_name.sendKeys("n");
-		Thread.sleep(500);
+//		customer_name.sendKeys("C");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("o");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("m");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("p");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("a");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("n");
+//		Thread.sleep(500);
+//		customer_name.sendKeys("y");
+//		Thread.sleep(500);
 
 		Click.on(driver, customer_name_option, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);

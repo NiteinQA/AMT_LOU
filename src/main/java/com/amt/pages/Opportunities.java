@@ -136,7 +136,7 @@ public class Opportunities extends TestBase {
 	@FindBy(xpath = "//select[@id='carScheme']")
 	private WebElement opp_opp_fact_find_no_of_carscheme;
 
-	@FindBy(xpath = "//*[normalize-space()='Update']")
+	@FindBy(xpath = "//*[normalize-space()='Save']")
 	private WebElement opp_opp_update_button;
 
 	@FindBy(xpath = "//*[normalize-space()='Proposal']")
@@ -166,8 +166,10 @@ public class Opportunities extends TestBase {
 
 	// New status
 
-	@FindBy(xpath = "//tr[@class='ng-star-inserted']//td[9]")
+	@FindBy(xpath = "//tr[@class='ng-star-inserted']//td[8]")
 	private WebElement opp_current_status_open;
+	
+	//tr[@class='ng-star-inserted']//td[9]
 
 	@FindBy(xpath = "//div[@class='status']")
 	private WebElement opp_current_status_proposal;

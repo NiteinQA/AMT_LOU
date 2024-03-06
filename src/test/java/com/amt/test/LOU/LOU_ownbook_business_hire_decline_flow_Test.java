@@ -113,7 +113,7 @@ public class LOU_ownbook_business_hire_decline_flow_Test extends TestBase {
 
 		obj_Opportunities_Page.opp_listing_detail_page();
 
-		obj_Opportunities_Page.opp_opp_fact_find();
+		//obj_Opportunities_Page.opp_opp_fact_find();
 
 		// Proposal page for adding data in opportunity - Customer info, Additionalinfo
 		// , Bank detail

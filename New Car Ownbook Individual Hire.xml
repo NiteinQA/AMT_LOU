@@ -6,8 +6,30 @@
 		<!-- ownbook individual hire flow without additional term and mileage - Accept Flow-->
 	<class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCH_without_maintenance_Test"/>	
     <class name="com.amt.test.LOU.LOU_ownbook_individual_hire_accept_with_changes_Test"/> 
-            
-      
+   
     </classes>
   </test> <!-- Test -->
+  
+  
+  
+    <test thread-count="5" name="ownbook individual hire flow with additional term and mileage - Accept Flow">
+    <classes>
+		<!-- ownbook individual hire flow without additional term and mileage - Accept Flow-->
+	<class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCH_without_maintenance_with_add_term_mileage_Test"/>	
+    <class name="com.amt.test.LOU.LOU_ownbook_individual_hire_accept_with_changes_Test"/> 
+   
+    </classes>
+  </test> <!-- Test -->
+  
+  
+    <test thread-count="5" name="ownbook individual hire flow with funder - Accept Flow">
+    <classes>
+		<!-- ownbook individual hire flow without additional term and mileage - Accept Flow-->
+	<class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCH_with_funder_quote_addition_without_maintenance_Test"/>	
+    <class name="com.amt.test.LOU.LOU_ownbook_individual_hire_funder_accept_with_changes_Test"/> 
+   
+    </classes>
+  </test> <!-- Test -->
+
+
 </suite> <!-- Suite -->

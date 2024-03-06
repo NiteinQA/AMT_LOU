@@ -1058,8 +1058,10 @@ public class Leads extends TestBase {
 		Click.on(driver, Map_New_quote_icon, 120);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		
 		Click.on(driver, acquisition_contract_type, 120);
 

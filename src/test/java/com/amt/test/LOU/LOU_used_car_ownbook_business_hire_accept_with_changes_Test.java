@@ -123,7 +123,7 @@ public class LOU_used_car_ownbook_business_hire_accept_with_changes_Test extends
 
 		obj_Opportunities_Page.opp_listing_detail_page();
 
-		obj_Opportunities_Page.opp_opp_fact_find();
+		//obj_Opportunities_Page.opp_opp_fact_find();
 
 		// Proposal page for adding data in opportunity - Customer info, Additionalinfo
 		// , Bank detail

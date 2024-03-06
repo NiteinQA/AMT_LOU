@@ -232,7 +232,7 @@ private List<WebElement> loading_icon;
 	private WebElement 	proposal_update_button ;
 	
 	
-	@FindBy(xpath = "//button[normalize-space()='Update & Exit']")
+	@FindBy(xpath = "//button[normalize-space()='Save & Exit']")
 	private WebElement 	proposal_update_and_exit_button ;
 	
 
@@ -450,7 +450,7 @@ private WebElement additional_info ;
 private WebElement proposal_save ;
 
  
- @FindBy(xpath = "//button[normalize-space()='Update & Exit']")
+ @FindBy(xpath = "//button[normalize-space()='Save & Exit']")
 	private WebElement  proposal_udpate_and_exit ;
  
  

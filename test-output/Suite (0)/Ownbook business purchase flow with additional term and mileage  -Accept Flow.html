@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Ownbook business purchase flow with additional term and mileage  -Accept Flow</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>27/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/22</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 29 21:17:28 IST 2024</td>
+<td>Started on:</td><td>Sun Mar 10 15:11:40 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1411 seconds (1411967 ms)</td>
+<tr><td>Total time:</td><td>452 seconds (452988 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,220 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-1514861296" onClick='toggleBox("Output-1514861296", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1514861296" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1514861296">
+<b>***********Entered in Customer Quote page ***********</b> <br /><br/>
+<b>Matrix credit type A1 Credit has been selected</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Actual Monthly Finance Payment from screen is 1784.66</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Expected Monthly Finannce Rental from excel is 1784.6618392138794</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Started Verifying Sales price discount not to be greater than cost price discount</b> <br /><br/>
+<br>----------Screenshot---------<br><br/>
+<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test_10_03_2024_03_15_21.png" height="800" width="1000"><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@id=&apos;bdiscount&apos;]//ancestor::div[3]//div//p&apos; (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+	at com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_HPRPage.enter_sales_price_discount_greater_than_cost_price_discount(CustomerQuotePage_HPNR_HPRPage.java:1042)
+	at com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test(Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.java:133)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;bdiscount&apos;]//ancestor::div[3]//div//p&quot;}
+  (Session info: chrome=122.0.6261.112)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fe68f0f5d6f700131f1e8bcf6643d1d, findElement {using=xpath, value=//*[@id=&apos;bdiscount&apos;]//ancestor::div[3]//div//p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64996}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: windows, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64996/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fe68f0f5d6f700131f1e8bcf6643d1d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 30 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1514861296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1514861296'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@id=&apos;bdiscount&apos;]//ancestor::div[3]//div//p&apos; (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:24)
+	at com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_HPRPage.enter_sales_price_discount_greater_than_cost_price_discount(CustomerQuotePage_HPNR_HPRPage.java:1042)
+	at com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test(Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.java:133)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;bdiscount&apos;]//ancestor::div[3]//div//p&quot;}
+  (Session info: chrome=122.0.6261.112)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fe68f0f5d6f700131f1e8bcf6643d1d, findElement {using=xpath, value=//*[@id=&apos;bdiscount&apos;]//ancestor::div[3]//div//p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64996}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: windows, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64996/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fe68f0f5d6f700131f1e8bcf6643d1d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 30 more
+</pre></div></td>
+<td>60</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow()'><b>L1_create_lead_convert_to_lead_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
+<a href="#Output-1054794560" onClick='toggleBox("Output-1054794560", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1054794560" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1054794560">
+<b>Clicked on Leads on Side Menu</b> <br /><br/>
+<b>Clicked on add lead</b> <br /><br/>
+<b>Lead is assigned</b> <br /><br/>
+<b>Added data in General Notes</b> <br /><br/>
+<b>Customer type - Business selected</b> <br /><br/>
+<b>Clicked on Add new vehicle request</b> <br /><br/>
+<b>Clicked on ownbook channel</b> <br /><br/>
+<b>Vehicle request for broker has been saved</b> <br /><br/>
+<b>Click on Map New Quote icon</b> <br /><br/>
+<b>Click on acquisition contract type icon</b> <br /><br/>
+<b>Click on customer contract type icon</b> <br /><br/>
+<b>Click on search button</b> <br /><br/>
+<b>Click on created date button 1st </b> <br /><br/>
+<b>Click on created date button 2nd</b> <br /><br/>
+<b>The given quote ZPA39189 is not available in pop up listing</b> <br /><br/>
+<b>New Quote has been mapped with lead</b> <br /><br/>
+<b>click ok button on Map  new quote </b> <br /><br/>
+<br>----------Screenshot---------<br><br/>
+<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\L1_create_lead_convert_to_lead_for_ownbook_business_flow_10_03_2024_03_19_13.png" height="800" width="1000"><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65108}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: windows, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65108/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aa10f4e1d1129c23860c38ddc6b5d86e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.waitForListOfVisibleElements(ExplicitWait.java:48)
+	at com.amt.pages.Leads.verify_table_values_on_lead_page(Leads.java:1223)
+	at com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow(LOU_ownbook_business_purchase_accept_with_changes_Test.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1054794560", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1054794560'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65108}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: windows, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65108/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aa10f4e1d1129c23860c38ddc6b5d86e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.amt.testUtil.ExplicitWait.waitForListOfVisibleElements(ExplicitWait.java:48)
+	at com.amt.pages.Leads.verify_table_values_on_lead_page(Leads.java:1223)
+	at com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow(LOU_ownbook_business_purchase_accept_with_changes_Test.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>205</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,116 +289,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()'><b>L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1670663187" onClick='toggleBox("Output-1670663187", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-661252173" onClick='toggleBox("Output-661252173", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1670663187" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1670663187">
-<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Draft</b> <br /><br/>
-<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
-<b>Status Verified : After sending the proposal</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()'><b>UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1658468562" onClick='toggleBox("Output-1658468562", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1658468562" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1658468562">
-<b>Click on Search text box on Opportunity page</b> <br /><br/>
-<b>Enter the opportunity ID in search text box =BA-8300</b> <br /><br/>
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Sent to customer</b> <br /><br/>
-<b>Current Status of  Quote ref is = Cancelled</b> <br /><br/>
-<b>Current Status of  Quote ref is = Sent to customer</b> <br /><br/>
-<b>Status Verified : Sent to customer</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>37</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()'><b>L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-217251131" onClick='toggleBox("Output-217251131", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-217251131" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-217251131">
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Sent to customer</b> <br /><br/>
-<b>Current Status of  Quote ref is = Sent to customer</b> <br /><br/>
-<b>Status Verified : Sent to customer</b> <br /><br/>
+<a href="#Output-661252173" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-661252173">
+<b>*********Calculations for On Road Price has been started***********</b> <br /><br/>
+<b>Started getting On screen values from after discount table </b> <br /><br/>
+<b>Manufacture_delivery_charges =550.00</b> <br /><br/>
+<b>Road_tax_first_year =585.00</b> <br /><br/>
+<b>First_registration_fee =65.00</b> <br /><br/>
+<b>Rebate =0.00</b> <br /><br/>
+<b>Writing After discount values to excel has been started</b> <br /><br/>
+<b>Writing After discount values to excel has been completed</b> <br /><br/>
+<b>Reading On Road Price for invoice from excel has been Started</b> <br /><br/>
+<b>Reading On Road Price for invoice from excel has been completed</b> <br /><br/>
+<b>Expected on the road price from excel is =58535.0</b> <br /><br/>
+<b>Actual on the road price from screen is =58535.00</b> <br /><br/>
 </div>
 </td>
 <td></td>
 <td>4</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
-<tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-1611118090" onClick='toggleBox("Output-1611118090", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1611118090" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1611118090">
-<b></b> <br /><br/>
-<b>Actual Monthly Finance Payment after editing vehicle profit = 1746.75</b> <br /><br/>
-<b>Expected  Monthly Finance Payment after editing vehicle profit = 1746.7494895318089</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Monthly Finance Payment verified after editing vehicle profit</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price</b> <br /><br/>
-<b>Sending 70242.0 to sales total input field</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Vehicle Profit Expected is 9755.833333333334</b> <br /><br/>
-<b>Vehicle Profit Actual is 9755.83</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Monthly Total Payment Expected is 2097.516589925359</b> <br /><br/>
-<b>Monthly Total Payment Actual is 2097.52</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Vehicle profit and Total Monthly Payment verified on editing Vehicle Sales Price</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>33</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L9_ownbook_status_after_contract_signed()'><b>L9_ownbook_status_after_contract_signed</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-494559279" onClick='toggleBox("Output-494559279", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-494559279" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-494559279">
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Contract signed</b> <br /><br/>
-<b>Current Status of  Quote ref is = Contract signed</b> <br /><br/>
-<b>Status Verified : Contract Signed </b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>10</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()'><b>UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1382038517" onClick='toggleBox("Output-1382038517", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1382038517" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1382038517">
-<b>Clicked on Opportunity link from Menu </b> <br /><br/>
-<b>Click on Search text box on Opportunity page</b> <br /><br/>
-<b>Enter the opportunity ID in search text box =BA-8300</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>16</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
 <tr>
 <td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-1538581934" onClick='toggleBox("Output-1538581934", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-998946183" onClick='toggleBox("Output-998946183", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1538581934" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1538581934">
+<a href="#Output-998946183" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-998946183">
 <b>***********Entered in holding cost page ***********</b> <br /><br/>
 <b>Clicked on holding cost summary</b> <br /><br/>
 <b></b> <br /><br/>
@@ -192,13 +324,13 @@ function toggleAllBoxes() {
 <b>Getting on screen values from Holding Cost Page</b> <br /><br/>
 <b>Duration(Terms) =36.0</b> <br /><br/>
 <b>Annual_mileage =10000.0</b> <br /><br/>
-<b>Cap_residual_value_from_screen =28575.0</b> <br /><br/>
+<b>Cap_residual_value_from_screen =0.0</b> <br /><br/>
 <b>Writing Holding Cost Summary values to excel has been started</b> <br /><br/>
 <b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
 <b>Reading Monthly Holding Cost value from excel has been started</b> <br /><br/>
 <b>Reading Monthly Holding Cost value from excel has been completed</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_screen =900.75</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_excel =900.7451652606776</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =1498.35</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =1498.353128125393</b> <br /><br/>
 <b>Total Monthly Holding Cost based on CAP data is Verified and Found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Editing % CAP Residual Value used</b> <br /><br/>
@@ -207,8 +339,8 @@ function toggleAllBoxes() {
 <b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
 <b>Reading Monthly Holding Cost value from excel has been started</b> <br /><br/>
 <b>Reading Monthly Holding Cost value from excel has been completed</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_screen =1199.55</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_excel =1199.5491466930368</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =1498.35</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =1498.353128125393</b> <br /><br/>
 <b>Total Monthly Holding Cost After Editing % Residual Value is Verified and Found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Editing Residual value used</b> <br /><br/>
@@ -222,25 +354,25 @@ function toggleAllBoxes() {
 <b>Total Monthly Holding Cost After Editing Residual Value is Verified and Found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Editing additional terms and mileage</b> <br /><br/>
-<b>Updated Residual Value from screen  (to be sent to calculation excel) is =9600.00</b> <br /><br/>
+<b>Updated Residual Value from screen  (to be sent to calculation excel) is =6575.00</b> <br /><br/>
 <b>Writing Holding Cost Summary values to excel has been started</b> <br /><br/>
 <b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
 <b>Reading Monthly Holding Cost value from excel has been started</b> <br /><br/>
 <b>Reading Monthly Holding Cost value from excel has been completed</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_screen =1,330.05</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_excel =1330.0548290712977</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =1,395.31</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =1395.3078288972547</b> <br /><br/>
 <b>Total Monthly Holding Cost After Editing Additional terms and mileage is Verified and Found OK</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>57</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
+<td>47</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
 <tr>
 <td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_OTR_calculation_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_OTR_calculation_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-2019608127" onClick='toggleBox("Output-2019608127", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2131045547" onClick='toggleBox("Output-2131045547", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2019608127" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2019608127">
+<a href="#Output-2131045547" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2131045547">
 <b>Clicked on Quote button </b> <br /><br/>
 <b>Manufacture =AUDI has been selected</b> <br /><br/>
 <b>Model range =A7 has been selected</b> <br /><br/>
@@ -267,765 +399,654 @@ function toggleAllBoxes() {
 </div>
 </td>
 <td></td>
-<td>80</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
+<td>82</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-125267861" onClick='toggleBox("Output-125267861", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-125267861" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-125267861">
-<b>*************OTR Calulation on quote summary page has been started************</b> <br /><br/>
-<b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Cost otr price from screen is 58535.0</b> <br /><br/>
-<b>Cost price ex vat and rfl from screen is 48237.5</b> <br /><br/>
-<b>Otr Vat from screen is 9647.5</b> <br /><br/>
-<b>Otr rfl and frf from screen is 650.0</b> <br /><br/>
-<b></b> <br /><br/>
-<b></b> <br /><br/>
-<b>Cost otr price from excel is 58535.0</b> <br /><br/>
-<b>Cost price ex vat and rfl from excel is 48237.5</b> <br /><br/>
-<b>Otr Vat from excel is 9647.5</b> <br /><br/>
-<b>Otr rfl and frf from excel is 650.0</b> <br /><br/>
-<b></b> <br /><br/>
-<b>OTR price compared</b> <br /><br/>
-<b>Cost price ex vat and rfl compared</b> <br /><br/>
-<b>VAT compared</b> <br /><br/>
-<b>RFL & FRF compared</b> <br /><br/>
-<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br /><br/>
-<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Holding cost Terms from screen35.0</b> <br /><br/>
-<b>Holding cost miles per annum from screen is 35000.0</b> <br /><br/>
-<b>Holding cost monthly finance cost from screen is 1330.05</b> <br /><br/>
-<b>Holding cost total monthly holding cost from screen is 1330.05</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Holding cost Terms from excel is 35.0</b> <br /><br/>
-<b>Holding cost miles per annum from excel is 35000.0</b> <br /><br/>
-<b>Holding cost monthly finance cost from excel is 1330.0548290712977</b> <br /><br/>
-<b>Holding cost total monthly holding cost from excel is 1330.0548290712977</b> <br /><br/>
-<b>terms compared</b> <br /><br/>
-<b>Miles per annum compared</b> <br /><br/>
-<b>Finance cost compared</b> <br /><br/>
-<b>Total Monthly Holding Cost compared</b> <br /><br/>
-<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br /><br/>
-<b>Terms found OK</b> <br /><br/>
-<b>miles found OK</b> <br /><br/>
-<b>Basic Cash Price found OK</b> <br /><br/>
-<b>VAT found OK</b> <br /><br/>
-<b>Non VAT Items Value found OK</b> <br /><br/>
-<b>Total Cash Price found OK</b> <br /><br/>
-<b>Order Deposit found OK</b> <br /><br/>
-<b>Finance Deposit found OK</b> <br /><br/>
-<b>Total Deposit found OK</b> <br /><br/>
-<b>Part Exchange Value - found OK</b> <br /><br/>
-<b>Balance to Finance found OK</b> <br /><br/>
-<b>Finance Charges - found OK</b> <br /><br/>
-<b>Document Fee - found OK</b> <br /><br/>
-<b>Balance Payable - found OK</b> <br /><br/>
-<b>Option To Purchase Fee - found OK</b> <br /><br/>
-<b>Initial Cash Payment - found OK</b> <br /><br/>
-<b>Followed By months - found OK</b> <br /><br/>
-<b>Monthly Finance Payment - found OK</b> <br /><br/>
-<b>Balloon Value - found OK</b> <br /><br/>
-<b>Final Payment - found OK</b> <br /><br/>
-<b>Vehicle Commission - found OK</b> <br /><br/>
-<b>Default Finance Commission - found OK</b> <br /><br/>
-<b>Document Fee Commission - found OK</b> <br /><br/>
-<b>Total Commission - found OK</b> <br /><br/>
-<b>*************Configuration Values Verification on quote summary page has been started************</b> <br /><br/>
-<b>Base Interest Rate found OK</b> <br /><br/>
-<b>Finance Margin found OK</b> <br /><br/>
-<b>Deductions found OK</b> <br /><br/>
-<b>Additional Margin found OK</b> <br /><br/>
-<b>Total Margin found OK</b> <br /><br/>
-<b>Default Broker Margin percentage found OK</b> <br /><br/>
-<b>Customer Interest Rate found OK</b> <br /><br/>
-<b>Document Fee Margin found OK</b> <br /><br/>
-<b>Default Broker Margin found OK</b> <br /><br/>
-<b>*********Customer Quote generated successfully and Quote_ref_no is=DDR95386</b> <br /><br/>
-<b>*************OTR Calulation on quote summary page has been started************</b> <br /><br/>
-<b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Cost otr price from screen is 58535.0</b> <br /><br/>
-<b>Cost price ex vat and rfl from screen is 48237.5</b> <br /><br/>
-<b>Otr Vat from screen is 9647.5</b> <br /><br/>
-<b>Otr rfl and frf from screen is 650.0</b> <br /><br/>
-<b></b> <br /><br/>
-<b></b> <br /><br/>
-<b>Cost otr price from excel is 58535.0</b> <br /><br/>
-<b>Cost price ex vat and rfl from excel is 48237.5</b> <br /><br/>
-<b>Otr Vat from excel is 9647.5</b> <br /><br/>
-<b>Otr rfl and frf from excel is 650.0</b> <br /><br/>
-<b></b> <br /><br/>
-<b>OTR price compared</b> <br /><br/>
-<b>Cost price ex vat and rfl compared</b> <br /><br/>
-<b>VAT compared</b> <br /><br/>
-<b>RFL & FRF compared</b> <br /><br/>
-<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br /><br/>
-<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Holding cost Terms from screen35.0</b> <br /><br/>
-<b>Holding cost miles per annum from screen is 35000.0</b> <br /><br/>
-<b>Holding cost monthly finance cost from screen is 1330.05</b> <br /><br/>
-<b>Holding cost total monthly holding cost from screen is 1330.05</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Holding cost Terms from excel is 35.0</b> <br /><br/>
-<b>Holding cost miles per annum from excel is 35000.0</b> <br /><br/>
-<b>Holding cost monthly finance cost from excel is 1330.0548290712977</b> <br /><br/>
-<b>Holding cost total monthly holding cost from excel is 1330.0548290712977</b> <br /><br/>
-<b>terms compared</b> <br /><br/>
-<b>Miles per annum compared</b> <br /><br/>
-<b>Finance cost compared</b> <br /><br/>
-<b>Total Monthly Holding Cost compared</b> <br /><br/>
-<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br /><br/>
-<b>Terms found OK</b> <br /><br/>
-<b>miles found OK</b> <br /><br/>
-<b>Basic Cash Price found OK</b> <br /><br/>
-<b>VAT found OK</b> <br /><br/>
-<b>Non VAT Items Value found OK</b> <br /><br/>
-<b>Total Cash Price found OK</b> <br /><br/>
-<b>Order Deposit found OK</b> <br /><br/>
-<b>Finance Deposit found OK</b> <br /><br/>
-<b>Total Deposit found OK</b> <br /><br/>
-<b>Part Exchange Value - found OK</b> <br /><br/>
-<b>Balance to Finance found OK</b> <br /><br/>
-<b>Finance Charges - found OK</b> <br /><br/>
-<b>Document Fee - found OK</b> <br /><br/>
-<b>Balance Payable - found OK</b> <br /><br/>
-<b>Option To Purchase Fee - found OK</b> <br /><br/>
-<b>Initial Cash Payment - found OK</b> <br /><br/>
-<b>Followed By months - found OK</b> <br /><br/>
-<b>Monthly Finance Payment - found OK</b> <br /><br/>
-<b>Balloon Value - found OK</b> <br /><br/>
-<b>Final Payment - found OK</b> <br /><br/>
-<b>Vehicle Commission - found OK</b> <br /><br/>
-<b>Default Finance Commission - found OK</b> <br /><br/>
-<b>Document Fee Commission - found OK</b> <br /><br/>
-<b>Total Commission - found OK</b> <br /><br/>
-<b>*************Configuration Values Verification on quote summary page has been started************</b> <br /><br/>
-<b>Base Interest Rate found OK</b> <br /><br/>
-<b>Finance Margin found OK</b> <br /><br/>
-<b>Deductions found OK</b> <br /><br/>
-<b>Additional Margin found OK</b> <br /><br/>
-<b>Total Margin found OK</b> <br /><br/>
-<b>Default Broker Margin percentage found OK</b> <br /><br/>
-<b>Customer Interest Rate found OK</b> <br /><br/>
-<b>Document Fee Margin found OK</b> <br /><br/>
-<b>Default Broker Margin found OK</b> <br /><br/>
-<b>*************Editing and Verifying Configuration Values on quote summary page has been started************</b> <br /><br/>
-<b>Base Interest Rate changed to 7.0 %</b> <br /><br/>
-<b>Holding Cost after changing Base Int. Rate -  found OK</b> <br /><br/>
-<b>Monthly Finance Rental after changing Base Int. Rate -  found OK</b> <br /><br/>
-<b>Finance Charges - found OK</b> <br /><br/>
-<b>Balance Payable - found OK</b> <br /><br/>
-<b>*************Editing Customer Rate Over Base and Verifying Values on quote summary page has been started************</b> <br /><br/>
-<b>Customer Base Over Rate changed to 5.0 %</b> <br /><br/>
-<b>Monthly Finance Rental after changing Customer Base Over Rate -  found OK</b> <br /><br/>
-<b>Finance Charges - found OK</b> <br /><br/>
-<b>Balance Payable - found OK</b> <br /><br/>
-<b>*************Calculations for Quote Summary page gas been started************</b> <br /><br/>
-<b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
-<b>Writing completed for some of the important required values to quote save excel sheet in the sheet HPNRHPNRQuoteNo</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>229</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()'><b>UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()[pri:16, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2138300851", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2138300851'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()[pri:16, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()'><b>L8_ownbook_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-723580162" onClick='toggleBox("Output-723580162", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-723580162" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-723580162">
-<b>Status code 200 received </b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>27</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()'><b>UW2_verify_status_after_sending_to_underwriting</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1549625500", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1549625500'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()[pri:11, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-689400820" onClick='toggleBox("Output-689400820", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-689400820" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-689400820">
-<b>*********Calculations for On Road Price has been started***********</b> <br /><br/>
-<b>Started getting On screen values from after discount table </b> <br /><br/>
-<b>Manufacture_delivery_charges =550.00</b> <br /><br/>
-<b>Road_tax_first_year =585.00</b> <br /><br/>
-<b>First_registration_fee =65.00</b> <br /><br/>
-<b>Rebate =0.00</b> <br /><br/>
-<b>Writing After discount values to excel has been started</b> <br /><br/>
-<b>Writing After discount values to excel has been completed</b> <br /><br/>
-<b>Reading On Road Price for invoice from excel has been Started</b> <br /><br/>
-<b>Reading On Road Price for invoice from excel has been completed</b> <br /><br/>
-<b>Expected on the road price from excel is =58535.0</b> <br /><br/>
-<b>Actual on the road price from screen is =58535.00</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()'><b>L2_ownbook_business_current_status_before_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace364945410", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace364945410'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()[pri:2, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow()'><b>UW4_verify_ownbook_underwriting_proposal_page_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-226706919" onClick='toggleBox("Output-226706919", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-226706919" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-226706919">
-<b>Click on Underwriting detail page for proposal</b> <br /><br/>
-<b>Clicked on Underwriting quote page</b> <br /><br/>
-<b></b> <br /><br/>
-<b>58535.0 = 58535.0</b> <br /><br/>
-<b>Cost Otr Price compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>48237.5 = 48237.5</b> <br /><br/>
-<b>Cost Otr Price compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9647.5 = 9647.5</b> <br /><br/>
-<b>Otr Vat compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>650.0 = 650.0</b> <br /><br/>
-<b>Otr Rfl And Frf compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>DDR95386 = DDR95386</b> <br /><br/>
-<b>Quote no. compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35.0 = 35.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35000.0 = 35000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>57993.33 = 57993.33</b> <br /><br/>
-<b>Basic Cash Price found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>11598.67 = 11598.666</b> <br /><br/>
-<b>VAT found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>650.0 = 650.0</b> <br /><br/>
-<b>Non VAT Items Value found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>70242.0 = 70241.996</b> <br /><br/>
-<b>Total Cash Price found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>1000.0 = 1000.0</b> <br /><br/>
-<b>Order Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>1000.0 = 1000.0</b> <br /><br/>
-<b>Finance Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2000.0 = 2000.0</b> <br /><br/>
-<b>Total Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>500.0 = 500.0</b> <br /><br/>
-<b>Part Exchange Value - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>67742.0 = 67741.996</b> <br /><br/>
-<b>Balance to Finance found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>14075.02 = 14074.901115291927</b> <br /><br/>
-<b>Finance Charges - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>199.99 = 199.99</b> <br /><br/>
-<b>Document Fee - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>82067.01 = 82066.88511529192</b> <br /><br/>
-<b>Balance Payable - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>10.0 = 10.0</b> <br /><br/>
-<b>Option To Purchase Fee - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2239.99 = 2239.988</b> <br /><br/>
-<b>Initial Cash Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>34.0 = 34.0</b> <br /><br/>
-<b>Followed By months - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2124.03 = 2124.0263857438795</b> <br /><br/>
-<b>Monthly Finance Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9600.0 = 9600.0</b> <br /><br/>
-<b>Balloon Value - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9610.0 = 9610.0</b> <br /><br/>
-<b>Final Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9755.83 = 9755.83</b> <br /><br/>
-<b>Vehicle Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>552.76 = 552.7558701388891</b> <br /><br/>
-<b>Default Finance Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
-<b>Document Fee Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>10408.58 = 10408.57587013889</b> <br /><br/>
-<b>Total Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>7.0 = 7.0</b> <br /><br/>
-<b>Base Interest Rate found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>6005.56 = 6005.437115291919</b> <br /><br/>
-<b>Finance Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>663.31 = 663.3070441666669</b> <br /><br/>
-<b>Deductions found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
-<b>Additional Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>5442.24 = 5442.120071125252</b> <br /><br/>
-<b>Total Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>0.98 = 0.9791666666666674</b> <br /><br/>
-<b>Default Broker Margin percentage found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>12.0 = 12.000000000000002</b> <br /><br/>
-<b>Customer Interest Rate found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
-<b>Document Fee Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>663.31 = 663.3070441666669</b> <br /><br/>
-<b>Default Broker Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>[32mAll values on underwriting quote tab verified successfully[0m</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Click on decision tab page</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>124</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()'><b>L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()[pri:7, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1917228580", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1917228580'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()[pri:7, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-795396365" onClick='toggleBox("Output-795396365", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-795396365" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-795396365">
-<b></b> <br /><br/>
-<b>Monthly Finance Payment Expected (with balloon payment toggle button off) is 2204.68024842396</b> <br /><br/>
-<b>Monthly Finance Payment Actual (with balloon payment toggle button off) is 2204.68</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Monthly Finance Payment verified after making balloon payment toggle button off</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>16</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept()'><b>UW5_verify_ownbook_underwriting_proposal_decision_with_accept</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept()[pri:14, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace749699277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace749699277'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept()[pri:14, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow()'><b>L1_create_lead_convert_to_lead_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1420231618" onClick='toggleBox("Output-1420231618", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1420231618" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1420231618">
-<b>Clicked on Leads on Side Menu</b> <br /><br/>
-<b>Clicked on add lead</b> <br /><br/>
-<b>Lead is assigned</b> <br /><br/>
-<b>Added data in General Notes</b> <br /><br/>
-<b>Customer type - Business selected</b> <br /><br/>
-<b>Clicked on Add new vehicle request</b> <br /><br/>
-<b>Clicked on ownbook channel</b> <br /><br/>
-<b>Vehicle request for broker has been saved</b> <br /><br/>
-<b>Click on Map New Quote icon</b> <br /><br/>
-<b>Click on acquisition contract type icon</b> <br /><br/>
-<b>Click on customer contract type icon</b> <br /><br/>
-<b>Click on search button</b> <br /><br/>
-<b>Click on created date button 1st </b> <br /><br/>
-<b>Click on created date button 2nd</b> <br /><br/>
-<b>New Quote has been mapped with lead</b> <br /><br/>
-<b>click ok button on Map  new quote </b> <br /><br/>
-<b></b> <br /><br/>
-<b>Started Verifying Table values</b> <br /><br/>
-<b></b> <br /><br/>
-<b>DDR95386 = DDR95386</b> <br /><br/>
-<b>Quote no. compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2124.03 = 2124.03</b> <br /><br/>
-<b>Monthly finance rental compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35000.0 = 35000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35.0 = 35.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>28/02/2024 = 28/02/2024</b> <br /><br/>
-<b>Expiry date compared and found ok</b> <br /><br/>
-<b>Click on Lead save and Convert button</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Started Verifying Table values</b> <br /><br/>
-<b></b> <br /><br/>
-<b>DDR95386 = DDR95386</b> <br /><br/>
-<b>Quote no. compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2124.03 = 2124.03</b> <br /><br/>
-<b>Monthly finance rental compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35000.0 = 35000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35.0 = 35.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>28/02/2024 = 28/02/2024</b> <br /><br/>
-<b>Expiry date compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>In Lead created Opportunity Id is =BA-8300</b> <br /><br/>
-<b></b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>167</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L9_ownbook_status_after_contract_signed()'><b>L9_ownbook_status_after_contract_signed</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L9_ownbook_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1879227558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1879227558'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L9_ownbook_status_after_contract_signed()[pri:9, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()'><b>UW3_verify_underwriting_lisitig_page</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1231827268" onClick='toggleBox("Output-1231827268", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1231827268" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1231827268">
-<b>Click on Underwriting menu_link </b> <br /><br/>
-<b>Click on Underwriting - ownbook tab </b> <br /><br/>
-<b>Click on Search text box - broker tab</b> <br /><br/>
-<b>Getting the  proposal id from excel sheet =VSU5732</b> <br /><br/>
-<b>Enter the proposal in search text box =VSU5732</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>14</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()'><b>L4_fill_up_the_required_fields_for_sending_a_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()[pri:4, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1376021857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1376021857'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()[pri:4, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()'><b>L2_ownbook_business_current_status_before_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1753661932" onClick='toggleBox("Output-1753661932", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1753661932" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1753661932">
-<b>Clicked on Opportunity link from Menu </b> <br /><br/>
-<b>listing_proposal_status is = Proposal Required</b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
-<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
-<b>Current Status of Proposal value is = Proposal Required</b> <br /><br/>
-<b>Current Status of Channel value is =  Draft</b> <br /><br/>
-<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
-<b>Status Verified : Before sending the proposal</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>21</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()'><b>UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace617816500", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace617816500'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status()'><b>UW1_verify_underwriting_flow_ownbook_with_status</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1196007778" onClick='toggleBox("Output-1196007778", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1196007778" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1196007778">
-<b> Underwriting icon is available </b> <br /><br/>
-<b>Underwriting pop up -quote ref no => Quote reference no.:
-DDR95386</b> <br /><br/>
-<b>Underwriting Popup Proposal Id is =VSU5732</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Started Verifying Summary values</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Quote reference no.:
-DDR95386 != DDR95386</b> <br /><br/>
-<b>Quote no. compared but found not ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35.0 = 35.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35000.0 = 35000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>57993.33 = 57993.33</b> <br /><br/>
-<b>Basic Cash Price found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>11598.67 = 11598.666</b> <br /><br/>
-<b>VAT found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>650.0 = 650.0</b> <br /><br/>
-<b>Non VAT Items Value found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>70242.0 = 70241.996</b> <br /><br/>
-<b>Total Cash Price found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>1000.0 = 1000.0</b> <br /><br/>
-<b>Order Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>1000.0 = 1000.0</b> <br /><br/>
-<b>Finance Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2000.0 = 2000.0</b> <br /><br/>
-<b>Total Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>500.0 = 500.0</b> <br /><br/>
-<b>Part Exchange Value - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>67742.0 = 67741.996</b> <br /><br/>
-<b>Balance to Finance found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>14075.02 = 14074.901115291927</b> <br /><br/>
-<b>Finance Charges - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>199.99 = 199.99</b> <br /><br/>
-<b>Document Fee - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>82067.01 = 82066.88511529192</b> <br /><br/>
-<b>Balance Payable - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>10.0 = 10.0</b> <br /><br/>
-<b>Option To Purchase Fee - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2239.99 = 2239.988</b> <br /><br/>
-<b>Initial Cash Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>34.0 = 34.0</b> <br /><br/>
-<b>Followed By months - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2124.03 = 2124.0263857438795</b> <br /><br/>
-<b>Monthly Finance Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9600.0 = 9600.0</b> <br /><br/>
-<b>Balloon Value - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9610.0 = 9610.0</b> <br /><br/>
-<b>Final Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9755.83 = 9755.83</b> <br /><br/>
-<b>Vehicle Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>552.76 = 552.7558701388891</b> <br /><br/>
-<b>Default Finance Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
-<b>Document Fee Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>10408.58 = 10408.57587013889</b> <br /><br/>
-<b>Total Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>One or More than One values on underwriting pop up may be wrong , please check all above values printed on console</b> <br /><br/>
-<b></b> <br /><br/>
-<b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
-<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>64</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1443680198", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1443680198'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept()'><b>UW5_verify_ownbook_underwriting_proposal_decision_with_accept</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1744052250" onClick='toggleBox("Output-1744052250", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1744052250" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1744052250">
-<b>Click on decision Accept button</b> <br /><br/>
-<b>Entering values to input field</b> <br /><br/>
-<b>Current Status of accept value is = Conditional acceptance</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>41</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()'><b>UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()[pri:15, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1873075471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1873075471'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()[pri:15, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()'><b>UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-701061991" onClick='toggleBox("Output-701061991", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-701061991" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-701061991">
-<b> Underwriting icon is available </b> <br /><br/>
-<b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>67</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()'><b>OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1107960902", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1107960902'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()'><b>UW2_verify_status_after_sending_to_underwriting</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1724203893" onClick='toggleBox("Output-1724203893", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1724203893" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1724203893">
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Awaiting underwriting</b> <br /><br/>
-<b>Current Status of  Quote ref is = Awaiting underwriting</b> <br /><br/>
-<b>Status Verified : Awaiting Underwriting </b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status()'><b>UW1_verify_underwriting_flow_ownbook_with_status</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status()[pri:10, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace278532503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace278532503'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status()[pri:10, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()'><b>L4_fill_up_the_required_fields_for_sending_a_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1659142293" onClick='toggleBox("Output-1659142293", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1659142293" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1659142293">
-<b>click on Proposal icon</b> <br /><br/>
-<b>click on Proposal icon</b> <br /><br/>
-<b>Proposal page will display </b> <br /><br/>
-<b>Send proposal to customer pop up  will open</b> <br /><br/>
-<b>Click on Manual fill radio button - Yes</b> <br /><br/>
-<b>Click on manually submit behalf of customer link</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>88</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace365971102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace365971102'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()'><b>OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-1726330964" onClick='toggleBox("Output-1726330964", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1726330964" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1726330964">
-<b>Cancelled Quote ref in Opportunity is = null</b> <br /><br/>
-<b>Cancelled Monthly Payment value is = £ 2,124.03</b> <br /><br/>
-<b>New Quote ref in Opportunity FSH52193</b> <br /><br/>
-<b>New Quote Monthly Payment is  = £ 2,045.65</b> <br /><br/>
-<b>[32mMonthly Payment verified (found ok) after accepting new quote, Actual value is 2045.65 and Expected value is 2045.646717896908[0m</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()'><b>L3_verify_table_values_on_opportunity_page_before_sending_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace898860093", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace898860093'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()[pri:3, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()'><b>L3_verify_table_values_on_opportunity_page_before_sending_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-2079372291" onClick='toggleBox("Output-2079372291", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2079372291" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2079372291">
-<b></b> <br /><br/>
-<b>Started Verifying Table values</b> <br /><br/>
-<b></b> <br /><br/>
-<b>DDR95386 = DDR95386</b> <br /><br/>
-<b>Quote no. compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>2124.03 = 2124.03</b> <br /><br/>
-<b>Monthly finance rental compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35000.0 = 35000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>35.0 = 35.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>28/02/2024 = 28/02/2024</b> <br /><br/>
-<b>Expiry date compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Table values verified Successfully</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>3</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:8, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1939742764", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1939742764'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:8, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
 <tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-2101402680" onClick='toggleBox("Output-2101402680", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2101402680" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2101402680">
-<b>Clicked on Part Exchange panel</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Balance To Finance Expected is 67741.996</b> <br /><br/>
-<b>Balance To Finance Actual is 67742.0</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Monthly Finance Payment Expected is 2014.0562220919794</b> <br /><br/>
-<b>Monthly Finance Payment Actual is 2014.06</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Monthly Finance Payment verified after editing part exchange values and deposit values</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>62</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()'><b>UW3_verify_underwriting_lisitig_page</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace797856093", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace797856093'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()[pri:12, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()'><b>UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-477082519" onClick='toggleBox("Output-477082519", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-477082519" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-477082519">
-<b>Status code 200 received </b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>91</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()'><b>L8_ownbook_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1937631113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1937631113'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()[pri:8, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 20000, 35, 35000, 1000, 20, NO, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
-<a href="#Output-843046470" onClick='toggleBox("Output-843046470", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-843046470" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-843046470">
-<b>***********Entered in Customer Quote page ***********</b> <br /><br/>
-<b>Matrix credit type A1 Credit has been selected</b> <br /><br/>
-<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br /><br/>
-<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br /><br/>
-<b>Actual Monthly Finance Payment from screen is 1706.69</b> <br /><br/>
-<b>Writing screen values to Excel for customer quote calculation -started</b> <br /><br/>
-<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
-<b>Expected Monthly Finannce Rental from excel is 1706.6885129717793</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Started Verifying Sales price discount not to be greater than cost price discount</b> <br /><br/>
-<b>Sales discount price entered greater than Cost discount prices and verified that sales discount input field doesn't accept greater values than cost discount prices</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Started Updating Sales price discount</b> <br /><br/>
-<b>Actual Sales Total Price from screen (on updating sales discount prices) is 58535.0</b> <br /><br/>
-<b>Expected Sales Total Price from excel (on updating sales discount prices) is 58535.0</b> <br /><br/>
-<b>Actual Vehicle Profit from screen (on updating sales discount prices) is 0.0</b> <br /><br/>
-<b>Expected Vehicle Profit from excel (on updating sales discount prices) is 0.0</b> <br /><br/>
-<b>Actual Monthly Finance Payment from screen is 1706.69</b> <br /><br/>
-<b>Expected Monthly Finance Payment from excel is 1706.6885129717793</b> <br /><br/>
-<b>1. Sales Total Price , 2.Vehicel Profit , 3.Monthly Finance Rental , Verified on updating sales discount and found OK</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>69</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@533bda92</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow()'><b>UW4_verify_ownbook_underwriting_proposal_page_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow()[pri:13, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1494896399", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1494896399'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow()[pri:13, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L6_ownbook_sending_contract()'><b>L6_ownbook_sending_contract</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test<br/>
-<a href="#Output-590172564" onClick='toggleBox("Output-590172564", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-590172564" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-590172564">
-<b>click on Send_Contract icon</b> <br /><br/>
-<b>Contract Sent Successfully</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>17</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@304bb45b</td></tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L6_ownbook_sending_contract()'><b>L6_ownbook_sending_contract</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L6_ownbook_sending_contract()[pri:6, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace99055199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace99055199'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L6_ownbook_sending_contract()[pri:6, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()'><b>UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()[pri:17, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1041667407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1041667407'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()[pri:17, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test</td>
+<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace637963643", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace637963643'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test@359df09a</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()'><b>L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()[pri:5, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace375604700", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace375604700'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()[pri:5, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test@43df23d3</td></tr>
 </table><p>
 </body>
 </html>

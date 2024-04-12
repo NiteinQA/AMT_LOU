@@ -172,6 +172,10 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='SupplierSettingFinance']")
 	private WebElement check_box_supplier_setting_finance;
+	
+	@FindBy(xpath = "//*[text()='OTR for invoice:']//ancestor::div[1]//p")
+	private WebElement otr_for_invoice;
+	
 
 	public CustomerQuotePage_HPNR_BCHPage() {
 
@@ -725,7 +729,16 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 		Click.on(driver, customer_quote, 50);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-		obj_read_excel_calculation_page.set_global_variables_to_excel(sheet_name);
+		
+		
+		ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+		double otrForInvoice = Double
+				.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));
+		
+		
+		
+		obj_read_excel_calculation_page.set_global_variables_to_excel(otrForInvoice, sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_without_maintenance(driver,
 						customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
@@ -763,7 +776,16 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 			throws IOException, NumberFormatException, ClassNotFoundException {
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 		Click.on(driver, customer_quote, 50);
-		obj_read_excel_calculation_page.set_global_variables_to_excel(sheet_name);
+        
+		
+		ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+		double otrForInvoice = Double
+				.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));
+		
+		
+		
+		obj_read_excel_calculation_page.set_global_variables_to_excel(otrForInvoice, sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_without_maintenance_edited(driver,
 						customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
@@ -837,7 +859,14 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		Click.on(driver, customer_quote, 50);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		obj_read_excel_calculation_page.set_global_variables_to_excel(sheet_name);
+        ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+		double otrForInvoice = Double
+				.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));
+		
+		
+		
+		obj_read_excel_calculation_page.set_global_variables_to_excel(otrForInvoice, sheet_name);
 
 		obj_read_excel_calculation_page.write_holding_cost_cap_values_to_excel_with_maintenance(duration,
 				annual_mileage, used_residual_value, total_cap_maintenance_value_converted,

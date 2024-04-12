@@ -1,97 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite (1)]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ownbook individual hire flow without additional term and mileage - Accept Flow(failed)">
+  <test thread-count="5" name="Used Car Ownbook Business Hire with additional term and mileage(failed)">
     <classes>
-      <class name="com.amt.test.LOU.LOU_ownbook_individual_hire_accept_with_changes_Test">
+      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_used_car_without_maintenance_with_add_term_and_mileage_Test">
         <methods>
-          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow"/>
-          <include name="L8_ownbook_signed_contract_status_with_api_call"/>
-          <include name="UW1_verify_status_after_contract_signed"/>
-          <include name="L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal"/>
-          <include name="UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow"/>
-          <include name="L1_create_lead_convert_to_lead_for_ownbook_individual_flow"/>
-          <include name="UW5_ownbook_underwriting_decision_accept_with_changes"/>
-          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
-          <include name="setup"/>
-          <include name="UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call"/>
-          <include name="UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up"/>
-          <include name="UW3_verify_underwriting_lisitig_page"/>
-          <include name="L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow"/>
-          <include name="UW2_verify_status_after_sending_to_underwriting"/>
-          <include name="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes"/>
+          <include name="aquisition_quotes_used_car_edit_cost_price_and_check_OTR_without_maintenance_test"/>
+          <include name="aquisition_quotes_used_car_OTR_calculation_without_maintenance_test"/>
+          <include name="aquisition_quotes_used_car_holding_cost_calculations_without_maintenance_test"/>
           <include name="start_info"/>
-          <include name="L2_ownbook_individual_current_status_before_sending_to_proposal"/>
-          <include name="L6_ownbook_sending_contract"/>
-          <include name="UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow"/>
           <include name="tearDown"/>
-          <include name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up"/>
-          <include name="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price"/>
-          <include name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification"/>
-        </methods>
-      </class> <!-- com.amt.test.LOU.LOU_ownbook_individual_hire_accept_with_changes_Test -->
-    </classes>
-  </test> <!-- ownbook individual hire flow without additional term and mileage - Accept Flow(failed) -->
-  <test thread-count="5" name="ownbook individual hire flow with additional term and mileage - Accept Flow(failed)">
-    <classes>
-      <class name="com.amt.test.LOU.LOU_ownbook_individual_hire_accept_with_changes_Test">
-        <methods>
-          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow"/>
-          <include name="L8_ownbook_signed_contract_status_with_api_call"/>
-          <include name="UW1_verify_status_after_contract_signed"/>
-          <include name="L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal"/>
-          <include name="UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow"/>
-          <include name="L1_create_lead_convert_to_lead_for_ownbook_individual_flow"/>
-          <include name="UW5_ownbook_underwriting_decision_accept_with_changes"/>
-          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
+          <include name="aquisition_quotes_customer_quote_payment_profile_calculations_without_maintenance_test"/>
+          <include name="aquisition_quotes_quote_summary_values_verification_without_maintenance_test" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call"/>
-          <include name="UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up"/>
-          <include name="UW3_verify_underwriting_lisitig_page"/>
-          <include name="L4_verify_current_status_on_opportunity_page_before_sending_to_proposal_for_ownbook_individual_flow"/>
-          <include name="UW2_verify_status_after_sending_to_underwriting"/>
-          <include name="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes"/>
-          <include name="start_info"/>
-          <include name="L2_ownbook_individual_current_status_before_sending_to_proposal"/>
-          <include name="L6_ownbook_sending_contract"/>
-          <include name="UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow"/>
-          <include name="tearDown"/>
-          <include name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up"/>
-          <include name="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price"/>
-          <include name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification"/>
         </methods>
-      </class> <!-- com.amt.test.LOU.LOU_ownbook_individual_hire_accept_with_changes_Test -->
+      </class> <!-- com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_used_car_without_maintenance_with_add_term_and_mileage_Test -->
     </classes>
-  </test> <!-- ownbook individual hire flow with additional term and mileage - Accept Flow(failed) -->
-  <test thread-count="5" name="ownbook individual hire flow with funder - Accept Flow(failed)">
-    <classes>
-      <class name="com.amt.test.LOU.LOU_ownbook_individual_hire_funder_accept_with_changes_Test">
-        <methods>
-          <include name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up"/>
-          <include name="UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call"/>
-          <include name="UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up"/>
-          <include name="UW3_verify_underwriting_lisitig_page"/>
-          <include name="UW2_verify_status_after_sending_to_underwriting"/>
-          <include name="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes"/>
-          <include name="L2_ownbook_individual_current_status_before_sending_to_proposal"/>
-          <include name="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price"/>
-          <include name="UW4_verify_values_on_underwriting_quote_tab_for_ownbook_individual_flow"/>
-          <include name="L6_ownbook_sending_contract"/>
-          <include name="setup"/>
-          <include name="L4_fill_up_the_required_fields_for_sending_a_proposal"/>
-          <include name="L8_ownbook_signed_contract_status_with_api_call"/>
-          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_individual_flow"/>
-          <include name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification"/>
-          <include name="start_info"/>
-          <include name="L1_create_lead_convert_to_lead_for_ownbook_individual_flow"/>
-          <include name="UW5_ownbook_underwriting_decision_accept_with_changes"/>
-          <include name="tearDown"/>
-          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
-          <include name="UW1_verify_status_after_contract_signed"/>
-          <include name="L5_ownbook_create_opportunity_individual_current_status_after_sending_to_proposal"/>
-          <include name="UW2_verify_underwriting_pop_up_summary_values_for_ownbook_individual_flow"/>
-        </methods>
-      </class> <!-- com.amt.test.LOU.LOU_ownbook_individual_hire_funder_accept_with_changes_Test -->
-    </classes>
-  </test> <!-- ownbook individual hire flow with funder - Accept Flow(failed) -->
+  </test> <!-- Used Car Ownbook Business Hire with additional term and mileage(failed) -->
 </suite> <!-- Failed suite [Suite (1)] -->

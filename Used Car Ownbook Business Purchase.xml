@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Used Car Ownbook Business">
  
   
-   <test thread-count="5" name="Used Car Ownbook Business Purchase with funder">
+    <test thread-count="5" name="Used Car Ownbook Business Purchase with funder">
     <classes>
     <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_used_car_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_used_car_ownbook_business_purchase_funder_accept_with_changes_Test"/>

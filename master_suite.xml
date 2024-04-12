@@ -1,15 +1,23 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MasterSuite">
 	<suite-files>
-		<!-- <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business Hire.xml" />
-		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Individual Hire.xml" />
-		<suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Individual Purchase.xml" />-->		
-		 <suite-file	path="D:\LOU\AMT_LOU\New Car Broker Business Hire.xml" />	
-		 <suite-file	path="D:\LOU\AMT_LOU\New Car Broker Business Purchase.xml" />
-		 
+		<!--
 		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Individual Hire.xml" />	
 		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Individual Purchase.xml" />
-
-		
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business Hire.xml" />
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Individual Hire.xml" />
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Individual Purchase.xml" />
+		 <suite-file	path="D:\LOU\AMT_LOU\Used Car Ownbook Business Hire.xml" />			
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business Hire.xml" />	
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business  Purchase.xml" />		
+		 <suite-file	path="D:\LOU\AMT_LOU\Used Car Ownbook Business Purchase.xml" />	
+		 <suite-file	path="D:\LOU\AMT_LOU\Used Car Ownbook Business Hire.xml" />
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Individual Hire.xml" />
+		 -->
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business Hire.xml" />	
+		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business  Purchase.xml" />	
+         
+         	
+		 		
 	</suite-files>
 </suite>

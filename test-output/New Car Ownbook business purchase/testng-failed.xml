@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [New Car Ownbook business purchase]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="New Car Ownbook business purchase flow  -Accept Flow(failed)">
+    <classes>
+      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test">
+        <methods>
+          <include name="aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test"/>
+          <include name="aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_without_maintenance_test"/>
+          <include name="aquisition_quotes_HPNR_HPNR_OTR_calculation_without_maintenance_test"/>
+          <include name="start_info"/>
+          <include name="aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test"/>
+          <include name="aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_without_maintenance_test"/>
+          <include name="aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test"/>
+          <include name="aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test"/>
+          <include name="aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test -->
+      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test">
+        <methods>
+          <include name="UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes"/>
+          <include name="UW3_verify_underwriting_lisitig_page"/>
+          <include name="UW2_verify_status_after_sending_to_underwriting"/>
+          <include name="UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call"/>
+          <include name="L6_ownbook_sending_contract"/>
+          <include name="UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up"/>
+          <include name="L1_create_lead_convert_to_lead_for_ownbook_business_flow"/>
+          <include name="L2_ownbook_business_current_status_before_sending_to_proposal"/>
+          <include name="OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price"/>
+          <include name="L9_ownbook_status_after_contract_signed"/>
+          <include name="setup"/>
+          <include name="UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification"/>
+          <include name="UW1_verify_underwriting_flow_ownbook_with_status"/>
+          <include name="L8_ownbook_signed_contract_status_with_api_call"/>
+          <include name="UW5_verify_ownbook_underwriting_proposal_decision_with_accept"/>
+          <include name="start_info"/>
+          <include name="L3_verify_table_values_on_opportunity_page_before_sending_proposal"/>
+          <include name="L4_fill_up_the_required_fields_for_sending_a_proposal"/>
+          <include name="L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow"/>
+          <include name="UW4_verify_ownbook_underwriting_proposal_page_flow"/>
+          <include name="L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal"/>
+        </methods>
+      </class> <!-- com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test -->
+    </classes>
+  </test> <!-- New Car Ownbook business purchase flow  -Accept Flow(failed) -->
+</suite> <!-- Failed suite [New Car Ownbook business purchase] -->

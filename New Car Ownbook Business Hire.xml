@@ -3,17 +3,17 @@
 <suite name="Suite">
    
     
-     <test thread-count="5" name="Ownbook business hire Accept">
+     <test thread-count="5" name="New Car Ownbook business hire Accept">
     <classes>	
      
       
-	 <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_Test"/>
-      <class name="com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test"/>
+	   <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_Test"/>
+     <class name="com.amt.test.LOU.LOU_ownbook_business_hire_accept_with_changes_Test"/>
     </classes>    
   </test> 
   
   
-       <test thread-count="5" name="Ownbook business hire Accept with Additional Term And Mileage">
+ <test thread-count="5" name="New Car Ownbook business hire Accept with Additional Term And Mileage">
     <classes>	
       
 	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_without_maintenance_with_add_term_mileage_Test"/>
@@ -22,14 +22,14 @@
     </classes>    
   </test>
    
-  <!--
   
-       <test thread-count="5" name="Ownbook business hire Accept with funder">
+  
+       <test thread-count="5" name="New Car Ownbook business hire Accept with funder">
     <classes>	      
       <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_maintenance_Test"/> 
       <class name="com.amt.test.LOU.LOU_ownbook_business_hire_funder_accept_with_changes_Test"/>      
     </classes>    
-  </test>-->
+  </test>
   
 
   

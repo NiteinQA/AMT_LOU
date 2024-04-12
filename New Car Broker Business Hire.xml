@@ -5,8 +5,8 @@
 		<classes>
 			<!-- Group 1 - Generate New Quote for Broker Business  and LOU accept
 			flow for the same -->
-			<class
-				name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />
+			<!-- <class
+				name="com.amt.test.broker.Acquisition_Quotes_Broker_BCH_without_maintenance_Test" />-->
 			<class
 				name="com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test" />
 

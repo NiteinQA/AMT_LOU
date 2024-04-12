@@ -147,6 +147,9 @@ public class CustomerQuotePage_CP_BCH_Page extends TestBase {
 	
 	@FindBy(xpath = "//p[contains(text(),'Holding cost')]")
 	private WebElement holding_cost;
+	
+	@FindBy(xpath = "//*[text()='OTR for invoice:']//ancestor::div[1]//p")
+	private WebElement otr_for_invoice;
 
 	Properties prop;
 	
@@ -501,7 +504,16 @@ public class CustomerQuotePage_CP_BCH_Page extends TestBase {
 			throws IOException, InterruptedException, NumberFormatException, ClassNotFoundException {
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 		Click.on(driver, customer_quote, 50);
-		obj_read_excel_calculation_page.set_global_variables_to_excel(sheet_name);
+        
+		
+		ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+		double otrForInvoice = Double
+				.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));
+		
+		
+		
+		obj_read_excel_calculation_page.set_global_variables_to_excel(otrForInvoice, sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_without_maintenance(driver,
 						customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
@@ -612,7 +624,14 @@ public class CustomerQuotePage_CP_BCH_Page extends TestBase {
 			throws IOException, NumberFormatException, ClassNotFoundException {
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 		Click.on(driver, customer_quote, 50);
-		obj_read_excel_calculation_page.set_global_variables_to_excel(sheet_name);
+ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+		double otrForInvoice = Double
+				.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));
+		
+		
+		
+		obj_read_excel_calculation_page.set_global_variables_to_excel(otrForInvoice, sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_without_maintenance_edited(driver,
 						customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
@@ -644,7 +663,14 @@ public class CustomerQuotePage_CP_BCH_Page extends TestBase {
 		Click.on(driver, customer_quote, 50);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, customer_quote_maintenance_toggle_button, 40);
-		obj_read_excel_calculation_page.set_global_variables_to_excel(sheet_name);
+ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+		double otrForInvoice = Double
+				.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));
+		
+		
+		
+		obj_read_excel_calculation_page.set_global_variables_to_excel(otrForInvoice, sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_with_maintenance(driver,
 						customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,

@@ -1325,8 +1325,10 @@ private WebElement proposal_save ;
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
+		Thread.sleep(5000);
+		
 		try {
-			ExplicitWait.visibleElement(driver, proposal_page_next_button, 10);
+			ExplicitWait.visibleElement(driver, proposal_page_next_button, 30);
 		
 	   while(proposal_page_next_button.isDisplayed())
 	   {

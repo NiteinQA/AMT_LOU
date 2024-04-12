@@ -40,7 +40,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 	private WebElement quote_summary;
 
 	// vehicle_discount_cost_price
-	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
+	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]/div/span")
 	private WebElement vehicle_discount_cost_price;
 
 	// vehicle_additional_discount_cost_price
@@ -134,6 +134,12 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 	@FindBy(xpath = "//*[@name='salesTotal']")
 	private WebElement sales_total_input;
+	
+	@FindBy(xpath = "//*[text()=' Rebate ']")
+	private WebElement rebate_text;	
+	
+	@FindBy(xpath = "//*[@class='salepricerighttpart']//*[text()=' Vehicle sales price ']//ancestor::div[2]//div[3]//p")
+	private WebElement sales_price_with_rabate;
 
 	@FindBy(xpath = "//*[@id='headingCustomerQuote']/div[1]/button/div")
 	private WebElement customer_quote_summary;
@@ -1456,32 +1462,32 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		// values
 
 		vehicle_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		Click.sendKeysdouble(driver, vehicle_discount, vehicleDiscountCostPrice - 1, 20);
+		Click.sendKeysdouble(driver, vehicle_discount,  - 1, 20);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		paint_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		Click.sendKeysdouble(driver, paint_discount, paintDiscountCostPrice - 1, 20);
+		Click.sendKeysdouble(driver, paint_discount,  - 1, 20);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		options_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		Click.sendKeysdouble(driver, options_discount, optionsDiscountCostPrice - 1, 20);
+		Click.sendKeysdouble(driver, options_discount,  - 1, 20);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		vehicle_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		Click.sendKeysdouble(driver, vehicle_additional_discount, vehicleAdditionalDiscountCostPrice - 1, 20);
+		Click.sendKeysdouble(driver, vehicle_additional_discount,  - 1, 20);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		paint_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		Click.sendKeysdouble(driver, paint_additional_discount, paintAdditionalDiscountCostPrice - 1, 20);
+		Click.sendKeysdouble(driver, paint_additional_discount,  - 1, 20);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		options_additional_discount.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		Click.sendKeysdouble(driver, options_additional_discount, optionsAdditionalDiscountCostPrice - 1, 20);
+		Click.sendKeysdouble(driver, options_additional_discount,  - 1, 20);
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
@@ -1513,8 +1519,29 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 
 		// getting sales price from screen
+		
+		
+		
+		double salesPriceActualFromSCreen = 0;
+		try {
+			ExplicitWait.visibleElement(driver, rebate_text, 30);
+			
+			if(rebate_text.isDisplayed())
+			{
+				ExplicitWait.visibleElement(driver, sales_price_with_rabate, 30);
+				salesPriceActualFromSCreen =  Double
+						.parseDouble(RemoveComma.of(sales_price_with_rabate.getText().trim().substring(2)));
+			}else				
+			{
+				salesPriceActualFromSCreen = Double.parseDouble(sales_total_input.getAttribute("value"));
+			}
+		}catch(Exception e)
+		{
+			
+		}
+		
 
-		double salesPriceActualFromSCreen = Double.parseDouble(sales_total_input.getAttribute("value"));
+		 
 
 		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);

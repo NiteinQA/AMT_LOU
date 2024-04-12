@@ -230,12 +230,20 @@ public class Leads extends TestBase {
 
 	@FindBy(xpath = "//div[contains(text(),'Business Contract Hire')]")
 	private WebElement customer_contract_type_bch_value;
-
-	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[1]/div[1]")
+	
+	
+	
+	@FindBy(xpath = "//*[@placeholder='Select customer contract']//*[text()='Business Contract Hire']")
 	private WebElement customer_business_contract_type_bch_value;
 
-	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[4]/div[1]")
+	@FindBy(xpath = "//*[@placeholder='Select customer contract']//*[text()='Hire Purchase Non-Regulated']")
 	private WebElement customer_business_contract_type_hpnr_value;
+
+//	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[1]/div[1]")
+//	private WebElement customer_business_contract_type_bch_value;
+//
+//	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[4]/div[1]")
+//	private WebElement customer_business_contract_type_hpnr_value;
 
 	@FindBy(xpath = "//*[normalize-space()='Search']")
 	private WebElement map_new_quote_search;
@@ -639,9 +647,13 @@ public class Leads extends TestBase {
 
 		// Thread.sleep(4000);
 
-		HelperClass.highlightElement(driver, add_new_vehicle_request);
+		
 
 		Click.on(driver, add_new_vehicle_request, 120);
+		
+		Thread.sleep(2000);
+		
+	
 
 		LO.print("Clicked on Add new vehicle request");
 		System.out.println("Clicked on Add new vehicle request");
@@ -653,7 +665,7 @@ public class Leads extends TestBase {
 
 		Click.on(driver, channel, 120);
 
-//	Thread.sleep(2000);
+	Thread.sleep(2000);
 
 		Click.on(driver, channel_broker_value, 120);
 
@@ -719,19 +731,23 @@ public class Leads extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		Click.on(driver, add_new_vehicle_request, 120);
-
+	 
+	   Click.on(driver, add_new_vehicle_request, 120);
+		
+		Thread.sleep(2000);
+		
+		
 		LO.print("Clicked on Add new vehicle request");
 		System.out.println("Clicked on Add new vehicle request");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		// Thread.sleep(4000);
 
-		HelperClass.highlightElement(driver, channel);
+	//	HelperClass.highlightElement(driver, channel);
 
 		Click.on(driver, channel, 120);
 
-		// Thread.sleep(2000);
+		 Thread.sleep(2000);
 
 		Click.on(driver, channel_ownbook_value, 120);
 
@@ -1056,6 +1072,8 @@ public class Leads extends TestBase {
 		Thread.sleep(5000);
 		
 		Click.on(driver, Map_New_quote_icon, 120);
+		
+	
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);

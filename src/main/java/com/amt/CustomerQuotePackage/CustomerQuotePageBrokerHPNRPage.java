@@ -653,7 +653,7 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 
 		Click.sendKeys(driver, miles_per_annum, milesperannum, 60);
 
-		Click.on(driver, contract_miles, 20);
+		//Click.on(driver, contract_miles, 20);
 
 		Click.sendKeys(driver, cashdeposit, cashDeposit, 60);
 

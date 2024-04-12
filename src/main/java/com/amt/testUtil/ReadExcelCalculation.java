@@ -1403,7 +1403,7 @@ public class ReadExcelCalculation extends TestBase {
 
 	}
 
-	public void set_global_variables_to_excel(String sheet_name)
+	public void set_global_variables_to_excel(double otr_for_invoice , String sheet_name)
 			throws IOException, NumberFormatException, ClassNotFoundException {
 		// write / take global variables and set to excel sheet for calculation
 
@@ -1444,14 +1444,28 @@ public class ReadExcelCalculation extends TestBase {
 
 			wb.getSheet(sheet_name).getRow(73).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("additional_rfl_per_annum_LCV")));
+			
+			if(otr_for_invoice >40000)
+			{
 			wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(
 					Double.parseDouble(prop.getProperty("additional_rfl_premium_vehicle_over_40k_per_annum_LCV")));
+			}else
+			{
+				wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(0);
+			}
 		} else {
 			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
 			wb.getSheet(sheet_name).getRow(73).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("additional_rfl_per_annum")));
+			if(otr_for_invoice >40000)
+			{
 			wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(
-					Double.parseDouble(prop.getProperty("additional_rfl_premium_vehicle_over_40k_per_annum")));
+					Double.parseDouble(prop.getProperty("additional_rfl_premium_vehicle_over_40k_per_annum_LCV")));
+			}else
+			{
+				wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(0);
+			}
+
 		}
 
 		wb.getSheet(sheet_name).getRow(78).getCell(1)

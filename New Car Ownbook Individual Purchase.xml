@@ -6,7 +6,7 @@
     <classes>		
     
       
-	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_maintenance_Test"/>
+	  <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_ownbook_individual_purchase_funder_accept_with_changes_Test"/>
      
     </classes>
@@ -16,7 +16,7 @@
 	<test thread-count="5" name="New Car Ownbook individual purchase flow with additional term and mileage - Accept Flow">
     <classes>     
      	
-	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_without_maintenance_with_add_term_mileage_Test"/>
+	  <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_PCP_without_maintenance_with_add_term_mileage_Test"/>
       <class name="com.amt.test.LOU.LOU_ownbook_individual_purchase_accept_with_changes_Test"/>  
       
     </classes>
@@ -26,7 +26,7 @@
     <classes>		
     
       
-	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_maintenance_Test"/>
+	  <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_PCP_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_ownbook_individual_purchase_funder_accept_with_changes_Test"/>
      
     </classes>

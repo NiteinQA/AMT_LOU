@@ -251,6 +251,11 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 				sheetName = prop.getProperty("HPNRBCHQuoteNo");
 			}
 		}
+		
+		if (classOrMethodName.contains("ownbook_FL_FL_business_hire")) {			
+
+				sheetName = prop.getProperty("FL_FL_Quote_Save");			
+		}
 
 		if (classOrMethodName.contains("ownbook_individual_hire")) {
 			sheetName = prop.getProperty("HPNRPCHQuoteNo");
@@ -258,6 +263,10 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 
 		if (classOrMethodName.contains("ownbook_business_purchase")) {
 			sheetName = prop.getProperty("HPNRHPNRQuoteNo");
+		}
+		
+		if (classOrMethodName.contains("ownbook_CP_CP_business_purchase")) {
+			sheetName = prop.getProperty("CP_CP_Quote_Save");
 		}
 
 		if (classOrMethodName.contains("ownbook_individual_purchase")) {
@@ -268,12 +277,20 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 			sheetName = prop.getProperty("HPNRBCHFunderQuoteNo");
 		}
 		
+		if (classOrMethodName.contains("ownbook_FL_FL_business_hire_funder")) {
+			sheetName = prop.getProperty("FL_FL_Funder_Quote_Save");
+		}
+		
 		if (classOrMethodName.contains("ownbook_individual_hire_funder")) {
 			sheetName = prop.getProperty("HPNRPCHFunderQuoteNo");
 		}
 		
 		if (classOrMethodName.contains("ownbook_business_purchase_funder")) {
 			sheetName = prop.getProperty("HPNRHPNRFunderQuoteNo");
+		}
+		
+		if (classOrMethodName.contains("ownbook_CP_CP_business_purchase_funder")) {
+			sheetName = prop.getProperty("CP_CP-Funder_Quote_Save");
 		}
 		
 		if (classOrMethodName.contains("ownbook_individual_purchase_funder")) {
@@ -305,6 +322,12 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 		sheetName = prop.getProperty("calculation_sheet_ownbook_business_hire");
 		}
 		}
+	
+	if (classOrMethodName.contains("ownbook_FL_FL_business_hire")) {
+
+		sheetName = prop.getProperty("calculation_sheet_ownbook_FL_FL_business_hire");
+		}
+
 
 	if (classOrMethodName.contains("ownbook_individual_hire")) {
 		
@@ -328,7 +351,11 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 		{
 			sheetName = prop.getProperty("calculation_sheet_ownbook_business_purchase");
 		}
-				
+		
+		if (classOrMethodName.contains("ownbook_CP_CP_business_purchase")) {
+			
+				sheetName = prop.getProperty("calculation_sheet_ownbook_CP_CP_business_purchase");
+	     }
 	}
 
 	if (classOrMethodName.contains("ownbook_individual_purchase")) {
@@ -357,6 +384,13 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 		sheetName = prop.getProperty("calculation_sheet_ownbook_business_hire_funder");
 		}
 		}
+	
+	if (classOrMethodName.contains("ownbook_FL_FL_business_hire_funder")) {
+
+		sheetName = prop.getProperty("calculation_sheet_ownbook_FL_FL_business_hire_funder");
+		}
+	
+	
 	
 
 	
@@ -392,6 +426,12 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 			
 	}
 	
+	if (classOrMethodName.contains("ownbook_CP_CP_business_purchase_funder")) {
+		
+		sheetName = prop.getProperty("calculation_sheet_ownbook_CP_CP_business_purchase_funder");
+       }
+
+	
 	if (classOrMethodName.contains("ownbook_individual_purchase_funder")) {
 	
 		if(classOrMethodName.contains("used_car"))
@@ -408,3 +448,4 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 	return sheetName;
 }
 }
+  

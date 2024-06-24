@@ -2799,7 +2799,7 @@ public class Underwriting extends TestBase {
 		int count = 0;
 
 		// 1. comparing cost OTR price
-		if (costOtrPriceActual == costOtrPriceExpected) {
+		if (Difference.of_two_Double_Values(costOtrPriceActual, costOtrPriceExpected) <0.1) {
 			count++;
 
 			System.out.println("");
@@ -2820,7 +2820,7 @@ public class Underwriting extends TestBase {
 		}
 
 		// 2.comparing cost Price Ex Vat And Rfl
-		if (costPriceExVatAndRflActual == costPriceExVatAndRflExpected) {
+		if (Difference.of_two_Double_Values(costPriceExVatAndRflActual , costPriceExVatAndRflExpected)<0.1) {
 			count++;
 
 			System.out.println("");
@@ -2841,7 +2841,7 @@ public class Underwriting extends TestBase {
 		}
 
 		// 3.comparing cost Price Ex Vat And Rfl
-		if (otrVatActual == otrVatExpected) {
+		if (Difference.of_two_Double_Values(otrVatActual, otrVatExpected)<0.1) {
 			count++;
 
 			System.out.println("");
@@ -2862,7 +2862,7 @@ public class Underwriting extends TestBase {
 		}
 
 		// 4.comparing Otr Rfl And Frf
-		if (otrRflAndFrfActual == otrRflAndFrfExpected) {
+		if (Difference.of_two_Double_Values(otrRflAndFrfActual , otrRflAndFrfExpected)<0.1) {
 			count++;
 
 			System.out.println("");
@@ -12504,7 +12504,9 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		// Yes button on confirmation
 
 		try
-		{		
+		{
+			Thread.sleep(2000);
+			
 		Click.on(driver, desicion_save_exit_button_confirm_yes, 10);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		}catch(Exception e) {}

@@ -27,13 +27,13 @@ public class OptionsAccessoriesPage extends TestBase {
 	@FindBy(linkText = "Interior")
 	private WebElement acq_interior;
 
-	@FindBy(xpath = "//*[contains(text(),'Trim')]//ancestor::div[1]//div/div/div/div/label")
+	@FindBy(xpath = "//*[contains(text(),'Trim -')]//ancestor::div[1]//div/div/div/div/label")
 	private WebElement acq_interior_trim; 
 	
-	@FindBy(xpath = "//*[contains(text(),'Trim')]//ancestor::div[1]//div/div/div/div/label")
+	@FindBy(xpath = "//*[contains(text(),'Trim -')]//ancestor::div[1]//div/div/div/div/label")
 	private WebElement acq_interior_trim_used_car; 
 	
-	@FindBy(xpath = "//*[contains(text(),'Trim')]//ancestor::div[1]//div/div/div/div/label")
+	@FindBy(xpath = "//*[contains(text(),'Trim -')]//ancestor::div[1]//div/div/div/div/label")
 	private WebElement acq_interior_trim_used_LCV; 
 	
 	@FindBy(xpath = "//img[@alt='Loading...']")
@@ -71,7 +71,7 @@ public class OptionsAccessoriesPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
-		Thread.sleep(6000);
+		Thread.sleep(15000);
 		
 	    try {
 		 try { Click.on(driver, ok_pop_up, 10);}catch(Exception e) {}
@@ -106,7 +106,7 @@ public class OptionsAccessoriesPage extends TestBase {
 //		}
 
 		
-
+		Thread.sleep(3000);
 
 		Click.on(driver, acq_interior, 40);
 		

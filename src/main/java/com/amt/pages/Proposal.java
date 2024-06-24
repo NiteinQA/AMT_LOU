@@ -1364,6 +1364,7 @@ private WebElement proposal_save ;
 		 
 		 //final approval  - yes - pls confirm ! pop up
 		 ExplicitWait.visibleElement(driver, proposal_page_final_approval_confirmation, 30);
+		 Thread.sleep(2000);
 		 proposal_page_final_approval_confirmation.click();
 		 
 		 

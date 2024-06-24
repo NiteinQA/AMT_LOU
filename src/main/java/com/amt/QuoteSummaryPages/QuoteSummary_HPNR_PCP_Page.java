@@ -18,6 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
@@ -323,8 +324,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -3655,7 +3655,9 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 //		Actions act = new Actions(driver);
 //		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 100);
+		
+		Thread.sleep(10000);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 
@@ -5872,7 +5874,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 	}
 
-public void quote_summary_HPNR_PCP_without_maintenance(String sheet_name) throws InterruptedException, IOException {
+public void quote_summary_purchase_without_maintenance(String sheet_name) throws InterruptedException, IOException {
 					
 		
 		

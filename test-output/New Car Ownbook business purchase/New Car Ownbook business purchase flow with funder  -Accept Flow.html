@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>New Car Ownbook business purchase flow with funder  -Accept Flow</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>25/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>22/1/2</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 11 22:14:13 IST 2024</td>
+<td>Started on:</td><td>Tue Jun 18 20:47:18 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1032 seconds (1032251 ms)</td>
+<tr><td>Total time:</td><td>993 seconds (993189 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,70 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()'><b>UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-2033756562" onClick='toggleBox("Output-2033756562", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2033756562" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2033756562">
+<b>Click on Search text box on Opportunity page</b> <br /><br/>
+<b>Enter the opportunity ID in search text box =YW-6851</b> <br /><br/>
+<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
+<b>Current Status of Channel value is =  Draft</b> <br /><br/>
+<b>Current Status of  Quote ref is = Cancelled</b> <br /><br/>
+<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
+<br>----------Screenshot---------<br><br/>
+<img src="D:\LOU\AMT_LOU\target\surefire-reports\html\failure_screenshots\UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification_18_06_2024_09_03_50.png" height="800" width="1000"><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification(LOU_ownbook_business_purchase_funder_accept_with_changes_Test.java:403)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2033756562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2033756562'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification(LOU_ownbook_business_purchase_funder_accept_with_changes_Test.java:403)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,11 +139,62 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()'><b>L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-1402403222" onClick='toggleBox("Output-1402403222", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()'><b>UW2_verify_status_after_sending_to_underwriting</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-2063045495" onClick='toggleBox("Output-2063045495", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1402403222" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1402403222">
+<a href="#Output-2063045495" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2063045495">
+<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
+<b>Current Status of Channel value is =  Awaiting underwriting</b> <br /><br/>
+<b>Current Status of  Quote ref is = Awaiting underwriting</b> <br /><br/>
+<b>Status Verified : Awaiting Underwriting </b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()'><b>L3_verify_table_values_on_opportunity_page_before_sending_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-1879050051" onClick='toggleBox("Output-1879050051", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1879050051" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1879050051">
+<b></b> <br /><br/>
+<b>Started Verifying Table values</b> <br /><br/>
+<b></b> <br /><br/>
+<b>LKQ36423 = LKQ36423</b> <br /><br/>
+<b>Quote no. compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro] = AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro]</b> <br /><br/>
+<b>Vehicle name compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
+<b>Contract type compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>2335.91 = 2335.91</b> <br /><br/>
+<b>Monthly finance rental compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>5000.0 = 5000.0</b> <br /><br/>
+<b>Mileage compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>33.0 = 33.0</b> <br /><br/>
+<b>Terms compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>05/12/2024 != 05/12/24</b> <br /><br/>
+<b>Expiry date compared but found not ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Table values verified Successfully</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal()'><b>L5_ownbook_create_opportunity_business_currentstatus_after_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-283063867" onClick='toggleBox("Output-283063867", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-283063867" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-283063867">
 <b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
 <b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
 <b>Current Status of Channel value is =  Draft</b> <br /><br/>
@@ -88,92 +203,30 @@ function toggleAllBoxes() {
 </div>
 </td>
 <td></td>
-<td>6</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>3</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()'><b>UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-428396808" onClick='toggleBox("Output-428396808", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-1126334695" onClick='toggleBox("Output-1126334695", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-428396808" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-428396808">
-<b>Status code 200 received </b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
+<a href="#Output-1126334695" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1126334695">
+<b>Actual Monthly Finance Payment after making balloon payment toggle button off is 2331.33</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Expected Monthly Finance Payment after making balloon payment toggle button off is 2331.3280702961</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Monthly Finance Payment verified after making balloon payment toggle button off</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>59</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification()'><b>UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-882184531" onClick='toggleBox("Output-882184531", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-882184531" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-882184531">
-<b>Click on Search text box on Opportunity page</b> <br /><br/>
-<b>Enter the opportunity ID in search text box =OL-2284</b> <br /><br/>
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Sent to customer</b> <br /><br/>
-<b>Current Status of  Quote ref is = Cancelled</b> <br /><br/>
-<b>Current Status of  Quote ref is = Sent to customer</b> <br /><br/>
-<b>Status Verified : Sent to customer</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>13</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-863804081" onClick='toggleBox("Output-863804081", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-863804081" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-863804081">
-<b>***********Entered in Customer Quote page ***********</b> <br /><br/>
-<b>Matrix credit type A1 Credit has been selected</b> <br /><br/>
-<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br /><br/>
-<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br /><br/>
-<b>Actual Monthly Finance Payment from screen is 1860.8</b> <br /><br/>
-<b>Writing screen values to Excel for customer quote calculation -started</b> <br /><br/>
-<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
-<b>Expected Monthly Finance Rental from excel is 1860.7951685568687</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>37</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@4a003cbe</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L6_ownbook_sending_contract()'><b>L6_ownbook_sending_contract</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-411961472" onClick='toggleBox("Output-411961472", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-411961472" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-411961472">
-<b>click on Send_Contract icon</b> <br /><br/>
-<b>Contract Sent Successfully</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>10</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L9_ownbook_status_after_contract_signed()'><b>L9_ownbook_status_after_contract_signed</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-2029948334" onClick='toggleBox("Output-2029948334", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2029948334" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2029948334">
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Contract signed</b> <br /><br/>
-<b>Current Status of  Quote ref is = Contract signed</b> <br /><br/>
-<b>Status Verified : Contract Signed </b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>10</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>17</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@2a7f1f10</td></tr>
 <tr>
 <td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-525692935" onClick='toggleBox("Output-525692935", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2112618413" onClick='toggleBox("Output-2112618413", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-525692935" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-525692935">
+<a href="#Output-2112618413" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2112618413">
 <b>***********Entered in holding cost page ***********</b> <br /><br/>
 <b>***********Holding Cost Calculations has been Started*************</b> <br /><br/>
 <b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
@@ -183,20 +236,39 @@ function toggleAllBoxes() {
 </div>
 </td>
 <td></td>
-<td>16</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@4a003cbe</td></tr>
+<td>17</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@2a7f1f10</td></tr>
+<tr>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-679967151" onClick='toggleBox("Output-679967151", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-679967151" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-679967151">
+<b>***********Entered in Customer Quote page ***********</b> <br /><br/>
+<b>Matrix credit type A1 Credit has been selected</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Actual Monthly Finance Payment from screen is 2230.08</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Expected Monthly Finance Rental from excel is 2230.077396338881</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@2a7f1f10</td></tr>
 <tr>
 <td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-2022454878" onClick='toggleBox("Output-2022454878", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-307728767" onClick='toggleBox("Output-307728767", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2022454878" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2022454878">
-<b>*********Customer Quote generated successfully and Quote_ref_no is=ETH54422</b> <br /><br/>
+<a href="#Output-307728767" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-307728767">
+<b>*********Customer Quote generated successfully and Quote_ref_no is=LKQ36423</b> <br /><br/>
 <b>*************OTR Calulation on quote summary page has been started************</b> <br /><br/>
 <b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
-<b>OTR_calculation_cost_otr_price_from_screen =58535.0</b> <br /><br/>
-<b>OTR_calculation_cost_price_ex_vat_and_rfl_from_screen =48237.5</b> <br /><br/>
-<b>OTR_calculation_otr_vat_from_screen =9647.5</b> <br /><br/>
+<b>OTR_calculation_cost_otr_price_from_screen =69019.99</b> <br /><br/>
+<b>OTR_calculation_cost_price_ex_vat_and_rfl_from_screen =56974.99</b> <br /><br/>
+<b>OTR_calculation_otr_vat_from_screen =11395.0</b> <br /><br/>
 <b>OTR_calculation_otr_rfl_and_frf_from_screen =650.0</b> <br /><br/>
 <b>OTR price compared</b> <br /><br/>
 <b>Cost price ex vat and rfl compared</b> <br /><br/>
@@ -262,224 +334,45 @@ function toggleAllBoxes() {
 </div>
 </td>
 <td></td>
-<td>144</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@4a003cbe</td></tr>
+<td>162</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@2a7f1f10</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW2_verify_status_after_sending_to_underwriting()'><b>UW2_verify_status_after_sending_to_underwriting</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-1766234004" onClick='toggleBox("Output-1766234004", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()'><b>UW3_verify_underwriting_lisitig_page</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-68597727" onClick='toggleBox("Output-68597727", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1766234004" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1766234004">
+<a href="#Output-68597727" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-68597727">
+<b>Click on Underwriting menu_link </b> <br /><br/>
+<b>Click on Underwriting - ownbook tab </b> <br /><br/>
+<b>Click on Search text box - broker tab</b> <br /><br/>
+<b>Getting the  proposal id from excel sheet =MCO1749</b> <br /><br/>
+<b>Enter the proposal in search text box =MCO1749</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L9_ownbook_status_after_contract_signed()'><b>L9_ownbook_status_after_contract_signed</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-1341148762" onClick='toggleBox("Output-1341148762", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1341148762" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1341148762">
 <b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Awaiting underwriting</b> <br /><br/>
-<b>Current Status of  Quote ref is = Awaiting underwriting</b> <br /><br/>
-<b>Status Verified : Awaiting Underwriting </b> <br /><br/>
+<b>Current Status of Channel value is =  Contract signed</b> <br /><br/>
+<b>Current Status of  Quote ref is = Contract signed</b> <br /><br/>
+<b>Status Verified : Contract Signed </b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>1</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()'><b>L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-339944660" onClick='toggleBox("Output-339944660", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-339944660" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-339944660">
-<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
-<b>Current Status of Channel value is =  Sent to customer</b> <br /><br/>
-<b>Current Status of  Quote ref is = Sent to customer</b> <br /><br/>
-<b>Status Verified : Sent to customer</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()'><b>L8_ownbook_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-608988374" onClick='toggleBox("Output-608988374", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-608988374" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-608988374">
-<b>Status code 200 received </b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>25</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()'><b>UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-1248415922" onClick='toggleBox("Output-1248415922", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1248415922" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1248415922">
-<b>Clicked on Opportunity link from Menu </b> <br /><br/>
-<b>Click on Search text box on Opportunity page</b> <br /><br/>
-<b>Enter the opportunity ID in search text box =OL-2284</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>14</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()'><b>UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-853809919" onClick='toggleBox("Output-853809919", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-853809919" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-853809919">
-<b> Underwriting icon is available </b> <br /><br/>
-<b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>39</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-2066883603" onClick='toggleBox("Output-2066883603", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2066883603" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2066883603">
-<b>Actual Monthly Finance Payment after making balloon payment toggle button off is 1971.96</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Expected Monthly Finance Payment after making balloon payment toggle button off is 1971.9638377554304</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Monthly Finance Payment verified after making balloon payment toggle button off</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>14</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@4a003cbe</td></tr>
-<tr>
-<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-1166050085" onClick='toggleBox("Output-1166050085", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1166050085" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1166050085">
-<b>*********Calculations for On Road Price has been started***********</b> <br /><br/>
-<b>Started getting On screen values from after discount table </b> <br /><br/>
-<b>Manufacture_delivery_charges =550.00</b> <br /><br/>
-<b>Road_tax_first_year =585.00</b> <br /><br/>
-<b>First_registration_fee =65.00</b> <br /><br/>
-<b>Rebate =0.00</b> <br /><br/>
-<b>Writing After discount values to excel has been started</b> <br /><br/>
-<b>Writing After discount values to excel has been completed</b> <br /><br/>
-<b>Reading On Road Price for invoice from excel has been Started</b> <br /><br/>
-<b>Reading On Road Price for invoice from excel has been completed</b> <br /><br/>
-<b>Expected on the road price from excel is =58535.0</b> <br /><br/>
-<b>Actual on the road price from screen is =58535.00</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@4a003cbe</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status()'><b>UW1_verify_underwriting_flow_ownbook_with_status</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-553012371" onClick='toggleBox("Output-553012371", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-553012371" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-553012371">
-<b> Underwriting icon is available </b> <br /><br/>
-<b>Underwriting pop up -quote ref no => Quote reference no.:
-ETH54422</b> <br /><br/>
-<b>Underwriting Popup Proposal Id is =GFX0735</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Started Verifying Summary values</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Quote reference no.:
-ETH54422 != ETH54422</b> <br /><br/>
-<b>Quote no. compared but found not ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>33.0 = 33.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>5000.0 = 5000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>48237.5 = 48237.5</b> <br /><br/>
-<b>Basic Cash Price found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9647.5 = 9647.5</b> <br /><br/>
-<b>VAT found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>650.0 = 650.0</b> <br /><br/>
-<b>Non VAT Items Value found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>58535.0 = 58535.0</b> <br /><br/>
-<b>Total Cash Price found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>0.0 = 0.0</b> <br /><br/>
-<b>Order Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>0.0 = 0.0</b> <br /><br/>
-<b>Finance Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>0.0 = 0.0</b> <br /><br/>
-<b>Total Deposit found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>58535.0 = 58535.0</b> <br /><br/>
-<b>Balance to Finance found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>9910.44 = 9910.392197207999</b> <br /><br/>
-<b>Finance Charges - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>199.99 = 199.99</b> <br /><br/>
-<b>Document Fee - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>68695.43 = 68695.380197208</b> <br /><br/>
-<b>Balance Payable - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>10.0 = 10.0</b> <br /><br/>
-<b>Option To Purchase Fee - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>239.99 = 239.988</b> <br /><br/>
-<b>Initial Cash Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>32.0 = 32.0</b> <br /><br/>
-<b>Followed By months - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>1951.42 = 1951.41850616275</b> <br /><br/>
-<b>Monthly Finance Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>6000.0 = 6000.0</b> <br /><br/>
-<b>Balloon Value - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>6010.0 = 6010.0</b> <br /><br/>
-<b>Final Payment - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>0.0 = 0.0</b> <br /><br/>
-<b>Vehicle Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>457.3 = 457.3046875</b> <br /><br/>
-<b>Default Finance Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
-<b>Document Fee Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>557.29 = 557.2946875</b> <br /><br/>
-<b>Total Commission - found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>One or More than One values on underwriting pop up may be wrong , please check all above values printed on console</b> <br /><br/>
-<b></b> <br /><br/>
-<b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
-<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>81</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>10</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 <tr>
 <td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_OTR_calculation_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_OTR_calculation_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-2085980786" onClick='toggleBox("Output-2085980786", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-180949634" onClick='toggleBox("Output-180949634", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2085980786" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2085980786">
+<a href="#Output-180949634" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-180949634">
 <b>Clicked on Quote button </b> <br /><br/>
 <b>Manufacture =AUDI has been selected</b> <br /><br/>
 <b>Model range =A7 has been selected</b> <br /><br/>
@@ -488,7 +381,7 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b>Interior option has been selected</b> <br /><br/>
 <b> Acquisition Contract type option = Hire Purchase Non regulated (HPNR) has been selected</b> <br /><br/>
 <b> Customer Contract type option = Hire Purchase Non regulated (HPNR) has been selected</b> <br /><br/>
-<b>Getting Basic Price- Vehicle value is  =46854.17</b> <br /><br/>
+<b>Getting Basic Price- Vehicle value is  =55495.83</b> <br /><br/>
 <b>Getting Basic Price - Paint  value is  =0.00</b> <br /><br/>
 <b>Getting  Basic Price - Options value is   =833.33</b> <br /><br/>
 <b>Getting Discount- Vehicle value is  =0.00</b> <br /><br/>
@@ -501,69 +394,42 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b>Writing OTR table values to excel sheet -Completed </b> <br /><br/>
 <b>Reading Subtotal After Discount from excel sheet -Started </b> <br /><br/>
 <b>Reading Subtotal After Discount from excel sheet -Started </b> <br /><br/>
-<b>Subtotal After Discount from excel sheet is =47687.5</b> <br /><br/>
-<b>Subtotal after discount actual value from screen =£ 47,687.50</b> <br /><br/>
+<b>Subtotal After Discount from excel sheet is =56329.16</b> <br /><br/>
+<b>Subtotal after discount actual value from screen =£ 56,329.16</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>92</td>
-<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@4a003cbe</td></tr>
+<td>90</td>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@2a7f1f10</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept()'><b>UW5_verify_ownbook_underwriting_proposal_decision_with_accept</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-926613341" onClick='toggleBox("Output-926613341", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test</b><br>Test class: com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/24, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-1305110820" onClick='toggleBox("Output-1305110820", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-926613341" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-926613341">
-<b>Click on decision Accept button</b> <br /><br/>
-<b>Entering values to input field</b> <br /><br/>
-<b>Current Status of accept value is = Conditional acceptance</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>43</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
-<tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L3_verify_table_values_on_opportunity_page_before_sending_proposal()'><b>L3_verify_table_values_on_opportunity_page_before_sending_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-390722104" onClick='toggleBox("Output-390722104", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-390722104" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-390722104">
-<b></b> <br /><br/>
-<b>Started Verifying Table values</b> <br /><br/>
-<b></b> <br /><br/>
-<b>ETH54422 = ETH54422</b> <br /><br/>
-<b>Quote no. compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
-<b>Vehicle name compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
-<b>Contract type compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>1951.42 = 1951.42</b> <br /><br/>
-<b>Monthly finance rental compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>5000.0 = 5000.0</b> <br /><br/>
-<b>Mileage compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>33.0 = 33.0</b> <br /><br/>
-<b>Terms compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>05/12/2024 != 05/12/24</b> <br /><br/>
-<b>Expiry date compared but found not ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Table values verified Successfully</b> <br /><br/>
+<a href="#Output-1305110820" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1305110820">
+<b>*********Calculations for On Road Price has been started***********</b> <br /><br/>
+<b>Started getting On screen values from after discount table </b> <br /><br/>
+<b>Manufacture_delivery_charges =645.83</b> <br /><br/>
+<b>Road_tax_first_year =585.00</b> <br /><br/>
+<b>First_registration_fee =65.00</b> <br /><br/>
+<b>Rebate =0.00</b> <br /><br/>
+<b>Writing After discount values to excel has been started</b> <br /><br/>
+<b>Writing After discount values to excel has been completed</b> <br /><br/>
+<b>Reading On Road Price for invoice from excel has been Started</b> <br /><br/>
+<b>Reading On Road Price for invoice from excel has been completed</b> <br /><br/>
+<b>Expected on the road price from excel is =69019.99</b> <br /><br/>
+<b>Actual on the road price from screen is =69019.99</b> <br /><br/>
 </div>
 </td>
 <td></td>
 <td>4</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@2a7f1f10</td></tr>
 <tr>
 <td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L4_fill_up_the_required_fields_for_sending_a_proposal()'><b>L4_fill_up_the_required_fields_for_sending_a_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-403711649" onClick='toggleBox("Output-403711649", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-770615072" onClick='toggleBox("Output-770615072", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-403711649" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-403711649">
+<a href="#Output-770615072" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-770615072">
 <b>click on Proposal icon</b> <br /><br/>
 <b>Proposal page will display </b> <br /><br/>
 <b>Send proposal to customer pop up  will open</b> <br /><br/>
@@ -572,49 +438,79 @@ ETH54422 != ETH54422</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>68</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>67</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()'><b>OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-1530641032" onClick='toggleBox("Output-1530641032", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L6_ownbook_sending_contract()'><b>L6_ownbook_sending_contract</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-1083040285" onClick='toggleBox("Output-1083040285", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1530641032" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1530641032">
-<b>Cancelled Quote ref in Opportunity is = null</b> <br /><br/>
-<b>Cancelled Monthly Payment value is = £ 1,951.42</b> <br /><br/>
-<b>New Quote ref in Opportunity WPB36247</b> <br /><br/>
-<b>New Quote Monthly Payment is  = £ 1,974.08</b> <br /><br/>
-<b>[32mMonthly Payment verified (found ok) after accepting new quote, Actual value is 1974.08 and Expected value is 1974.07713116275[0m</b> <br /><br/>
+<a href="#Output-1083040285" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1083040285">
+<b>click on Send_Contract icon</b> <br /><br/>
+<b>Contract Sent Successfully</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>2</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>15</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow()'><b>UW4_verify_ownbook_underwriting_proposal_page_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-934133589" onClick='toggleBox("Output-934133589", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes()'><b>UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-826576950" onClick='toggleBox("Output-826576950", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-934133589" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-934133589">
-<b>Click on Underwriting detail page for proposal</b> <br /><br/>
-<b>Clicked on Underwriting quote page</b> <br /><br/>
+<a href="#Output-826576950" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-826576950">
+<b>Clicked on Opportunity link from Menu </b> <br /><br/>
+<b>Click on Search text box on Opportunity page</b> <br /><br/>
+<b>Enter the opportunity ID in search text box =YW-6851</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L8_ownbook_signed_contract_status_with_api_call()'><b>L8_ownbook_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-16046432" onClick='toggleBox("Output-16046432", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-16046432" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-16046432">
+<b>Status code 200 received </b> <br /><br/>
+<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up()'><b>UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-1936260318" onClick='toggleBox("Output-1936260318", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1936260318" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1936260318">
+<b> Underwriting icon is available </b> <br /><br/>
+<b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW1_verify_underwriting_flow_ownbook_with_status()'><b>UW1_verify_underwriting_flow_ownbook_with_status</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-1700695881" onClick='toggleBox("Output-1700695881", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1700695881" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1700695881">
+<b> Underwriting icon is available </b> <br /><br/>
+<b>Underwriting pop up -quote ref no => Quote reference no.:
+LKQ36423</b> <br /><br/>
+<b>Underwriting Popup Proposal Id is =MCO1749</b> <br /><br/>
 <b></b> <br /><br/>
-<b>58535.0 = 58535.0</b> <br /><br/>
-<b>Cost Otr Price compared and found ok</b> <br /><br/>
+<b>Started Verifying Summary values</b> <br /><br/>
 <b></b> <br /><br/>
-<b>48237.5 = 48237.5</b> <br /><br/>
-<b>Cost Otr Price compared and found ok</b> <br /><br/>
+<b>Quote reference no.:
+LKQ36423 != LKQ36423</b> <br /><br/>
+<b>Quote no. compared but found not ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>9647.5 = 9647.5</b> <br /><br/>
-<b>Otr Vat compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>650.0 = 650.0</b> <br /><br/>
-<b>Otr Rfl And Frf compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>ETH54422 = ETH54422</b> <br /><br/>
-<b>Quote no. compared and found ok</b> <br /><br/>
-<b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
+<b>AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro] = AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro]</b> <br /><br/>
 <b>Vehicle name compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
@@ -626,16 +522,16 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b>5000.0 = 5000.0</b> <br /><br/>
 <b>Mileage compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>48237.5 = 48237.5</b> <br /><br/>
+<b>56974.99 = 56974.99000000001</b> <br /><br/>
 <b>Basic Cash Price found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>9647.5 = 9647.5</b> <br /><br/>
+<b>11395.0 = 11394.998</b> <br /><br/>
 <b>VAT found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>650.0 = 650.0</b> <br /><br/>
 <b>Non VAT Items Value found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>58535.0 = 58535.0</b> <br /><br/>
+<b>69019.99 = 69019.98800000001</b> <br /><br/>
 <b>Total Cash Price found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>0.0 = 0.0</b> <br /><br/>
@@ -647,16 +543,16 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b>0.0 = 0.0</b> <br /><br/>
 <b>Total Deposit found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>58535.0 = 58535.0</b> <br /><br/>
+<b>69019.99 = 69019.98800000001</b> <br /><br/>
 <b>Balance to Finance found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>9910.44 = 9910.392197207999</b> <br /><br/>
+<b>11729.13 = 11729.12999999999</b> <br /><br/>
 <b>Finance Charges - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>199.99 = 199.99</b> <br /><br/>
 <b>Document Fee - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>68695.43 = 68695.380197208</b> <br /><br/>
+<b>80999.11 = 80999.10800000001</b> <br /><br/>
 <b>Balance Payable - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>10.0 = 10.0</b> <br /><br/>
@@ -668,7 +564,7 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b>32.0 = 32.0</b> <br /><br/>
 <b>Followed By months - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>1951.42 = 1951.41850616275</b> <br /><br/>
+<b>2335.91 = 2335.912376539</b> <br /><br/>
 <b>Monthly Finance Payment - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>6000.0 = 6000.0</b> <br /><br/>
@@ -680,72 +576,78 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b>0.0 = 0.0</b> <br /><br/>
 <b>Vehicle Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>457.3 = 457.3046875</b> <br /><br/>
+<b>539.22 = 539.21865625</b> <br /><br/>
 <b>Default Finance Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
 <b>99.99 = 99.99000000000001</b> <br /><br/>
 <b>Document Fee Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>557.29 = 557.2946875</b> <br /><br/>
+<b>639.21 = 639.20865625</b> <br /><br/>
 <b>Total Commission - found OK</b> <br /><br/>
 <b></b> <br /><br/>
-<b>7.0 = 7.0</b> <br /><br/>
-<b>Base Interest Rate found OK</b> <br /><br/>
+<b>One or More than One values on underwriting pop up may be wrong , please check all above values printed on console</b> <br /><br/>
 <b></b> <br /><br/>
-<b>4659.6 != 5748.1921972079945</b> <br /><br/>
-<b>Finance Margin found wrong</b> <br /><br/>
-<b></b> <br /><br/>
-<b>548.77 = 548.765625</b> <br /><br/>
-<b>Deductions found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
-<b>Additional Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>4210.82 != 5299.416572207994</b> <br /><br/>
-<b>Total Margin found wrong</b> <br /><br/>
-<b></b> <br /><br/>
-<b>0.94 = 0.9375000000000001</b> <br /><br/>
-<b>Default Broker Margin percentage found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>12.0 = 12.000000000000002</b> <br /><br/>
-<b>Customer Interest Rate found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>99.99 = 99.99000000000001</b> <br /><br/>
-<b>Document Fee Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>548.77 = 548.765625</b> <br /><br/>
-<b>Default Broker Margin found OK</b> <br /><br/>
-<b></b> <br /><br/>
-<b>One or More than One values on underwriting quote tab may be wrong , please check all above values printed on console</b> <br /><br/>
-<b></b> <br /><br/>
-<b>Click on decision tab page</b> <br /><br/>
+<b>click on underwriting_send_for_underwriting  button </b> <br /><br/>
+<b>Values on Underwriting pop up are verified succcessfully and opportunity sent for underwriting</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>130</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>83</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW3_verify_underwriting_lisitig_page()'><b>UW3_verify_underwriting_lisitig_page</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-1199517445" onClick='toggleBox("Output-1199517445", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow()'><b>L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-1578519052" onClick='toggleBox("Output-1578519052", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1199517445" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1199517445">
-<b>Click on Underwriting menu_link </b> <br /><br/>
-<b>Click on Underwriting - ownbook tab </b> <br /><br/>
-<b>Click on Search text box - broker tab</b> <br /><br/>
-<b>Getting the  proposal id from excel sheet =GFX0735</b> <br /><br/>
-<b>Enter the proposal in search text box =GFX0735</b> <br /><br/>
+<a href="#Output-1578519052" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1578519052">
+<b>Current Status of Proposal value is = Proposal Received</b> <br /><br/>
+<b>Current Status of Channel value is =  Sent to customer</b> <br /><br/>
+<b>Current Status of  Quote ref is = Sent to customer</b> <br /><br/>
+<b>Status Verified : Sent to customer</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>12</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>4</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()'><b>L2_ownbook_business_current_status_before_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-292766536" onClick='toggleBox("Output-292766536", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-292766536" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-292766536">
+<b>Clicked on Opportunity link from Menu </b> <br /><br/>
+<b>listing_proposal_status is = Proposal Required</b> <br /><br/>
+<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
+<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
+<b>Current Status of Proposal value is = Proposal Required</b> <br /><br/>
+<b>Current Status of Channel value is =  Draft</b> <br /><br/>
+<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
+<b>Status Verified : Before sending the proposal</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW5_verify_ownbook_underwriting_proposal_decision_with_accept()'><b>UW5_verify_ownbook_underwriting_proposal_decision_with_accept</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-1846238736" onClick='toggleBox("Output-1846238736", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1846238736" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1846238736">
+<b>Click on decision Accept button</b> <br /><br/>
+<b>Entering values to input field</b> <br /><br/>
+<b>Current Status of accept value is = Conditional acceptance</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 <tr>
 <td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L1_create_lead_convert_to_lead_for_ownbook_business_flow()'><b>L1_create_lead_convert_to_lead_for_ownbook_business_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-646069500" onClick='toggleBox("Output-646069500", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1136399842" onClick='toggleBox("Output-1136399842", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-646069500" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-646069500">
+<a href="#Output-1136399842" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1136399842">
 <b>Clicked on Leads on Side Menu</b> <br /><br/>
 <b>Clicked on add lead</b> <br /><br/>
 <b>Lead is assigned</b> <br /><br/>
@@ -764,16 +666,16 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Started Verifying Table values</b> <br /><br/>
 <b></b> <br /><br/>
-<b>ETH54422 = ETH54422</b> <br /><br/>
+<b>LKQ36423 = LKQ36423</b> <br /><br/>
 <b>Quote no. compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
+<b>AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro] = AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro]</b> <br /><br/>
 <b>Vehicle name compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
 <b>Contract type compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>1951.42 = 1951.42</b> <br /><br/>
+<b>2335.91 = 2335.91</b> <br /><br/>
 <b>Monthly finance rental compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>5000.0 = 5000.0</b> <br /><br/>
@@ -788,16 +690,16 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Started Verifying Table values</b> <br /><br/>
 <b></b> <br /><br/>
-<b>ETH54422 = ETH54422</b> <br /><br/>
+<b>LKQ36423 = LKQ36423</b> <br /><br/>
 <b>Quote no. compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic = AUDI A7 DIESEL SPORTBACK (2018 - Current) 40 TDI Quattro Black Edition 5dr S Tronic</b> <br /><br/>
+<b>AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro] = AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro]</b> <br /><br/>
 <b>Vehicle name compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
 <b>Contract type compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>1951.42 = 1951.42</b> <br /><br/>
+<b>2335.91 = 2335.91</b> <br /><br/>
 <b>Monthly finance rental compared and found ok</b> <br /><br/>
 <b></b> <br /><br/>
 <b>5000.0 = 5000.0</b> <br /><br/>
@@ -809,32 +711,213 @@ ETH54422 != ETH54422</b> <br /><br/>
 <b>05/12/2024 != 05/12/24</b> <br /><br/>
 <b>Expiry date compared but found not ok</b> <br /><br/>
 <b></b> <br /><br/>
-<b>In Lead created Opportunity Id is =OL-2284</b> <br /><br/>
+<b>In Lead created Opportunity Id is =YW-6851</b> <br /><br/>
 <b></b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>121</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>130</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 <tr>
-<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.L2_ownbook_business_current_status_before_sending_to_proposal()'><b>L2_ownbook_business_current_status_before_sending_to_proposal</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
-<a href="#Output-734340282" onClick='toggleBox("Output-734340282", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW4_verify_ownbook_underwriting_proposal_page_flow()'><b>UW4_verify_ownbook_underwriting_proposal_page_flow</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test<br/>
+<a href="#Output-997834886" onClick='toggleBox("Output-997834886", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-734340282" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-734340282">
-<b>Clicked on Opportunity link from Menu </b> <br /><br/>
-<b>listing_proposal_status is = Proposal Required</b> <br /><br/>
-<b>Enter the Opportunity id in Search Text box</b> <br /><br/>
-<b>Current Status of Opportunity Status value is = Open</b> <br /><br/>
-<b>Current Status of Proposal value is = Proposal Required</b> <br /><br/>
-<b>Current Status of Channel value is =  Draft</b> <br /><br/>
-<b>Current Status of  Quote ref is = Draft</b> <br /><br/>
-<b>Status Verified : Before sending the proposal</b> <br /><br/>
+<a href="#Output-997834886" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-997834886">
+<b>Click on Underwriting detail page for proposal</b> <br /><br/>
+<b>Clicked on Underwriting quote page</b> <br /><br/>
+<b></b> <br /><br/>
+<b>69019.99 != 69019.98800000001</b> <br /><br/>
+<b>Cost Otr Price compared but found not ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>56974.99 != 56974.99000000001</b> <br /><br/>
+<b>Cost Price Ex Vat And Rfl compared but found not ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>11395.0 != 11394.998</b> <br /><br/>
+<b>Otr Vat compared but found not ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>650.0 = 650.0</b> <br /><br/>
+<b>Otr Rfl And Frf compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>LKQ36423 = LKQ36423</b> <br /><br/>
+<b>Quote no. compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro] = AUDI A7 DIESEL SPORTBACK (2023 - Current) 40 TDI Quattro Black Ed 5dr S Tronic [Tech pro]</b> <br /><br/>
+<b>Vehicle name compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Hire Purchase Non-Regulated = Hire Purchase Non-Regulated</b> <br /><br/>
+<b>Contract type compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>33.0 = 33.0</b> <br /><br/>
+<b>Terms compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>5000.0 = 5000.0</b> <br /><br/>
+<b>Mileage compared and found ok</b> <br /><br/>
+<b></b> <br /><br/>
+<b>56974.99 = 56974.99000000001</b> <br /><br/>
+<b>Basic Cash Price found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>11395.0 = 11394.998</b> <br /><br/>
+<b>VAT found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>650.0 = 650.0</b> <br /><br/>
+<b>Non VAT Items Value found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>69019.99 = 69019.98800000001</b> <br /><br/>
+<b>Total Cash Price found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>0.0 = 0.0</b> <br /><br/>
+<b>Order Deposit found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>0.0 = 0.0</b> <br /><br/>
+<b>Finance Deposit found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>0.0 = 0.0</b> <br /><br/>
+<b>Total Deposit found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>69019.99 = 69019.98800000001</b> <br /><br/>
+<b>Balance to Finance found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>11729.13 = 11729.12999999999</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>199.99 = 199.99</b> <br /><br/>
+<b>Document Fee - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>80999.11 = 80999.10800000001</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>10.0 = 10.0</b> <br /><br/>
+<b>Option To Purchase Fee - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>239.99 = 239.988</b> <br /><br/>
+<b>Initial Cash Payment - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>32.0 = 32.0</b> <br /><br/>
+<b>Followed By months - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>2335.91 = 2335.912376539</b> <br /><br/>
+<b>Monthly Finance Payment - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>6000.0 = 6000.0</b> <br /><br/>
+<b>Balloon Value - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>6010.0 = 6010.0</b> <br /><br/>
+<b>Final Payment - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>0.0 = 0.0</b> <br /><br/>
+<b>Vehicle Commission - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>539.22 = 539.21865625</b> <br /><br/>
+<b>Default Finance Commission - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>99.99 = 99.99000000000001</b> <br /><br/>
+<b>Document Fee Commission - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>639.21 = 639.20865625</b> <br /><br/>
+<b>Total Commission - found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>7.0 = 7.0</b> <br /><br/>
+<b>Base Interest Rate found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>5438.8 != 6527.440000000017</b> <br /><br/>
+<b>Finance Margin found wrong</b> <br /><br/>
+<b></b> <br /><br/>
+<b>647.06 = 647.0623875</b> <br /><br/>
+<b>Deductions found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>99.99 = 99.99000000000001</b> <br /><br/>
+<b>Additional Margin found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>4891.73 != 5980.367612500017</b> <br /><br/>
+<b>Total Margin found wrong</b> <br /><br/>
+<b></b> <br /><br/>
+<b>0.94 = 0.9375000000000001</b> <br /><br/>
+<b>Default Broker Margin percentage found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>12.0 = 12.000000000000002</b> <br /><br/>
+<b>Customer Interest Rate found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>99.99 = 99.99000000000001</b> <br /><br/>
+<b>Document Fee Margin found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>647.06 = 647.0623875</b> <br /><br/>
+<b>Default Broker Margin found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>One or More than One values on underwriting quote tab may be wrong , please check all above values printed on console</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Click on decision tab page</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>18</td>
-<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@4082ba93</td></tr>
+<td>131</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()'><b>OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_funder_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace843208499", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace843208499'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_funder_accept_with_changes_Test.OP1_ownbook_after_Underwriting_accepted_mothlty_payment_price()[pri:19, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
+<tr>
+<td title='com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()'><b>UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call</b><br>Test class: com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test</td>
+<td><div><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1815199238", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1815199238'><pre>java.lang.Throwable: Method LOU_ownbook_business_purchase_funder_accept_with_changes_Test.UW9_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call()[pri:18, instance:com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test@54c5a2ff</td></tr>
 </table><p>
 </body>
 </html>

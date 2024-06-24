@@ -463,12 +463,14 @@ public class UnderwritingPopupPage extends TestBase {
 		private WebElement underwriting_popup_customer_quote_summary_total_monthly_payment;
 
 		// Balloon
-		@FindBy(xpath = "//*[normalize-space()='Balloon']//ancestor::div[1]//div//strong")
+		@FindBy(xpath = "//*[normalize-space()='Balloon']//ancestor::div[1]//div//strong|//*[normalize-space()='Guaranteed future value']//ancestor::div[1]//div//strong")
 		private WebElement underwriting_popup_customer_quote_summary_balloon;
+		
+		
 
 		// Final payment (inc. option to purchase fee)
-		@FindBy(xpath = "//*[normalize-space()='Final payment (inc. option to purchase fee)']//ancestor::div[1]//div//strong")
-		private WebElement underwriting_popup_customer_quote_summary_final_payment_inc_option_to_purchase_fee;
+		@FindBy(xpath = "//*[normalize-space()='Final payment (inc. option to purchase fee)']//ancestor::div[1]//div//strong|//*[normalize-space()='Optional final payment (inc. option to purchase fee)']//ancestor::div[1]//div//strong")
+		private WebElement underwriting_popup_customer_quote_summary_final_payment_inc_option_to_purchase_fee;		
 
 
 		// Credit type

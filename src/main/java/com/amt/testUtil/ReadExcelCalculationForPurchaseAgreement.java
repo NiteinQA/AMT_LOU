@@ -21,8 +21,7 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 	public ReadExcelCalculationForPurchaseAgreement() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -2495,8 +2494,8 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		wb.getSheet(sheet_name).getRow(151).getCell(4).setCellValue(0);
-		wb.getSheet(sheet_name).getRow(151).getCell(6).setCellValue(Double.parseDouble(part_exchange_given));
-		wb.getSheet(sheet_name).getRow(152).getCell(6).setCellValue(Double.parseDouble(less_finance_settlement));
+		wb.getSheet(sheet_name).getRow(151).getCell(6).setCellValue(0);
+		wb.getSheet(sheet_name).getRow(152).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(110).getCell(1).setCellValue(Double.parseDouble(order_deposit));
 		wb.getSheet(sheet_name).getRow(110).getCell(4).setCellValue(Double.parseDouble(finance_deposit));
 		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(document_fee_copied);

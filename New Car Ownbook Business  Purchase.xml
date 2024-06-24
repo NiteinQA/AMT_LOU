@@ -3,10 +3,10 @@
 <suite name="New Car Ownbook business purchase">
  
  
-     <test thread-count="5" name="New Car Ownbook business purchase flow with funder  -Accept Flow">
+    <test thread-count="5" name="New Car Ownbook business purchase flow with funder  -Accept Flow">
     <classes>      
   	  
-  	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test"/>  	
+  	  <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test"/>  	
       <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_funder_accept_with_changes_Test"/>
 
     </classes>
@@ -16,21 +16,21 @@
     <classes>     
   
   	
-	  <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test"/>  	
+	  <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_HPNR_without_maintenance_with_add_term_mileage_Test"/>  	
       <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test"/> 
       
 
     </classes>
   </test> 
   
-   <!--  <test thread-count="5" name="New Car Ownbook business purchase flow  -Accept Flow">
+    <test thread-count="5" name="New Car Ownbook business purchase flow  -Accept Flow">
     <classes>		
 	  
-	 <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test"/>
+	 <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_HPNR_without_maintenance_Test"/>
      <class name="com.amt.test.LOU.LOU_ownbook_business_purchase_accept_with_changes_Test"/>
 
     </classes>
-  </test>   --> 
+  </test>  
     
    
 </suite> <!-- Suite -->

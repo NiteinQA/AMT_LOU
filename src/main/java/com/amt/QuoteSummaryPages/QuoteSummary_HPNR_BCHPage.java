@@ -18,6 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
@@ -195,6 +196,10 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
 	private WebElement quote_summary_save_button;
 
+	
+//	@FindBy(xpath = "//*[@id='btnSubmit']")
+//	private WebElement quote_summary_save_button;
+
 	@FindBy(xpath = "//*[normalize-space()='Balance due']//ancestor::div[1]//p//strong")
 	private WebElement balance_due_value;
 	// vehicle details
@@ -223,8 +228,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -3098,15 +3102,17 @@ public boolean quote_summary_customer_quote_summary_value_verification_with_main
 public void save_quote() throws InterruptedException, IOException {
 	
 	
-    ExplicitWait.visibleElement(driver, quote_summary_save_button, 30);
+   ExplicitWait.visibleElement(driver, quote_summary_save_button, 30);
  
    JavascriptExecutor js = (JavascriptExecutor)driver;
    
     js.executeScript("arguments[0].click();", quote_summary_save_button);
 	
-	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 	
-    ExplicitWait.visibleElement(driver, quote_summary_ref_no, 300);
+	Thread.sleep(10000);
+	
+    ExplicitWait.visibleElement(driver, quote_summary_ref_no, 100);
     
     String quote_ref_no = quote_summary_ref_no.getText();
 	

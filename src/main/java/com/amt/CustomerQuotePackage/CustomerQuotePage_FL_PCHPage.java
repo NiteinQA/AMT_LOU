@@ -18,6 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
@@ -182,8 +183,7 @@ public class CustomerQuotePage_FL_PCHPage extends TestBase {
 	
 		try {
 			 prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -502,8 +502,14 @@ public class CustomerQuotePage_FL_PCHPage extends TestBase {
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 		Click.on(driver, customer_quote, 50);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-		obj_read_excel_calculation_page
-				.set_global_variables_to_excel_for_fl_bch_pch_scenario_with_funder_quote_addition(sheet_name);
+	    ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+			double otrForInvoice = Double
+					.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));		
+			
+			
+			obj_read_excel_calculation_page
+					.set_global_variables_to_excel_for_fl_bch_pch_scenario_with_funder_quote_addition(otrForInvoice ,sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_for_funder_quote_addition_without_maintenance(
 						driver, customer_quote_payment_profile_dropdown, part_exchange_payment,
@@ -578,8 +584,14 @@ ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
 
 		if (totalCapMaintenanceValue == 0) {
 			
-			obj_read_excel_calculation_page
-			.set_global_variables_to_excel_for_fl_bch_pch_scenario_with_funder_quote_addition(sheet_name);
+		    ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+			
+				double otrForInvoice = Double
+						.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));		
+				
+				
+				obj_read_excel_calculation_page
+						.set_global_variables_to_excel_for_fl_bch_pch_scenario_with_funder_quote_addition(otrForInvoice ,sheet_name);
 	return obj_read_excel_calculation_page
 			.verify_customer_quote_calculations_for_one_payment_options_for_funder_quote_addition_without_maintenance(
 					driver, customer_quote_payment_profile_dropdown, part_exchange_payment,
@@ -595,8 +607,14 @@ ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
 		
 		Click.on(driver, customer_quote_maintenance_toggle_button, 30);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-		obj_read_excel_calculation_page
-				.set_global_variables_to_excel_for_fl_bch_pch_scenario_with_funder_quote_addition(sheet_name);
+	    ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
+		
+			double otrForInvoice = Double
+					.parseDouble(RemoveComma.of(otr_for_invoice.getText().substring(2)));		
+			
+			
+			obj_read_excel_calculation_page
+					.set_global_variables_to_excel_for_fl_bch_pch_scenario_with_funder_quote_addition(otrForInvoice ,sheet_name);
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_for_funder_quote_addition_with_maintenance(
 						driver, customer_quote_payment_profile_dropdown, part_exchange_payment,

@@ -3302,6 +3302,8 @@ public void save_quote() throws InterruptedException {
 //		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		
+		Thread.sleep(10000);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 

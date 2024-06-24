@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Used Car Ownbook Individual hire">
     <classes>
-      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test"/>
+      <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_used_car_ownbook_individual_hire_accept_with_changes_Test"/>
     </classes>
   </test> 
@@ -12,7 +12,7 @@
   
     <test thread-count="5" name="Used Car Ownbook Individual hire with additional term and mileage">
     <classes>
-      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_with_add_term_and_mileage_Test"/>
+      <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_PCH_used_car_without_maintenance_with_add_term_and_mileage_Test"/>
       <class name="com.amt.test.LOU.LOU_used_car_ownbook_individual_hire_accept_with_changes_Test"/>
     </classes>
   </test>
@@ -20,7 +20,7 @@
   
      <test thread-count="5" name="Used Car Ownbook Individual hire with funder">
     <classes>
-      <class name="com.amt.test.HPNR.Acquisition_Quotes_HPNR_PCH_used_car_with_funder_quote_addition_without_maintenance_Test"/>
+      <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_PCH_used_car_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_used_car_ownbook_individual_hire_funder_accept_with_changes_Test"/>
     </classes>
   </test> 

@@ -59,7 +59,10 @@ public class Leads extends TestBase {
 	@FindBy(xpath = "//ul[@class='user-dd-list shadow ng-star-inserted']//li[@class='ng-star-inserted']")
 	private WebElement general_assigned_to_option;
 
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-general-info[1]/div[1]/div[2]/div[1]/div[1]/textarea[1]")
+//	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-general-info[1]/div[1]/div[2]/div[1]/div[1]/textarea[1]")
+//	private WebElement general_notes;
+	
+	@FindBy(xpath = "//label[text()='Notes']//ancestor::div[1]//div//textarea")
 	private WebElement general_notes;
 
 	@FindBy(xpath = "//select[@id='CustomerTypeId']")
@@ -207,7 +210,13 @@ public class Leads extends TestBase {
 	// acquisition_contract_type_ownbook_value
 
 	@FindBy(xpath = "//*[@placeholder='Select Acquisition contract']//*[text()='Hire Purchase Non-Regulated']")
-	private WebElement acquisition_contract_type_ownbook_value;	
+	private WebElement acquisition_contract_type_ownbook_hpnr_value;	
+	
+	@FindBy(xpath = "//*[@placeholder='Select Acquisition contract']//*[text()='Finance Lease']")
+	private WebElement acquisition_contract_type_ownbook_fl_value;	
+	
+	@FindBy(xpath = "//*[@placeholder='Select Acquisition contract']//*[text()='Contract Purchase']")
+	private WebElement acquisition_contract_type_ownbook_cp_value;
 	
 	
 	@FindBy(xpath = "//*[@placeholder='Select Acquisition contract']//*[text()='Outright Purchase']")
@@ -235,9 +244,15 @@ public class Leads extends TestBase {
 	
 	@FindBy(xpath = "//*[@placeholder='Select customer contract']//*[text()='Business Contract Hire']")
 	private WebElement customer_business_contract_type_bch_value;
+	
+	@FindBy(xpath = "//*[@placeholder='Select customer contract']//*[text()='Finance Lease']")
+	private WebElement customer_business_contract_type_FL_value;
 
 	@FindBy(xpath = "//*[@placeholder='Select customer contract']//*[text()='Hire Purchase Non-Regulated']")
 	private WebElement customer_business_contract_type_hpnr_value;
+	
+	@FindBy(xpath = "//*[@placeholder='Select customer contract']//*[text()='Contract Purchase']")
+	private WebElement customer_business_contract_type_cp_value;
 
 //	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/app-map-new-quote[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/ng-multiselect-dropdown[1]/div[1]/div[2]/ul[2]/li[1]/div[1]")
 //	private WebElement customer_business_contract_type_bch_value;
@@ -984,7 +999,7 @@ public class Leads extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 //Thread.sleep(5000);
-		Click.on(driver, acquisition_contract_type_ownbook_value, 120);
+		Click.on(driver, acquisition_contract_type_ownbook_hpnr_value, 120);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
@@ -1061,7 +1076,7 @@ public class Leads extends TestBase {
 
 	{
 
-//Map New Quote 
+        //Map New Quote 
 		ExplicitWait.visibleElement(driver, Map_New_quote_icon, 30);
 
 		HelperClass.highlightElement(driver, Map_New_quote_icon);
@@ -1094,9 +1109,21 @@ public class Leads extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		}
 		
-		if (classOrMethodName.contains("ownbook"))
+		if (classOrMethodName.contains("ownbook_HPNR"))
 		{			
-		Click.on(driver, acquisition_contract_type_ownbook_value, 120);
+		Click.on(driver, acquisition_contract_type_ownbook_hpnr_value, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		}
+		
+		if (classOrMethodName.contains("ownbook_FL"))
+		{			
+		Click.on(driver, acquisition_contract_type_ownbook_fl_value, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		}
+		
+		if (classOrMethodName.contains("ownbook_CP"))
+		{			
+		Click.on(driver, acquisition_contract_type_ownbook_cp_value, 120);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		}
 		
@@ -1114,16 +1141,28 @@ public class Leads extends TestBase {
 		
 
 		if (classOrMethodName.contains("business_hire")) {
-			Click.on(driver, customer_business_contract_type_bch_value, 120);
+			
+			if (classOrMethodName.contains("FL_FL_business_hire")) {
+				Click.on(driver, customer_business_contract_type_FL_value, 120);
 
+				ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+			}else {			
+			Click.on(driver, customer_business_contract_type_bch_value, 120);
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+			}
 		}
 
 		if (classOrMethodName.contains("business_purchase")) {
-
+			
+			if (classOrMethodName.contains("CP_CP_business_purchase")) {				
+				
+				Click.on(driver, customer_business_contract_type_cp_value, 120);
+				ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+				
+			}else {
 			Click.on(driver, customer_business_contract_type_hpnr_value, 120);
-
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+			}
 		}
 		
 		if (classOrMethodName.contains("individual_hire")) {
@@ -1243,34 +1282,34 @@ public class Leads extends TestBase {
 		// get quote ref no.
 
 		String quotRefNoActual = lead_page_table_elements_list.get(0).getText();
-		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(0));
+		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(0));
 
 		// get Vehicle name
 		String vehicleNameActual = lead_page_table_elements_list.get(1).getText();
-		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(1));
+		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(1));
 
 		// get contract type
 		String contractTypeActual = lead_page_table_elements_list.get(2).getText();
-		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(2));
+		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(2));
 
 		// get monthly payment
 		String[] monthlyPayment = lead_page_table_elements_list.get(3).getText().split(" ");
-		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(3));
+		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(3));
 		double monthlyFinanceRentalActual = Double.parseDouble(RemoveComma.of(monthlyPayment[1]));
 
 		// get mileage
 		String[] mileage = lead_page_table_elements_list.get(4).getText().split(" ");
-		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(4));
+		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(4));
 		double mileageActual = Double.parseDouble(mileage[1]);
 
 		// get terms
 		String[] term = lead_page_table_elements_list.get(5).getText().split(" ");
-		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(5));
+		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(5));
 		double termActual = Double.parseDouble(term[1]);
 
 		// get Expiry date
 		String[] ExpiryDate = lead_page_table_elements_list.get(6).getText().split(" ");
-		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(6));
+		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(6));
 		String expiryDateActual = RemoveComma.of(ExpiryDate[0]);
 
 		// part second -- Getting values from quote save excel sheet

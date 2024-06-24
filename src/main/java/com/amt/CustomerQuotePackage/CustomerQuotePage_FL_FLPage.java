@@ -19,6 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
@@ -122,13 +123,13 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 	@FindBy(xpath = "//*[@id='lessFinanceSettlement']")
 	private WebElement less_finance_settlement;
 
-	@FindBy(xpath = "//*[@name='orderDeposit']")
+	@FindBy(xpath = "//*[@name='orderDeposit']|//*[@name='orderDepositHire']")
 	private WebElement order_Deposit;
 
 	@FindBy(xpath = "//*[@name='financeDeposit']")
 	private WebElement finance_Deposit;
 
-	@FindBy(xpath = "//*[@id='DocumentFee']")
+	@FindBy(xpath = "//*[@id='DocumentFee']|//*[@id='DocumentFeeHire']")
 	private WebElement document_fee;
 
 	@FindBy(xpath = "//*[@name='FunderName']")
@@ -185,6 +186,9 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 	@FindBy(xpath = "//*[text()='OTR for invoice:']//ancestor::div[1]//p")
 	private WebElement otr_for_invoice;
 
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
+	
 	Properties prop;
 	
 	public CustomerQuotePage_FL_FLPage() {
@@ -193,8 +197,7 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 
 		try {
 			 prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -216,7 +219,7 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 		// waiting for the elements
 		ExplicitWait.visibleElement(driver, balance_due_value, 30);
 
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 
 		// taking elements from screen
 
@@ -260,43 +263,17 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 			String less_finance_settlement_from_excel, String order_Deposit_from_excel, String document_fee_from_excel,
 			String sheet_name) throws InterruptedException, IOException {
 
-		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 		Thread.sleep(4000);
-		Click.on(driver, part_exchange_payment, 70);
-		LO.print("Clicked on Part Exchange panel");
-		System.out.println("Clicked on Part Exchange panel");
+		
 		Actions act = new Actions(driver);
+		
+		LO.print("Entering the deposit values in the part Exchange Section");
+		System.out.println("Entering the deposit values in the part Exchange Section");
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
-		Click.on(driver, given_part_exchange_value, 20);
 
-		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-	
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, funder_name, "Funder X", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, agreement_number, "123", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
@@ -310,10 +287,12 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 		document_fee.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
+		Thread.sleep(2000);
+		
 		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
@@ -335,9 +314,9 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(111).getCell(3).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(111).getCell(4)
-				.setCellValue(Double.parseDouble(given_part_exchange_value_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(112).getCell(4)
-				.setCellValue(Double.parseDouble(less_finance_settlement_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -1011,48 +990,14 @@ ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
 			String upsell, String part_exchange_status, String target_rental, String sheet_name)
 			throws InterruptedException, IOException {
 
-		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
-		Thread.sleep(4000);
-		Click.on(driver, part_exchange_payment, 70);
-		LO.print("Clicked on Part Exchange panel");
-		System.out.println("Clicked on Part Exchange panel");
+		LO.print("Entering the deposit values in the part Exchange Section");
+		System.out.println("Entering the deposit values in the part Exchange Section");
+		
 		Actions act = new Actions(driver);
-
-		Click.on(driver, given_part_exchange_value, 20);
-
-		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-
-		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-	
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, funder_name, "Funder X", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, agreement_number, "123", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
+		
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
@@ -1065,9 +1010,11 @@ ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
 		document_fee.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Thread.sleep(3000);
 
 		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
@@ -1078,9 +1025,9 @@ ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
 		wb.getSheet(sheet_name).getRow(115).getCell(1).setCellValue("NO");
 		wb.getSheet(sheet_name).getRow(117).getCell(3).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(117).getCell(4)
-				.setCellValue(Double.parseDouble(given_part_exchange_value_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(118).getCell(4)
-				.setCellValue(Double.parseDouble(less_finance_settlement_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(129).getCell(1).setCellValue(Double.parseDouble(target_rental));
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
@@ -1120,48 +1067,16 @@ ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
 			String upsell, String part_exchange_status, String target_rental, String sheet_name)
 			throws InterruptedException, IOException {
 
-		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 		Thread.sleep(4000);
-		Click.on(driver, part_exchange_payment, 70);
-		LO.print("Clicked on Part Exchange panel");
-		System.out.println("Clicked on Part Exchange panel");
+		
+		LO.print("Entering the deposit values in the part Exchange Section");
+		System.out.println("Entering the deposit values in the part Exchange Section");
+		
 		Actions act = new Actions(driver);
-
-		Click.on(driver, given_part_exchange_value, 20);
-
-		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-
-		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-	
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, funder_name, "Funder X", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, agreement_number, "123", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
+		
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
@@ -1187,9 +1102,9 @@ ExplicitWait.visibleElement(driver, otr_for_invoice, 20);
 		wb.getSheet(sheet_name).getRow(115).getCell(1).setCellValue("NO");
 		wb.getSheet(sheet_name).getRow(117).getCell(3).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(117).getCell(4)
-				.setCellValue(Double.parseDouble(given_part_exchange_value_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(118).getCell(4)
-				.setCellValue(Double.parseDouble(less_finance_settlement_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(129).getCell(1).setCellValue(Double.parseDouble(target_rental));
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));

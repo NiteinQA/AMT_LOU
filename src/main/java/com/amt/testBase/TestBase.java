@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Time;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -23,6 +24,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 import com.amt.pages.LoginPage;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Logger;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -37,7 +39,7 @@ public class TestBase {
     	try
     	{
     		prop=new Properties();
-    		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\config.properties");
+    		FileInputStream ip = new FileInputStream(ConfigConstants.CONFIG_PROPERTY_FILE_PATH);
     		prop.load(ip);                            
     	}
     	catch(FileNotFoundException e)
@@ -58,13 +60,22 @@ public class TestBase {
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver","D:\\chromedriver-win64\\chromedriver.exe");
-			//WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();	
-		
+			ChromeOptions options = new ChromeOptions();
+			
+			
+			
 			options.addArguments("--remote-allow-origins=*");
-			options.addArguments("force-device-scale-factor=0.67");
-			options.addArguments("high-dpi-support=0.67");
+			options.addArguments("--disable-blink-features=AutomationControlled");
+			options.addArguments("disable-infobars");
+			options.setExperimentalOption("prefs", new HashMap<String, Object>() {{
+			    put("credentials_enable_service", false);
+			    put("profile.password_manager_enabled", false);
+			}});
+			options.addArguments("--incognito");
+	//		options.addArguments("force-device-scale-factor=0.67");
+//			options.addArguments("high-dpi-support=0.67");
 //			options.addArguments("--headless=new");
+			
 			driver = new ChromeDriver(options);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {

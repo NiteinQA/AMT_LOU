@@ -587,14 +587,17 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 		String otr_screen_price = otrScreenPriceUsedVehicle.getText().trim().substring(2);
 		String otr = RemoveComma.of(otr_screen_price);
 		double otr_screen_price_converted = Double.parseDouble(otr);
+		
+		int profit = Integer.parseInt(vehicleProfit);
+		
+		Thread.sleep(2000);
 
 		ExplicitWait.visibleElement(driver, vehicleprofit, 20);
 
-		vehicleprofit.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
-		int profit = Integer.parseInt(vehicleProfit);
+		vehicleprofit.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));		
 
 		Click.sendKeysint(driver, vehicleprofit, profit, 40);
+		
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 

@@ -74,7 +74,7 @@ public class OptionsAccessoriesPage extends TestBase {
 		Thread.sleep(15000);
 		
 	    try {
-		 try { Click.on(driver, ok_pop_up, 10);}catch(Exception e) {}
+		 try { Click.on(driver, ok_pop_up, 20);}catch(Exception e) {}
 	    }
 	    catch(Exception e)
 	    {

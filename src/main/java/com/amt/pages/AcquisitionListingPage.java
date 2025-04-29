@@ -222,7 +222,7 @@ public class AcquisitionListingPage extends TestBase {
 
 	}
 
-public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMethodName) {
+   public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMethodName) {
 		String sheetName = "";
 		
 		if (classOrMethodName.contains("broker_business_hire")) {
@@ -351,12 +351,12 @@ public String quote_save_sheet_name_from_quote_save_excel_sheet(String classOrMe
 		{
 			sheetName = prop.getProperty("calculation_sheet_ownbook_business_purchase");
 		}
-		
-		if (classOrMethodName.contains("ownbook_CP_CP_business_purchase")) {
-			
-				sheetName = prop.getProperty("calculation_sheet_ownbook_CP_CP_business_purchase");
-	     }
 	}
+	
+	if (classOrMethodName.contains("ownbook_CP_CP_business_purchase")) {
+		
+		sheetName = prop.getProperty("calculation_sheet_ownbook_CP_CP_business_purchase");
+      }
 
 	if (classOrMethodName.contains("ownbook_individual_purchase")) {
 		

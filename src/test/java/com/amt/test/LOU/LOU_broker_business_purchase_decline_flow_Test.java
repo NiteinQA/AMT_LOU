@@ -161,91 +161,56 @@ public class LOU_broker_business_purchase_decline_flow_Test extends TestBase {
 
 	}
 
-	/*
-	 * @Test( priority=7)
-	 * 
-	 * public void
-	 * broker_create_opportunity_business_currentstatus_after_sending_to_contract()
-	 * throws Exception { obj_Opportunities_Page = new Opportunities();
-	 * 
-	 * 
-	 * 
-	 * 
-	 * // Opportunity listing screen - Proposal status boolean
-	 * opp_AfterCurrentStatus_contract =obj_Opportunities_Page.
-	 * verify_current_status_of_opportunity_after_sending_to_customer_contract();
-	 * 
-	 * Assert.assertTrue(opp_AfterCurrentStatus_contract);
-	 * 
-	 * 
-	 * 
-	 * System.out.println( "Status Verified : Sent to customer ");
-	 * LO.print("Status Verified : Status Verified : Sent to customer");
-	 * 
-	 * }
-	 */
 
-	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_business_sending_to_contract" })
+//	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_business_sending_to_contract" })
+//
+//	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_business_flow()
+//			throws Exception {
+//
+//		System.out.println("Test 7");
+//
+//		obj_Opportunities_Page = new Opportunities();
+//
+//		// Opportunity listing screen - Proposal status
+//		boolean opp_AfterCurrentStatus_contract = obj_Opportunities_Page
+//				.verify_current_status_of_opportunity_after_sending_to_customer_contract();
+//
+//		Assert.assertTrue(opp_AfterCurrentStatus_contract);
+//
+//		System.out.println("Status Verified : Sent to customer ");
+//		LO.print("Status Verified : Status Verified : Sent to customer");
+//
+//	}
+//
+//	@Test(priority = 8 , dependsOnMethods = { "L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_business_flow" })
+//	public void L8_verify_signed_contract_status_with_api_call() throws Exception
+//
+//	{
+//		System.out.println("Test 8");
+//
+//		obj_Opportunities_Page = new Opportunities();
+//
+//		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp();
+//
+//		String opp_id_screen = OppDATA[0];
+//		String quote_ref_screen = OppDATA[1];
+//
+//		System.out.println("opp_id_screen" + opp_id_screen);
+//
+//		System.out.println("quote_ref_screen" + quote_ref_screen);
+//
+//		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen, opp_id_screen);
+//
+//		Assert.assertEquals(statuscode, 200);
+//		
+//		LO.print          ("Status code "+statuscode+" received ");
+//		System.out.println("Status code "+statuscode+" received ");
+//
+//		obj_Opportunities_Page.opp_search_textbox();
+//
+//	}
 
-	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_business_flow()
-			throws Exception {
 
-		System.out.println("Test 7");
-
-		obj_Opportunities_Page = new Opportunities();
-
-		// Opportunity listing screen - Proposal status
-		boolean opp_AfterCurrentStatus_contract = obj_Opportunities_Page
-				.verify_current_status_of_opportunity_after_sending_to_customer_contract();
-
-		Assert.assertTrue(opp_AfterCurrentStatus_contract);
-
-		System.out.println("Status Verified : Sent to customer ");
-		LO.print("Status Verified : Status Verified : Sent to customer");
-
-	}
-
-	@Test(priority = 8 , dependsOnMethods = { "L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_business_flow" })
-	public void L8_verify_signed_contract_status_with_api_call() throws Exception
-
-	{
-		System.out.println("Test 8");
-
-		obj_Opportunities_Page = new Opportunities();
-
-		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp();
-
-		String opp_id_screen = OppDATA[0];
-		String quote_ref_screen = OppDATA[1];
-
-		System.out.println("opp_id_screen" + opp_id_screen);
-
-		System.out.println("quote_ref_screen" + quote_ref_screen);
-
-		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen, opp_id_screen);
-
-		Assert.assertEquals(statuscode, 200);
-		
-		LO.print          ("Status code "+statuscode+" received ");
-		System.out.println("Status code "+statuscode+" received ");
-
-		obj_Opportunities_Page.opp_search_textbox();
-
-	}
-
-	/*
-	 * @Test(priority = 9)
-	 * 
-	 * public void L9_ownbook_status_after_contract_signed() throws Exception {
-	 * 
-	 * obj_Opportunities_Page = new Opportunities();
-	 * 
-	 * boolean CurrentStatusafterContractSigned = obj_Opportunities_Page
-	 * .verify_current_status_of_opportunity_after_contract_signed();
-	 * Assert.assertTrue(CurrentStatusafterContractSigned);
-	 * 
-	 * }
-	 */
 
 	@Test(priority = 9 , dependsOnMethods = { "L8_verify_signed_contract_status_with_api_call" })
 
@@ -354,100 +319,6 @@ public class LOU_broker_business_purchase_decline_flow_Test extends TestBase {
 	  .verify_current_status_of_underwriting_after_sending_to_decline();
 	  Assert.assertTrue(statusofdecline);
 	  
-	  }
-	 
+	  }	 
 
-//	@Test(priority = 14, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
-//
-//	public void UW5_verify_underwriting_proposal_decision_with_accept() throws Exception {
-//
-//		System.out.println("Test 14");
-//		
-//		obj_Underwriting_page = new Underwriting();
-//
-//		// obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-//
-//		// obj_Underwriting_page.find_underwriting_listing_detail_listing_yes_option();
-//
-//		// obj_Underwriting_page.find_underwriting_tab_decision_page();
-//		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
-//
-//		obj_Underwriting_page.find_underwriting_tab_decision_page_accept_upload();
-//		// //
-//		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
-//
-//		obj_Underwriting_page.verification_underwriting_tab_decision_page_save_and_exit_button();
-//
-//		obj_Underwriting_page.verify_underwriting_proposal_search_text_box();
-//
-//		obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-//
-//		obj_Underwriting_page.find_underwriting_tab_decision_page();
-//
-//		obj_Underwriting_page.verification_underwriting_tab_decision_page_view_icon();
-//
-//		// Assert for Accept condition
-//		
-//		boolean statusofaccept = obj_Underwriting_page.verify_current_status_of_underwriting_after_sending_to_accept();
-//		Assert.assertTrue(statusofaccept);
-//
-//	}
-
-	/*
-	 * @Test(priority = 13)
-	 * 
-	 * public void
-	 * UW7_verify_ownbook_underwriting_proposal_decision_accept_with_changes
-	 * ()throws Exception {
-	 * 
-	 * obj_Underwriting_page = new Underwriting();
-	 * 
-	 * //obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-	 * 
-	 * 
-	 * 
-	 * //obj_Underwriting_page.find_underwriting_tab_decision_page();
-	 * obj_Underwriting_page.find_underwriting_tab_decision_page_accept_button();
-	 * obj_Underwriting_page.ownbook_accept_with_change_the_data_quote();
-	 * 
-	 * 
-	 * obj_Underwriting_page.
-	 * verification_underwriting_tab_decision_page_saveandexit_button();
-	 * 
-	 * // obj_Underwriting_page.find_underwriting_decision_yes_option();
-	 * 
-	 * 
-	 * // Assert for Accept condition boolean statusofaccept =
-	 * obj_Underwriting_page.
-	 * verify_current_status_of_underwriting_after_sending_to_accept_with_changes();
-	 * Assert.assertTrue(statusofaccept);
-	 * 
-	 * }
-	 */
-
-//	@Test(priority = 16 , dependsOnMethods = { "UW5_verify_ownbook_underwriting_proposal_decision_with_accept" })
-//
-//	public void UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes() throws Exception {
-//
-//		obj_Opportunities_Page = new Opportunities();
-//		obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
-//
-//		obj_Opportunities_Page.opp_menu_link();
-//
-//		obj_Opportunities_Page.verify_opportunity_broker_business_quote_search_text_box();
-//
-//	}
-//
-//	@Test(priority = 17, dependsOnMethods = { "UW6_verify_ownbook_opportunity_search_text_box_accept_with_changes" })
-//
-//	public void UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up() throws Exception
-//
-//	{
-//		obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
-//
-//		obj_Underwriting_Popup_Page.search_and_verify_underwriting_icon_is_availabale();
-//
-////obj_Underwriting_Popup_Page.verify_ownbook_underwriting_popup_accept_with_change_flow();
-//
-//	}
 }

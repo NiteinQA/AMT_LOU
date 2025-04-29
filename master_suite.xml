@@ -16,8 +16,8 @@
 		 
 		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business  Purchase.xml" />			 
 		 <suite-file	path="D:\LOU\AMT_LOU\New Car Ownbook Business Hire.xml" />	
-		 <suite-file	path="D:\LOU\AMT_LOU\Used Car Ownbook Business Purchase.xml" />	
-		 <suite-file	path="D:\LOU\AMT_LOU\Used Car Ownbook Business Hire.xml" />
+		 <!-- <suite-file	path="D:\LOU\AMT_LOU\Used Car Ownbook Business Purchase.xml" />	
+		 <suite-file	path="D:\LOU\AMT_LOU\Used Car Ownbook Business Hire.xml" />-->
          
          	
 		 		

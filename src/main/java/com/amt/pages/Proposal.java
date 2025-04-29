@@ -254,7 +254,7 @@ private List<WebElement> loading_icon;
 	private WebElement 	send_proposal_to_customer_pop_up_yes ;
 	
 	
-	@FindBy(xpath = "//*[@id='sendproposalmodal']/div/div/div[2]/div[3]/a")
+	@FindBy(xpath = "//*[text()='Click here to manually submit the proposal on behalf of the customer.']")
 	private WebElement 	click_manually_submit_behalf_of_customer_link ;
 	
 	
@@ -1280,14 +1280,12 @@ private WebElement proposal_save ;
 	public void Opp_listing_proposal_fill_form_manually() throws Exception
 
 	{
-	
-//		obj_Opportunities_Page = new Opportunities();
+		
+//		obj_Opportunities_Page = new Opportunities();		
 //		
-//	
 //		obj_Opportunities_Page.opp_menu_link();
 //
 //		obj_Opportunities_Page.opp_search_textbox();
-		
 		
 		System.out.println("*****************Proposal Lisiting page will display ****************************");
 		System.out.println("*********************************************");

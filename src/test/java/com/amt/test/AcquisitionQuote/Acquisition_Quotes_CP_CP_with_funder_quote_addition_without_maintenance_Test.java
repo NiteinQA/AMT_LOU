@@ -10,7 +10,9 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_CP_CP_Page;
 import com.amt.HoldingCostPages.HoldingCost_CP_CP_Page;
+import com.amt.HoldingCostPages.HoldingCost_HPNR_HPRPage;
 import com.amt.QuoteSummaryPages.QuoteSummary_CP_CP_Page;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_PCP_Page;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -29,7 +31,8 @@ public class Acquisition_Quotes_CP_CP_with_funder_quote_addition_without_mainten
 	ContractTypesAndOTR_CP_CP_Page obj_contract_types_and_OTR_page;
 	HoldingCost_CP_CP_Page obj_holding_cost_CP_CP_page;
 	CustomerQuotePage_CP_CP_Page obj_customer_quote_page;
-	QuoteSummary_CP_CP_Page obj_quote_summary_page;
+	QuoteSummary_CP_CP_Page obj_quote_summary_page;	
+	QuoteSummary_HPNR_PCP_Page obj_quote_summary_page_hpnr_pcp;
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_CP_CP_OTR_calculation_without_maintenance_test(String manufacturer,
@@ -151,7 +154,9 @@ public class Acquisition_Quotes_CP_CP_with_funder_quote_addition_without_mainten
 			Assert.assertTrue(quote_summary_holding_cost_calculation1);
 
 			boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
-					.quote_summary_customer_quote_summary_value_verification_for_funder_without_maintenance(sheet_name); // Assert.assertTrue(quote_summary_customer_quote_calculation);
+					.quote_summary_customer_quote_summary_value_verification_for_funder_without_maintenance(sheet_name); 
+			
+			// Assert.assertTrue(quote_summary_customer_quote_calculation);
 
 			boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
 					.quote_summary_configuration_value_verification_for_funder_without_maintenance(sheet_name);
@@ -165,10 +170,14 @@ public class Acquisition_Quotes_CP_CP_with_funder_quote_addition_without_mainten
 					.quote_summary_edit_customer_rate_over_base_value_verification_for_funder(sheet_name);
 			// Assert.assertTrue(value_check_after_customer_rate_over_base_change);
 			
+			obj_quote_summary_page_hpnr_pcp = new QuoteSummary_HPNR_PCP_Page();
 			
+			obj_quote_summary_page_hpnr_pcp.quote_summary_purchase_without_maintenance("CP_CP-Funder_Quote_Save");
 			
+			HoldingCost_HPNR_HPRPage obj_holding_cost_page = new HoldingCost_HPNR_HPRPage();
+			
+			obj_holding_cost_page.save_maint_value_to_excel_for_with_funder_scenario(term , expiryDate, "CP_CP-Funder_Quote_Save");
 
-	
 		  
 		  }
 

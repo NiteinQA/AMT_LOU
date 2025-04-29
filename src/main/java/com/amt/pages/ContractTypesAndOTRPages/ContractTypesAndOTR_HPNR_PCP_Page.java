@@ -49,7 +49,7 @@ public class ContractTypesAndOTR_HPNR_PCP_Page extends TestBase {
 	private WebElement acq_contractTypes_calculation_table_discount;	
 	
 	@FindBy(xpath = "//*[@id='collapseTwo']//*[normalize-space(text())='Additional discount']//ancestor::div[1]")
-	private WebElement acq_contractTypes_calculation_table_additional_discount;	
+	private WebElement acq_contractTypes_calculation_table_additional_discount;		
 
 	
 	

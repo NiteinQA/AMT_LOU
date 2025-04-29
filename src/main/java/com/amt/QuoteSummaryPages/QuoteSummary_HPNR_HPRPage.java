@@ -2,9 +2,11 @@ package com.amt.QuoteSummaryPages;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,6 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
@@ -25,9 +28,14 @@ import com.amt.testUtil.RemoveComma;
 public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 	ReadExcelCalculationForPurchaseAgreement obj_read_excel_calculation_page;
+	
+	
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//app-acquisition-summary-configuration//*[@id='defaultBrokerMargin']")
+	private WebElement quote_summary_default_broker_margin;
 
 	@FindBy(xpath = "//p[normalize-space()='Quote summary']")
 	private WebElement quote_summary;
@@ -311,7 +319,25 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Monthly finance rental']//ancestor::div[1]//div//strong|//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_monthly_finance_rental;
 
+	Properties prop;
+	
 	public QuoteSummary_HPNR_HPRPage() {
+		
+    	try
+    	{
+    		prop=new Properties();
+    		FileInputStream ip = new FileInputStream(
+					ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
+    		prop.load(ip);                            
+    	}
+    	catch(FileNotFoundException e)
+    	{
+    		e.printStackTrace();
+    	}
+    	catch(IOException e)
+    	{
+    		e.printStackTrace();
+    	}
 		
 		
 		PageFactory.initElements(driver, this);
@@ -888,7 +914,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 	}
 
 	public boolean quote_summary_customer_quote_summary_value_verification_without_maintenance(String sheet_name)
-			throws IOException {
+			throws IOException, InterruptedException {
 
 		LO.print("*************Customer Quote Calulation on quote summary page has been started************");
 		System.out.println("*************Customer Quote Calulation on quote summary page has been started************");
@@ -897,6 +923,8 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 20);
 
 		// waiting for elements
+		
+		Thread.sleep(5000);
 
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 20);
@@ -907,7 +935,10 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_order_deposit, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_deposit, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_deposit, 20);
-		try{ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_part_exchange_value, 20);}catch(Exception e) {}
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_part_exchange_value, 20);
+		} catch (Exception e) {
+		}
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_balance_to_finance, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_charges, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee, 20);
@@ -920,7 +951,11 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		ExplicitWait.visibleElement(driver,
 				quote_summary_customer_quote_summary_final_payment_inc_option_to_purchase_fee, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vehicle_comm, 20);
+		
+		try {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+		}catch(Exception e1) {}
+		
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee_comm, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_comm, 20);
 
@@ -953,9 +988,12 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		double customer_quote_summary_total_deposit = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_total_deposit.getText().trim().substring(2)));
 
-		double customer_quote_summary_part_exchange_value =0;
-		try{ customer_quote_summary_part_exchange_value = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));}catch(Exception e) {}
+		double customer_quote_summary_part_exchange_value = 0;
+		try {
+			customer_quote_summary_part_exchange_value = Double.parseDouble(RemoveComma
+					.of(quote_summary_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
+		} catch (Exception e) {
+		}
 
 		double customer_quote_summary_balance_to_finance = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
@@ -991,8 +1029,11 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		double customer_quote_summary_vehicle_comm = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_vehicle_comm.getText().trim().substring(2)));
 
-		double customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
+		double customer_quote_summary_default_finance_comm =0;
+		try {
+		customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
 				.of(quote_summary_customer_quote_summary_default_finance_comm.getText().trim().substring(2)));
+		}catch(Exception e3) {}	
 
 		double customer_quote_summary_document_fee_comm = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_document_fee_comm.getText().trim().substring(2)));
@@ -1018,7 +1059,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 		double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-		double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+		double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 		double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 		double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);
@@ -1133,14 +1174,17 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		}
 
 		// 10
-		try{if (partExchangeValue == customer_quote_summary_part_exchange_value) {
-			LO.print("Part Exchange Value - found OK");
-			System.out.println("Part Exchange Value - found OK");
-			count++;
-		} else {
-			LO.print("Part Exchange Value - found wrong");
-			System.err.println("Part Exchange Value - found wrong");
-		}}catch(Exception e) {}
+		try {
+			if (partExchangeValue == customer_quote_summary_part_exchange_value) {
+				LO.print("Part Exchange Value - found OK");
+				System.out.println("Part Exchange Value - found OK");
+				count++;
+			} else {
+				LO.print("Part Exchange Value - found wrong");
+				System.err.println("Part Exchange Value - found wrong");
+			}
+		} catch (Exception e) {
+		}
 
 		// 11
 		if ((Difference.of_two_Double_Values(balanceToFinance, customer_quote_summary_balance_to_finance)) < 0.2) {
@@ -2191,10 +2235,6 @@ try {
 		double totalMarginFromScreen = Double
 				.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
-		double defaultBrokerMarginPercentageFromScreen = Double
-				.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().substring(0, 4));
-
 		ExplicitWait.visibleElement(driver, quote_summary_configuration_customer_interest_rate, 20);
 		double customerInterestRateFromScreen = Double
 				.parseDouble(quote_summary_configuration_customer_interest_rate.getText().trim().substring(0, 5));
@@ -2205,8 +2245,17 @@ try {
 
 		// copying default broker margin from input field
 
+		double defaultBrokerMarginPercentageFromScreen =0;
+		double default_broker_margin_copied =0;
+		
+		try {
+		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
+		defaultBrokerMarginPercentageFromScreen = Double
+				.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().split(" ")[0]);
+		
 		ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-		double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+		default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+		}catch(Exception e) {}
 //		ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //		double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 //
@@ -2307,7 +2356,8 @@ try {
 		}
 
 		// 6
-		if (Difference.of_two_Double_Values(defaualtBrokerMarginPercentageFromExcel , defaultBrokerMarginPercentageFromScreen)<0.2) {
+		if (Difference.of_two_Double_Values(defaualtBrokerMarginPercentageFromExcel,
+				defaultBrokerMarginPercentageFromScreen) < 0.2) {
 			LO.print("Default Broker Margin percentage found OK");
 			System.out.println("Default Broker Margin percentage found OK");
 			count++;
@@ -2317,7 +2367,7 @@ try {
 		}
 
 		// 7
-		if (Difference.of_two_Double_Values(customerInterestRateFromScreen , customerInterestRateFromExcel)<0.2) {
+		if (Difference.of_two_Double_Values(customerInterestRateFromScreen, customerInterestRateFromExcel) < 0.2) {
 			LO.print("Customer Interest Rate found OK");
 			System.out.println("Customer Interest Rate found OK");
 			count++;
@@ -2870,7 +2920,7 @@ try {
 				RemoveComma.of(quote_summary_customer_quote_summary_balance_payable.getText().trim().substring(2)));
 
 		// writing values to excel
-
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 

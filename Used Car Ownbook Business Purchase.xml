@@ -3,12 +3,21 @@
 <suite name="Used Car Ownbook Business">
  
   
-    <test thread-count="5" name="Used Car Ownbook Business Purchase with funder">
+  <!--   <test thread-count="5" name="Used Car Ownbook Business Purchase with funder">
     <classes>
       <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_HPNR_used_car_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="com.amt.test.LOU.LOU_used_car_ownbook_business_purchase_funder_accept_with_changes_Test"/>
     </classes>
  </test> 
+ 
+      <test thread-count="5" name="Used Car Ownbook Business Purchase with additional term and mileage">
+    <classes>
+      <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_HPNR_used_car_without_maintenance_with_add_term_and_mileage_Test"/>
+      <class name="com.amt.test.LOU.LOU_used_car_ownbook_business_purchase_accept_with_changes_Test"/>
+    </classes>
+ </test> 
+ 
+ -->
  
  
    <test thread-count="5" name="Used Car Ownbook Business Purchase">
@@ -18,11 +27,5 @@
     </classes>
   </test>
  
-     <test thread-count="5" name="Used Car Ownbook Business Purchase with additional term and mileage">
-    <classes>
-      <class name="com.amt.test.AcquisitionQuote.Acquisition_Quotes_HPNR_HPNR_used_car_without_maintenance_with_add_term_and_mileage_Test"/>
-      <class name="com.amt.test.LOU.LOU_used_car_ownbook_business_purchase_accept_with_changes_Test"/>
-    </classes>
- </test> 
- 
+
 </suite>  

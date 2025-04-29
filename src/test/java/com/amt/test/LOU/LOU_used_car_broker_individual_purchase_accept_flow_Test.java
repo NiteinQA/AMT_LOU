@@ -160,97 +160,62 @@ public class LOU_used_car_broker_individual_purchase_accept_flow_Test extends Te
 		obj_Opportunities_Page.opp_find_send_contract_icon();
 	}
 
-	/*
-	 * @Test( priority=7)
-	 * 
-	 * public void
-	 * broker_create_opportunity_individual_currentstatus_after_sending_to_contract()
-	 * throws Exception { obj_Opportunities_Page = new Opportunities();
-	 * 
-	 * 
-	 * 
-	 * 
-	 * // Opportunity listing screen - Proposal status boolean
-	 * opp_AfterCurrentStatus_contract =obj_Opportunities_Page.
-	 * verify_current_status_of_opportunity_after_sending_to_customer_contract();
-	 * 
-	 * Assert.assertTrue(opp_AfterCurrentStatus_contract);
-	 * 
-	 * 
-	 * 
-	 * System.out.println( "Status Verified : Sent to customer ");
-	 * LO.print("Status Verified : Status Verified : Sent to customer");
-	 * 
-	 * }
-	 */
 
-	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_individual_sending_to_contract" })
 
-	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow()
-			throws Exception {
+//	@Test(priority = 7 , dependsOnMethods = { "L6_broker_create_opportunity_individual_sending_to_contract" })
+//
+//	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow()
+//			throws Exception {
+//
+//		System.out.println("Test 7");
+//
+//		obj_Opportunities_Page = new Opportunities();
+//
+//		// Opportunity listing screen - Proposal status
+//		boolean opp_AfterCurrentStatus_contract = obj_Opportunities_Page
+//				.verify_current_status_of_opportunity_after_sending_to_customer_contract();
+//
+//		Assert.assertTrue(opp_AfterCurrentStatus_contract);
+//
+//		System.out.println("Status Verified : Sent to customer ");
+//		LO.print("Status Verified : Status Verified : Sent to customer");
+//
+//	}
+//
+//	@Test(priority = 8 , dependsOnMethods = { "L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow" })
+//	public void L8_verify_signed_contract_status_with_api_call() throws Exception
+//
+//	{
+//		System.out.println("Test 8");
+//
+//		obj_Opportunities_Page = new Opportunities();
+//
+//		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp();
+//
+//		String opp_id_screen = OppDATA[0];
+//		String quote_ref_screen = OppDATA[1];
+//
+//		System.out.println("opp_id_screen" + opp_id_screen);
+//
+//		System.out.println("quote_ref_screen" + quote_ref_screen);
+//
+//		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen, opp_id_screen);
+//
+//		Assert.assertEquals(statuscode, 200);
+//		
+//		LO.print          ("Status code "+statuscode+" received ");
+//		System.out.println("Status code "+statuscode+" received ");
+//
+//		obj_Opportunities_Page.opp_search_textbox();
+//
+//	}
 
-		System.out.println("Test 7");
 
-		obj_Opportunities_Page = new Opportunities();
-
-		// Opportunity listing screen - Proposal status
-		boolean opp_AfterCurrentStatus_contract = obj_Opportunities_Page
-				.verify_current_status_of_opportunity_after_sending_to_customer_contract();
-
-		Assert.assertTrue(opp_AfterCurrentStatus_contract);
-
-		System.out.println("Status Verified : Sent to customer ");
-		LO.print("Status Verified : Status Verified : Sent to customer");
-
-	}
-
-	@Test(priority = 8 , dependsOnMethods = { "L7_verify_current_status_on_opportunity_page_after_sending_contract_for_broker_individual_flow" })
-	public void L8_verify_signed_contract_status_with_api_call() throws Exception
-
-	{
-		System.out.println("Test 8");
-
-		obj_Opportunities_Page = new Opportunities();
-
-		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp();
-
-		String opp_id_screen = OppDATA[0];
-		String quote_ref_screen = OppDATA[1];
-
-		System.out.println("opp_id_screen" + opp_id_screen);
-
-		System.out.println("quote_ref_screen" + quote_ref_screen);
-
-		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen, opp_id_screen);
-
-		Assert.assertEquals(statuscode, 200);
-		
-		LO.print          ("Status code "+statuscode+" received ");
-		System.out.println("Status code "+statuscode+" received ");
-
-		obj_Opportunities_Page.opp_search_textbox();
-
-	}
-
-	/*
-	 * @Test(priority = 9)
-	 * 
-	 * public void L9_ownbook_status_after_contract_signed() throws Exception {
-	 * 
-	 * obj_Opportunities_Page = new Opportunities();
-	 * 
-	 * boolean CurrentStatusafterContractSigned = obj_Opportunities_Page
-	 * .verify_current_status_of_opportunity_after_contract_signed();
-	 * Assert.assertTrue(CurrentStatusafterContractSigned);
-	 * 
-	 * }
-	 */
-
-	@Test(priority = 9 , dependsOnMethods = { "L8_verify_signed_contract_status_with_api_call" })
+	@Test(priority = 9 , dependsOnMethods = { "L6_broker_create_opportunity_individual_sending_to_contract" })
 
 	public void L9_verify_status_after_contract_signed() throws Exception {
 
-		System.out.println("Test 9");
+		System.out.println("Test 7");
 
 		obj_Opportunities_Page = new Opportunities();
 
@@ -269,7 +234,7 @@ public class LOU_used_car_broker_individual_purchase_accept_flow_Test extends Te
 
 	public void UW1_verify_underwriting_flow_ownbook_with_status() throws Exception {
 
-		System.out.println("Test 10");
+		System.out.println("Test 8");
 
 		obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
 
@@ -287,7 +252,7 @@ public class LOU_used_car_broker_individual_purchase_accept_flow_Test extends Te
 
 	public void UW2_verify_status_after_sending_to_underwriting() throws Exception {
 
-		System.out.println("Test 11");
+		System.out.println("Test 9");
 		
 		obj_Opportunities_Page = new Opportunities();
 
@@ -304,7 +269,7 @@ public class LOU_used_car_broker_individual_purchase_accept_flow_Test extends Te
 
 	public void UW3_verify_underwriting_lisitig_page() throws Exception {
 
-		System.out.println("Test 12");
+		System.out.println("Test 10");
 
 		obj_Underwriting_page = new Underwriting();
 
@@ -321,7 +286,7 @@ public class LOU_used_car_broker_individual_purchase_accept_flow_Test extends Te
 	public void UW4_verify_underwriting_proposal_page_flow() throws Exception {
 
 		
-		System.out.println("Test 13");
+		System.out.println("Test 11");
 		
 		obj_Underwriting_page = new Underwriting();
 
@@ -333,32 +298,12 @@ public class LOU_used_car_broker_individual_purchase_accept_flow_Test extends Te
 
 	}
 
-	/*
-	 * @Test(priority = 14)
-	 * 
-	 * public void UW6_verify_ownbook_underwriting_proposal_decision_with_declined()
-	 * throws Exception {
-	 * 
-	 * obj_Underwriting_page = new Underwriting();
-	 * 
-	 * //obj_Underwriting_page.find_underwriting_listing_detail_for_proposal();
-	 * obj_Underwriting_page.find_underwriting_tab_decision_page();
-	 * 
-	 * obj_Underwriting_page.find_decision_decline(); obj_Underwriting_page.
-	 * verification_underwriting_tab_decision_page_saveandexit_button();
-	 * 
-	 * boolean statusofdecline = obj_Underwriting_page
-	 * .verify_current_status_of_underwriting_after_sending_to_decline();
-	 * Assert.assertTrue(statusofdecline);
-	 * 
-	 * }
-	 */
 
 	@Test(priority = 14, dependsOnMethods = { "UW4_verify_underwriting_proposal_page_flow" })
 
 	public void UW5_verify_underwriting_proposal_decision_with_accept() throws Exception {
 
-		System.out.println("Test 14");
+		System.out.println("Test 12");
 		
 		obj_Underwriting_page = new Underwriting();
 

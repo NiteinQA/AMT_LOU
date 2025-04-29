@@ -175,7 +175,7 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 	@FindBy(xpath = "//*[@name='financeDeposit']")
 	private WebElement finance_Deposit;
 
-	@FindBy(xpath = "//*[@id='DocumentFee']")
+	@FindBy(xpath = "//*[@id='DocumentFeeOR']")
 	private WebElement document_fee;
 
 	@FindBy(xpath = "//*[@name='FunderName']")

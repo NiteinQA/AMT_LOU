@@ -76,14 +76,16 @@ public class Leads extends TestBase {
 	@FindBy(xpath = "(//button[@type='button'][normalize-space()='Add new'])[1]")
 	private WebElement business_contact_add_new_button;
 
-	@FindBy(xpath = "//div[@class='form-group only-inputgroup input norequired col-md-12 col-lg-4']//input[@id='customer']")
+	@FindBy(xpath = "//*[contains(text(),'Customer name')]//ancestor::div[1]/div/input")
 	private WebElement customer_name;
 
-	@FindBy(xpath = "//ul[@class='user-dd-list shadow ng-star-inserted']//li[@class='ng-star-inserted']")
+	@FindBy(xpath = "(//*[contains(@class, 'user-dd-list shadow')]/li)[1]")
 	private WebElement customer_name_option;
 
 	@FindBy(xpath = "//button[contains(text(), 'Add new vehicle request')]")
 	private WebElement add_new_vehicle_request;
+	
+	//[contains(text(), 'user-dd-list shadow')]
 
 	@FindBy(xpath = "//ng-multiselect-dropdown//*[text()='Channel']")
 	private WebElement channel;
@@ -344,7 +346,7 @@ public class Leads extends TestBase {
 
 		Dropdown.selectByVisibleText(driver, general_entry_type, " Lease ", 120);
 
-		Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
+//		Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
 
 		Click.sendKeys(driver, general_assigned_to, "QA Sales", 120);
 
@@ -509,9 +511,9 @@ public class Leads extends TestBase {
 
 		//Dropdown.selectByVisibleText(driver, general_entry_type, " Lease ", 120);
 
-		HelperClass.highlightElement(driver, status);
-
-		Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
+//		HelperClass.highlightElement(driver, status);
+//
+//		Dropdown.selectByVisibleText(driver, status, " New/Open ", 120);
 		// Dropdown.selectByVisibleText(driver, status, " Closed ", 120);
 
 		Click.sendKeys(driver, general_assigned_to, "arpita ", 120);
@@ -549,31 +551,26 @@ public class Leads extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_name, 30);
 		Thread.sleep(3000);
-		customer_name.sendKeys("A");
+		customer_name.sendKeys("D");
 		Thread.sleep(500);
 		customer_name.sendKeys("u");
 		Thread.sleep(500);
-		customer_name.sendKeys("t");
-		Thread.sleep(500);
-		customer_name.sendKeys("o");
+		customer_name.sendKeys("m");
 		Thread.sleep(500);
 		customer_name.sendKeys("m");
 		Thread.sleep(500);
-		customer_name.sendKeys("a");
+		customer_name.sendKeys("y");
 		Thread.sleep(500);
-		customer_name.sendKeys("t");
-		Thread.sleep(500);
-		customer_name.sendKeys("i");		
-		Thread.sleep(500);
-		customer_name.sendKeys("o");
-		Thread.sleep(500);
-		customer_name.sendKeys("n");
-	    Thread.sleep(500);
 		customer_name.sendKeys(" ");
-	    Thread.sleep(500);
+		Thread.sleep(500);
 		customer_name.sendKeys("P");
+		Thread.sleep(500);
+		customer_name.sendKeys("e");		
+		Thread.sleep(500);
+		customer_name.sendKeys("r");
+		Thread.sleep(500);
+		customer_name.sendKeys("s");
 	    Thread.sleep(500);
-		customer_name.sendKeys("e");
 
 		
    	// Thread.sleep(4000);
@@ -1079,7 +1076,7 @@ public class Leads extends TestBase {
         //Map New Quote 
 		ExplicitWait.visibleElement(driver, Map_New_quote_icon, 30);
 
-		HelperClass.highlightElement(driver, Map_New_quote_icon);
+
 
 		LO.print("Click on Map New Quote icon");
 		System.out.println("Click on Map New Quote icon");
@@ -1221,7 +1218,7 @@ public class Leads extends TestBase {
 
 			}
 			
-			else if (i == 50) {
+			else if (i == 100) {
 
 				LO.print          ("The given quote "+quote_no+" is not available in pop up listing");
 				System.err.println("The given quote "+quote_no+" is not available in pop up listing");
@@ -1270,6 +1267,8 @@ public class Leads extends TestBase {
 
 		catch (Exception e) {
 		}
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
 	}
 
@@ -1282,34 +1281,45 @@ public class Leads extends TestBase {
 		// get quote ref no.
 
 		String quotRefNoActual = lead_page_table_elements_list.get(0).getText();
-		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(0));
-
+		try {
+		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(0));
+		}catch(Exception e) {}
 		// get Vehicle name
 		String vehicleNameActual = lead_page_table_elements_list.get(1).getText();
-		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(1));
-
+		try {
+		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(1));
+		}catch(Exception e) {}
 		// get contract type
 		String contractTypeActual = lead_page_table_elements_list.get(2).getText();
-		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(2));
-
+		try {
+		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(2));
+	    }catch(Exception e) {}
 		// get monthly payment
 		String[] monthlyPayment = lead_page_table_elements_list.get(3).getText().split(" ");
-		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(3));
+		try {
+		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(3));
+		}catch(Exception e) {}
 		double monthlyFinanceRentalActual = Double.parseDouble(RemoveComma.of(monthlyPayment[1]));
 
 		// get mileage
 		String[] mileage = lead_page_table_elements_list.get(4).getText().split(" ");
-		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(4));
+		try {
+		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(4));
+		}catch(Exception e) {}
 		double mileageActual = Double.parseDouble(mileage[1]);
 
 		// get terms
 		String[] term = lead_page_table_elements_list.get(5).getText().split(" ");
-		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(5));
+		try {
+		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(5));
+		}catch(Exception e) {}
 		double termActual = Double.parseDouble(term[1]);
 
 		// get Expiry date
 		String[] ExpiryDate = lead_page_table_elements_list.get(6).getText().split(" ");
-		//HelperClass.highlightElement(driver, lead_page_table_elements_list.get(6));
+		try {
+		HelperClass.highlightElement(driver, lead_page_table_elements_list.get(6));
+		}catch(Exception e) {}
 		String expiryDateActual = RemoveComma.of(ExpiryDate[0]);
 
 		// part second -- Getting values from quote save excel sheet
@@ -1530,7 +1540,7 @@ public class Leads extends TestBase {
 	}
 
 	
-public boolean verify_quote_no_and_sales_price_displayed_in_table() throws IOException, ClassNotFoundException {
+    public boolean verify_quote_no_and_sales_price_displayed_in_table() throws IOException, ClassNotFoundException {
 		
 		
 					LO.print("Verifying Quote no. and Sales Price Displayed in the Table");

@@ -357,17 +357,17 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		String monthly_finance_rental = customer_quote_monthly_finance_rental.getText().substring(2);
@@ -466,17 +466,17 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		try {
 
@@ -1168,47 +1168,8 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		Actions act = new Actions(driver);
 		
 		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		
 		Thread.sleep(4000);
-
-//		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
-//		Thread.sleep(4000);
-//		Click.on(driver, part_exchange_payment, 70);
-//		LO.print("Clicked on Part Exchange panel");
-//		System.out.println("Clicked on Part Exchange panel");
-//		Actions act = new Actions(driver);
-//
-//		Click.on(driver, given_part_exchange_value, 20);
-//
-//		given_part_exchange_value.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//
-//		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, funder_name, "Funder X", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, agreement_number, "123", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-//		less_finance_settlement.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
@@ -1218,17 +1179,21 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		Thread.sleep(3000);
+		
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Thread.sleep(3000);
+//		
+//		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		Thread.sleep(3000);
 

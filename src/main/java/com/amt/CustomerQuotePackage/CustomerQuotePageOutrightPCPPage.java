@@ -143,7 +143,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
 	private WebElement part_exchange_and_additional_payment_button;
 
-	@FindBy(xpath = "//*[@id='collapseFirst']/div/div/div[5]/label/span")
+	@FindBy(xpath = "//*[@name='withBalloon']//ancestor::div[1]//span[@class='slider round']")
 	private WebElement balloon_payment_toggle;
 
 	@FindBy(xpath = "//app-purchase-customer-quote-summary-header/div/div[6]/div/p/strong")
@@ -381,7 +381,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 				.println("Actual Monthly Finance Payment from screen is " + monthly_finance_payment_actual_from_screen);
 
 		double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
-				.get_monthly_finanace_payment_from_excel(maintenance_status, matrix_credit_type, balloon_payment_status,
+				.get_monthly_finance_payment_from_excel(maintenance_status, matrix_credit_type, balloon_payment_status,
 						order_deposit, finance_deposit, document_fee, vehicle_discount_copied, paint_discount_copied,
 						options_discount_copied, vehicle_additional_copied, paint_additional_copied,
 						options_additional_copied, sheet_name);
@@ -982,7 +982,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -1104,7 +1104,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 
 	public boolean put_part_exchange_values_and_check_monthly_finance_payment(String part_exchange_actual,
 			String part_exchange_given, String less_finance_settlement, String order_deposit, String finance_deposit,
-			String sheet_name) throws UnsupportedFlavorException, IOException, InterruptedException {
+			String sheet_name) throws UnsupportedFlavorException, IOException, InterruptedException, ClassNotFoundException {
 		Actions act = new Actions(driver);
 
 		Click.on(driver, part_exchange_and_additional_payment_button, 30);
@@ -1150,7 +1150,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 		double[] monthlyFinanceAndBalanceToFinance = obj_read_excel_calculation_page
 				.get_monthly_finance_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
 						part_exchange_actual, part_exchange_given, less_finance_settlement, order_deposit,
-						finance_deposit, document_fee_copied, sheet_name);
+						finance_deposit,  sheet_name);
 
 		double monthly_finance_payment_expected = monthlyFinanceAndBalanceToFinance[0];
 		double balance_to_finance_expected = monthlyFinanceAndBalanceToFinance[1];
@@ -1175,7 +1175,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 	public boolean put_part_exchange_values_and_check_monthly_total_payment_with_maintenance(
 			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
 			String order_deposit, String finance_deposit, String sheet_name)
-			throws InterruptedException, UnsupportedFlavorException, IOException {
+			throws InterruptedException, UnsupportedFlavorException, IOException, ClassNotFoundException {
 		Actions act = new Actions(driver);
 
 		Click.on(driver, part_exchange_and_additional_payment_button, 30);
@@ -1223,7 +1223,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 		double[] monthlyFinanceAndBalanceToFinance = obj_read_excel_calculation_page
 				.get_monthly_total_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
 						part_exchange_actual, part_exchange_given, less_finance_settlement, order_deposit,
-						finance_deposit, document_fee_copied, sheet_name);
+						finance_deposit,  sheet_name);
 
 		double monthly_total_payment_expected = monthlyFinanceAndBalanceToFinance[0];
 		double balance_to_finance_expected = monthlyFinanceAndBalanceToFinance[1];

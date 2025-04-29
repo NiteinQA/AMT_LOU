@@ -161,62 +161,62 @@ public class LOU_ownbook_business_hire_accept_with_changes_for_quotes_of_maint_e
 		obj_Opportunities_Page = new Opportunities();
 		obj_Opportunities_Page.opp_find_send_contract_icon();
 		
-		System.out.println("Contract Sent Successfully");
-		LO.print          ("Contract Sent Successfully");	
+		System.out.println("Contract Signed Successfully");
+		LO.print          ("Contract Signed Successfully");	
 		
 
 	}
 
-	@Test(priority = 7, dependsOnMethods = {"L6_ownbook_sending_contract" })
+//	@Test(priority = 7, dependsOnMethods = {"L6_ownbook_sending_contract" })
+//
+//	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow() throws Exception {
+//
+//		System.out.println("Test 7");
+//		
+//		obj_Opportunities_Page = new Opportunities();
+//
+//		// Opportunity listing screen - Proposal status
+//		boolean opp_AfterCurrentStatus_contract = obj_Opportunities_Page
+//				.verify_current_status_of_opportunity_after_sending_to_customer_contract();
+//
+//		Assert.assertTrue(opp_AfterCurrentStatus_contract);
+//
+//		System.out.println("Status Verified : Sent to customer ");
+//		LO.print          ("Status Verified : Sent to customer");
+//
+//	}
+//
+//	@Test(priority = 8, dependsOnMethods = {"L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow" })
+//	public void L8_ownbook_signed_contract_status_with_api_call() throws Exception
+//
+//	{
+//
+//		System.out.println("Test 8");
+//		
+//		obj_Opportunities_Page = new Opportunities();
+//
+//		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp();
+//
+//		String opp_id_screen = OppDATA[0];
+//		String quote_ref_screen = OppDATA[1];
+//
+//		System.out.println("opp_id_screen" + opp_id_screen);
+//
+//		System.out.println("quote_ref_screen" + quote_ref_screen);
+//
+//		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen, opp_id_screen);
+//
+//		Assert.assertEquals(statuscode, 200);
+//
+//		LO.print          ("Status code "+statuscode+" received ");
+//		System.out.println("Status code "+statuscode+" received ");
+//
+//		obj_Opportunities_Page.opp_search_textbox();
+//
+//	}
 
-	public void L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow() throws Exception {
 
-		System.out.println("Test 7");
-		
-		obj_Opportunities_Page = new Opportunities();
-
-		// Opportunity listing screen - Proposal status
-		boolean opp_AfterCurrentStatus_contract = obj_Opportunities_Page
-				.verify_current_status_of_opportunity_after_sending_to_customer_contract();
-
-		Assert.assertTrue(opp_AfterCurrentStatus_contract);
-
-		System.out.println("Status Verified : Sent to customer ");
-		LO.print          ("Status Verified : Sent to customer");
-
-	}
-
-	@Test(priority = 8, dependsOnMethods = {"L7_verify_current_status_on_opportunity_page_after_sending_contract_for_ownbook_business_flow" })
-	public void L8_ownbook_signed_contract_status_with_api_call() throws Exception
-
-	{
-
-		System.out.println("Test 8");
-		
-		obj_Opportunities_Page = new Opportunities();
-
-		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp();
-
-		String opp_id_screen = OppDATA[0];
-		String quote_ref_screen = OppDATA[1];
-
-		System.out.println("opp_id_screen" + opp_id_screen);
-
-		System.out.println("quote_ref_screen" + quote_ref_screen);
-
-		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen, opp_id_screen);
-
-		Assert.assertEquals(statuscode, 200);
-
-		LO.print          ("Status code "+statuscode+" received ");
-		System.out.println("Status code "+statuscode+" received ");
-
-		obj_Opportunities_Page.opp_search_textbox();
-
-	}
-
-
-	@Test(priority = 9, dependsOnMethods = {"L8_ownbook_signed_contract_status_with_api_call" })
+	@Test(priority = 9, dependsOnMethods = {"L6_ownbook_sending_contract" })
 
 	public void UW1_verify_status_after_contract_signed() throws Exception {
 
@@ -388,32 +388,32 @@ public class LOU_ownbook_business_hire_accept_with_changes_for_quotes_of_maint_e
  
  
  
- @Test(priority = 17 , dependsOnMethods = {"UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" })
+// @Test(priority = 17 , dependsOnMethods = {"UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" })
+// 
+// public void UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification ()throws Exception
+// 
+// {
+//	 
+//	 System.out.println("Test 17");
+//	 
+//	 
+//	 obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
+//	 obj_Opportunities_Page = new Opportunities();
+// 
+//	 //obj_Opportunities_Page.verify_opportunity_ownbook_quote_search_text_box();
+// 
+//	 
+//	 
+//	 boolean CurrentStatusafterAcceptingTheNewChangesFromUnderwritingPopup = obj_Opportunities_Page.verify_current_status_after_accept_new_changes_from_underwriting_pop_up();
+//	 Assert.assertTrue(CurrentStatusafterAcceptingTheNewChangesFromUnderwritingPopup);
+//	 
+//		System.out.println("Status Verified : Sent to customer");
+//		LO.print          ("Status Verified : Sent to customer"); 		
+// 
+// 
+// } 
  
- public void UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification ()throws Exception
- 
- {
-	 
-	 System.out.println("Test 17");
-	 
-	 
-	 obj_Underwriting_Popup_Page = new UnderwritingPopupPage();
-	 obj_Opportunities_Page = new Opportunities();
- 
-	 //obj_Opportunities_Page.verify_opportunity_ownbook_quote_search_text_box();
- 
-	 
-	 
-	 boolean CurrentStatusafterAcceptingTheNewChangesFromUnderwritingPopup = obj_Opportunities_Page.verify_current_status_after_accept_new_changes_from_underwriting_pop_up();
-	 Assert.assertTrue(CurrentStatusafterAcceptingTheNewChangesFromUnderwritingPopup);
-	 
-		System.out.println("Status Verified : Sent to customer");
-		LO.print          ("Status Verified : Sent to customer"); 		
- 
- 
- } 
- 
- @Test(priority = 18, dependsOnMethods = {"UW8_verify_ownbook_opportunity_underwriting_accept_with_changes_cancel_flow_verification" })
+ @Test(priority = 18, dependsOnMethods = {"UW7_verify_ownbook_opportunity_accept_with_changes_underwriting_pop_up" })
  
  public void UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up ()throws Exception
  
@@ -432,34 +432,50 @@ public class LOU_ownbook_business_hire_accept_with_changes_for_quotes_of_maint_e
  
  
 	
-	@Test(priority = 19 ,  dependsOnMethods = {"UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up" })
-	public void UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call() throws Exception
-
-	{
-
-		 System.out.println("Test 19");
-		
-		obj_Opportunities_Page = new Opportunities();
-
-		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp_after_decision_underwriting_accpet_the_changes();
-
-		String opp_id_screen = OppDATA[0];
-		String quote_ref_screen2 = OppDATA[1];
-
-		System.out.println("opp_id_screen" + opp_id_screen);
-		
-		System.out.println("quote_ref_screen" + quote_ref_screen2);
-		
-		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen2, opp_id_screen);
-
-		Assert.assertEquals(statuscode, 200);
-
-		LO.print          ("Status code "+statuscode+" received ");
-		System.out.println("Status code "+statuscode+" received ");
-
-		obj_Opportunities_Page.opp_search_textbox();
-	}
+//	@Test(priority = 19 ,  dependsOnMethods = {"UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up" })
+//	public void UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call() throws Exception
+//
+//	{
+//
+//		 System.out.println("Test 19");
+//		
+//		obj_Opportunities_Page = new Opportunities();
+//
+//		String[] OppDATA = obj_Opportunities_Page.get_api_data_opp_after_decision_underwriting_accpet_the_changes();
+//
+//		String opp_id_screen = OppDATA[0];
+//		String quote_ref_screen2 = OppDATA[1];
+//
+//		System.out.println("opp_id_screen" + opp_id_screen);
+//		
+//		System.out.println("quote_ref_screen" + quote_ref_screen2);
+//		
+//		int statuscode = obj_Opportunities_Page.postAPITest(quote_ref_screen2, opp_id_screen);
+//
+//		Assert.assertEquals(statuscode, 200);
+//
+//		LO.print          ("Status code "+statuscode+" received ");
+//		System.out.println("Status code "+statuscode+" received ");
+//
+//		obj_Opportunities_Page.opp_search_textbox();
+//	}
  
+ 
+	@Test(priority = 19, dependsOnMethods = {
+	"UW9_verify_ownbook_opportunity_underwriting_accept_with_changes_underwriting_pop_up" })
+
+public void OP1_ownbook_manual_signing_after_conditional_accceptance_contract() throws Exception {
+
+System.out.println("Test 19");
+
+obj_Opportunities_Page = new Opportunities();
+obj_Opportunities_Page.opp_find_send_contract_icon();
+
+System.out.println("New Contract Signed Successfully");
+LO.print          ("New Contract Signed Successfully");	
+
+
+}
 	
 	
 	@Test(priority = 20 , dependsOnMethods = {"UW10_ownbook_after_opportunity_underwriting_accept_with_changes_signed_contract_status_with_api_call" })

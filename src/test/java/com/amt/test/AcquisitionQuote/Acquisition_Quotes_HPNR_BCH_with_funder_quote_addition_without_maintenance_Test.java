@@ -37,6 +37,12 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_HPNR_BCH_OTR_calculation_without_maintenance_test(String manufacturer, String model,
+			String vehicle_percentage_discount , String additional_discount_vehicle ,
+            String options_percentage_discount , String additional_discount_options , 
+            String paint_percentage_discount ,   String additional_discount_paint ,
+            String rebate ,                      String marketing_bonus ,
+            String manufacturer_delivery_charges,String basic_price ,
+			String road_tax_for_first_year, String on_road_price_for_invoice,
 			String quoteRef, String expiryDate,String term,String milesPerAnnum,String cashDeposit,
 			String financeCharges,String documentFee, String monthlyPayment,String finalBallonPayment,String optionToPurchaseFee,
 		    String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -61,6 +67,12 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 	@Test(priority=2, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_HPNR_BCH_OTR_calculation_without_maintenance_test" })
 
 	public void aquisition_quotes_HPNR_BCH_after_discount_calculations_without_maintenance_test(String manufacturer, String model,
+			String vehicle_percentage_discount , String additional_discount_vehicle ,
+            String options_percentage_discount , String additional_discount_options , 
+            String paint_percentage_discount ,   String additional_discount_paint ,
+            String rebate ,                      String marketing_bonus ,
+            String manufacturer_delivery_charges,String basic_price ,
+			String road_tax_for_first_year, String on_road_price_for_invoice,
 			String quoteRef, String expiryDate,String term,String milesPerAnnum,String cashDeposit,
 			String financeCharges,String documentFee, String monthlyPayment,String finalBallonPayment,String optionToPurchaseFee,
 		    String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -79,6 +91,12 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 	@Test(priority=3, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_HPNR_BCH_after_discount_calculations_without_maintenance_test" })
 
 	public void aquisition_quotes_HPNR_BCH_holding_cost_calculations_without_maintenance_test(String manufacturer, String model,
+			String vehicle_percentage_discount , String additional_discount_vehicle ,
+            String options_percentage_discount , String additional_discount_options , 
+            String paint_percentage_discount ,   String additional_discount_paint ,
+            String rebate ,                      String marketing_bonus ,
+            String manufacturer_delivery_charges,String basic_price ,
+			String road_tax_for_first_year, String on_road_price_for_invoice,
 			String quoteRef, String expiryDate,String term,String milesPerAnnum,String cashDeposit,
 			String financeCharges,String documentFee, String monthlyPayment,String finalBallonPayment,String optionToPurchaseFee,
 		    String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -98,6 +116,12 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 	@Test(priority=4, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_HPNR_BCH_holding_cost_calculations_without_maintenance_test" })
 
 	public void aquisition_quotes_HPNR_BCH_customer_quote_payment_profile_calculations_without_maintenance_test(String manufacturer, String model,
+			String vehicle_percentage_discount , String additional_discount_vehicle ,
+            String options_percentage_discount , String additional_discount_options , 
+            String paint_percentage_discount ,   String additional_discount_paint ,
+            String rebate ,                      String marketing_bonus ,
+            String manufacturer_delivery_charges,String basic_price ,
+			String road_tax_for_first_year, String on_road_price_for_invoice,
 			String quoteRef, String expiryDate,String term,String milesPerAnnum,String cashDeposit,
 			String financeCharges,String documentFee, String monthlyPayment,String finalBallonPayment,String optionToPurchaseFee,
 		    String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
@@ -152,6 +176,12 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 	@Test(priority=5, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_HPNR_BCH_customer_quote_payment_profile_calculations_without_maintenance_test" })
 
 	public void aquisition_quotes_HPNR_BCH_quote_summary_values_verification_without_maintenance_test(String manufacturer, String model,
+			String vehicle_percentage_discount , String additional_discount_vehicle ,
+            String options_percentage_discount , String additional_discount_options , 
+            String paint_percentage_discount ,   String additional_discount_paint ,
+            String rebate ,                      String marketing_bonus ,
+            String manufacturer_delivery_charges,String basic_price ,
+			String road_tax_for_first_year, String on_road_price_for_invoice,
 			String quoteRef, String expiryDate,String term,String milesPerAnnum,String cashDeposit,
 			String financeCharges,String documentFee, String monthlyPayment,String finalBallonPayment,String optionToPurchaseFee,
 		    String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,

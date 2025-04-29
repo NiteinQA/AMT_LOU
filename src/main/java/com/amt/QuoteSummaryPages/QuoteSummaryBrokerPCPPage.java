@@ -123,7 +123,7 @@ public class QuoteSummaryBrokerPCPPage extends TestBase {
 	private WebElement quote_summary_customer_quote_summary_cash_deposit;
 	
 	//Balance to finance
-	@FindBy(xpath = "(//*[normalize-space()='Balance to finance']//ancestor::div[1]//div//strong)[2]")
+	@FindBy(xpath = "//*[normalize-space()='Balance to finance']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_balance_to_finance;
 	
 	//Finance charges

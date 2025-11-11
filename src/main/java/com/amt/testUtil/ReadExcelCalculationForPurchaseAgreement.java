@@ -2094,6 +2094,7 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(72).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(75).getCell(1).setCellValue(0);
+		wb.getSheet(sheet_name).getRow(155).getCell(7).setCellValue(0);
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);

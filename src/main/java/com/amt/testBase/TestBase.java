@@ -60,8 +60,9 @@ public class TestBase {
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver","D:\\chromedriver-win64\\chromedriver.exe");
+			//WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			
+			 
 			
 			
 			options.addArguments("--remote-allow-origins=*");
@@ -110,8 +111,7 @@ public class TestBase {
 	public void start_info() throws InterruptedException, IOException {
 
 		prop = new Properties();
-		FileInputStream ip = new FileInputStream(
-				"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\config.properties");
+		FileInputStream ip = new FileInputStream(ConfigConstants.CONFIG_PROPERTY_FILE_PATH);
 		prop.load(ip);
 
 
@@ -129,7 +129,7 @@ public class TestBase {
 	public void setup() throws InterruptedException, IOException {
      
 		prop=new Properties();
-		FileInputStream ip = new FileInputStream("D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\config.properties");
+		FileInputStream ip = new FileInputStream(ConfigConstants.CONFIG_PROPERTY_FILE_PATH);
 		prop.load(ip);		
 		  
 	    initialization(prop.getProperty("browser"));
@@ -138,7 +138,7 @@ public class TestBase {
 		obj_Login_Page.enter_credentials();
 	}
 
-// @AfterClass public void tearDown() { driver.close(); }
+ //@AfterClass public void tearDown() { driver.close(); }
 	
 	
 	}

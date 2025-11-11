@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amt.test.broker.Acquisition_Quotes_Broker_HPNR_used_car_Test">
+      <class name="com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test">
         <methods>
-          <include name="aquisition_quotes_user_flow_broker_HPNR_balance_to_finance_check_test"/>
-          <include name="aquisition_quotes_used_car_edit_cost_price_and_check_OTR_with_maintenance_test"/>
+          <include name="L1_create_lead_for_broker_business"/>
           <include name="start_info"/>
-          <include name="aquisition_quotes_user_flow_broker_HPNR_OTR_calculation_test"/>
-          <include name="aquisition_quotes_user_flow_broker_HPNR_quote_summary_values_verification_test" invocation-numbers="0"/>
-          <include name="aquisition_quotes_user_flow_broker_HPNR_vehicle_profit_check_test"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.amt.test.broker.Acquisition_Quotes_Broker_HPNR_used_car_Test -->
+      </class> <!-- com.amt.test.LOU.LOU_broker_business_hire_accept_flow_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

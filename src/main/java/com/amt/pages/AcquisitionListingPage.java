@@ -123,7 +123,7 @@ public class AcquisitionListingPage extends TestBase {
 			
 			   driver.get(full_url);
 				
-			   Thread.sleep(7000);
+			   Thread.sleep(3000);
 			   
 				ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		}

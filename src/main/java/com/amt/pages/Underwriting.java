@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 import java.text.DecimalFormat;
+import java.time.Duration;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -31,6 +32,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
@@ -75,7 +78,7 @@ public class Underwriting extends TestBase {
 	@FindBy(xpath = "//input[@placeholder='Search something in the results']")
 	private WebElement underwriting_Search_text_box;
 
-	@FindBy(xpath = "//*[@id='cWraper']/div/app-underwriting-management/div[2]/div/div/app-uw-listing/div[1]/app-grid/div[2]/div/div[2]/div[1]/table/tbody/tr")
+	@FindBy(xpath = "//*[@id=\"cWraper\"]/div/app-underwriting-management/div[2]/div/div/app-uw-listing/div[1]/div[2]/ag-grid-angular/div/div[1]/div[2]/div[3]/div[2]/div/div")
 	private WebElement proposal_detail_listing_data;
 
 	@FindBy(xpath = "//p[contains(text(),'Quote')]")
@@ -228,7 +231,7 @@ public class Underwriting extends TestBase {
 
 // underwriting current status 
 
-	@FindBy(xpath = "(//td[@class='ng-star-inserted'])[9]")
+	@FindBy(xpath = "//*[@class='status']")
 	private WebElement underw_current_status;
 
 	@FindBy(xpath = "//div[@id='confirmationModal']//button[@class='btn btn-secondary float-right'][normalize-space()='Yes']")
@@ -248,8 +251,13 @@ public class Underwriting extends TestBase {
 	private WebElement underw_accept_spread_rental_payment_value;
 
 //  vehicle details
-	@FindBy(xpath = "//*[@class='heading ng-star-inserted']")
+//	@FindBy(xpath = "//*[@class='heading ng-star-inserted']")
+//	private WebElement underwriting_quote_tab_vehicle_heading;
+	
+	@FindBy(xpath = "//*[@id='vehicleSummery']//*[@class='heading']")
 	private WebElement underwriting_quote_tab_vehicle_heading;
+	
+	//*[@id='vehicleSummery']//*[@class='heading']
 
 	// customer quote summary button
 	@FindBy(xpath = "//*[normalize-space()='Customer quote summary']//ancestor::button")
@@ -834,7 +842,7 @@ public class Underwriting extends TestBase {
 		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 
 		
-		String UnderwritingPrposalId = GetExcelFormulaValue.get_cell_value(1, 3, sheetName);
+		String UnderwritingPrposalId = GetExcelFormulaValue.get_cell_value(1, 0, sheetName); //earlier it was 1,3 for proposal id but in version change proposal id not searched so changed to quote basis
 
 		System.out.println("Getting the  proposal id from excel sheet  =" + UnderwritingPrposalId);
 		LO.print("Getting the  proposal id from excel sheet =" + UnderwritingPrposalId);
@@ -849,6 +857,8 @@ public class Underwriting extends TestBase {
 		LO.print("Enter the proposal in search text box =" + UnderwritingPrposalId);
 
 		underwriting_Search_text_box.sendKeys(Keys.ENTER);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 
 	}
 
@@ -978,17 +988,33 @@ public class Underwriting extends TestBase {
 
 	}
 
-	public void find_underwriting_listing_detail_for_proposal() throws InterruptedException {
+	public void find_underwriting_listing_detail_for_proposal() throws InterruptedException, ClassNotFoundException, IOException {
+		
+		
+		String classOrMethodName = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
 
-		ExplicitWait.visibleElement(driver, proposal_detail_listing_data, 20);
+		obj_acq_listing_page = new AcquisitionListingPage();
+		
+		String sheetName = obj_acq_listing_page.quote_save_sheet_name_from_quote_save_excel_sheet(classOrMethodName);
 
-		HelperClass.highlightElement(driver, proposal_detail_listing_data);
-
-		Thread.sleep(2000);
-
+		
+		String QuoteRefNo = GetExcelFormulaValue.get_cell_value(1, 0, sheetName); //earlier it was 1,3 for proposal id but in version change proposal id not searched so changed to quote basis
+        
+		Thread.sleep(3000);
+		
+		
+		WebElement underwritingResult = new WebDriverWait(driver , Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(driver.findElement(
+			    By.xpath("//span[contains(normalize-space(),'" + QuoteRefNo + "')]"))
+				));
+		
 		Actions actions = new Actions(driver);
-
-		actions.doubleClick(proposal_detail_listing_data).perform();
+		actions.doubleClick(underwritingResult).perform();
+		
+		//actions.moveToElement(underwritingListresult).doubleClick().perform();
+		
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//WebElement element = driver.findElement(By.id("doubleClickBtn"));
+		//js.executeScript("var evt = new MouseEvent('dblclick', {bubbles: true}); arguments[0].dispatchEvent(evt);", underwritingListresult);
 
 		// Click.on(driver, proposal_detail_listing_data, 60);
 
@@ -13578,7 +13604,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		
 		if(sheetName.contains("Formula 3")|sheetName.contains("F3")|sheetName.contains("Formula 2"))
 		{
-			if(sheetName.contains("CP")) {
+			if(sheetName.contains("Formula 2")) {
 				
 				uw.write_edit_data_to_excel_for_ownboook_CP_CP_purchase_funder_contract(sheetName, orderDeposit, financeDeposit, maintRequired, capMaintCost , terms);
 	
@@ -14050,7 +14076,7 @@ if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getNa
 		System.out.println(" Current Status of accept screen value is = " + ScreenValueforAccept);
 		LO.print("Current Status of accept value is = " + ScreenValueforAccept);
 
-		boolean CurrentStatusofUndewriting = ScreenValueforAccept.equals("Conditional acceptance");
+		boolean CurrentStatusofUndewriting = ScreenValueforAccept.matches("Conditional Acceptance");
 
 		System.out.println(
 				" Mapping the current Status of Accept in Underwriting page is   = " + CurrentStatusofUndewriting);

@@ -19,8 +19,9 @@ public class VehicleSelectionPage extends TestBase {
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
 	
-	@FindBy(xpath = "//ng-select[@id='Make']//input[@role='combobox']")
+	@FindBy(xpath = "//*[@id=\"Make\"]/div/div/div[3]/input")
 	private WebElement select_manufacturer_button;
+	
     
 	@FindBy(xpath = "//body/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-aquisition-generic[1]/form[1]/div[1]/div[1]/div[1]/app-acquisition-fleet-selector[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/ng-select[1]/div[1]/div[1]/div[3]/input[1]")
 	private WebElement select_model_range;

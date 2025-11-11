@@ -54,7 +54,7 @@ public class HoldingCost_BCH_BCH_Page extends TestBase {
 	@FindBy(xpath = "//button[@class='btn btn-outline-secondary px-4 mr-2']")
 	private WebElement add_funder_button;
 
-	@FindBy(xpath = "//input[@role='combobox']")
+	@FindBy(xpath = "//*[@role='combobox']")
 	private WebElement funder;
 
 	@FindBy(xpath = "//input[@id='quoteReferenceNo']")

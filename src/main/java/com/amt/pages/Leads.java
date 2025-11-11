@@ -41,7 +41,7 @@ public class Leads extends TestBase {
 	@FindBy(xpath = "//*[contains(text(),'Leads')]")
 	private WebElement leads;
 
-	@FindBy(xpath = "//button[@title='Add Lead']")
+	@FindBy(xpath = "//*[contains(text(),'Add new')]")
 	private WebElement add_lead;
 
 	@FindBy(xpath = "//select[@id='SourceId']")
@@ -53,11 +53,21 @@ public class Leads extends TestBase {
 	@FindBy(xpath = "//select[@id='StatusId']")
 	private WebElement status;
 
-	@FindBy(xpath = "//div[@class='form-group norequired col-md-12 col-lg-4 ng-star-inserted']//input[@id='customer']")
+//	@FindBy(xpath = "//div[@class='form-group norequired col-md-12 col-lg-4 ng-star-inserted']//input[@id='customer']")
+//	private WebElement general_assigned_to;
+	
+	@FindBy(xpath = "//div[@class='form-group norequired col-md-12 col-lg-4']//input[@id='customer']")
 	private WebElement general_assigned_to;
+	
+	
 
-	@FindBy(xpath = "//ul[@class='user-dd-list shadow ng-star-inserted']//li[@class='ng-star-inserted']")
+//	@FindBy(xpath = "//ul[@class='user-dd-list shadow ng-star-inserted']//li[@class='ng-star-inserted']")
+//	private WebElement general_assigned_to_option;
+	
+	@FindBy(xpath = "//div[@id='cWraper']//li[1]//span[1]")
 	private WebElement general_assigned_to_option;
+	
+	
 
 //	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-add-leads[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-general-info[1]/div[1]/div[2]/div[1]/div[1]/textarea[1]")
 //	private WebElement general_notes;
@@ -312,12 +322,24 @@ public class Leads extends TestBase {
 
 	public Leads() {
 		PageFactory.initElements(driver, this);
+		
+		prop = new Properties();
+		try {
+			
+			FileInputStream ip1 = new FileInputStream(
+					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\config.properties");
+			prop.load(ip1);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		try {
-			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
+			
+			FileInputStream ip2 = new FileInputStream(
 					"D:\\LOU\\AMT_LOU\\src\\main\\java\\configs\\excelValues.properties");
-			prop.load(ip);
+			prop.load(ip2);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -476,25 +498,46 @@ public class Leads extends TestBase {
 		System.out.println("*********************************************");
 		System.out.println("*********************************************");
 
-		Thread.sleep(10000);
+		Thread.sleep(6000);
 		
-		Click.on(driver, leads, 20);
+//		Click.on(driver, leads, 20);
+//		
+//		HelperClass.highlightElement(driver, leads); // Click on Leads Menu Link
+//		//Click.on(driver, leads, 120);
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		
+//		
+//
+//		LO.print("Clicked on Leads on Side Menu");
+//		System.out.println("Clicked on Leads on Side Menu");
 		
-		HelperClass.highlightElement(driver, leads); // Click on Leads Menu Link
-		//Click.on(driver, leads, 120);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
+		 String url = prop.getProperty("url");
+		   
+		   String path = "/opportunity/leads";
+		   
+		   String full_url =url+path;
 		
-		
+		   driver.get(full_url);
+			
+		   Thread.sleep(3000);
+		   
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		LO.print("Clicked on Leads on Side Menu");
-		System.out.println("Clicked on Leads on Side Menu");
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		
 
 		// Add Lead Button
-		ExplicitWait.visibleElement(driver, add_lead, 120);
 
+
+		try
+		{
 		Click.on(driver, add_lead, 120);
+		}
+		catch(Exception e)
+		{
+			driver.findElement(By.xpath("//*[contains(text(),'Add new')]")).click();
+		}
+		
+		
 		System.out.println("Clicked on Leads button");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
